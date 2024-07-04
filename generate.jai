@@ -16,6 +16,7 @@ SOURCE_FILE   :: "source/miniaudio.c";
     }
 
     #if OS == {
+
         case .MACOS;
             options := Compiler.get_build_options();
             minimum_version   : type_of(options.minimum_os_version) = .{ 11, 0 };
@@ -72,6 +73,18 @@ SOURCE_FILE   :: "source/miniaudio.c";
                 Compiler.compiler_set_workspace_status(.FAILED);
                 return;
             }
+
+        case .LINUX;
+           //
+            // Create universal lib now:
+            //
+
+            universal_static_base := tprint("%/%.a", "linux", LIB_BASE_NAME);
+            universal_dylib_path  := tprint("%/%.so", "linux", LIB_BASE_NAME);
+
+            // run_or_exit("lipo", "-create", tprint("%.so", lib_base_x64), tprint("%.so", lib_base_x64),  "-output", universal_dylib_path);
+            // run_or_exit("lipo", "-create", tprint("%.a", lib_base_x64),  tprint("%.a", lib_base_arm64), "-output", universal_static_base);
+
     };
 
     if !generate_bindings() {
@@ -122,6 +135,11 @@ generate_bindings :: () -> bool {
                 array_add(*libpaths, "windows");
                 array_add(*extra_clang_arguments, "-DWIN32_LEAN_AND_MEAN", "-DMA_API=__declspec(dllexport)");
 
+            case .LINUX;
+                // strip_flags = 0;
+                output_filename = "linux.jai";
+                array_add(*libpaths, "linux");
+
             case;
                 #assert false "Unsupported OS";
                 return false;
@@ -144,6 +162,8 @@ FOOTER_UNIX_TEMPLATE :: #string END
 
 #if OS == .MACOS {
     %1 :: #library "macos/%1";
+} else #if OS == .LINUX {
+    %1 :: #library "linux/%1";
 } else {
     #assert false;
 }
