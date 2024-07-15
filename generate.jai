@@ -1,5 +1,6 @@
 LIB_BASE_NAME :: "miniaudio";
-SOURCE_FILE   :: "source/miniaudio.c";
+// SOURCE_FILE   :: "source/miniaudio.c";
+SOURCE_FILE   :: "linux/miniaudio_fdkaac.h";
 
 #run {
     Compiler.set_build_options_dc(.{ do_output = false });
@@ -82,6 +83,9 @@ SOURCE_FILE   :: "source/miniaudio.c";
             universal_static_base := tprint("%/%.a", "linux", LIB_BASE_NAME);
             universal_dylib_path  := tprint("%/%.so", "linux", LIB_BASE_NAME);
 
+            // options := get_common_options(os, cpu);
+            // array_add(*options.system_types_to_include, "HANDLE_AACDECODER", "INT_PCM");
+
             // run_or_exit("lipo", "-create", tprint("%.so", lib_base_x64), tprint("%.so", lib_base_x64),  "-output", universal_dylib_path);
             // run_or_exit("lipo", "-create", tprint("%.a", lib_base_x64),  tprint("%.a", lib_base_arm64), "-output", universal_static_base);
 
@@ -137,6 +141,12 @@ generate_bindings :: () -> bool {
 
             case .LINUX;
                 // strip_flags = 0;
+                array_add(*opts.system_include_paths, ..get_default_system_include_paths());
+                array_add(*opts.system_include_paths, "fdk-aac", "libavformat", "libavcodec", "libavutil");
+                array_add(*opts.path_fragments_to_treat_as_non_system_paths, "fdk-aac", "avformat", "avcodec", "avutil");
+
+                // array_add(*opts.system_types_to_include, "HANDLE_AACDECODER", "INT_PCM", "AVStream", "AVFormatContext", "AAC_DECODER_INSTANCE", "CStreamInfo");
+
                 output_filename = "linux.jai";
                 array_add(*libpaths, "linux");
 
@@ -181,7 +191,6 @@ FILE :: *void;
 } else {
     #assert false;
 }
-
 END
 
 #import "Basic";
