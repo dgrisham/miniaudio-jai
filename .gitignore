@@ -1,7 +1,6 @@
 *.dll
 *.lib
 *.dylib
-*.a
 *.DS_Store
 .build/
 *.dSYM
