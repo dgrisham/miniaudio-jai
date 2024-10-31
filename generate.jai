@@ -1,6 +1,23 @@
-LIB_BASE_NAME :: "miniaudio";
-// SOURCE_FILE   :: "source/miniaudio.c";
-SOURCE_FILE   :: "linux/miniaudio_fdkaac.h";
+ENABLE_AAC :: false;
+
+#if ENABLE_AAC
+{
+    LIB_BASE_NAME :: "miniaudio_fdkaac";
+
+    SOURCE_FILE :: "fdkaac/miniaudio_fdkaac.h";
+    INCLUDE_DIR :: "fdkaac";
+    LIBRARY_DIR :: "fdkaac";
+    OUTPUT_FILE :: "fdkaac.jai";
+}
+else
+{
+    LIB_BASE_NAME :: "miniaudio";
+
+    SOURCE_FILE :: "linux/miniaudio.h";
+    INCLUDE_DIR :: "linux";
+    LIBRARY_DIR :: "linux";
+    OUTPUT_FILE :: "linux.jai";
+}
 
 #run {
     Compiler.set_build_options_dc(.{ do_output = false });
@@ -76,18 +93,6 @@ SOURCE_FILE   :: "linux/miniaudio_fdkaac.h";
             }
 
         case .LINUX;
-           //
-            // Create universal lib now:
-            //
-
-            universal_static_base := tprint("%/%.a", "linux", LIB_BASE_NAME);
-            universal_dylib_path  := tprint("%/%.so", "linux", LIB_BASE_NAME);
-
-            // options := get_common_options(os, cpu);
-            // array_add(*options.system_types_to_include, "HANDLE_AACDECODER", "INT_PCM");
-
-            // run_or_exit("lipo", "-create", tprint("%.so", lib_base_x64), tprint("%.so", lib_base_x64),  "-output", universal_dylib_path);
-            // run_or_exit("lipo", "-create", tprint("%.a", lib_base_x64),  tprint("%.a", lib_base_arm64), "-output", universal_static_base);
 
     };
 
@@ -140,15 +145,14 @@ generate_bindings :: () -> bool {
                 array_add(*extra_clang_arguments, "-DWIN32_LEAN_AND_MEAN", "-DMA_API=__declspec(dllexport)");
 
             case .LINUX;
-                // strip_flags = 0;
-                array_add(*opts.system_include_paths, ..get_default_system_include_paths());
-                array_add(*opts.system_include_paths, "fdk-aac", "libavformat", "libavcodec", "libavutil");
-                array_add(*opts.path_fragments_to_treat_as_non_system_paths, "fdk-aac", "avformat", "avcodec", "avutil");
-
-                // array_add(*opts.system_types_to_include, "HANDLE_AACDECODER", "INT_PCM", "AVStream", "AVFormatContext", "AAC_DECODER_INSTANCE", "CStreamInfo");
-
-                output_filename = "linux.jai";
-                array_add(*libpaths, "linux");
+                #if ENABLE_AAC
+                {
+                    array_add(*opts.system_include_paths, ..get_default_system_include_paths());
+                    array_add(*opts.system_include_paths, "fdk-aac", "libavformat", "libavcodec", "libavutil");
+                    array_add(*opts.path_fragments_to_treat_as_non_system_paths, "fdk-aac", "avformat", "avcodec", "avutil");
+                }
+                array_add(*opts.include_paths, INCLUDE_DIR);
+                array_add(*libpaths, LIBRARY_DIR);
 
             case;
                 #assert false "Unsupported OS";
@@ -165,11 +169,23 @@ generate_bindings :: () -> bool {
         );
     }
 
-    return generate_bindings(opts, output_filename);
+    return generate_bindings(opts, OUTPUT_FILE);
 }
 
-FOOTER_UNIX_TEMPLATE :: #string END
+#if ENABLE_AAC
+{
+    FOOTER_UNIX_TEMPLATE :: #string END
+#if OS == .LINUX {
+    %1 :: #library "fdkaac/%1";
+} else {
+    #assert false;
+}
 
+END
+}
+else
+{
+    FOOTER_UNIX_TEMPLATE :: #string END
 #if OS == .MACOS {
     %1 :: #library "macos/%1";
 } else #if OS == .LINUX {
@@ -179,6 +195,8 @@ FOOTER_UNIX_TEMPLATE :: #string END
 }
 
 END
+
+}
 
 FOOTER_WINDOWS_TEMPLATE :: #string END
 

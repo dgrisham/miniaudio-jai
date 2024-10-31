@@ -62,6 +62,742 @@ MA_LISTENER_INDEX_CLOSEST :: cast,trunc(ma_uint8) -1;
 
 MA_SOUND_SOURCE_CHANNEL_COUNT :: 0xFFFFFFFF;
 
+FF_LAMBDA_SHIFT :: 7;
+FF_LAMBDA_SCALE :: 1<<FF_LAMBDA_SHIFT;
+FF_QP2LAMBDA :: 118;
+FF_LAMBDA_MAX :: 256*128-1;
+
+FF_QUALITY_SCALE :: FF_LAMBDA_SCALE;
+
+AV_TIME_BASE :: 1000000;
+
+AV_HAVE_BIGENDIAN :: 0;
+AV_HAVE_FAST_UNALIGNED :: 1;
+
+AVERROR_EXPERIMENTAL :: -0x2bb2afa8;
+AVERROR_INPUT_CHANGED :: -0x636e6701;
+AVERROR_OUTPUT_CHANGED :: -0x636e6702;
+
+AV_ERROR_MAX_STRING_SIZE :: 64;
+
+LIBAVUTIL_VERSION_MAJOR :: 59;
+LIBAVUTIL_VERSION_MINOR :: 8;
+LIBAVUTIL_VERSION_MICRO :: 100;
+
+FF_API_HDR_VIVID_THREE_SPLINE :: LIBAVUTIL_VERSION_MAJOR < 60;
+FF_API_FRAME_PKT :: LIBAVUTIL_VERSION_MAJOR < 60;
+FF_API_INTERLACED_FRAME :: LIBAVUTIL_VERSION_MAJOR < 60;
+FF_API_FRAME_KEY :: LIBAVUTIL_VERSION_MAJOR < 60;
+FF_API_PALETTE_HAS_CHANGED :: LIBAVUTIL_VERSION_MAJOR < 60;
+FF_API_VULKAN_CONTIGUOUS_MEMORY :: LIBAVUTIL_VERSION_MAJOR < 60;
+FF_API_H274_FILM_GRAIN_VCS :: LIBAVUTIL_VERSION_MAJOR < 60;
+
+M_Ef :: 2.7182818284590452354;
+
+M_LN2f :: 0.69314718055994530942;
+
+M_LN10f :: 2.30258509299404568402;
+
+M_LOG2_10 :: 3.32192809488736234787;
+
+M_LOG2_10f :: 3.32192809488736234787;
+
+M_PHI :: 1.61803398874989484820;
+
+M_PHIf :: 1.61803398874989484820;
+
+M_PIf :: 3.14159265358979323846;
+
+M_PI_2f :: 1.57079632679489661923;
+
+M_PI_4f :: 0.78539816339744830962;
+
+M_1_PIf :: 0.31830988618379067154;
+
+M_2_PIf :: 0.63661977236758134308;
+
+M_2_SQRTPIf :: 1.12837916709551257390;
+
+M_SQRT1_2f :: 0.70710678118654752440;
+
+M_SQRT2f :: 1.41421356237309504880;
+
+AV_LOG_QUIET :: -8;
+
+AV_LOG_PANIC :: 0;
+
+AV_LOG_FATAL :: 8;
+
+AV_LOG_ERROR :: 16;
+
+AV_LOG_WARNING :: 24;
+
+AV_LOG_INFO :: 32;
+
+AV_LOG_VERBOSE :: 40;
+
+AV_LOG_DEBUG :: 48;
+
+AV_LOG_TRACE :: 56;
+
+AV_LOG_MAX_OFFSET :: AV_LOG_TRACE - AV_LOG_QUIET;
+
+AV_LOG_SKIP_REPEATED :: 1;
+
+AV_LOG_PRINT_LEVEL :: 2;
+
+AVPALETTE_SIZE :: 1024;
+AVPALETTE_COUNT :: 256;
+
+AV_VIDEO_MAX_PLANES :: 4;
+
+AV_FOURCC_MAX_STRING_SIZE :: 32;
+
+AV_CHANNEL_LAYOUT_RETYPE_FLAG_LOSSLESS :: 1 << 0;
+
+AV_CHANNEL_LAYOUT_RETYPE_FLAG_CANONICAL :: 1 << 1;
+
+LIBAVCODEC_VERSION_MAJOR :: 61;
+
+FF_API_INIT_PACKET :: LIBAVCODEC_VERSION_MAJOR < 62;
+FF_API_SUBFRAMES :: LIBAVCODEC_VERSION_MAJOR < 62;
+FF_API_TICKS_PER_FRAME :: LIBAVCODEC_VERSION_MAJOR < 62;
+FF_API_DROPCHANGED :: LIBAVCODEC_VERSION_MAJOR < 62;
+
+FF_API_AVFFT :: LIBAVCODEC_VERSION_MAJOR < 62;
+FF_API_FF_PROFILE_LEVEL :: LIBAVCODEC_VERSION_MAJOR < 62;
+FF_API_AVCODEC_CLOSE :: LIBAVCODEC_VERSION_MAJOR < 62;
+FF_API_BUFFER_MIN_SIZE :: LIBAVCODEC_VERSION_MAJOR < 62;
+FF_API_VDPAU_ALLOC_GET_SET :: LIBAVCODEC_VERSION_MAJOR < 62;
+
+AV_INPUT_BUFFER_PADDING_SIZE :: 64;
+
+AV_EF_CRCCHECK :: 1<<0;
+AV_EF_BITSTREAM :: 1<<1;
+AV_EF_BUFFER :: 1<<2;
+AV_EF_EXPLODE :: 1<<3;
+
+AV_EF_IGNORE_ERR :: 1<<15;
+AV_EF_CAREFUL :: 1<<16;
+AV_EF_COMPLIANT :: 1<<17;
+AV_EF_AGGRESSIVE :: 1<<18;
+
+FF_COMPLIANCE_VERY_STRICT :: 2;
+FF_COMPLIANCE_STRICT :: 1;
+FF_COMPLIANCE_NORMAL :: 0;
+FF_COMPLIANCE_UNOFFICIAL :: -1;
+FF_COMPLIANCE_EXPERIMENTAL :: -2;
+
+AV_PROFILE_UNKNOWN :: -99;
+AV_PROFILE_RESERVED :: -100;
+
+AV_PROFILE_AAC_MAIN :: 0;
+AV_PROFILE_AAC_LOW :: 1;
+AV_PROFILE_AAC_SSR :: 2;
+AV_PROFILE_AAC_LTP :: 3;
+AV_PROFILE_AAC_HE :: 4;
+AV_PROFILE_AAC_HE_V2 :: 28;
+AV_PROFILE_AAC_LD :: 22;
+AV_PROFILE_AAC_ELD :: 38;
+AV_PROFILE_MPEG2_AAC_LOW :: 128;
+AV_PROFILE_MPEG2_AAC_HE :: 131;
+
+AV_PROFILE_DNXHD :: 0;
+AV_PROFILE_DNXHR_LB :: 1;
+AV_PROFILE_DNXHR_SQ :: 2;
+AV_PROFILE_DNXHR_HQ :: 3;
+AV_PROFILE_DNXHR_HQX :: 4;
+AV_PROFILE_DNXHR_444 :: 5;
+
+AV_PROFILE_DTS :: 20;
+AV_PROFILE_DTS_ES :: 30;
+AV_PROFILE_DTS_96_24 :: 40;
+AV_PROFILE_DTS_HD_HRA :: 50;
+AV_PROFILE_DTS_HD_MA :: 60;
+AV_PROFILE_DTS_EXPRESS :: 70;
+AV_PROFILE_DTS_HD_MA_X :: 61;
+AV_PROFILE_DTS_HD_MA_X_IMAX :: 62;
+
+AV_PROFILE_EAC3_DDP_ATMOS :: 30;
+
+AV_PROFILE_TRUEHD_ATMOS :: 30;
+
+AV_PROFILE_MPEG2_422 :: 0;
+AV_PROFILE_MPEG2_HIGH :: 1;
+AV_PROFILE_MPEG2_SS :: 2;
+AV_PROFILE_MPEG2_SNR_SCALABLE :: 3;
+AV_PROFILE_MPEG2_MAIN :: 4;
+AV_PROFILE_MPEG2_SIMPLE :: 5;
+
+AV_PROFILE_H264_CONSTRAINED :: 1<<9;
+AV_PROFILE_H264_INTRA :: 1<<11;
+
+AV_PROFILE_H264_BASELINE :: 66;
+AV_PROFILE_H264_CONSTRAINED_BASELINE :: 66|AV_PROFILE_H264_CONSTRAINED;
+AV_PROFILE_H264_MAIN :: 77;
+AV_PROFILE_H264_EXTENDED :: 88;
+AV_PROFILE_H264_HIGH :: 100;
+AV_PROFILE_H264_HIGH_10 :: 110;
+AV_PROFILE_H264_HIGH_10_INTRA :: 110|AV_PROFILE_H264_INTRA;
+AV_PROFILE_H264_MULTIVIEW_HIGH :: 118;
+AV_PROFILE_H264_HIGH_422 :: 122;
+AV_PROFILE_H264_HIGH_422_INTRA :: 122|AV_PROFILE_H264_INTRA;
+AV_PROFILE_H264_STEREO_HIGH :: 128;
+AV_PROFILE_H264_HIGH_444 :: 144;
+AV_PROFILE_H264_HIGH_444_PREDICTIVE :: 244;
+AV_PROFILE_H264_HIGH_444_INTRA :: 244|AV_PROFILE_H264_INTRA;
+AV_PROFILE_H264_CAVLC_444 :: 44;
+
+AV_PROFILE_VC1_SIMPLE :: 0;
+AV_PROFILE_VC1_MAIN :: 1;
+AV_PROFILE_VC1_COMPLEX :: 2;
+AV_PROFILE_VC1_ADVANCED :: 3;
+
+AV_PROFILE_MPEG4_SIMPLE :: 0;
+AV_PROFILE_MPEG4_SIMPLE_SCALABLE :: 1;
+AV_PROFILE_MPEG4_CORE :: 2;
+AV_PROFILE_MPEG4_MAIN :: 3;
+AV_PROFILE_MPEG4_N_BIT :: 4;
+AV_PROFILE_MPEG4_SCALABLE_TEXTURE :: 5;
+AV_PROFILE_MPEG4_SIMPLE_FACE_ANIMATION :: 6;
+AV_PROFILE_MPEG4_BASIC_ANIMATED_TEXTURE :: 7;
+AV_PROFILE_MPEG4_HYBRID :: 8;
+AV_PROFILE_MPEG4_ADVANCED_REAL_TIME :: 9;
+AV_PROFILE_MPEG4_CORE_SCALABLE :: 10;
+AV_PROFILE_MPEG4_ADVANCED_CODING :: 11;
+AV_PROFILE_MPEG4_ADVANCED_CORE :: 12;
+AV_PROFILE_MPEG4_ADVANCED_SCALABLE_TEXTURE :: 13;
+AV_PROFILE_MPEG4_SIMPLE_STUDIO :: 14;
+AV_PROFILE_MPEG4_ADVANCED_SIMPLE :: 15;
+
+AV_PROFILE_JPEG2000_CSTREAM_RESTRICTION_0 :: 1;
+AV_PROFILE_JPEG2000_CSTREAM_RESTRICTION_1 :: 2;
+AV_PROFILE_JPEG2000_CSTREAM_NO_RESTRICTION :: 32768;
+AV_PROFILE_JPEG2000_DCINEMA_2K :: 3;
+AV_PROFILE_JPEG2000_DCINEMA_4K :: 4;
+
+AV_PROFILE_VP9_0 :: 0;
+AV_PROFILE_VP9_1 :: 1;
+AV_PROFILE_VP9_2 :: 2;
+AV_PROFILE_VP9_3 :: 3;
+
+AV_PROFILE_HEVC_MAIN :: 1;
+AV_PROFILE_HEVC_MAIN_10 :: 2;
+AV_PROFILE_HEVC_MAIN_STILL_PICTURE :: 3;
+AV_PROFILE_HEVC_REXT :: 4;
+AV_PROFILE_HEVC_SCC :: 9;
+
+AV_PROFILE_VVC_MAIN_10 :: 1;
+AV_PROFILE_VVC_MAIN_10_444 :: 33;
+
+AV_PROFILE_AV1_MAIN :: 0;
+AV_PROFILE_AV1_HIGH :: 1;
+AV_PROFILE_AV1_PROFESSIONAL :: 2;
+
+AV_PROFILE_MJPEG_HUFFMAN_BASELINE_DCT :: 0xc0;
+AV_PROFILE_MJPEG_HUFFMAN_EXTENDED_SEQUENTIAL_DCT :: 0xc1;
+AV_PROFILE_MJPEG_HUFFMAN_PROGRESSIVE_DCT :: 0xc2;
+AV_PROFILE_MJPEG_HUFFMAN_LOSSLESS :: 0xc3;
+AV_PROFILE_MJPEG_JPEG_LS :: 0xf7;
+
+AV_PROFILE_SBC_MSBC :: 1;
+
+AV_PROFILE_PRORES_PROXY :: 0;
+AV_PROFILE_PRORES_LT :: 1;
+AV_PROFILE_PRORES_STANDARD :: 2;
+AV_PROFILE_PRORES_HQ :: 3;
+AV_PROFILE_PRORES_4444 :: 4;
+AV_PROFILE_PRORES_XQ :: 5;
+
+AV_PROFILE_ARIB_PROFILE_A :: 0;
+AV_PROFILE_ARIB_PROFILE_C :: 1;
+
+AV_PROFILE_KLVA_SYNC :: 0;
+AV_PROFILE_KLVA_ASYNC :: 1;
+
+AV_PROFILE_EVC_BASELINE :: 0;
+AV_PROFILE_EVC_MAIN :: 1;
+
+AV_LEVEL_UNKNOWN :: -99;
+
+AV_BUFFER_FLAG_READONLY :: 1 << 0;
+
+AV_DICT_MATCH_CASE :: 1;
+AV_DICT_IGNORE_SUFFIX :: 2;
+
+AV_DICT_DONT_STRDUP_KEY :: 4;
+
+AV_DICT_DONT_STRDUP_VAL :: 8;
+
+AV_DICT_DONT_OVERWRITE :: 16;
+AV_DICT_APPEND :: 32;
+
+AV_DICT_MULTIKEY :: 64;
+
+AV_PKT_FLAG_KEY :: 0x0001;
+AV_PKT_FLAG_CORRUPT :: 0x0002;
+
+AV_PKT_FLAG_DISCARD :: 0x0004;
+
+AV_PKT_FLAG_TRUSTED :: 0x0008;
+
+AV_PKT_FLAG_DISPOSABLE :: 0x0010;
+
+LIBAVFORMAT_VERSION_MAJOR :: 61;
+
+FF_API_COMPUTE_PKT_FIELDS2 :: LIBAVFORMAT_VERSION_MAJOR < 62;
+FF_API_LAVF_SHORTEST :: LIBAVFORMAT_VERSION_MAJOR < 62;
+FF_API_ALLOW_FLUSH :: LIBAVFORMAT_VERSION_MAJOR < 62;
+FF_API_AVSTREAM_SIDE_DATA :: LIBAVFORMAT_VERSION_MAJOR < 62;
+
+FF_API_GET_DUR_ESTIMATE_METHOD :: LIBAVFORMAT_VERSION_MAJOR < 62;
+
+FF_API_R_FRAME_RATE :: 1;
+
+AVIO_SEEKABLE_NORMAL :: 1 << 0;
+
+AVIO_SEEKABLE_TIME :: 1 << 1;
+
+AVSEEK_SIZE :: 0x10000;
+
+AVSEEK_FORCE :: 0x20000;
+
+AVIO_FLAG_READ :: 1;
+AVIO_FLAG_WRITE :: 2;
+AVIO_FLAG_READ_WRITE :: AVIO_FLAG_READ|AVIO_FLAG_WRITE;
+
+AVIO_FLAG_NONBLOCK :: 8;
+
+AVIO_FLAG_DIRECT :: 0x8000;
+
+LIBAVFORMAT_VERSION_MINOR :: 1;
+LIBAVFORMAT_VERSION_MICRO :: 100;
+
+AV_NUM_DATA_POINTERS :: 8;
+
+AV_FRAME_FLAG_CORRUPT :: 1 << 0;
+
+AV_FRAME_FLAG_KEY :: 1 << 1;
+
+AV_FRAME_FLAG_DISCARD :: 1 << 2;
+
+AV_FRAME_FLAG_INTERLACED :: 1 << 3;
+
+AV_FRAME_FLAG_TOP_FIELD_FIRST :: 1 << 4;
+
+FF_DECODE_ERROR_INVALID_BITSTREAM :: 1;
+FF_DECODE_ERROR_MISSING_REFERENCE :: 2;
+FF_DECODE_ERROR_CONCEALMENT_ACTIVE :: 4;
+FF_DECODE_ERROR_DECODE_SLICES :: 8;
+
+AV_FRAME_SIDE_DATA_FLAG_UNIQUE :: 1 << 0;
+
+AV_CODEC_CAP_DRAW_HORIZ_BAND :: 1 << 0;
+
+AV_CODEC_CAP_DR1 :: 1 << 1;
+
+AV_CODEC_CAP_DELAY :: 1 << 5;
+
+AV_CODEC_CAP_SMALL_LAST_FRAME :: 1 << 6;
+
+AV_CODEC_CAP_SUBFRAMES :: 1 << 8;
+
+AV_CODEC_CAP_EXPERIMENTAL :: 1 << 9;
+
+AV_CODEC_CAP_CHANNEL_CONF :: 1 << 10;
+
+AV_CODEC_CAP_FRAME_THREADS :: 1 << 12;
+
+AV_CODEC_CAP_SLICE_THREADS :: 1 << 13;
+
+AV_CODEC_CAP_PARAM_CHANGE :: 1 << 14;
+
+AV_CODEC_CAP_OTHER_THREADS :: 1 << 15;
+
+AV_CODEC_CAP_VARIABLE_FRAME_SIZE :: 1 << 16;
+
+AV_CODEC_CAP_AVOID_PROBING :: 1 << 17;
+
+AV_CODEC_CAP_HARDWARE :: 1 << 18;
+
+AV_CODEC_CAP_HYBRID :: 1 << 19;
+
+AV_CODEC_CAP_ENCODER_REORDERED_OPAQUE :: 1 << 20;
+
+AV_CODEC_CAP_ENCODER_FLUSH :: 1 << 21;
+
+AV_CODEC_CAP_ENCODER_RECON_FRAME :: 1 << 22;
+
+AVPROBE_SCORE_RETRY :: AVPROBE_SCORE_MAX/4;
+AVPROBE_SCORE_STREAM_RETRY :: AVPROBE_SCORE_MAX/4-1;
+
+AVPROBE_SCORE_EXTENSION :: 50;
+AVPROBE_SCORE_MIME :: 75;
+AVPROBE_SCORE_MAX :: 100;
+
+AVPROBE_PADDING_SIZE :: 32;
+
+AVFMT_NOFILE :: 0x0001;
+AVFMT_NEEDNUMBER :: 0x0002;
+
+AVFMT_EXPERIMENTAL :: 0x0004;
+AVFMT_SHOW_IDS :: 0x0008;
+AVFMT_GLOBALHEADER :: 0x0040;
+AVFMT_NOTIMESTAMPS :: 0x0080;
+AVFMT_GENERIC_INDEX :: 0x0100;
+AVFMT_TS_DISCONT :: 0x0200;
+AVFMT_VARIABLE_FPS :: 0x0400;
+AVFMT_NODIMENSIONS :: 0x0800;
+AVFMT_NOSTREAMS :: 0x1000;
+AVFMT_NOBINSEARCH :: 0x2000;
+AVFMT_NOGENSEARCH :: 0x4000;
+AVFMT_NO_BYTE_SEEK :: 0x8000;
+
+AVFMT_ALLOW_FLUSH :: 0x10000;
+
+AVFMT_TS_NONSTRICT :: 0x20000;
+
+AVFMT_TS_NEGATIVE :: 0x40000;
+
+AVFMT_SEEK_TO_PTS :: 0x4000000;
+
+AVINDEX_KEYFRAME :: 0x0001;
+AVINDEX_DISCARD_FRAME :: 0x0002;
+
+AV_DISPOSITION_DEFAULT :: 1 << 0;
+
+AV_DISPOSITION_DUB :: 1 << 1;
+
+AV_DISPOSITION_ORIGINAL :: 1 << 2;
+
+AV_DISPOSITION_COMMENT :: 1 << 3;
+
+AV_DISPOSITION_LYRICS :: 1 << 4;
+
+AV_DISPOSITION_KARAOKE :: 1 << 5;
+
+AV_DISPOSITION_FORCED :: 1 << 6;
+
+AV_DISPOSITION_HEARING_IMPAIRED :: 1 << 7;
+
+AV_DISPOSITION_VISUAL_IMPAIRED :: 1 << 8;
+
+AV_DISPOSITION_CLEAN_EFFECTS :: 1 << 9;
+
+AV_DISPOSITION_ATTACHED_PIC :: 1 << 10;
+
+AV_DISPOSITION_TIMED_THUMBNAILS :: 1 << 11;
+
+AV_DISPOSITION_NON_DIEGETIC :: 1 << 12;
+
+AV_DISPOSITION_CAPTIONS :: 1 << 16;
+
+AV_DISPOSITION_DESCRIPTIONS :: 1 << 17;
+
+AV_DISPOSITION_METADATA :: 1 << 18;
+
+AV_DISPOSITION_DEPENDENT :: 1 << 19;
+
+AV_DISPOSITION_STILL_IMAGE :: 1 << 20;
+
+AV_PTS_WRAP_IGNORE :: 0;
+AV_PTS_WRAP_ADD_OFFSET :: 1;
+AV_PTS_WRAP_SUB_OFFSET :: -1;
+
+AVSTREAM_EVENT_FLAG_METADATA_UPDATED :: 0x0001;
+
+AVSTREAM_EVENT_FLAG_NEW_PACKETS :: 1 << 1;
+
+AV_PROGRAM_RUNNING :: 1;
+
+AVFMTCTX_NOHEADER :: 0x0001;
+
+AVFMTCTX_UNSEEKABLE :: 0x0002;
+
+AVFMT_FLAG_GENPTS :: 0x0001;
+AVFMT_FLAG_IGNIDX :: 0x0002;
+AVFMT_FLAG_NONBLOCK :: 0x0004;
+AVFMT_FLAG_IGNDTS :: 0x0008;
+AVFMT_FLAG_NOFILLIN :: 0x0010;
+AVFMT_FLAG_NOPARSE :: 0x0020;
+AVFMT_FLAG_NOBUFFER :: 0x0040;
+AVFMT_FLAG_CUSTOM_IO :: 0x0080;
+AVFMT_FLAG_DISCARD_CORRUPT :: 0x0100;
+AVFMT_FLAG_FLUSH_PACKETS :: 0x0200;
+
+AVFMT_FLAG_BITEXACT :: 0x0400;
+AVFMT_FLAG_SORT_DTS :: 0x10000;
+AVFMT_FLAG_FAST_SEEK :: 0x80000;
+
+AVFMT_FLAG_SHORTEST :: 0x100000;
+
+AVFMT_FLAG_AUTO_BSF :: 0x200000;
+
+FF_FDEBUG_TS :: 0x0001;
+
+AVFMT_EVENT_FLAG_METADATA_UPDATED :: 0x0001;
+
+AVFMT_AVOID_NEG_TS_AUTO :: -1;
+AVFMT_AVOID_NEG_TS_DISABLED :: 0;
+AVFMT_AVOID_NEG_TS_MAKE_NON_NEGATIVE :: 1;
+AVFMT_AVOID_NEG_TS_MAKE_ZERO :: 2;
+
+AVSEEK_FLAG_BACKWARD :: 1;
+AVSEEK_FLAG_BYTE :: 2;
+AVSEEK_FLAG_ANY :: 4;
+AVSEEK_FLAG_FRAME :: 8;
+
+AVSTREAM_INIT_IN_WRITE_HEADER :: 0;
+AVSTREAM_INIT_IN_INIT_OUTPUT :: 1;
+
+AV_FRAME_FILENAME_FLAGS_MULTIPLE :: 1;
+
+LONG :: s32;
+ULONG :: u32;
+
+SHORT_BITS :: 16;
+CHAR_BITS :: 8;
+
+WAV_BITS :: 16;
+SAMPLE_BITS :: 16;
+SAMPLE_MAX :: cast(INT_PCM) ((cast(ULONG)1 << (SAMPLE_BITS - 1)) - 1);
+SAMPLE_MIN :: ~SAMPLE_MAX;
+
+ALIGNMENT_DEFAULT :: 8;
+
+ALIGNMENT_EXTRES :: ALIGNMENT_DEFAULT;
+
+FDK_EXITCODE_OK :: 0;
+FDK_EXITCODE_USAGE :: 64;
+
+FDK_EXITCODE_DATAERROR :: 65;
+
+FDK_EXITCODE_NOINPUT :: 66;
+
+FDK_EXITCODE_UNAVAILABLE :: 69;
+
+FDK_EXITCODE_SOFTWARE :: 70;
+
+FDK_EXITCODE_CANTCREATE :: 73;
+
+FDK_EXITCODE_IOERROR :: 74;
+
+FDK_MAX_OVERLAYS :: 8;
+
+FDK_INT_MAX :: cast(s32) 0x7FFFFFFF;
+FDK_INT_MIN :: cast(s32) 0x80000000;
+
+AC_ER_VCB11 :: 0x000001;
+
+AC_ER_RVLC :: 0x000002;
+
+AC_ER_HCR :: 0x000004;
+
+AC_SCALABLE :: 0x000008;
+AC_ELD :: 0x000010;
+AC_LD :: 0x000020;
+AC_ER :: 0x000040;
+AC_BSAC :: 0x000080;
+AC_USAC :: 0x000100;
+AC_RSV603DA :: 0x000200;
+AC_HDAAC :: 0x000400;
+AC_RSVD50 :: 0x004000;
+AC_SBR_PRESENT :: 0x008000;
+AC_SBRCRC :: 0x010000;
+
+AC_PS_PRESENT :: 0x020000;
+AC_MPS_PRESENT :: 0x040000;
+
+AC_DRM :: 0x080000;
+AC_INDEP :: 0x100000;
+AC_MPEGD_RES :: 0x200000;
+AC_SAOC_PRESENT :: 0x400000;
+AC_DAB :: 0x800000;
+AC_ELD_DOWNSCALE :: 0x1000000;
+AC_LD_MPS :: 0x2000000;
+AC_DRC_PRESENT :: 0x4000000;
+
+AC_USAC_SCFGI3 :: 0x8000000;
+
+AC_CM_DET_CFG_CHANGE :: 0x000001;
+
+AC_CM_ALLOC_MEM :: 0x000002;
+
+AC_EL_USAC_TW :: 0x000001;
+AC_EL_USAC_NOISE :: 0x000002;
+AC_EL_USAC_ITES :: 0x000004;
+AC_EL_USAC_PVC :: 0x000008;
+
+AC_EL_USAC_MPS212 :: 0x000010;
+AC_EL_USAC_LFE :: 0x000020;
+AC_EL_USAC_CP_POSSIBLE :: 0x000040;
+
+AC_EL_ENHANCED_NOISE :: 0x000080;
+AC_EL_IGF_AFTER_TNS :: 0x000100;
+AC_EL_IGF_INDEP_TILING :: 0x000200;
+AC_EL_IGF_USE_ENF :: 0x000400;
+AC_EL_FULLBANDLPD :: 0x000800;
+AC_EL_LPDSTEREOIDX :: 0x001000;
+AC_EL_LFE :: 0x002000;
+
+CC_MPEG_ID :: 0x00100000;
+CC_IS_BASELAYER :: 0x00200000;
+CC_PROTECTION :: 0x00400000;
+CC_SBR :: 0x00800000;
+CC_SBRCRC :: 0x00010000;
+CC_SAC :: 0x00020000;
+CC_RVLC :: 0x01000000;
+CC_VCB11 :: 0x02000000;
+CC_HCR :: 0x04000000;
+CC_PSEUDO_SURROUND :: 0x08000000;
+CC_USAC_NOISE :: 0x10000000;
+CC_USAC_TW :: 0x20000000;
+CC_USAC_HBE :: 0x40000000;
+
+USAC_ID_BIT :: 16;
+
+EXT_ID_BITS :: 4;
+
+CAPF_AAC_LC :: 0x00000001;
+CAPF_ER_AAC_LD :: 0x00000002;
+
+CAPF_ER_AAC_SCAL :: 0x00000004;
+CAPF_ER_AAC_LC :: 0x00000008;
+
+CAPF_AAC_480 :: 0x00000010;
+
+CAPF_AAC_512 :: 0x00000020;
+
+CAPF_AAC_960 :: 0x00000040;
+
+CAPF_AAC_1024 :: 0x00000080;
+
+CAPF_AAC_HCR :: 0x00000100;
+
+CAPF_AAC_VCB11 :: 0x00000200;
+
+CAPF_AAC_RVLC :: 0x00000400;
+
+CAPF_AAC_MPEG4 :: 0x00000800;
+CAPF_AAC_DRC :: 0x00001000;
+
+CAPF_AAC_CONCEALMENT :: 0x00002000;
+
+CAPF_AAC_DRM_BSFORMAT :: 0x00004000;
+
+CAPF_ER_AAC_ELD :: 0x00008000;
+
+CAPF_ER_AAC_BSAC :: 0x00010000;
+
+CAPF_AAC_ELD_DOWNSCALE :: 0x00040000;
+
+CAPF_AAC_USAC_LP :: 0x00100000;
+
+CAPF_AAC_USAC :: 0x00200000;
+
+CAPF_ER_AAC_ELDV2 :: 0x00800000;
+
+CAPF_AAC_UNIDRC :: 0x01000000;
+
+CAPF_ADTS :: 0x00000001;
+
+CAPF_ADIF :: 0x00000002;
+
+CAPF_LATM :: 0x00000004;
+
+CAPF_LOAS :: 0x00000008;
+
+CAPF_RAWPACKETS :: 0x00000010;
+
+CAPF_DRM :: 0x00000020;
+
+CAPF_RSVD50 :: 0x00000040;
+
+CAPF_SBR_LP :: 0x00000001;
+
+CAPF_SBR_HQ :: 0x00000002;
+
+CAPF_SBR_DRM_BS :: 0x00000004;
+
+CAPF_SBR_CONCEALMENT :: 0x00000008;
+
+CAPF_SBR_DRC :: 0x00000010;
+
+CAPF_SBR_PS_MPEG :: 0x00000020;
+
+CAPF_SBR_PS_DRM :: 0x00000040;
+
+CAPF_SBR_ELD_DOWNSCALE :: 0x00000080;
+
+CAPF_SBR_HBEHQ :: 0x00000100;
+
+CAPF_DMX_BLIND :: 0x00000001;
+
+CAPF_DMX_PCE :: 0x00000002;
+
+CAPF_DMX_ARIB :: 0x00000004;
+
+CAPF_DMX_DVB :: 0x00000008;
+
+CAPF_DMX_CH_EXP :: 0x00000010;
+
+CAPF_DMX_6_CH :: 0x00000020;
+
+CAPF_DMX_8_CH :: 0x00000040;
+
+CAPF_DMX_24_CH :: 0x00000080;
+
+CAPF_LIMITER :: 0x00002000;
+
+CAPF_MPS_STD :: 0x00000001;
+
+CAPF_MPS_LD :: 0x00000002;
+
+CAPF_MPS_USAC :: 0x00000004;
+
+CAPF_MPS_HQ :: 0x00000010;
+
+CAPF_MPS_LP :: 0x00000020;
+
+CAPF_MPS_BLIND :: 0x00000040;
+
+CAPF_MPS_BINAURAL :: 0x00000080;
+
+CAPF_MPS_2CH_OUT :: 0x00000100;
+
+CAPF_MPS_6CH_OUT :: 0x00000200;
+
+CAPF_MPS_8CH_OUT :: 0x00000400;
+
+CAPF_MPS_1CH_IN :: 0x00001000;
+
+CAPF_MPS_2CH_IN :: 0x00002000;
+
+CAPF_MPS_6CH_IN :: 0x00004000;
+
+FDK_BUF_TYPE_MASK_IO :: cast(u32) 0x03 << 30;
+FDK_BUF_TYPE_MASK_DESCR :: cast(u32) 0x3F << 16;
+FDK_BUF_TYPE_MASK_ID :: cast(u32) 0xFF;
+
+FDK_BUF_TYPE_INPUT :: cast(u32) 0x1 << 30;
+FDK_BUF_TYPE_OUTPUT :: cast(u32) 0x2 << 30;
+
+FDK_BUF_TYPE_PCM_DATA :: cast(u32) 0x1 << 16;
+FDK_BUF_TYPE_ANC_DATA :: cast(u32) 0x2 << 16;
+FDK_BUF_TYPE_BS_DATA :: cast(u32) 0x4 << 16;
+
+AACDECODER_LIB_VL0 :: 3;
+AACDECODER_LIB_VL1 :: 2;
+AACDECODER_LIB_VL2 :: 0;
+
+AACDEC_CONCEAL :: 1;
+
+AACDEC_FLUSH :: 2;
+
+AACDEC_INTR :: 4;
+
+AACDEC_CLRHIST :: 8;
+
 ma_int8 :: s8;
 ma_uint8 :: u8;
 ma_int16 :: s16;
@@ -395,12 +1131,12 @@ ma_semaphore :: struct {
 /*
 Retrieves the version of miniaudio as separated integers. Each component can be NULL if it's not required.
 */
-ma_version :: (pMajor: *ma_uint32, pMinor: *ma_uint32, pRevision: *ma_uint32) -> void #foreign miniaudio;
+ma_version :: (pMajor: *ma_uint32, pMinor: *ma_uint32, pRevision: *ma_uint32) -> void #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the version of miniaudio as a string which can be useful for logging purposes.
 */
-ma_version_string :: () -> *u8 #foreign miniaudio;
+ma_version_string :: () -> *u8 #foreign miniaudio_fdkaac;
 
 /*
 The callback for handling log messages.
@@ -433,7 +1169,7 @@ ma_log_callback :: struct {
     pUserData: *void;
 }
 
-ma_log_callback_init :: (onLog: ma_log_callback_proc, pUserData: *void) -> ma_log_callback #foreign miniaudio;
+ma_log_callback_init :: (onLog: ma_log_callback_proc, pUserData: *void) -> ma_log_callback #foreign miniaudio_fdkaac;
 
 ma_log :: struct {
     callbacks:           [4] ma_log_callback;
@@ -443,13 +1179,13 @@ ma_log :: struct {
     lock:                ma_mutex; /* For thread safety just to make it easier and safer for the logging implementation. */
 }
 
-ma_log_init :: (pAllocationCallbacks: *ma_allocation_callbacks, pLog: *ma_log) -> ma_result #foreign miniaudio;
-ma_log_uninit :: (pLog: *ma_log) -> void #foreign miniaudio;
-ma_log_register_callback :: (pLog: *ma_log, callback: ma_log_callback) -> ma_result #foreign miniaudio;
-ma_log_unregister_callback :: (pLog: *ma_log, callback: ma_log_callback) -> ma_result #foreign miniaudio;
-ma_log_post :: (pLog: *ma_log, level: ma_uint32, pMessage: *u8) -> ma_result #foreign miniaudio;
+ma_log_init :: (pAllocationCallbacks: *ma_allocation_callbacks, pLog: *ma_log) -> ma_result #foreign miniaudio_fdkaac;
+ma_log_uninit :: (pLog: *ma_log) -> void #foreign miniaudio_fdkaac;
+ma_log_register_callback :: (pLog: *ma_log, callback: ma_log_callback) -> ma_result #foreign miniaudio_fdkaac;
+ma_log_unregister_callback :: (pLog: *ma_log, callback: ma_log_callback) -> ma_result #foreign miniaudio_fdkaac;
+ma_log_post :: (pLog: *ma_log, level: ma_uint32, pMessage: *u8) -> ma_result #foreign miniaudio_fdkaac;
 
-ma_log_postf_CFormat :: (pLog: *ma_log, level: ma_uint32, pFormat: *u8, __args: ..Any) -> ma_result #foreign miniaudio "ma_log_postf";
+ma_log_postf_CFormat :: (pLog: *ma_log, level: ma_uint32, pFormat: *u8, __args: ..Any) -> ma_result #foreign miniaudio_fdkaac "ma_log_postf";
 ma_log_postf :: (pLog: *ma_log, level: ma_uint32, pFormat: string, __args: ..Any) -> ma_result {
     push_allocator(temp);
     formatted_text_builder: String_Builder;
@@ -480,7 +1216,7 @@ ma_biquad_config :: struct {
     a2:       float64;
 }
 
-ma_biquad_config_init :: (format: ma_format, channels: ma_uint32, b0: float64, b1: float64, b2: float64, a0: float64, a1: float64, a2: float64) -> ma_biquad_config #foreign miniaudio;
+ma_biquad_config_init :: (format: ma_format, channels: ma_uint32, b0: float64, b1: float64, b2: float64, a0: float64, a1: float64, a2: float64) -> ma_biquad_config #foreign miniaudio_fdkaac;
 
 ma_biquad :: struct {
     format:    ma_format;
@@ -498,14 +1234,14 @@ ma_biquad :: struct {
     _ownsHeap: ma_bool32;
 }
 
-ma_biquad_get_heap_size :: (pConfig: *ma_biquad_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_biquad_init_preallocated :: (pConfig: *ma_biquad_config, pHeap: *void, pBQ: *ma_biquad) -> ma_result #foreign miniaudio;
-ma_biquad_init :: (pConfig: *ma_biquad_config, pAllocationCallbacks: *ma_allocation_callbacks, pBQ: *ma_biquad) -> ma_result #foreign miniaudio;
-ma_biquad_uninit :: (pBQ: *ma_biquad, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_biquad_reinit :: (pConfig: *ma_biquad_config, pBQ: *ma_biquad) -> ma_result #foreign miniaudio;
-ma_biquad_clear_cache :: (pBQ: *ma_biquad) -> ma_result #foreign miniaudio;
-ma_biquad_process_pcm_frames :: (pBQ: *ma_biquad, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_biquad_get_latency :: (pBQ: *ma_biquad) -> ma_uint32 #foreign miniaudio;
+ma_biquad_get_heap_size :: (pConfig: *ma_biquad_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_biquad_init_preallocated :: (pConfig: *ma_biquad_config, pHeap: *void, pBQ: *ma_biquad) -> ma_result #foreign miniaudio_fdkaac;
+ma_biquad_init :: (pConfig: *ma_biquad_config, pAllocationCallbacks: *ma_allocation_callbacks, pBQ: *ma_biquad) -> ma_result #foreign miniaudio_fdkaac;
+ma_biquad_uninit :: (pBQ: *ma_biquad, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_biquad_reinit :: (pConfig: *ma_biquad_config, pBQ: *ma_biquad) -> ma_result #foreign miniaudio_fdkaac;
+ma_biquad_clear_cache :: (pBQ: *ma_biquad) -> ma_result #foreign miniaudio_fdkaac;
+ma_biquad_process_pcm_frames :: (pBQ: *ma_biquad, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_biquad_get_latency :: (pBQ: *ma_biquad) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 /**************************************************************************************************************************************************************
 
@@ -527,8 +1263,8 @@ Low-Pass Filtering
 **************************************************************************************************************************************************************/
 ma_lpf2_config :: ma_lpf1_config;
 
-ma_lpf1_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64) -> ma_lpf1_config #foreign miniaudio;
-ma_lpf2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, q: float64) -> ma_lpf2_config #foreign miniaudio;
+ma_lpf1_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64) -> ma_lpf1_config #foreign miniaudio_fdkaac;
+ma_lpf2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, q: float64) -> ma_lpf2_config #foreign miniaudio_fdkaac;
 
 ma_lpf1 :: struct {
     format:    ma_format;
@@ -541,27 +1277,27 @@ ma_lpf1 :: struct {
     _ownsHeap: ma_bool32;
 }
 
-ma_lpf1_get_heap_size :: (pConfig: *ma_lpf1_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_lpf1_init_preallocated :: (pConfig: *ma_lpf1_config, pHeap: *void, pLPF: *ma_lpf1) -> ma_result #foreign miniaudio;
-ma_lpf1_init :: (pConfig: *ma_lpf1_config, pAllocationCallbacks: *ma_allocation_callbacks, pLPF: *ma_lpf1) -> ma_result #foreign miniaudio;
-ma_lpf1_uninit :: (pLPF: *ma_lpf1, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_lpf1_reinit :: (pConfig: *ma_lpf1_config, pLPF: *ma_lpf1) -> ma_result #foreign miniaudio;
-ma_lpf1_clear_cache :: (pLPF: *ma_lpf1) -> ma_result #foreign miniaudio;
-ma_lpf1_process_pcm_frames :: (pLPF: *ma_lpf1, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_lpf1_get_latency :: (pLPF: *ma_lpf1) -> ma_uint32 #foreign miniaudio;
+ma_lpf1_get_heap_size :: (pConfig: *ma_lpf1_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf1_init_preallocated :: (pConfig: *ma_lpf1_config, pHeap: *void, pLPF: *ma_lpf1) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf1_init :: (pConfig: *ma_lpf1_config, pAllocationCallbacks: *ma_allocation_callbacks, pLPF: *ma_lpf1) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf1_uninit :: (pLPF: *ma_lpf1, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_lpf1_reinit :: (pConfig: *ma_lpf1_config, pLPF: *ma_lpf1) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf1_clear_cache :: (pLPF: *ma_lpf1) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf1_process_pcm_frames :: (pLPF: *ma_lpf1, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf1_get_latency :: (pLPF: *ma_lpf1) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 ma_lpf2 :: struct {
     bq: ma_biquad; /* The second order low-pass filter is implemented as a biquad filter. */
 }
 
-ma_lpf2_get_heap_size :: (pConfig: *ma_lpf2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_lpf2_init_preallocated :: (pConfig: *ma_lpf2_config, pHeap: *void, pHPF: *ma_lpf2) -> ma_result #foreign miniaudio;
-ma_lpf2_init :: (pConfig: *ma_lpf2_config, pAllocationCallbacks: *ma_allocation_callbacks, pLPF: *ma_lpf2) -> ma_result #foreign miniaudio;
-ma_lpf2_uninit :: (pLPF: *ma_lpf2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_lpf2_reinit :: (pConfig: *ma_lpf2_config, pLPF: *ma_lpf2) -> ma_result #foreign miniaudio;
-ma_lpf2_clear_cache :: (pLPF: *ma_lpf2) -> ma_result #foreign miniaudio;
-ma_lpf2_process_pcm_frames :: (pLPF: *ma_lpf2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_lpf2_get_latency :: (pLPF: *ma_lpf2) -> ma_uint32 #foreign miniaudio;
+ma_lpf2_get_heap_size :: (pConfig: *ma_lpf2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf2_init_preallocated :: (pConfig: *ma_lpf2_config, pHeap: *void, pHPF: *ma_lpf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf2_init :: (pConfig: *ma_lpf2_config, pAllocationCallbacks: *ma_allocation_callbacks, pLPF: *ma_lpf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf2_uninit :: (pLPF: *ma_lpf2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_lpf2_reinit :: (pConfig: *ma_lpf2_config, pLPF: *ma_lpf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf2_clear_cache :: (pLPF: *ma_lpf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf2_process_pcm_frames :: (pLPF: *ma_lpf2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf2_get_latency :: (pLPF: *ma_lpf2) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 ma_lpf_config :: struct {
     format:          ma_format;
@@ -571,7 +1307,7 @@ ma_lpf_config :: struct {
     order:           ma_uint32; /* If set to 0, will be treated as a passthrough (no filtering will be applied). */
 }
 
-ma_lpf_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, order: ma_uint32) -> ma_lpf_config #foreign miniaudio;
+ma_lpf_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, order: ma_uint32) -> ma_lpf_config #foreign miniaudio_fdkaac;
 
 ma_lpf :: struct {
     format:     ma_format;
@@ -587,14 +1323,14 @@ ma_lpf :: struct {
     _ownsHeap:  ma_bool32;
 }
 
-ma_lpf_get_heap_size :: (pConfig: *ma_lpf_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_lpf_init_preallocated :: (pConfig: *ma_lpf_config, pHeap: *void, pLPF: *ma_lpf) -> ma_result #foreign miniaudio;
-ma_lpf_init :: (pConfig: *ma_lpf_config, pAllocationCallbacks: *ma_allocation_callbacks, pLPF: *ma_lpf) -> ma_result #foreign miniaudio;
-ma_lpf_uninit :: (pLPF: *ma_lpf, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_lpf_reinit :: (pConfig: *ma_lpf_config, pLPF: *ma_lpf) -> ma_result #foreign miniaudio;
-ma_lpf_clear_cache :: (pLPF: *ma_lpf) -> ma_result #foreign miniaudio;
-ma_lpf_process_pcm_frames :: (pLPF: *ma_lpf, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_lpf_get_latency :: (pLPF: *ma_lpf) -> ma_uint32 #foreign miniaudio;
+ma_lpf_get_heap_size :: (pConfig: *ma_lpf_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf_init_preallocated :: (pConfig: *ma_lpf_config, pHeap: *void, pLPF: *ma_lpf) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf_init :: (pConfig: *ma_lpf_config, pAllocationCallbacks: *ma_allocation_callbacks, pLPF: *ma_lpf) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf_uninit :: (pLPF: *ma_lpf, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_lpf_reinit :: (pConfig: *ma_lpf_config, pLPF: *ma_lpf) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf_clear_cache :: (pLPF: *ma_lpf) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf_process_pcm_frames :: (pLPF: *ma_lpf, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf_get_latency :: (pLPF: *ma_lpf) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 /**************************************************************************************************************************************************************
 
@@ -616,8 +1352,8 @@ High-Pass Filtering
 **************************************************************************************************************************************************************/
 ma_hpf2_config :: ma_hpf1_config;
 
-ma_hpf1_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64) -> ma_hpf1_config #foreign miniaudio;
-ma_hpf2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, q: float64) -> ma_hpf2_config #foreign miniaudio;
+ma_hpf1_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64) -> ma_hpf1_config #foreign miniaudio_fdkaac;
+ma_hpf2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, q: float64) -> ma_hpf2_config #foreign miniaudio_fdkaac;
 
 ma_hpf1 :: struct {
     format:    ma_format;
@@ -630,25 +1366,25 @@ ma_hpf1 :: struct {
     _ownsHeap: ma_bool32;
 }
 
-ma_hpf1_get_heap_size :: (pConfig: *ma_hpf1_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_hpf1_init_preallocated :: (pConfig: *ma_hpf1_config, pHeap: *void, pLPF: *ma_hpf1) -> ma_result #foreign miniaudio;
-ma_hpf1_init :: (pConfig: *ma_hpf1_config, pAllocationCallbacks: *ma_allocation_callbacks, pHPF: *ma_hpf1) -> ma_result #foreign miniaudio;
-ma_hpf1_uninit :: (pHPF: *ma_hpf1, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_hpf1_reinit :: (pConfig: *ma_hpf1_config, pHPF: *ma_hpf1) -> ma_result #foreign miniaudio;
-ma_hpf1_process_pcm_frames :: (pHPF: *ma_hpf1, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_hpf1_get_latency :: (pHPF: *ma_hpf1) -> ma_uint32 #foreign miniaudio;
+ma_hpf1_get_heap_size :: (pConfig: *ma_hpf1_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf1_init_preallocated :: (pConfig: *ma_hpf1_config, pHeap: *void, pLPF: *ma_hpf1) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf1_init :: (pConfig: *ma_hpf1_config, pAllocationCallbacks: *ma_allocation_callbacks, pHPF: *ma_hpf1) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf1_uninit :: (pHPF: *ma_hpf1, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_hpf1_reinit :: (pConfig: *ma_hpf1_config, pHPF: *ma_hpf1) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf1_process_pcm_frames :: (pHPF: *ma_hpf1, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf1_get_latency :: (pHPF: *ma_hpf1) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 ma_hpf2 :: struct {
     bq: ma_biquad; /* The second order high-pass filter is implemented as a biquad filter. */
 }
 
-ma_hpf2_get_heap_size :: (pConfig: *ma_hpf2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_hpf2_init_preallocated :: (pConfig: *ma_hpf2_config, pHeap: *void, pHPF: *ma_hpf2) -> ma_result #foreign miniaudio;
-ma_hpf2_init :: (pConfig: *ma_hpf2_config, pAllocationCallbacks: *ma_allocation_callbacks, pHPF: *ma_hpf2) -> ma_result #foreign miniaudio;
-ma_hpf2_uninit :: (pHPF: *ma_hpf2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_hpf2_reinit :: (pConfig: *ma_hpf2_config, pHPF: *ma_hpf2) -> ma_result #foreign miniaudio;
-ma_hpf2_process_pcm_frames :: (pHPF: *ma_hpf2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_hpf2_get_latency :: (pHPF: *ma_hpf2) -> ma_uint32 #foreign miniaudio;
+ma_hpf2_get_heap_size :: (pConfig: *ma_hpf2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf2_init_preallocated :: (pConfig: *ma_hpf2_config, pHeap: *void, pHPF: *ma_hpf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf2_init :: (pConfig: *ma_hpf2_config, pAllocationCallbacks: *ma_allocation_callbacks, pHPF: *ma_hpf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf2_uninit :: (pHPF: *ma_hpf2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_hpf2_reinit :: (pConfig: *ma_hpf2_config, pHPF: *ma_hpf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf2_process_pcm_frames :: (pHPF: *ma_hpf2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf2_get_latency :: (pHPF: *ma_hpf2) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 ma_hpf_config :: struct {
     format:          ma_format;
@@ -658,7 +1394,7 @@ ma_hpf_config :: struct {
     order:           ma_uint32; /* If set to 0, will be treated as a passthrough (no filtering will be applied). */
 }
 
-ma_hpf_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, order: ma_uint32) -> ma_hpf_config #foreign miniaudio;
+ma_hpf_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, order: ma_uint32) -> ma_hpf_config #foreign miniaudio_fdkaac;
 
 ma_hpf :: struct {
     format:     ma_format;
@@ -674,13 +1410,13 @@ ma_hpf :: struct {
     _ownsHeap:  ma_bool32;
 }
 
-ma_hpf_get_heap_size :: (pConfig: *ma_hpf_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_hpf_init_preallocated :: (pConfig: *ma_hpf_config, pHeap: *void, pLPF: *ma_hpf) -> ma_result #foreign miniaudio;
-ma_hpf_init :: (pConfig: *ma_hpf_config, pAllocationCallbacks: *ma_allocation_callbacks, pHPF: *ma_hpf) -> ma_result #foreign miniaudio;
-ma_hpf_uninit :: (pHPF: *ma_hpf, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_hpf_reinit :: (pConfig: *ma_hpf_config, pHPF: *ma_hpf) -> ma_result #foreign miniaudio;
-ma_hpf_process_pcm_frames :: (pHPF: *ma_hpf, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_hpf_get_latency :: (pHPF: *ma_hpf) -> ma_uint32 #foreign miniaudio;
+ma_hpf_get_heap_size :: (pConfig: *ma_hpf_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf_init_preallocated :: (pConfig: *ma_hpf_config, pHeap: *void, pLPF: *ma_hpf) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf_init :: (pConfig: *ma_hpf_config, pAllocationCallbacks: *ma_allocation_callbacks, pHPF: *ma_hpf) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf_uninit :: (pHPF: *ma_hpf, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_hpf_reinit :: (pConfig: *ma_hpf_config, pHPF: *ma_hpf) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf_process_pcm_frames :: (pHPF: *ma_hpf, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf_get_latency :: (pHPF: *ma_hpf) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 /**************************************************************************************************************************************************************
 
@@ -695,19 +1431,19 @@ ma_bpf2_config :: struct {
     q:               float64;
 }
 
-ma_bpf2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, q: float64) -> ma_bpf2_config #foreign miniaudio;
+ma_bpf2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, q: float64) -> ma_bpf2_config #foreign miniaudio_fdkaac;
 
 ma_bpf2 :: struct {
     bq: ma_biquad; /* The second order band-pass filter is implemented as a biquad filter. */
 }
 
-ma_bpf2_get_heap_size :: (pConfig: *ma_bpf2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_bpf2_init_preallocated :: (pConfig: *ma_bpf2_config, pHeap: *void, pBPF: *ma_bpf2) -> ma_result #foreign miniaudio;
-ma_bpf2_init :: (pConfig: *ma_bpf2_config, pAllocationCallbacks: *ma_allocation_callbacks, pBPF: *ma_bpf2) -> ma_result #foreign miniaudio;
-ma_bpf2_uninit :: (pBPF: *ma_bpf2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_bpf2_reinit :: (pConfig: *ma_bpf2_config, pBPF: *ma_bpf2) -> ma_result #foreign miniaudio;
-ma_bpf2_process_pcm_frames :: (pBPF: *ma_bpf2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_bpf2_get_latency :: (pBPF: *ma_bpf2) -> ma_uint32 #foreign miniaudio;
+ma_bpf2_get_heap_size :: (pConfig: *ma_bpf2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_bpf2_init_preallocated :: (pConfig: *ma_bpf2_config, pHeap: *void, pBPF: *ma_bpf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_bpf2_init :: (pConfig: *ma_bpf2_config, pAllocationCallbacks: *ma_allocation_callbacks, pBPF: *ma_bpf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_bpf2_uninit :: (pBPF: *ma_bpf2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_bpf2_reinit :: (pConfig: *ma_bpf2_config, pBPF: *ma_bpf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_bpf2_process_pcm_frames :: (pBPF: *ma_bpf2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_bpf2_get_latency :: (pBPF: *ma_bpf2) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 ma_bpf_config :: struct {
     format:          ma_format;
@@ -717,7 +1453,7 @@ ma_bpf_config :: struct {
     order:           ma_uint32; /* If set to 0, will be treated as a passthrough (no filtering will be applied). */
 }
 
-ma_bpf_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, order: ma_uint32) -> ma_bpf_config #foreign miniaudio;
+ma_bpf_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, order: ma_uint32) -> ma_bpf_config #foreign miniaudio_fdkaac;
 
 ma_bpf :: struct {
     format:    ma_format;
@@ -730,13 +1466,13 @@ ma_bpf :: struct {
     _ownsHeap: ma_bool32;
 }
 
-ma_bpf_get_heap_size :: (pConfig: *ma_bpf_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_bpf_init_preallocated :: (pConfig: *ma_bpf_config, pHeap: *void, pBPF: *ma_bpf) -> ma_result #foreign miniaudio;
-ma_bpf_init :: (pConfig: *ma_bpf_config, pAllocationCallbacks: *ma_allocation_callbacks, pBPF: *ma_bpf) -> ma_result #foreign miniaudio;
-ma_bpf_uninit :: (pBPF: *ma_bpf, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_bpf_reinit :: (pConfig: *ma_bpf_config, pBPF: *ma_bpf) -> ma_result #foreign miniaudio;
-ma_bpf_process_pcm_frames :: (pBPF: *ma_bpf, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_bpf_get_latency :: (pBPF: *ma_bpf) -> ma_uint32 #foreign miniaudio;
+ma_bpf_get_heap_size :: (pConfig: *ma_bpf_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_bpf_init_preallocated :: (pConfig: *ma_bpf_config, pHeap: *void, pBPF: *ma_bpf) -> ma_result #foreign miniaudio_fdkaac;
+ma_bpf_init :: (pConfig: *ma_bpf_config, pAllocationCallbacks: *ma_allocation_callbacks, pBPF: *ma_bpf) -> ma_result #foreign miniaudio_fdkaac;
+ma_bpf_uninit :: (pBPF: *ma_bpf, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_bpf_reinit :: (pConfig: *ma_bpf_config, pBPF: *ma_bpf) -> ma_result #foreign miniaudio_fdkaac;
+ma_bpf_process_pcm_frames :: (pBPF: *ma_bpf, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_bpf_get_latency :: (pBPF: *ma_bpf) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 /**************************************************************************************************************************************************************
 
@@ -758,19 +1494,19 @@ Notching Filter
 **************************************************************************************************************************************************************/
 ma_notch_config :: ma_notch2_config;
 
-ma_notch2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, q: float64, frequency: float64) -> ma_notch2_config #foreign miniaudio;
+ma_notch2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, q: float64, frequency: float64) -> ma_notch2_config #foreign miniaudio_fdkaac;
 
 ma_notch2 :: struct {
     bq: ma_biquad;
 }
 
-ma_notch2_get_heap_size :: (pConfig: *ma_notch2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_notch2_init_preallocated :: (pConfig: *ma_notch2_config, pHeap: *void, pFilter: *ma_notch2) -> ma_result #foreign miniaudio;
-ma_notch2_init :: (pConfig: *ma_notch2_config, pAllocationCallbacks: *ma_allocation_callbacks, pFilter: *ma_notch2) -> ma_result #foreign miniaudio;
-ma_notch2_uninit :: (pFilter: *ma_notch2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_notch2_reinit :: (pConfig: *ma_notch2_config, pFilter: *ma_notch2) -> ma_result #foreign miniaudio;
-ma_notch2_process_pcm_frames :: (pFilter: *ma_notch2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_notch2_get_latency :: (pFilter: *ma_notch2) -> ma_uint32 #foreign miniaudio;
+ma_notch2_get_heap_size :: (pConfig: *ma_notch2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_notch2_init_preallocated :: (pConfig: *ma_notch2_config, pHeap: *void, pFilter: *ma_notch2) -> ma_result #foreign miniaudio_fdkaac;
+ma_notch2_init :: (pConfig: *ma_notch2_config, pAllocationCallbacks: *ma_allocation_callbacks, pFilter: *ma_notch2) -> ma_result #foreign miniaudio_fdkaac;
+ma_notch2_uninit :: (pFilter: *ma_notch2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_notch2_reinit :: (pConfig: *ma_notch2_config, pFilter: *ma_notch2) -> ma_result #foreign miniaudio_fdkaac;
+ma_notch2_process_pcm_frames :: (pFilter: *ma_notch2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_notch2_get_latency :: (pFilter: *ma_notch2) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 /**************************************************************************************************************************************************************
 
@@ -793,19 +1529,19 @@ Peaking EQ Filter
 **************************************************************************************************************************************************************/
 ma_peak_config :: ma_peak2_config;
 
-ma_peak2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, gainDB: float64, q: float64, frequency: float64) -> ma_peak2_config #foreign miniaudio;
+ma_peak2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, gainDB: float64, q: float64, frequency: float64) -> ma_peak2_config #foreign miniaudio_fdkaac;
 
 ma_peak2 :: struct {
     bq: ma_biquad;
 }
 
-ma_peak2_get_heap_size :: (pConfig: *ma_peak2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_peak2_init_preallocated :: (pConfig: *ma_peak2_config, pHeap: *void, pFilter: *ma_peak2) -> ma_result #foreign miniaudio;
-ma_peak2_init :: (pConfig: *ma_peak2_config, pAllocationCallbacks: *ma_allocation_callbacks, pFilter: *ma_peak2) -> ma_result #foreign miniaudio;
-ma_peak2_uninit :: (pFilter: *ma_peak2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_peak2_reinit :: (pConfig: *ma_peak2_config, pFilter: *ma_peak2) -> ma_result #foreign miniaudio;
-ma_peak2_process_pcm_frames :: (pFilter: *ma_peak2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_peak2_get_latency :: (pFilter: *ma_peak2) -> ma_uint32 #foreign miniaudio;
+ma_peak2_get_heap_size :: (pConfig: *ma_peak2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_peak2_init_preallocated :: (pConfig: *ma_peak2_config, pHeap: *void, pFilter: *ma_peak2) -> ma_result #foreign miniaudio_fdkaac;
+ma_peak2_init :: (pConfig: *ma_peak2_config, pAllocationCallbacks: *ma_allocation_callbacks, pFilter: *ma_peak2) -> ma_result #foreign miniaudio_fdkaac;
+ma_peak2_uninit :: (pFilter: *ma_peak2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_peak2_reinit :: (pConfig: *ma_peak2_config, pFilter: *ma_peak2) -> ma_result #foreign miniaudio_fdkaac;
+ma_peak2_process_pcm_frames :: (pFilter: *ma_peak2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_peak2_get_latency :: (pFilter: *ma_peak2) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 /**************************************************************************************************************************************************************
 
@@ -828,19 +1564,19 @@ Low Shelf Filter
 **************************************************************************************************************************************************************/
 ma_loshelf_config :: ma_loshelf2_config;
 
-ma_loshelf2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, gainDB: float64, shelfSlope: float64, frequency: float64) -> ma_loshelf2_config #foreign miniaudio;
+ma_loshelf2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, gainDB: float64, shelfSlope: float64, frequency: float64) -> ma_loshelf2_config #foreign miniaudio_fdkaac;
 
 ma_loshelf2 :: struct {
     bq: ma_biquad;
 }
 
-ma_loshelf2_get_heap_size :: (pConfig: *ma_loshelf2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_loshelf2_init_preallocated :: (pConfig: *ma_loshelf2_config, pHeap: *void, pFilter: *ma_loshelf2) -> ma_result #foreign miniaudio;
-ma_loshelf2_init :: (pConfig: *ma_loshelf2_config, pAllocationCallbacks: *ma_allocation_callbacks, pFilter: *ma_loshelf2) -> ma_result #foreign miniaudio;
-ma_loshelf2_uninit :: (pFilter: *ma_loshelf2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_loshelf2_reinit :: (pConfig: *ma_loshelf2_config, pFilter: *ma_loshelf2) -> ma_result #foreign miniaudio;
-ma_loshelf2_process_pcm_frames :: (pFilter: *ma_loshelf2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_loshelf2_get_latency :: (pFilter: *ma_loshelf2) -> ma_uint32 #foreign miniaudio;
+ma_loshelf2_get_heap_size :: (pConfig: *ma_loshelf2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_loshelf2_init_preallocated :: (pConfig: *ma_loshelf2_config, pHeap: *void, pFilter: *ma_loshelf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_loshelf2_init :: (pConfig: *ma_loshelf2_config, pAllocationCallbacks: *ma_allocation_callbacks, pFilter: *ma_loshelf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_loshelf2_uninit :: (pFilter: *ma_loshelf2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_loshelf2_reinit :: (pConfig: *ma_loshelf2_config, pFilter: *ma_loshelf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_loshelf2_process_pcm_frames :: (pFilter: *ma_loshelf2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_loshelf2_get_latency :: (pFilter: *ma_loshelf2) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 /**************************************************************************************************************************************************************
 
@@ -863,19 +1599,19 @@ High Shelf Filter
 **************************************************************************************************************************************************************/
 ma_hishelf_config :: ma_hishelf2_config;
 
-ma_hishelf2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, gainDB: float64, shelfSlope: float64, frequency: float64) -> ma_hishelf2_config #foreign miniaudio;
+ma_hishelf2_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, gainDB: float64, shelfSlope: float64, frequency: float64) -> ma_hishelf2_config #foreign miniaudio_fdkaac;
 
 ma_hishelf2 :: struct {
     bq: ma_biquad;
 }
 
-ma_hishelf2_get_heap_size :: (pConfig: *ma_hishelf2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_hishelf2_init_preallocated :: (pConfig: *ma_hishelf2_config, pHeap: *void, pFilter: *ma_hishelf2) -> ma_result #foreign miniaudio;
-ma_hishelf2_init :: (pConfig: *ma_hishelf2_config, pAllocationCallbacks: *ma_allocation_callbacks, pFilter: *ma_hishelf2) -> ma_result #foreign miniaudio;
-ma_hishelf2_uninit :: (pFilter: *ma_hishelf2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_hishelf2_reinit :: (pConfig: *ma_hishelf2_config, pFilter: *ma_hishelf2) -> ma_result #foreign miniaudio;
-ma_hishelf2_process_pcm_frames :: (pFilter: *ma_hishelf2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_hishelf2_get_latency :: (pFilter: *ma_hishelf2) -> ma_uint32 #foreign miniaudio;
+ma_hishelf2_get_heap_size :: (pConfig: *ma_hishelf2_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_hishelf2_init_preallocated :: (pConfig: *ma_hishelf2_config, pHeap: *void, pFilter: *ma_hishelf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_hishelf2_init :: (pConfig: *ma_hishelf2_config, pAllocationCallbacks: *ma_allocation_callbacks, pFilter: *ma_hishelf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_hishelf2_uninit :: (pFilter: *ma_hishelf2, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_hishelf2_reinit :: (pConfig: *ma_hishelf2_config, pFilter: *ma_hishelf2) -> ma_result #foreign miniaudio_fdkaac;
+ma_hishelf2_process_pcm_frames :: (pFilter: *ma_hishelf2, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_hishelf2_get_latency :: (pFilter: *ma_hishelf2) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 /*
 Delay
@@ -890,7 +1626,7 @@ ma_delay_config :: struct {
     decay:         float; /* 0..1. Default = 0 (no feedback). Feedback decay. Use this for echo. */
 }
 
-ma_delay_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, delayInFrames: ma_uint32, decay: float) -> ma_delay_config #foreign miniaudio;
+ma_delay_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, delayInFrames: ma_uint32, decay: float) -> ma_delay_config #foreign miniaudio_fdkaac;
 
 ma_delay :: struct {
     config:             ma_delay_config;
@@ -899,15 +1635,15 @@ ma_delay :: struct {
     pBuffer:            *float;
 }
 
-ma_delay_init :: (pConfig: *ma_delay_config, pAllocationCallbacks: *ma_allocation_callbacks, pDelay: *ma_delay) -> ma_result #foreign miniaudio;
-ma_delay_uninit :: (pDelay: *ma_delay, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_delay_process_pcm_frames :: (pDelay: *ma_delay, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint32) -> ma_result #foreign miniaudio;
-ma_delay_set_wet :: (pDelay: *ma_delay, value: float) -> void #foreign miniaudio;
-ma_delay_get_wet :: (pDelay: *ma_delay) -> float #foreign miniaudio;
-ma_delay_set_dry :: (pDelay: *ma_delay, value: float) -> void #foreign miniaudio;
-ma_delay_get_dry :: (pDelay: *ma_delay) -> float #foreign miniaudio;
-ma_delay_set_decay :: (pDelay: *ma_delay, value: float) -> void #foreign miniaudio;
-ma_delay_get_decay :: (pDelay: *ma_delay) -> float #foreign miniaudio;
+ma_delay_init :: (pConfig: *ma_delay_config, pAllocationCallbacks: *ma_allocation_callbacks, pDelay: *ma_delay) -> ma_result #foreign miniaudio_fdkaac;
+ma_delay_uninit :: (pDelay: *ma_delay, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_delay_process_pcm_frames :: (pDelay: *ma_delay, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_delay_set_wet :: (pDelay: *ma_delay, value: float) -> void #foreign miniaudio_fdkaac;
+ma_delay_get_wet :: (pDelay: *ma_delay) -> float #foreign miniaudio_fdkaac;
+ma_delay_set_dry :: (pDelay: *ma_delay, value: float) -> void #foreign miniaudio_fdkaac;
+ma_delay_get_dry :: (pDelay: *ma_delay) -> float #foreign miniaudio_fdkaac;
+ma_delay_set_decay :: (pDelay: *ma_delay, value: float) -> void #foreign miniaudio_fdkaac;
+ma_delay_get_decay :: (pDelay: *ma_delay) -> float #foreign miniaudio_fdkaac;
 
 /* Gainer for smooth volume changes. */
 ma_gainer_config :: struct {
@@ -915,7 +1651,7 @@ ma_gainer_config :: struct {
     smoothTimeInFrames: ma_uint32;
 }
 
-ma_gainer_config_init :: (channels: ma_uint32, smoothTimeInFrames: ma_uint32) -> ma_gainer_config #foreign miniaudio;
+ma_gainer_config_init :: (channels: ma_uint32, smoothTimeInFrames: ma_uint32) -> ma_gainer_config #foreign miniaudio_fdkaac;
 
 ma_gainer :: struct {
     config:       ma_gainer_config;
@@ -929,15 +1665,15 @@ ma_gainer :: struct {
     _ownsHeap:    ma_bool32;
 }
 
-ma_gainer_get_heap_size :: (pConfig: *ma_gainer_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_gainer_init_preallocated :: (pConfig: *ma_gainer_config, pHeap: *void, pGainer: *ma_gainer) -> ma_result #foreign miniaudio;
-ma_gainer_init :: (pConfig: *ma_gainer_config, pAllocationCallbacks: *ma_allocation_callbacks, pGainer: *ma_gainer) -> ma_result #foreign miniaudio;
-ma_gainer_uninit :: (pGainer: *ma_gainer, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_gainer_process_pcm_frames :: (pGainer: *ma_gainer, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_gainer_set_gain :: (pGainer: *ma_gainer, newGain: float) -> ma_result #foreign miniaudio;
-ma_gainer_set_gains :: (pGainer: *ma_gainer, pNewGains: *float) -> ma_result #foreign miniaudio;
-ma_gainer_set_master_volume :: (pGainer: *ma_gainer, volume: float) -> ma_result #foreign miniaudio;
-ma_gainer_get_master_volume :: (pGainer: *ma_gainer, pVolume: *float) -> ma_result #foreign miniaudio;
+ma_gainer_get_heap_size :: (pConfig: *ma_gainer_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_gainer_init_preallocated :: (pConfig: *ma_gainer_config, pHeap: *void, pGainer: *ma_gainer) -> ma_result #foreign miniaudio_fdkaac;
+ma_gainer_init :: (pConfig: *ma_gainer_config, pAllocationCallbacks: *ma_allocation_callbacks, pGainer: *ma_gainer) -> ma_result #foreign miniaudio_fdkaac;
+ma_gainer_uninit :: (pGainer: *ma_gainer, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_gainer_process_pcm_frames :: (pGainer: *ma_gainer, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_gainer_set_gain :: (pGainer: *ma_gainer, newGain: float) -> ma_result #foreign miniaudio_fdkaac;
+ma_gainer_set_gains :: (pGainer: *ma_gainer, pNewGains: *float) -> ma_result #foreign miniaudio_fdkaac;
+ma_gainer_set_master_volume :: (pGainer: *ma_gainer, volume: float) -> ma_result #foreign miniaudio_fdkaac;
+ma_gainer_get_master_volume :: (pGainer: *ma_gainer, pVolume: *float) -> ma_result #foreign miniaudio_fdkaac;
 
 /* Stereo panner. */
 ma_pan_mode :: enum u32 {
@@ -952,7 +1688,7 @@ ma_panner_config :: struct {
     pan:      float;
 }
 
-ma_panner_config_init :: (format: ma_format, channels: ma_uint32) -> ma_panner_config #foreign miniaudio;
+ma_panner_config_init :: (format: ma_format, channels: ma_uint32) -> ma_panner_config #foreign miniaudio_fdkaac;
 
 ma_panner :: struct {
     format:   ma_format;
@@ -961,12 +1697,12 @@ ma_panner :: struct {
     pan:      float; /* -1..1 where 0 is no pan, -1 is left side, +1 is right side. Defaults to 0. */
 }
 
-ma_panner_init :: (pConfig: *ma_panner_config, pPanner: *ma_panner) -> ma_result #foreign miniaudio;
-ma_panner_process_pcm_frames :: (pPanner: *ma_panner, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_panner_set_mode :: (pPanner: *ma_panner, mode: ma_pan_mode) -> void #foreign miniaudio;
-ma_panner_get_mode :: (pPanner: *ma_panner) -> ma_pan_mode #foreign miniaudio;
-ma_panner_set_pan :: (pPanner: *ma_panner, pan: float) -> void #foreign miniaudio;
-ma_panner_get_pan :: (pPanner: *ma_panner) -> float #foreign miniaudio;
+ma_panner_init :: (pConfig: *ma_panner_config, pPanner: *ma_panner) -> ma_result #foreign miniaudio_fdkaac;
+ma_panner_process_pcm_frames :: (pPanner: *ma_panner, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_panner_set_mode :: (pPanner: *ma_panner, mode: ma_pan_mode) -> void #foreign miniaudio_fdkaac;
+ma_panner_get_mode :: (pPanner: *ma_panner) -> ma_pan_mode #foreign miniaudio_fdkaac;
+ma_panner_set_pan :: (pPanner: *ma_panner, pan: float) -> void #foreign miniaudio_fdkaac;
+ma_panner_get_pan :: (pPanner: *ma_panner) -> float #foreign miniaudio_fdkaac;
 
 /* Fader. */
 ma_fader_config :: struct {
@@ -975,7 +1711,7 @@ ma_fader_config :: struct {
     sampleRate: ma_uint32;
 }
 
-ma_fader_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32) -> ma_fader_config #foreign miniaudio;
+ma_fader_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32) -> ma_fader_config #foreign miniaudio_fdkaac;
 
 ma_fader :: struct {
     config:         ma_fader_config;
@@ -985,12 +1721,12 @@ ma_fader :: struct {
     cursorInFrames: ma_int64; /* The current time in frames. Incremented by ma_fader_process_pcm_frames(). Signed because it'll be offset by startOffsetInFrames in set_fade_ex(). */
 }
 
-ma_fader_init :: (pConfig: *ma_fader_config, pFader: *ma_fader) -> ma_result #foreign miniaudio;
-ma_fader_process_pcm_frames :: (pFader: *ma_fader, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_fader_get_data_format :: (pFader: *ma_fader, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32) -> void #foreign miniaudio;
-ma_fader_set_fade :: (pFader: *ma_fader, volumeBeg: float, volumeEnd: float, lengthInFrames: ma_uint64) -> void #foreign miniaudio;
-ma_fader_set_fade_ex :: (pFader: *ma_fader, volumeBeg: float, volumeEnd: float, lengthInFrames: ma_uint64, startOffsetInFrames: ma_int64) -> void #foreign miniaudio;
-ma_fader_get_current_volume :: (pFader: *ma_fader) -> float #foreign miniaudio;
+ma_fader_init :: (pConfig: *ma_fader_config, pFader: *ma_fader) -> ma_result #foreign miniaudio_fdkaac;
+ma_fader_process_pcm_frames :: (pFader: *ma_fader, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_fader_get_data_format :: (pFader: *ma_fader, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32) -> void #foreign miniaudio_fdkaac;
+ma_fader_set_fade :: (pFader: *ma_fader, volumeBeg: float, volumeEnd: float, lengthInFrames: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_fader_set_fade_ex :: (pFader: *ma_fader, volumeBeg: float, volumeEnd: float, lengthInFrames: ma_uint64, startOffsetInFrames: ma_int64) -> void #foreign miniaudio_fdkaac;
+ma_fader_get_current_volume :: (pFader: *ma_fader) -> float #foreign miniaudio_fdkaac;
 
 /* Spatializer. */
 ma_vec3f :: struct {
@@ -1032,7 +1768,7 @@ ma_spatializer_listener_config :: struct {
     worldUp:                 ma_vec3f;
 }
 
-ma_spatializer_listener_config_init :: (channelsOut: ma_uint32) -> ma_spatializer_listener_config #foreign miniaudio;
+ma_spatializer_listener_config_init :: (channelsOut: ma_uint32) -> ma_spatializer_listener_config #foreign miniaudio_fdkaac;
 
 ma_spatializer_listener :: struct {
     config:    ma_spatializer_listener_config;
@@ -1046,25 +1782,25 @@ ma_spatializer_listener :: struct {
     _pHeap:    *void;
 }
 
-ma_spatializer_listener_get_heap_size :: (pConfig: *ma_spatializer_listener_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_spatializer_listener_init_preallocated :: (pConfig: *ma_spatializer_listener_config, pHeap: *void, pListener: *ma_spatializer_listener) -> ma_result #foreign miniaudio;
-ma_spatializer_listener_init :: (pConfig: *ma_spatializer_listener_config, pAllocationCallbacks: *ma_allocation_callbacks, pListener: *ma_spatializer_listener) -> ma_result #foreign miniaudio;
-ma_spatializer_listener_uninit :: (pListener: *ma_spatializer_listener, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_spatializer_listener_get_channel_map :: (pListener: *ma_spatializer_listener) -> *ma_channel #foreign miniaudio;
-ma_spatializer_listener_set_cone :: (pListener: *ma_spatializer_listener, innerAngleInRadians: float, outerAngleInRadians: float, outerGain: float) -> void #foreign miniaudio;
-ma_spatializer_listener_get_cone :: (pListener: *ma_spatializer_listener, pInnerAngleInRadians: *float, pOuterAngleInRadians: *float, pOuterGain: *float) -> void #foreign miniaudio;
-ma_spatializer_listener_set_position :: (pListener: *ma_spatializer_listener, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_spatializer_listener_get_position :: (pListener: *ma_spatializer_listener) -> ma_vec3f #foreign miniaudio;
-ma_spatializer_listener_set_direction :: (pListener: *ma_spatializer_listener, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_spatializer_listener_get_direction :: (pListener: *ma_spatializer_listener) -> ma_vec3f #foreign miniaudio;
-ma_spatializer_listener_set_velocity :: (pListener: *ma_spatializer_listener, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_spatializer_listener_get_velocity :: (pListener: *ma_spatializer_listener) -> ma_vec3f #foreign miniaudio;
-ma_spatializer_listener_set_speed_of_sound :: (pListener: *ma_spatializer_listener, speedOfSound: float) -> void #foreign miniaudio;
-ma_spatializer_listener_get_speed_of_sound :: (pListener: *ma_spatializer_listener) -> float #foreign miniaudio;
-ma_spatializer_listener_set_world_up :: (pListener: *ma_spatializer_listener, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_spatializer_listener_get_world_up :: (pListener: *ma_spatializer_listener) -> ma_vec3f #foreign miniaudio;
-ma_spatializer_listener_set_enabled :: (pListener: *ma_spatializer_listener, isEnabled: ma_bool32) -> void #foreign miniaudio;
-ma_spatializer_listener_is_enabled :: (pListener: *ma_spatializer_listener) -> ma_bool32 #foreign miniaudio;
+ma_spatializer_listener_get_heap_size :: (pConfig: *ma_spatializer_listener_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_spatializer_listener_init_preallocated :: (pConfig: *ma_spatializer_listener_config, pHeap: *void, pListener: *ma_spatializer_listener) -> ma_result #foreign miniaudio_fdkaac;
+ma_spatializer_listener_init :: (pConfig: *ma_spatializer_listener_config, pAllocationCallbacks: *ma_allocation_callbacks, pListener: *ma_spatializer_listener) -> ma_result #foreign miniaudio_fdkaac;
+ma_spatializer_listener_uninit :: (pListener: *ma_spatializer_listener, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_listener_get_channel_map :: (pListener: *ma_spatializer_listener) -> *ma_channel #foreign miniaudio_fdkaac;
+ma_spatializer_listener_set_cone :: (pListener: *ma_spatializer_listener, innerAngleInRadians: float, outerAngleInRadians: float, outerGain: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_listener_get_cone :: (pListener: *ma_spatializer_listener, pInnerAngleInRadians: *float, pOuterAngleInRadians: *float, pOuterGain: *float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_listener_set_position :: (pListener: *ma_spatializer_listener, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_listener_get_position :: (pListener: *ma_spatializer_listener) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_spatializer_listener_set_direction :: (pListener: *ma_spatializer_listener, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_listener_get_direction :: (pListener: *ma_spatializer_listener) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_spatializer_listener_set_velocity :: (pListener: *ma_spatializer_listener, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_listener_get_velocity :: (pListener: *ma_spatializer_listener) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_spatializer_listener_set_speed_of_sound :: (pListener: *ma_spatializer_listener, speedOfSound: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_listener_get_speed_of_sound :: (pListener: *ma_spatializer_listener) -> float #foreign miniaudio_fdkaac;
+ma_spatializer_listener_set_world_up :: (pListener: *ma_spatializer_listener, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_listener_get_world_up :: (pListener: *ma_spatializer_listener) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_spatializer_listener_set_enabled :: (pListener: *ma_spatializer_listener, isEnabled: ma_bool32) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_listener_is_enabled :: (pListener: *ma_spatializer_listener) -> ma_bool32 #foreign miniaudio_fdkaac;
 
 ma_spatializer_config :: struct {
     channelsIn:                   ma_uint32;
@@ -1087,7 +1823,7 @@ ma_spatializer_config :: struct {
     gainSmoothTimeInFrames:       ma_uint32; /* When the gain of a channel changes during spatialization, the transition will be linearly interpolated over this number of frames. */
 }
 
-ma_spatializer_config_init :: (channelsIn: ma_uint32, channelsOut: ma_uint32) -> ma_spatializer_config #foreign miniaudio;
+ma_spatializer_config_init :: (channelsIn: ma_uint32, channelsOut: ma_uint32) -> ma_spatializer_config #foreign miniaudio_fdkaac;
 
 ma_spatializer :: struct {
     channelsIn:                   ma_uint32;
@@ -1120,42 +1856,42 @@ ma_spatializer :: struct {
     _ownsHeap:                    ma_bool32;
 }
 
-ma_spatializer_get_heap_size :: (pConfig: *ma_spatializer_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_spatializer_init_preallocated :: (pConfig: *ma_spatializer_config, pHeap: *void, pSpatializer: *ma_spatializer) -> ma_result #foreign miniaudio;
-ma_spatializer_init :: (pConfig: *ma_spatializer_config, pAllocationCallbacks: *ma_allocation_callbacks, pSpatializer: *ma_spatializer) -> ma_result #foreign miniaudio;
-ma_spatializer_uninit :: (pSpatializer: *ma_spatializer, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_spatializer_process_pcm_frames :: (pSpatializer: *ma_spatializer, pListener: *ma_spatializer_listener, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_spatializer_set_master_volume :: (pSpatializer: *ma_spatializer, volume: float) -> ma_result #foreign miniaudio;
-ma_spatializer_get_master_volume :: (pSpatializer: *ma_spatializer, pVolume: *float) -> ma_result #foreign miniaudio;
-ma_spatializer_get_input_channels :: (pSpatializer: *ma_spatializer) -> ma_uint32 #foreign miniaudio;
-ma_spatializer_get_output_channels :: (pSpatializer: *ma_spatializer) -> ma_uint32 #foreign miniaudio;
-ma_spatializer_set_attenuation_model :: (pSpatializer: *ma_spatializer, attenuationModel: ma_attenuation_model) -> void #foreign miniaudio;
-ma_spatializer_get_attenuation_model :: (pSpatializer: *ma_spatializer) -> ma_attenuation_model #foreign miniaudio;
-ma_spatializer_set_positioning :: (pSpatializer: *ma_spatializer, positioning: ma_positioning) -> void #foreign miniaudio;
-ma_spatializer_get_positioning :: (pSpatializer: *ma_spatializer) -> ma_positioning #foreign miniaudio;
-ma_spatializer_set_rolloff :: (pSpatializer: *ma_spatializer, rolloff: float) -> void #foreign miniaudio;
-ma_spatializer_get_rolloff :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio;
-ma_spatializer_set_min_gain :: (pSpatializer: *ma_spatializer, minGain: float) -> void #foreign miniaudio;
-ma_spatializer_get_min_gain :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio;
-ma_spatializer_set_max_gain :: (pSpatializer: *ma_spatializer, maxGain: float) -> void #foreign miniaudio;
-ma_spatializer_get_max_gain :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio;
-ma_spatializer_set_min_distance :: (pSpatializer: *ma_spatializer, minDistance: float) -> void #foreign miniaudio;
-ma_spatializer_get_min_distance :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio;
-ma_spatializer_set_max_distance :: (pSpatializer: *ma_spatializer, maxDistance: float) -> void #foreign miniaudio;
-ma_spatializer_get_max_distance :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio;
-ma_spatializer_set_cone :: (pSpatializer: *ma_spatializer, innerAngleInRadians: float, outerAngleInRadians: float, outerGain: float) -> void #foreign miniaudio;
-ma_spatializer_get_cone :: (pSpatializer: *ma_spatializer, pInnerAngleInRadians: *float, pOuterAngleInRadians: *float, pOuterGain: *float) -> void #foreign miniaudio;
-ma_spatializer_set_doppler_factor :: (pSpatializer: *ma_spatializer, dopplerFactor: float) -> void #foreign miniaudio;
-ma_spatializer_get_doppler_factor :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio;
-ma_spatializer_set_directional_attenuation_factor :: (pSpatializer: *ma_spatializer, directionalAttenuationFactor: float) -> void #foreign miniaudio;
-ma_spatializer_get_directional_attenuation_factor :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio;
-ma_spatializer_set_position :: (pSpatializer: *ma_spatializer, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_spatializer_get_position :: (pSpatializer: *ma_spatializer) -> ma_vec3f #foreign miniaudio;
-ma_spatializer_set_direction :: (pSpatializer: *ma_spatializer, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_spatializer_get_direction :: (pSpatializer: *ma_spatializer) -> ma_vec3f #foreign miniaudio;
-ma_spatializer_set_velocity :: (pSpatializer: *ma_spatializer, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_spatializer_get_velocity :: (pSpatializer: *ma_spatializer) -> ma_vec3f #foreign miniaudio;
-ma_spatializer_get_relative_position_and_direction :: (pSpatializer: *ma_spatializer, pListener: *ma_spatializer_listener, pRelativePos: *ma_vec3f, pRelativeDir: *ma_vec3f) -> void #foreign miniaudio;
+ma_spatializer_get_heap_size :: (pConfig: *ma_spatializer_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_spatializer_init_preallocated :: (pConfig: *ma_spatializer_config, pHeap: *void, pSpatializer: *ma_spatializer) -> ma_result #foreign miniaudio_fdkaac;
+ma_spatializer_init :: (pConfig: *ma_spatializer_config, pAllocationCallbacks: *ma_allocation_callbacks, pSpatializer: *ma_spatializer) -> ma_result #foreign miniaudio_fdkaac;
+ma_spatializer_uninit :: (pSpatializer: *ma_spatializer, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_process_pcm_frames :: (pSpatializer: *ma_spatializer, pListener: *ma_spatializer_listener, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_spatializer_set_master_volume :: (pSpatializer: *ma_spatializer, volume: float) -> ma_result #foreign miniaudio_fdkaac;
+ma_spatializer_get_master_volume :: (pSpatializer: *ma_spatializer, pVolume: *float) -> ma_result #foreign miniaudio_fdkaac;
+ma_spatializer_get_input_channels :: (pSpatializer: *ma_spatializer) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_spatializer_get_output_channels :: (pSpatializer: *ma_spatializer) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_spatializer_set_attenuation_model :: (pSpatializer: *ma_spatializer, attenuationModel: ma_attenuation_model) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_attenuation_model :: (pSpatializer: *ma_spatializer) -> ma_attenuation_model #foreign miniaudio_fdkaac;
+ma_spatializer_set_positioning :: (pSpatializer: *ma_spatializer, positioning: ma_positioning) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_positioning :: (pSpatializer: *ma_spatializer) -> ma_positioning #foreign miniaudio_fdkaac;
+ma_spatializer_set_rolloff :: (pSpatializer: *ma_spatializer, rolloff: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_rolloff :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio_fdkaac;
+ma_spatializer_set_min_gain :: (pSpatializer: *ma_spatializer, minGain: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_min_gain :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio_fdkaac;
+ma_spatializer_set_max_gain :: (pSpatializer: *ma_spatializer, maxGain: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_max_gain :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio_fdkaac;
+ma_spatializer_set_min_distance :: (pSpatializer: *ma_spatializer, minDistance: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_min_distance :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio_fdkaac;
+ma_spatializer_set_max_distance :: (pSpatializer: *ma_spatializer, maxDistance: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_max_distance :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio_fdkaac;
+ma_spatializer_set_cone :: (pSpatializer: *ma_spatializer, innerAngleInRadians: float, outerAngleInRadians: float, outerGain: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_cone :: (pSpatializer: *ma_spatializer, pInnerAngleInRadians: *float, pOuterAngleInRadians: *float, pOuterGain: *float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_set_doppler_factor :: (pSpatializer: *ma_spatializer, dopplerFactor: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_doppler_factor :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio_fdkaac;
+ma_spatializer_set_directional_attenuation_factor :: (pSpatializer: *ma_spatializer, directionalAttenuationFactor: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_directional_attenuation_factor :: (pSpatializer: *ma_spatializer) -> float #foreign miniaudio_fdkaac;
+ma_spatializer_set_position :: (pSpatializer: *ma_spatializer, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_position :: (pSpatializer: *ma_spatializer) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_spatializer_set_direction :: (pSpatializer: *ma_spatializer, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_direction :: (pSpatializer: *ma_spatializer) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_spatializer_set_velocity :: (pSpatializer: *ma_spatializer, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_spatializer_get_velocity :: (pSpatializer: *ma_spatializer) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_spatializer_get_relative_position_and_direction :: (pSpatializer: *ma_spatializer, pListener: *ma_spatializer_listener, pRelativePos: *ma_vec3f, pRelativeDir: *ma_vec3f) -> void #foreign miniaudio_fdkaac;
 
 /**************************************************************************************************************************************************************
 
@@ -1171,7 +1907,7 @@ ma_linear_resampler_config :: struct {
     lpfNyquistFactor: float64; /* 0..1. Defaults to 1. 1 = Half the sampling frequency (Nyquist Frequency), 0.5 = Quarter the sampling frequency (half Nyquest Frequency), etc. */
 }
 
-ma_linear_resampler_config_init :: (format: ma_format, channels: ma_uint32, sampleRateIn: ma_uint32, sampleRateOut: ma_uint32) -> ma_linear_resampler_config #foreign miniaudio;
+ma_linear_resampler_config_init :: (format: ma_format, channels: ma_uint32, sampleRateIn: ma_uint32, sampleRateOut: ma_uint32) -> ma_linear_resampler_config #foreign miniaudio_fdkaac;
 
 ma_linear_resampler :: struct {
     config:        ma_linear_resampler_config;
@@ -1196,18 +1932,18 @@ ma_linear_resampler :: struct {
     _ownsHeap:     ma_bool32;
 }
 
-ma_linear_resampler_get_heap_size :: (pConfig: *ma_linear_resampler_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_linear_resampler_init_preallocated :: (pConfig: *ma_linear_resampler_config, pHeap: *void, pResampler: *ma_linear_resampler) -> ma_result #foreign miniaudio;
-ma_linear_resampler_init :: (pConfig: *ma_linear_resampler_config, pAllocationCallbacks: *ma_allocation_callbacks, pResampler: *ma_linear_resampler) -> ma_result #foreign miniaudio;
-ma_linear_resampler_uninit :: (pResampler: *ma_linear_resampler, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_linear_resampler_process_pcm_frames :: (pResampler: *ma_linear_resampler, pFramesIn: *void, pFrameCountIn: *ma_uint64, pFramesOut: *void, pFrameCountOut: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_linear_resampler_set_rate :: (pResampler: *ma_linear_resampler, sampleRateIn: ma_uint32, sampleRateOut: ma_uint32) -> ma_result #foreign miniaudio;
-ma_linear_resampler_set_rate_ratio :: (pResampler: *ma_linear_resampler, ratioInOut: float) -> ma_result #foreign miniaudio;
-ma_linear_resampler_get_input_latency :: (pResampler: *ma_linear_resampler) -> ma_uint64 #foreign miniaudio;
-ma_linear_resampler_get_output_latency :: (pResampler: *ma_linear_resampler) -> ma_uint64 #foreign miniaudio;
-ma_linear_resampler_get_required_input_frame_count :: (pResampler: *ma_linear_resampler, outputFrameCount: ma_uint64, pInputFrameCount: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_linear_resampler_get_expected_output_frame_count :: (pResampler: *ma_linear_resampler, inputFrameCount: ma_uint64, pOutputFrameCount: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_linear_resampler_reset :: (pResampler: *ma_linear_resampler) -> ma_result #foreign miniaudio;
+ma_linear_resampler_get_heap_size :: (pConfig: *ma_linear_resampler_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_linear_resampler_init_preallocated :: (pConfig: *ma_linear_resampler_config, pHeap: *void, pResampler: *ma_linear_resampler) -> ma_result #foreign miniaudio_fdkaac;
+ma_linear_resampler_init :: (pConfig: *ma_linear_resampler_config, pAllocationCallbacks: *ma_allocation_callbacks, pResampler: *ma_linear_resampler) -> ma_result #foreign miniaudio_fdkaac;
+ma_linear_resampler_uninit :: (pResampler: *ma_linear_resampler, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_linear_resampler_process_pcm_frames :: (pResampler: *ma_linear_resampler, pFramesIn: *void, pFrameCountIn: *ma_uint64, pFramesOut: *void, pFrameCountOut: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_linear_resampler_set_rate :: (pResampler: *ma_linear_resampler, sampleRateIn: ma_uint32, sampleRateOut: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_linear_resampler_set_rate_ratio :: (pResampler: *ma_linear_resampler, ratioInOut: float) -> ma_result #foreign miniaudio_fdkaac;
+ma_linear_resampler_get_input_latency :: (pResampler: *ma_linear_resampler) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_linear_resampler_get_output_latency :: (pResampler: *ma_linear_resampler) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_linear_resampler_get_required_input_frame_count :: (pResampler: *ma_linear_resampler, outputFrameCount: ma_uint64, pInputFrameCount: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_linear_resampler_get_expected_output_frame_count :: (pResampler: *ma_linear_resampler, inputFrameCount: ma_uint64, pOutputFrameCount: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_linear_resampler_reset :: (pResampler: *ma_linear_resampler) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_resampling_backend :: void;
 ma_resampling_backend_vtable :: struct {
@@ -1241,7 +1977,7 @@ ma_resampler_config :: struct {
     };
 }
 
-ma_resampler_config_init :: (format: ma_format, channels: ma_uint32, sampleRateIn: ma_uint32, sampleRateOut: ma_uint32, algorithm: ma_resample_algorithm) -> ma_resampler_config #foreign miniaudio;
+ma_resampler_config_init :: (format: ma_format, channels: ma_uint32, sampleRateIn: ma_uint32, sampleRateOut: ma_uint32, algorithm: ma_resample_algorithm) -> ma_resampler_config #foreign miniaudio_fdkaac;
 
 ma_resampler :: struct {
     pBackend:         *ma_resampling_backend;
@@ -1260,18 +1996,18 @@ ma_resampler :: struct {
     _ownsHeap:        ma_bool32;
 }
 
-ma_resampler_get_heap_size :: (pConfig: *ma_resampler_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_resampler_init_preallocated :: (pConfig: *ma_resampler_config, pHeap: *void, pResampler: *ma_resampler) -> ma_result #foreign miniaudio;
+ma_resampler_get_heap_size :: (pConfig: *ma_resampler_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resampler_init_preallocated :: (pConfig: *ma_resampler_config, pHeap: *void, pResampler: *ma_resampler) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Initializes a new resampler object from a config.
 */
-ma_resampler_init :: (pConfig: *ma_resampler_config, pAllocationCallbacks: *ma_allocation_callbacks, pResampler: *ma_resampler) -> ma_result #foreign miniaudio;
+ma_resampler_init :: (pConfig: *ma_resampler_config, pAllocationCallbacks: *ma_allocation_callbacks, pResampler: *ma_resampler) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Uninitializes a resampler.
 */
-ma_resampler_uninit :: (pResampler: *ma_resampler, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_resampler_uninit :: (pResampler: *ma_resampler, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 /*
 Converts the given input data.
@@ -1295,29 +2031,29 @@ It is an error for [pFramesOut] to be non-NULL and [pFrameCountOut] to be NULL.
 
 It is an error for both [pFrameCountOut] and [pFrameCountIn] to be NULL.
 */
-ma_resampler_process_pcm_frames :: (pResampler: *ma_resampler, pFramesIn: *void, pFrameCountIn: *ma_uint64, pFramesOut: *void, pFrameCountOut: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_resampler_process_pcm_frames :: (pResampler: *ma_resampler, pFramesIn: *void, pFrameCountIn: *ma_uint64, pFramesOut: *void, pFrameCountOut: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Sets the input and output sample rate.
 */
-ma_resampler_set_rate :: (pResampler: *ma_resampler, sampleRateIn: ma_uint32, sampleRateOut: ma_uint32) -> ma_result #foreign miniaudio;
+ma_resampler_set_rate :: (pResampler: *ma_resampler, sampleRateIn: ma_uint32, sampleRateOut: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Sets the input and output sample rate as a ratio.
 
 The ration is in/out.
 */
-ma_resampler_set_rate_ratio :: (pResampler: *ma_resampler, ratio: float) -> ma_result #foreign miniaudio;
+ma_resampler_set_rate_ratio :: (pResampler: *ma_resampler, ratio: float) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the latency introduced by the resampler in input frames.
 */
-ma_resampler_get_input_latency :: (pResampler: *ma_resampler) -> ma_uint64 #foreign miniaudio;
+ma_resampler_get_input_latency :: (pResampler: *ma_resampler) -> ma_uint64 #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the latency introduced by the resampler in output frames.
 */
-ma_resampler_get_output_latency :: (pResampler: *ma_resampler) -> ma_uint64 #foreign miniaudio;
+ma_resampler_get_output_latency :: (pResampler: *ma_resampler) -> ma_uint64 #foreign miniaudio_fdkaac;
 
 /*
 Calculates the number of whole input frames that would need to be read from the client in order to output the specified
@@ -1326,18 +2062,18 @@ number of output frames.
 The returned value does not include cached input frames. It only returns the number of extra frames that would need to be
 read from the input buffer in order to output the specified number of output frames.
 */
-ma_resampler_get_required_input_frame_count :: (pResampler: *ma_resampler, outputFrameCount: ma_uint64, pInputFrameCount: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_resampler_get_required_input_frame_count :: (pResampler: *ma_resampler, outputFrameCount: ma_uint64, pInputFrameCount: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Calculates the number of whole output frames that would be output after fully reading and consuming the specified number of
 input frames.
 */
-ma_resampler_get_expected_output_frame_count :: (pResampler: *ma_resampler, inputFrameCount: ma_uint64, pOutputFrameCount: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_resampler_get_expected_output_frame_count :: (pResampler: *ma_resampler, inputFrameCount: ma_uint64, pOutputFrameCount: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Resets the resampler's timer and clears it's internal cache.
 */
-ma_resampler_reset :: (pResampler: *ma_resampler) -> ma_result #foreign miniaudio;
+ma_resampler_reset :: (pResampler: *ma_resampler) -> ma_result #foreign miniaudio_fdkaac;
 
 /**************************************************************************************************************************************************************
 
@@ -1371,7 +2107,7 @@ ma_channel_converter_config :: struct {
     ppWeights:                       **float; /* [in][out]. Only used when mixingMode is set to ma_channel_mix_mode_custom_weights. */
 }
 
-ma_channel_converter_config_init :: (format: ma_format, channelsIn: ma_uint32, pChannelMapIn: *ma_channel, channelsOut: ma_uint32, pChannelMapOut: *ma_channel, mixingMode: ma_channel_mix_mode) -> ma_channel_converter_config #foreign miniaudio;
+ma_channel_converter_config_init :: (format: ma_format, channelsIn: ma_uint32, pChannelMapIn: *ma_channel, channelsOut: ma_uint32, pChannelMapOut: *ma_channel, mixingMode: ma_channel_mix_mode) -> ma_channel_converter_config #foreign miniaudio_fdkaac;
 
 ma_channel_converter :: struct {
     format:         ma_format;
@@ -1392,13 +2128,13 @@ ma_channel_converter :: struct {
     _ownsHeap:      ma_bool32;
 }
 
-ma_channel_converter_get_heap_size :: (pConfig: *ma_channel_converter_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_channel_converter_init_preallocated :: (pConfig: *ma_channel_converter_config, pHeap: *void, pConverter: *ma_channel_converter) -> ma_result #foreign miniaudio;
-ma_channel_converter_init :: (pConfig: *ma_channel_converter_config, pAllocationCallbacks: *ma_allocation_callbacks, pConverter: *ma_channel_converter) -> ma_result #foreign miniaudio;
-ma_channel_converter_uninit :: (pConverter: *ma_channel_converter, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_channel_converter_process_pcm_frames :: (pConverter: *ma_channel_converter, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_channel_converter_get_input_channel_map :: (pConverter: *ma_channel_converter, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio;
-ma_channel_converter_get_output_channel_map :: (pConverter: *ma_channel_converter, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio;
+ma_channel_converter_get_heap_size :: (pConfig: *ma_channel_converter_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_channel_converter_init_preallocated :: (pConfig: *ma_channel_converter_config, pHeap: *void, pConverter: *ma_channel_converter) -> ma_result #foreign miniaudio_fdkaac;
+ma_channel_converter_init :: (pConfig: *ma_channel_converter_config, pAllocationCallbacks: *ma_allocation_callbacks, pConverter: *ma_channel_converter) -> ma_result #foreign miniaudio_fdkaac;
+ma_channel_converter_uninit :: (pConverter: *ma_channel_converter, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_channel_converter_process_pcm_frames :: (pConverter: *ma_channel_converter, pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_channel_converter_get_input_channel_map :: (pConverter: *ma_channel_converter, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_channel_converter_get_output_channel_map :: (pConverter: *ma_channel_converter, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio_fdkaac;
 
 /**************************************************************************************************************************************************************
 
@@ -1422,8 +2158,8 @@ ma_data_converter_config :: struct {
     resampling:                      ma_resampler_config;
 }
 
-ma_data_converter_config_init_default :: () -> ma_data_converter_config #foreign miniaudio;
-ma_data_converter_config_init :: (formatIn: ma_format, formatOut: ma_format, channelsIn: ma_uint32, channelsOut: ma_uint32, sampleRateIn: ma_uint32, sampleRateOut: ma_uint32) -> ma_data_converter_config #foreign miniaudio;
+ma_data_converter_config_init_default :: () -> ma_data_converter_config #foreign miniaudio_fdkaac;
+ma_data_converter_config_init :: (formatIn: ma_format, formatOut: ma_format, channelsIn: ma_uint32, channelsOut: ma_uint32, sampleRateIn: ma_uint32, sampleRateOut: ma_uint32) -> ma_data_converter_config #foreign miniaudio_fdkaac;
 
 ma_data_converter_execution_path :: enum u32 {
     passthrough    :: 0;
@@ -1456,93 +2192,93 @@ ma_data_converter :: struct {
     _pHeap:                  *void;
 }
 
-ma_data_converter_get_heap_size :: (pConfig: *ma_data_converter_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_data_converter_init_preallocated :: (pConfig: *ma_data_converter_config, pHeap: *void, pConverter: *ma_data_converter) -> ma_result #foreign miniaudio;
-ma_data_converter_init :: (pConfig: *ma_data_converter_config, pAllocationCallbacks: *ma_allocation_callbacks, pConverter: *ma_data_converter) -> ma_result #foreign miniaudio;
-ma_data_converter_uninit :: (pConverter: *ma_data_converter, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_data_converter_process_pcm_frames :: (pConverter: *ma_data_converter, pFramesIn: *void, pFrameCountIn: *ma_uint64, pFramesOut: *void, pFrameCountOut: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_data_converter_set_rate :: (pConverter: *ma_data_converter, sampleRateIn: ma_uint32, sampleRateOut: ma_uint32) -> ma_result #foreign miniaudio;
-ma_data_converter_set_rate_ratio :: (pConverter: *ma_data_converter, ratioInOut: float) -> ma_result #foreign miniaudio;
-ma_data_converter_get_input_latency :: (pConverter: *ma_data_converter) -> ma_uint64 #foreign miniaudio;
-ma_data_converter_get_output_latency :: (pConverter: *ma_data_converter) -> ma_uint64 #foreign miniaudio;
-ma_data_converter_get_required_input_frame_count :: (pConverter: *ma_data_converter, outputFrameCount: ma_uint64, pInputFrameCount: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_data_converter_get_expected_output_frame_count :: (pConverter: *ma_data_converter, inputFrameCount: ma_uint64, pOutputFrameCount: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_data_converter_get_input_channel_map :: (pConverter: *ma_data_converter, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio;
-ma_data_converter_get_output_channel_map :: (pConverter: *ma_data_converter, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio;
-ma_data_converter_reset :: (pConverter: *ma_data_converter) -> ma_result #foreign miniaudio;
+ma_data_converter_get_heap_size :: (pConfig: *ma_data_converter_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_converter_init_preallocated :: (pConfig: *ma_data_converter_config, pHeap: *void, pConverter: *ma_data_converter) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_converter_init :: (pConfig: *ma_data_converter_config, pAllocationCallbacks: *ma_allocation_callbacks, pConverter: *ma_data_converter) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_converter_uninit :: (pConverter: *ma_data_converter, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_data_converter_process_pcm_frames :: (pConverter: *ma_data_converter, pFramesIn: *void, pFrameCountIn: *ma_uint64, pFramesOut: *void, pFrameCountOut: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_converter_set_rate :: (pConverter: *ma_data_converter, sampleRateIn: ma_uint32, sampleRateOut: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_converter_set_rate_ratio :: (pConverter: *ma_data_converter, ratioInOut: float) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_converter_get_input_latency :: (pConverter: *ma_data_converter) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_data_converter_get_output_latency :: (pConverter: *ma_data_converter) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_data_converter_get_required_input_frame_count :: (pConverter: *ma_data_converter, outputFrameCount: ma_uint64, pInputFrameCount: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_converter_get_expected_output_frame_count :: (pConverter: *ma_data_converter, inputFrameCount: ma_uint64, pOutputFrameCount: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_converter_get_input_channel_map :: (pConverter: *ma_data_converter, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_converter_get_output_channel_map :: (pConverter: *ma_data_converter, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_converter_reset :: (pConverter: *ma_data_converter) -> ma_result #foreign miniaudio_fdkaac;
 
 /************************************************************************************************************************************************************
 
 Format Conversion
 
 ************************************************************************************************************************************************************/
-ma_pcm_u8_to_s16 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_u8_to_s24 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_u8_to_s32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_u8_to_f32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_s16_to_u8 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_s16_to_s24 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_s16_to_s32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_s16_to_f32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_s24_to_u8 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_s24_to_s16 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_s24_to_s32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_s24_to_f32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_s32_to_u8 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_s32_to_s16 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_s32_to_s24 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_s32_to_f32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_f32_to_u8 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_f32_to_s16 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_f32_to_s24 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_f32_to_s32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_pcm_convert :: (pOut: *void, formatOut: ma_format, pIn: *void, formatIn: ma_format, sampleCount: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
-ma_convert_pcm_frames_format :: (pOut: *void, formatOut: ma_format, pIn: *void, formatIn: ma_format, frameCount: ma_uint64, channels: ma_uint32, ditherMode: ma_dither_mode) -> void #foreign miniaudio;
+ma_pcm_u8_to_s16 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_u8_to_s24 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_u8_to_s32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_u8_to_f32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_s16_to_u8 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_s16_to_s24 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_s16_to_s32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_s16_to_f32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_s24_to_u8 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_s24_to_s16 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_s24_to_s32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_s24_to_f32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_s32_to_u8 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_s32_to_s16 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_s32_to_s24 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_s32_to_f32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_f32_to_u8 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_f32_to_s16 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_f32_to_s24 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_f32_to_s32 :: (pOut: *void, pIn: *void, count: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_pcm_convert :: (pOut: *void, formatOut: ma_format, pIn: *void, formatIn: ma_format, sampleCount: ma_uint64, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
+ma_convert_pcm_frames_format :: (pOut: *void, formatOut: ma_format, pIn: *void, formatIn: ma_format, frameCount: ma_uint64, channels: ma_uint32, ditherMode: ma_dither_mode) -> void #foreign miniaudio_fdkaac;
 
 /*
 Deinterleaves an interleaved buffer.
 */
-ma_deinterleave_pcm_frames :: (format: ma_format, channels: ma_uint32, frameCount: ma_uint64, pInterleavedPCMFrames: *void, ppDeinterleavedPCMFrames: **void) -> void #foreign miniaudio;
+ma_deinterleave_pcm_frames :: (format: ma_format, channels: ma_uint32, frameCount: ma_uint64, pInterleavedPCMFrames: *void, ppDeinterleavedPCMFrames: **void) -> void #foreign miniaudio_fdkaac;
 
 /*
 Interleaves a group of deinterleaved buffers.
 */
-ma_interleave_pcm_frames :: (format: ma_format, channels: ma_uint32, frameCount: ma_uint64, ppDeinterleavedPCMFrames: **void, pInterleavedPCMFrames: *void) -> void #foreign miniaudio;
+ma_interleave_pcm_frames :: (format: ma_format, channels: ma_uint32, frameCount: ma_uint64, ppDeinterleavedPCMFrames: **void, pInterleavedPCMFrames: *void) -> void #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the channel position of the specified channel in the given channel map.
 
 The pChannelMap parameter can be null, in which case miniaudio's default channel map will be assumed.
 */
-ma_channel_map_get_channel :: (pChannelMap: *ma_channel, channelCount: ma_uint32, channelIndex: ma_uint32) -> ma_channel #foreign miniaudio;
+ma_channel_map_get_channel :: (pChannelMap: *ma_channel, channelCount: ma_uint32, channelIndex: ma_uint32) -> ma_channel #foreign miniaudio_fdkaac;
 
 /*
 Initializes a blank channel map.
 
 When a blank channel map is specified anywhere it indicates that the native channel map should be used.
 */
-ma_channel_map_init_blank :: (pChannelMap: *ma_channel, channels: ma_uint32) -> void #foreign miniaudio;
+ma_channel_map_init_blank :: (pChannelMap: *ma_channel, channels: ma_uint32) -> void #foreign miniaudio_fdkaac;
 
 /*
 Helper for retrieving a standard channel map.
 
 The output channel map buffer must have a capacity of at least `channelMapCap`.
 */
-ma_channel_map_init_standard :: (standardChannelMap: ma_standard_channel_map, pChannelMap: *ma_channel, channelMapCap: u64, channels: ma_uint32) -> void #foreign miniaudio;
+ma_channel_map_init_standard :: (standardChannelMap: ma_standard_channel_map, pChannelMap: *ma_channel, channelMapCap: u64, channels: ma_uint32) -> void #foreign miniaudio_fdkaac;
 
 /*
 Copies a channel map.
 
 Both input and output channel map buffers must have a capacity of at at least `channels`.
 */
-ma_channel_map_copy :: (pOut: *ma_channel, pIn: *ma_channel, channels: ma_uint32) -> void #foreign miniaudio;
+ma_channel_map_copy :: (pOut: *ma_channel, pIn: *ma_channel, channels: ma_uint32) -> void #foreign miniaudio_fdkaac;
 
 /*
 Copies a channel map if one is specified, otherwise copies the default channel map.
 
 The output buffer must have a capacity of at least `channels`. If not NULL, the input channel map must also have a capacity of at least `channels`.
 */
-ma_channel_map_copy_or_default :: (pOut: *ma_channel, channelMapCapOut: u64, pIn: *ma_channel, channels: ma_uint32) -> void #foreign miniaudio;
+ma_channel_map_copy_or_default :: (pOut: *ma_channel, channelMapCapOut: u64, pIn: *ma_channel, channels: ma_uint32) -> void #foreign miniaudio_fdkaac;
 
 /*
 Determines whether or not a channel map is valid.
@@ -1556,7 +2292,7 @@ Invalid channel maps:
 
 The channel map buffer must have a capacity of at least `channels`.
 */
-ma_channel_map_is_valid :: (pChannelMap: *ma_channel, channels: ma_uint32) -> ma_bool32 #foreign miniaudio;
+ma_channel_map_is_valid :: (pChannelMap: *ma_channel, channels: ma_uint32) -> ma_bool32 #foreign miniaudio_fdkaac;
 
 /*
 Helper for comparing two channel maps for equality.
@@ -1565,21 +2301,21 @@ This assumes the channel count is the same between the two.
 
 Both channels map buffers must have a capacity of at least `channels`.
 */
-ma_channel_map_is_equal :: (pChannelMapA: *ma_channel, pChannelMapB: *ma_channel, channels: ma_uint32) -> ma_bool32 #foreign miniaudio;
+ma_channel_map_is_equal :: (pChannelMapA: *ma_channel, pChannelMapB: *ma_channel, channels: ma_uint32) -> ma_bool32 #foreign miniaudio_fdkaac;
 
 /*
 Helper for determining if a channel map is blank (all channels set to MA_CHANNEL_NONE).
 
 The channel map buffer must have a capacity of at least `channels`.
 */
-ma_channel_map_is_blank :: (pChannelMap: *ma_channel, channels: ma_uint32) -> ma_bool32 #foreign miniaudio;
+ma_channel_map_is_blank :: (pChannelMap: *ma_channel, channels: ma_uint32) -> ma_bool32 #foreign miniaudio_fdkaac;
 
 /*
 Helper for determining whether or not a channel is present in the given channel map.
 
 The channel map buffer must have a capacity of at least `channels`.
 */
-ma_channel_map_contains_channel_position :: (channels: ma_uint32, pChannelMap: *ma_channel, channelPosition: ma_channel) -> ma_bool32 #foreign miniaudio;
+ma_channel_map_contains_channel_position :: (channels: ma_uint32, pChannelMap: *ma_channel, channelPosition: ma_channel) -> ma_bool32 #foreign miniaudio_fdkaac;
 
 /*
 Find a channel position in the given channel map. Returns MA_TRUE if the channel is found; MA_FALSE otherwise. The
@@ -1587,7 +2323,7 @@ index of the channel is output to `pChannelIndex`.
 
 The channel map buffer must have a capacity of at least `channels`.
 */
-ma_channel_map_find_channel_position :: (channels: ma_uint32, pChannelMap: *ma_channel, channelPosition: ma_channel, pChannelIndex: *ma_uint32) -> ma_bool32 #foreign miniaudio;
+ma_channel_map_find_channel_position :: (channels: ma_uint32, pChannelMap: *ma_channel, channelPosition: ma_channel, pChannelIndex: *ma_uint32) -> ma_bool32 #foreign miniaudio_fdkaac;
 
 /*
 Generates a string representing the given channel map.
@@ -1596,12 +2332,12 @@ This is for printing and debugging purposes, not serialization/deserialization.
 
 Returns the length of the string, not including the null terminator.
 */
-ma_channel_map_to_string :: (pChannelMap: *ma_channel, channels: ma_uint32, pBufferOut: *u8, bufferCap: u64) -> u64 #foreign miniaudio;
+ma_channel_map_to_string :: (pChannelMap: *ma_channel, channels: ma_uint32, pBufferOut: *u8, bufferCap: u64) -> u64 #foreign miniaudio_fdkaac;
 
 /*
 Retrieves a human readable version of a channel position.
 */
-ma_channel_position_to_string :: (channel: ma_channel) -> *u8 #foreign miniaudio;
+ma_channel_position_to_string :: (channel: ma_channel) -> *u8 #foreign miniaudio_fdkaac;
 
 /*
 High-level helper for doing a full format conversion in one go. Returns the number of output frames. Call this with pOut set to NULL to
@@ -1612,8 +2348,8 @@ A return value of 0 indicates an error.
 
 This function is useful for one-off bulk conversions, but if you're streaming data you should use the ma_data_converter APIs instead.
 */
-ma_convert_frames :: (pOut: *void, frameCountOut: ma_uint64, formatOut: ma_format, channelsOut: ma_uint32, sampleRateOut: ma_uint32, pIn: *void, frameCountIn: ma_uint64, formatIn: ma_format, channelsIn: ma_uint32, sampleRateIn: ma_uint32) -> ma_uint64 #foreign miniaudio;
-ma_convert_frames_ex :: (pOut: *void, frameCountOut: ma_uint64, pIn: *void, frameCountIn: ma_uint64, pConfig: *ma_data_converter_config) -> ma_uint64 #foreign miniaudio;
+ma_convert_frames :: (pOut: *void, frameCountOut: ma_uint64, formatOut: ma_format, channelsOut: ma_uint32, sampleRateOut: ma_uint32, pIn: *void, frameCountIn: ma_uint64, formatIn: ma_format, channelsIn: ma_uint32, sampleRateIn: ma_uint32) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_convert_frames_ex :: (pOut: *void, frameCountOut: ma_uint64, pIn: *void, frameCountIn: ma_uint64, pConfig: *ma_data_converter_config) -> ma_uint64 #foreign miniaudio_fdkaac;
 
 /************************************************************************************************************************************************************
 
@@ -1638,7 +2374,7 @@ ma_data_source_config :: struct {
     vtable: *ma_data_source_vtable;
 }
 
-ma_data_source_config_init :: () -> ma_data_source_config #foreign miniaudio;
+ma_data_source_config_init :: () -> ma_data_source_config #foreign miniaudio_fdkaac;
 
 ma_data_source_base :: struct {
     vtable:           *ma_data_source_vtable;
@@ -1652,28 +2388,28 @@ ma_data_source_base :: struct {
     isLooping:        ma_bool32;
 }
 
-ma_data_source_init :: (pConfig: *ma_data_source_config, pDataSource: *ma_data_source) -> ma_result #foreign miniaudio;
-ma_data_source_uninit :: (pDataSource: *ma_data_source) -> void #foreign miniaudio;
-ma_data_source_read_pcm_frames :: (pDataSource: *ma_data_source, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_data_source_seek_pcm_frames :: (pDataSource: *ma_data_source, frameCount: ma_uint64, pFramesSeeked: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_data_source_seek_to_pcm_frame :: (pDataSource: *ma_data_source, frameIndex: ma_uint64) -> ma_result #foreign miniaudio;
-ma_data_source_get_data_format :: (pDataSource: *ma_data_source, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio;
-ma_data_source_get_cursor_in_pcm_frames :: (pDataSource: *ma_data_source, pCursor: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_data_source_get_length_in_pcm_frames :: (pDataSource: *ma_data_source, pLength: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_data_source_get_cursor_in_seconds :: (pDataSource: *ma_data_source, pCursor: *float) -> ma_result #foreign miniaudio;
-ma_data_source_get_length_in_seconds :: (pDataSource: *ma_data_source, pLength: *float) -> ma_result #foreign miniaudio;
-ma_data_source_set_looping :: (pDataSource: *ma_data_source, isLooping: ma_bool32) -> ma_result #foreign miniaudio;
-ma_data_source_is_looping :: (pDataSource: *ma_data_source) -> ma_bool32 #foreign miniaudio;
-ma_data_source_set_range_in_pcm_frames :: (pDataSource: *ma_data_source, rangeBegInFrames: ma_uint64, rangeEndInFrames: ma_uint64) -> ma_result #foreign miniaudio;
-ma_data_source_get_range_in_pcm_frames :: (pDataSource: *ma_data_source, pRangeBegInFrames: *ma_uint64, pRangeEndInFrames: *ma_uint64) -> void #foreign miniaudio;
-ma_data_source_set_loop_point_in_pcm_frames :: (pDataSource: *ma_data_source, loopBegInFrames: ma_uint64, loopEndInFrames: ma_uint64) -> ma_result #foreign miniaudio;
-ma_data_source_get_loop_point_in_pcm_frames :: (pDataSource: *ma_data_source, pLoopBegInFrames: *ma_uint64, pLoopEndInFrames: *ma_uint64) -> void #foreign miniaudio;
-ma_data_source_set_current :: (pDataSource: *ma_data_source, pCurrentDataSource: *ma_data_source) -> ma_result #foreign miniaudio;
-ma_data_source_get_current :: (pDataSource: *ma_data_source) -> *ma_data_source #foreign miniaudio;
-ma_data_source_set_next :: (pDataSource: *ma_data_source, pNextDataSource: *ma_data_source) -> ma_result #foreign miniaudio;
-ma_data_source_get_next :: (pDataSource: *ma_data_source) -> *ma_data_source #foreign miniaudio;
-ma_data_source_set_next_callback :: (pDataSource: *ma_data_source, onGetNext: ma_data_source_get_next_proc) -> ma_result #foreign miniaudio;
-ma_data_source_get_next_callback :: (pDataSource: *ma_data_source) -> ma_data_source_get_next_proc #foreign miniaudio;
+ma_data_source_init :: (pConfig: *ma_data_source_config, pDataSource: *ma_data_source) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_uninit :: (pDataSource: *ma_data_source) -> void #foreign miniaudio_fdkaac;
+ma_data_source_read_pcm_frames :: (pDataSource: *ma_data_source, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_seek_pcm_frames :: (pDataSource: *ma_data_source, frameCount: ma_uint64, pFramesSeeked: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_seek_to_pcm_frame :: (pDataSource: *ma_data_source, frameIndex: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_get_data_format :: (pDataSource: *ma_data_source, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_get_cursor_in_pcm_frames :: (pDataSource: *ma_data_source, pCursor: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_get_length_in_pcm_frames :: (pDataSource: *ma_data_source, pLength: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_get_cursor_in_seconds :: (pDataSource: *ma_data_source, pCursor: *float) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_get_length_in_seconds :: (pDataSource: *ma_data_source, pLength: *float) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_set_looping :: (pDataSource: *ma_data_source, isLooping: ma_bool32) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_is_looping :: (pDataSource: *ma_data_source) -> ma_bool32 #foreign miniaudio_fdkaac;
+ma_data_source_set_range_in_pcm_frames :: (pDataSource: *ma_data_source, rangeBegInFrames: ma_uint64, rangeEndInFrames: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_get_range_in_pcm_frames :: (pDataSource: *ma_data_source, pRangeBegInFrames: *ma_uint64, pRangeEndInFrames: *ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_data_source_set_loop_point_in_pcm_frames :: (pDataSource: *ma_data_source, loopBegInFrames: ma_uint64, loopEndInFrames: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_get_loop_point_in_pcm_frames :: (pDataSource: *ma_data_source, pLoopBegInFrames: *ma_uint64, pLoopEndInFrames: *ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_data_source_set_current :: (pDataSource: *ma_data_source, pCurrentDataSource: *ma_data_source) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_get_current :: (pDataSource: *ma_data_source) -> *ma_data_source #foreign miniaudio_fdkaac;
+ma_data_source_set_next :: (pDataSource: *ma_data_source, pNextDataSource: *ma_data_source) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_get_next :: (pDataSource: *ma_data_source) -> *ma_data_source #foreign miniaudio_fdkaac;
+ma_data_source_set_next_callback :: (pDataSource: *ma_data_source, onGetNext: ma_data_source_get_next_proc) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_get_next_callback :: (pDataSource: *ma_data_source) -> ma_data_source_get_next_proc #foreign miniaudio_fdkaac;
 
 ma_audio_buffer_ref :: struct {
     ds:           ma_data_source_base;
@@ -1685,17 +2421,17 @@ ma_audio_buffer_ref :: struct {
     pData:        *void;
 }
 
-ma_audio_buffer_ref_init :: (format: ma_format, channels: ma_uint32, pData: *void, sizeInFrames: ma_uint64, pAudioBufferRef: *ma_audio_buffer_ref) -> ma_result #foreign miniaudio;
-ma_audio_buffer_ref_uninit :: (pAudioBufferRef: *ma_audio_buffer_ref) -> void #foreign miniaudio;
-ma_audio_buffer_ref_set_data :: (pAudioBufferRef: *ma_audio_buffer_ref, pData: *void, sizeInFrames: ma_uint64) -> ma_result #foreign miniaudio;
-ma_audio_buffer_ref_read_pcm_frames :: (pAudioBufferRef: *ma_audio_buffer_ref, pFramesOut: *void, frameCount: ma_uint64, loop: ma_bool32) -> ma_uint64 #foreign miniaudio;
-ma_audio_buffer_ref_seek_to_pcm_frame :: (pAudioBufferRef: *ma_audio_buffer_ref, frameIndex: ma_uint64) -> ma_result #foreign miniaudio;
-ma_audio_buffer_ref_map :: (pAudioBufferRef: *ma_audio_buffer_ref, ppFramesOut: **void, pFrameCount: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_audio_buffer_ref_unmap :: (pAudioBufferRef: *ma_audio_buffer_ref, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_audio_buffer_ref_at_end :: (pAudioBufferRef: *ma_audio_buffer_ref) -> ma_bool32 #foreign miniaudio;
-ma_audio_buffer_ref_get_cursor_in_pcm_frames :: (pAudioBufferRef: *ma_audio_buffer_ref, pCursor: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_audio_buffer_ref_get_length_in_pcm_frames :: (pAudioBufferRef: *ma_audio_buffer_ref, pLength: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_audio_buffer_ref_get_available_frames :: (pAudioBufferRef: *ma_audio_buffer_ref, pAvailableFrames: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_audio_buffer_ref_init :: (format: ma_format, channels: ma_uint32, pData: *void, sizeInFrames: ma_uint64, pAudioBufferRef: *ma_audio_buffer_ref) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_ref_uninit :: (pAudioBufferRef: *ma_audio_buffer_ref) -> void #foreign miniaudio_fdkaac;
+ma_audio_buffer_ref_set_data :: (pAudioBufferRef: *ma_audio_buffer_ref, pData: *void, sizeInFrames: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_ref_read_pcm_frames :: (pAudioBufferRef: *ma_audio_buffer_ref, pFramesOut: *void, frameCount: ma_uint64, loop: ma_bool32) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_audio_buffer_ref_seek_to_pcm_frame :: (pAudioBufferRef: *ma_audio_buffer_ref, frameIndex: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_ref_map :: (pAudioBufferRef: *ma_audio_buffer_ref, ppFramesOut: **void, pFrameCount: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_ref_unmap :: (pAudioBufferRef: *ma_audio_buffer_ref, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_ref_at_end :: (pAudioBufferRef: *ma_audio_buffer_ref) -> ma_bool32 #foreign miniaudio_fdkaac;
+ma_audio_buffer_ref_get_cursor_in_pcm_frames :: (pAudioBufferRef: *ma_audio_buffer_ref, pCursor: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_ref_get_length_in_pcm_frames :: (pAudioBufferRef: *ma_audio_buffer_ref, pLength: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_ref_get_available_frames :: (pAudioBufferRef: *ma_audio_buffer_ref, pAvailableFrames: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_audio_buffer_config :: struct {
     format:              ma_format;
@@ -1706,7 +2442,7 @@ ma_audio_buffer_config :: struct {
     allocationCallbacks: ma_allocation_callbacks;
 }
 
-ma_audio_buffer_config_init :: (format: ma_format, channels: ma_uint32, sizeInFrames: ma_uint64, pData: *void, pAllocationCallbacks: *ma_allocation_callbacks) -> ma_audio_buffer_config #foreign miniaudio;
+ma_audio_buffer_config_init :: (format: ma_format, channels: ma_uint32, sizeInFrames: ma_uint64, pData: *void, pAllocationCallbacks: *ma_allocation_callbacks) -> ma_audio_buffer_config #foreign miniaudio_fdkaac;
 
 ma_audio_buffer :: struct {
     ref:                 ma_audio_buffer_ref;
@@ -1715,19 +2451,19 @@ ma_audio_buffer :: struct {
     _pExtraData:         [1] ma_uint8; /* For allocating a buffer with the memory located directly after the other memory of the structure. */
 }
 
-ma_audio_buffer_init :: (pConfig: *ma_audio_buffer_config, pAudioBuffer: *ma_audio_buffer) -> ma_result #foreign miniaudio;
-ma_audio_buffer_init_copy :: (pConfig: *ma_audio_buffer_config, pAudioBuffer: *ma_audio_buffer) -> ma_result #foreign miniaudio;
-ma_audio_buffer_alloc_and_init :: (pConfig: *ma_audio_buffer_config, ppAudioBuffer: **ma_audio_buffer) -> ma_result #foreign miniaudio;
-ma_audio_buffer_uninit :: (pAudioBuffer: *ma_audio_buffer) -> void #foreign miniaudio;
-ma_audio_buffer_uninit_and_free :: (pAudioBuffer: *ma_audio_buffer) -> void #foreign miniaudio;
-ma_audio_buffer_read_pcm_frames :: (pAudioBuffer: *ma_audio_buffer, pFramesOut: *void, frameCount: ma_uint64, loop: ma_bool32) -> ma_uint64 #foreign miniaudio;
-ma_audio_buffer_seek_to_pcm_frame :: (pAudioBuffer: *ma_audio_buffer, frameIndex: ma_uint64) -> ma_result #foreign miniaudio;
-ma_audio_buffer_map :: (pAudioBuffer: *ma_audio_buffer, ppFramesOut: **void, pFrameCount: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_audio_buffer_unmap :: (pAudioBuffer: *ma_audio_buffer, frameCount: ma_uint64) -> ma_result #foreign miniaudio;
-ma_audio_buffer_at_end :: (pAudioBuffer: *ma_audio_buffer) -> ma_bool32 #foreign miniaudio;
-ma_audio_buffer_get_cursor_in_pcm_frames :: (pAudioBuffer: *ma_audio_buffer, pCursor: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_audio_buffer_get_length_in_pcm_frames :: (pAudioBuffer: *ma_audio_buffer, pLength: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_audio_buffer_get_available_frames :: (pAudioBuffer: *ma_audio_buffer, pAvailableFrames: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_audio_buffer_init :: (pConfig: *ma_audio_buffer_config, pAudioBuffer: *ma_audio_buffer) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_init_copy :: (pConfig: *ma_audio_buffer_config, pAudioBuffer: *ma_audio_buffer) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_alloc_and_init :: (pConfig: *ma_audio_buffer_config, ppAudioBuffer: **ma_audio_buffer) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_uninit :: (pAudioBuffer: *ma_audio_buffer) -> void #foreign miniaudio_fdkaac;
+ma_audio_buffer_uninit_and_free :: (pAudioBuffer: *ma_audio_buffer) -> void #foreign miniaudio_fdkaac;
+ma_audio_buffer_read_pcm_frames :: (pAudioBuffer: *ma_audio_buffer, pFramesOut: *void, frameCount: ma_uint64, loop: ma_bool32) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_audio_buffer_seek_to_pcm_frame :: (pAudioBuffer: *ma_audio_buffer, frameIndex: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_map :: (pAudioBuffer: *ma_audio_buffer, ppFramesOut: **void, pFrameCount: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_unmap :: (pAudioBuffer: *ma_audio_buffer, frameCount: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_at_end :: (pAudioBuffer: *ma_audio_buffer) -> ma_bool32 #foreign miniaudio_fdkaac;
+ma_audio_buffer_get_cursor_in_pcm_frames :: (pAudioBuffer: *ma_audio_buffer, pCursor: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_get_length_in_pcm_frames :: (pAudioBuffer: *ma_audio_buffer, pLength: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_audio_buffer_get_available_frames :: (pAudioBuffer: *ma_audio_buffer, pAvailableFrames: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_paged_audio_buffer_page :: struct {
     pNext:        *ma_paged_audio_buffer_page;
@@ -1742,21 +2478,21 @@ ma_paged_audio_buffer_data :: struct {
     pTail:    *ma_paged_audio_buffer_page; /* Never null. Initially set to &head. */
 }
 
-ma_paged_audio_buffer_data_init :: (format: ma_format, channels: ma_uint32, pData: *ma_paged_audio_buffer_data) -> ma_result #foreign miniaudio;
-ma_paged_audio_buffer_data_uninit :: (pData: *ma_paged_audio_buffer_data, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_paged_audio_buffer_data_get_head :: (pData: *ma_paged_audio_buffer_data) -> *ma_paged_audio_buffer_page #foreign miniaudio;
-ma_paged_audio_buffer_data_get_tail :: (pData: *ma_paged_audio_buffer_data) -> *ma_paged_audio_buffer_page #foreign miniaudio;
-ma_paged_audio_buffer_data_get_length_in_pcm_frames :: (pData: *ma_paged_audio_buffer_data, pLength: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_paged_audio_buffer_data_allocate_page :: (pData: *ma_paged_audio_buffer_data, pageSizeInFrames: ma_uint64, pInitialData: *void, pAllocationCallbacks: *ma_allocation_callbacks, ppPage: **ma_paged_audio_buffer_page) -> ma_result #foreign miniaudio;
-ma_paged_audio_buffer_data_free_page :: (pData: *ma_paged_audio_buffer_data, pPage: *ma_paged_audio_buffer_page, pAllocationCallbacks: *ma_allocation_callbacks) -> ma_result #foreign miniaudio;
-ma_paged_audio_buffer_data_append_page :: (pData: *ma_paged_audio_buffer_data, pPage: *ma_paged_audio_buffer_page) -> ma_result #foreign miniaudio;
-ma_paged_audio_buffer_data_allocate_and_append_page :: (pData: *ma_paged_audio_buffer_data, pageSizeInFrames: ma_uint32, pInitialData: *void, pAllocationCallbacks: *ma_allocation_callbacks) -> ma_result #foreign miniaudio;
+ma_paged_audio_buffer_data_init :: (format: ma_format, channels: ma_uint32, pData: *ma_paged_audio_buffer_data) -> ma_result #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_data_uninit :: (pData: *ma_paged_audio_buffer_data, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_data_get_head :: (pData: *ma_paged_audio_buffer_data) -> *ma_paged_audio_buffer_page #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_data_get_tail :: (pData: *ma_paged_audio_buffer_data) -> *ma_paged_audio_buffer_page #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_data_get_length_in_pcm_frames :: (pData: *ma_paged_audio_buffer_data, pLength: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_data_allocate_page :: (pData: *ma_paged_audio_buffer_data, pageSizeInFrames: ma_uint64, pInitialData: *void, pAllocationCallbacks: *ma_allocation_callbacks, ppPage: **ma_paged_audio_buffer_page) -> ma_result #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_data_free_page :: (pData: *ma_paged_audio_buffer_data, pPage: *ma_paged_audio_buffer_page, pAllocationCallbacks: *ma_allocation_callbacks) -> ma_result #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_data_append_page :: (pData: *ma_paged_audio_buffer_data, pPage: *ma_paged_audio_buffer_page) -> ma_result #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_data_allocate_and_append_page :: (pData: *ma_paged_audio_buffer_data, pageSizeInFrames: ma_uint32, pInitialData: *void, pAllocationCallbacks: *ma_allocation_callbacks) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_paged_audio_buffer_config :: struct {
     pData: *ma_paged_audio_buffer_data; /* Must not be null. */
 }
 
-ma_paged_audio_buffer_config_init :: (pData: *ma_paged_audio_buffer_data) -> ma_paged_audio_buffer_config #foreign miniaudio;
+ma_paged_audio_buffer_config_init :: (pData: *ma_paged_audio_buffer_data) -> ma_paged_audio_buffer_config #foreign miniaudio_fdkaac;
 
 ma_paged_audio_buffer :: struct {
     ds:             ma_data_source_base;
@@ -1766,12 +2502,12 @@ ma_paged_audio_buffer :: struct {
     absoluteCursor: ma_uint64;
 }
 
-ma_paged_audio_buffer_init :: (pConfig: *ma_paged_audio_buffer_config, pPagedAudioBuffer: *ma_paged_audio_buffer) -> ma_result #foreign miniaudio;
-ma_paged_audio_buffer_uninit :: (pPagedAudioBuffer: *ma_paged_audio_buffer) -> void #foreign miniaudio;
-ma_paged_audio_buffer_read_pcm_frames :: (pPagedAudioBuffer: *ma_paged_audio_buffer, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_paged_audio_buffer_seek_to_pcm_frame :: (pPagedAudioBuffer: *ma_paged_audio_buffer, frameIndex: ma_uint64) -> ma_result #foreign miniaudio;
-ma_paged_audio_buffer_get_cursor_in_pcm_frames :: (pPagedAudioBuffer: *ma_paged_audio_buffer, pCursor: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_paged_audio_buffer_get_length_in_pcm_frames :: (pPagedAudioBuffer: *ma_paged_audio_buffer, pLength: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_paged_audio_buffer_init :: (pConfig: *ma_paged_audio_buffer_config, pPagedAudioBuffer: *ma_paged_audio_buffer) -> ma_result #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_uninit :: (pPagedAudioBuffer: *ma_paged_audio_buffer) -> void #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_read_pcm_frames :: (pPagedAudioBuffer: *ma_paged_audio_buffer, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_seek_to_pcm_frame :: (pPagedAudioBuffer: *ma_paged_audio_buffer, frameIndex: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_get_cursor_in_pcm_frames :: (pPagedAudioBuffer: *ma_paged_audio_buffer, pCursor: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_paged_audio_buffer_get_length_in_pcm_frames :: (pPagedAudioBuffer: *ma_paged_audio_buffer, pLength: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /************************************************************************************************************************************************************
 
@@ -1790,23 +2526,23 @@ ma_rb :: struct {
     allocationCallbacks:    ma_allocation_callbacks;
 }
 
-ma_rb_init_ex :: (subbufferSizeInBytes: u64, subbufferCount: u64, subbufferStrideInBytes: u64, pOptionalPreallocatedBuffer: *void, pAllocationCallbacks: *ma_allocation_callbacks, pRB: *ma_rb) -> ma_result #foreign miniaudio;
-ma_rb_init :: (bufferSizeInBytes: u64, pOptionalPreallocatedBuffer: *void, pAllocationCallbacks: *ma_allocation_callbacks, pRB: *ma_rb) -> ma_result #foreign miniaudio;
-ma_rb_uninit :: (pRB: *ma_rb) -> void #foreign miniaudio;
-ma_rb_reset :: (pRB: *ma_rb) -> void #foreign miniaudio;
-ma_rb_acquire_read :: (pRB: *ma_rb, pSizeInBytes: *u64, ppBufferOut: **void) -> ma_result #foreign miniaudio;
-ma_rb_commit_read :: (pRB: *ma_rb, sizeInBytes: u64) -> ma_result #foreign miniaudio;
-ma_rb_acquire_write :: (pRB: *ma_rb, pSizeInBytes: *u64, ppBufferOut: **void) -> ma_result #foreign miniaudio;
-ma_rb_commit_write :: (pRB: *ma_rb, sizeInBytes: u64) -> ma_result #foreign miniaudio;
-ma_rb_seek_read :: (pRB: *ma_rb, offsetInBytes: u64) -> ma_result #foreign miniaudio;
-ma_rb_seek_write :: (pRB: *ma_rb, offsetInBytes: u64) -> ma_result #foreign miniaudio;
-ma_rb_pointer_distance :: (pRB: *ma_rb) -> ma_int32 #foreign miniaudio;
-ma_rb_available_read :: (pRB: *ma_rb) -> ma_uint32 #foreign miniaudio;
-ma_rb_available_write :: (pRB: *ma_rb) -> ma_uint32 #foreign miniaudio;
-ma_rb_get_subbuffer_size :: (pRB: *ma_rb) -> u64 #foreign miniaudio;
-ma_rb_get_subbuffer_stride :: (pRB: *ma_rb) -> u64 #foreign miniaudio;
-ma_rb_get_subbuffer_offset :: (pRB: *ma_rb, subbufferIndex: u64) -> u64 #foreign miniaudio;
-ma_rb_get_subbuffer_ptr :: (pRB: *ma_rb, subbufferIndex: u64, pBuffer: *void) -> *void #foreign miniaudio;
+ma_rb_init_ex :: (subbufferSizeInBytes: u64, subbufferCount: u64, subbufferStrideInBytes: u64, pOptionalPreallocatedBuffer: *void, pAllocationCallbacks: *ma_allocation_callbacks, pRB: *ma_rb) -> ma_result #foreign miniaudio_fdkaac;
+ma_rb_init :: (bufferSizeInBytes: u64, pOptionalPreallocatedBuffer: *void, pAllocationCallbacks: *ma_allocation_callbacks, pRB: *ma_rb) -> ma_result #foreign miniaudio_fdkaac;
+ma_rb_uninit :: (pRB: *ma_rb) -> void #foreign miniaudio_fdkaac;
+ma_rb_reset :: (pRB: *ma_rb) -> void #foreign miniaudio_fdkaac;
+ma_rb_acquire_read :: (pRB: *ma_rb, pSizeInBytes: *u64, ppBufferOut: **void) -> ma_result #foreign miniaudio_fdkaac;
+ma_rb_commit_read :: (pRB: *ma_rb, sizeInBytes: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_rb_acquire_write :: (pRB: *ma_rb, pSizeInBytes: *u64, ppBufferOut: **void) -> ma_result #foreign miniaudio_fdkaac;
+ma_rb_commit_write :: (pRB: *ma_rb, sizeInBytes: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_rb_seek_read :: (pRB: *ma_rb, offsetInBytes: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_rb_seek_write :: (pRB: *ma_rb, offsetInBytes: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_rb_pointer_distance :: (pRB: *ma_rb) -> ma_int32 #foreign miniaudio_fdkaac;
+ma_rb_available_read :: (pRB: *ma_rb) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_rb_available_write :: (pRB: *ma_rb) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_rb_get_subbuffer_size :: (pRB: *ma_rb) -> u64 #foreign miniaudio_fdkaac;
+ma_rb_get_subbuffer_stride :: (pRB: *ma_rb) -> u64 #foreign miniaudio_fdkaac;
+ma_rb_get_subbuffer_offset :: (pRB: *ma_rb, subbufferIndex: u64) -> u64 #foreign miniaudio_fdkaac;
+ma_rb_get_subbuffer_ptr :: (pRB: *ma_rb, subbufferIndex: u64, pBuffer: *void) -> *void #foreign miniaudio_fdkaac;
 
 ma_pcm_rb :: struct {
     ds:         ma_data_source_base;
@@ -1816,27 +2552,27 @@ ma_pcm_rb :: struct {
     sampleRate: ma_uint32; /* Not required for the ring buffer itself, but useful for associating the data with some sample rate, particularly for data sources. */
 }
 
-ma_pcm_rb_init_ex :: (format: ma_format, channels: ma_uint32, subbufferSizeInFrames: ma_uint32, subbufferCount: ma_uint32, subbufferStrideInFrames: ma_uint32, pOptionalPreallocatedBuffer: *void, pAllocationCallbacks: *ma_allocation_callbacks, pRB: *ma_pcm_rb) -> ma_result #foreign miniaudio;
-ma_pcm_rb_init :: (format: ma_format, channels: ma_uint32, bufferSizeInFrames: ma_uint32, pOptionalPreallocatedBuffer: *void, pAllocationCallbacks: *ma_allocation_callbacks, pRB: *ma_pcm_rb) -> ma_result #foreign miniaudio;
-ma_pcm_rb_uninit :: (pRB: *ma_pcm_rb) -> void #foreign miniaudio;
-ma_pcm_rb_reset :: (pRB: *ma_pcm_rb) -> void #foreign miniaudio;
-ma_pcm_rb_acquire_read :: (pRB: *ma_pcm_rb, pSizeInFrames: *ma_uint32, ppBufferOut: **void) -> ma_result #foreign miniaudio;
-ma_pcm_rb_commit_read :: (pRB: *ma_pcm_rb, sizeInFrames: ma_uint32) -> ma_result #foreign miniaudio;
-ma_pcm_rb_acquire_write :: (pRB: *ma_pcm_rb, pSizeInFrames: *ma_uint32, ppBufferOut: **void) -> ma_result #foreign miniaudio;
-ma_pcm_rb_commit_write :: (pRB: *ma_pcm_rb, sizeInFrames: ma_uint32) -> ma_result #foreign miniaudio;
-ma_pcm_rb_seek_read :: (pRB: *ma_pcm_rb, offsetInFrames: ma_uint32) -> ma_result #foreign miniaudio;
-ma_pcm_rb_seek_write :: (pRB: *ma_pcm_rb, offsetInFrames: ma_uint32) -> ma_result #foreign miniaudio;
-ma_pcm_rb_pointer_distance :: (pRB: *ma_pcm_rb) -> ma_int32 #foreign miniaudio;
-ma_pcm_rb_available_read :: (pRB: *ma_pcm_rb) -> ma_uint32 #foreign miniaudio;
-ma_pcm_rb_available_write :: (pRB: *ma_pcm_rb) -> ma_uint32 #foreign miniaudio;
-ma_pcm_rb_get_subbuffer_size :: (pRB: *ma_pcm_rb) -> ma_uint32 #foreign miniaudio;
-ma_pcm_rb_get_subbuffer_stride :: (pRB: *ma_pcm_rb) -> ma_uint32 #foreign miniaudio;
-ma_pcm_rb_get_subbuffer_offset :: (pRB: *ma_pcm_rb, subbufferIndex: ma_uint32) -> ma_uint32 #foreign miniaudio;
-ma_pcm_rb_get_subbuffer_ptr :: (pRB: *ma_pcm_rb, subbufferIndex: ma_uint32, pBuffer: *void) -> *void #foreign miniaudio;
-ma_pcm_rb_get_format :: (pRB: *ma_pcm_rb) -> ma_format #foreign miniaudio;
-ma_pcm_rb_get_channels :: (pRB: *ma_pcm_rb) -> ma_uint32 #foreign miniaudio;
-ma_pcm_rb_get_sample_rate :: (pRB: *ma_pcm_rb) -> ma_uint32 #foreign miniaudio;
-ma_pcm_rb_set_sample_rate :: (pRB: *ma_pcm_rb, sampleRate: ma_uint32) -> void #foreign miniaudio;
+ma_pcm_rb_init_ex :: (format: ma_format, channels: ma_uint32, subbufferSizeInFrames: ma_uint32, subbufferCount: ma_uint32, subbufferStrideInFrames: ma_uint32, pOptionalPreallocatedBuffer: *void, pAllocationCallbacks: *ma_allocation_callbacks, pRB: *ma_pcm_rb) -> ma_result #foreign miniaudio_fdkaac;
+ma_pcm_rb_init :: (format: ma_format, channels: ma_uint32, bufferSizeInFrames: ma_uint32, pOptionalPreallocatedBuffer: *void, pAllocationCallbacks: *ma_allocation_callbacks, pRB: *ma_pcm_rb) -> ma_result #foreign miniaudio_fdkaac;
+ma_pcm_rb_uninit :: (pRB: *ma_pcm_rb) -> void #foreign miniaudio_fdkaac;
+ma_pcm_rb_reset :: (pRB: *ma_pcm_rb) -> void #foreign miniaudio_fdkaac;
+ma_pcm_rb_acquire_read :: (pRB: *ma_pcm_rb, pSizeInFrames: *ma_uint32, ppBufferOut: **void) -> ma_result #foreign miniaudio_fdkaac;
+ma_pcm_rb_commit_read :: (pRB: *ma_pcm_rb, sizeInFrames: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_pcm_rb_acquire_write :: (pRB: *ma_pcm_rb, pSizeInFrames: *ma_uint32, ppBufferOut: **void) -> ma_result #foreign miniaudio_fdkaac;
+ma_pcm_rb_commit_write :: (pRB: *ma_pcm_rb, sizeInFrames: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_pcm_rb_seek_read :: (pRB: *ma_pcm_rb, offsetInFrames: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_pcm_rb_seek_write :: (pRB: *ma_pcm_rb, offsetInFrames: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_pcm_rb_pointer_distance :: (pRB: *ma_pcm_rb) -> ma_int32 #foreign miniaudio_fdkaac;
+ma_pcm_rb_available_read :: (pRB: *ma_pcm_rb) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_pcm_rb_available_write :: (pRB: *ma_pcm_rb) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_pcm_rb_get_subbuffer_size :: (pRB: *ma_pcm_rb) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_pcm_rb_get_subbuffer_stride :: (pRB: *ma_pcm_rb) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_pcm_rb_get_subbuffer_offset :: (pRB: *ma_pcm_rb, subbufferIndex: ma_uint32) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_pcm_rb_get_subbuffer_ptr :: (pRB: *ma_pcm_rb, subbufferIndex: ma_uint32, pBuffer: *void) -> *void #foreign miniaudio_fdkaac;
+ma_pcm_rb_get_format :: (pRB: *ma_pcm_rb) -> ma_format #foreign miniaudio_fdkaac;
+ma_pcm_rb_get_channels :: (pRB: *ma_pcm_rb) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_pcm_rb_get_sample_rate :: (pRB: *ma_pcm_rb) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_pcm_rb_set_sample_rate :: (pRB: *ma_pcm_rb, sampleRate: ma_uint32) -> void #foreign miniaudio_fdkaac;
 
 /*
 The idea of the duplex ring buffer is to act as the intermediary buffer when running two asynchronous devices in a duplex set up. The
@@ -1852,8 +2588,8 @@ ma_duplex_rb :: struct {
     rb: ma_pcm_rb;
 }
 
-ma_duplex_rb_init :: (captureFormat: ma_format, captureChannels: ma_uint32, sampleRate: ma_uint32, captureInternalSampleRate: ma_uint32, captureInternalPeriodSizeInFrames: ma_uint32, pAllocationCallbacks: *ma_allocation_callbacks, pRB: *ma_duplex_rb) -> ma_result #foreign miniaudio;
-ma_duplex_rb_uninit :: (pRB: *ma_duplex_rb) -> ma_result #foreign miniaudio;
+ma_duplex_rb_init :: (captureFormat: ma_format, captureChannels: ma_uint32, sampleRate: ma_uint32, captureInternalSampleRate: ma_uint32, captureInternalPeriodSizeInFrames: ma_uint32, pAllocationCallbacks: *ma_allocation_callbacks, pRB: *ma_duplex_rb) -> ma_result #foreign miniaudio_fdkaac;
+ma_duplex_rb_uninit :: (pRB: *ma_duplex_rb) -> ma_result #foreign miniaudio_fdkaac;
 
 /************************************************************************************************************************************************************
 
@@ -1863,47 +2599,47 @@ Miscellaneous Helpers
 /*
 Retrieves a human readable description of the given result code.
 */
-ma_result_description :: (result: ma_result) -> *u8 #foreign miniaudio;
+ma_result_description :: (result: ma_result) -> *u8 #foreign miniaudio_fdkaac;
 
 /*
 malloc()
 */
-ma_malloc :: (sz: u64, pAllocationCallbacks: *ma_allocation_callbacks) -> *void #foreign miniaudio;
+ma_malloc :: (sz: u64, pAllocationCallbacks: *ma_allocation_callbacks) -> *void #foreign miniaudio_fdkaac;
 
 /*
 calloc()
 */
-ma_calloc :: (sz: u64, pAllocationCallbacks: *ma_allocation_callbacks) -> *void #foreign miniaudio;
+ma_calloc :: (sz: u64, pAllocationCallbacks: *ma_allocation_callbacks) -> *void #foreign miniaudio_fdkaac;
 
 /*
 realloc()
 */
-ma_realloc :: (p: *void, sz: u64, pAllocationCallbacks: *ma_allocation_callbacks) -> *void #foreign miniaudio;
+ma_realloc :: (p: *void, sz: u64, pAllocationCallbacks: *ma_allocation_callbacks) -> *void #foreign miniaudio_fdkaac;
 
 /*
 free()
 */
-ma_free :: (p: *void, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_free :: (p: *void, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 /*
 Performs an aligned malloc, with the assumption that the alignment is a power of 2.
 */
-ma_aligned_malloc :: (sz: u64, alignment: u64, pAllocationCallbacks: *ma_allocation_callbacks) -> *void #foreign miniaudio;
+ma_aligned_malloc :: (sz: u64, alignment: u64, pAllocationCallbacks: *ma_allocation_callbacks) -> *void #foreign miniaudio_fdkaac;
 
 /*
 Free's an aligned malloc'd buffer.
 */
-ma_aligned_free :: (p: *void, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_aligned_free :: (p: *void, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 /*
 Retrieves a friendly name for a format.
 */
-ma_get_format_name :: (format: ma_format) -> *u8 #foreign miniaudio;
+ma_get_format_name :: (format: ma_format) -> *u8 #foreign miniaudio_fdkaac;
 
 /*
 Blends two frames in floating point format.
 */
-ma_blend_f32 :: (pOut: *float, pInA: *float, pInB: *float, factor: float, channels: ma_uint32) -> void #foreign miniaudio;
+ma_blend_f32 :: (pOut: *float, pInA: *float, pInB: *float, factor: float, channels: ma_uint32) -> void #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the size of a sample in bytes for the given format.
@@ -1913,12 +2649,12 @@ This API is efficient and is implemented using a lookup table.
 Thread Safety: SAFE
 This API is pure.
 */
-ma_get_bytes_per_sample :: (format: ma_format) -> ma_uint32 #foreign miniaudio;
+ma_get_bytes_per_sample :: (format: ma_format) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 /*
 Converts a log level to a string.
 */
-ma_log_level_to_string :: (logLevel: ma_uint32) -> *u8 #foreign miniaudio;
+ma_log_level_to_string :: (logLevel: ma_uint32) -> *u8 #foreign miniaudio_fdkaac;
 
 /************************************************************************************************************************************************************
 
@@ -1928,59 +2664,59 @@ Synchronization
 /*
 Locks a spinlock.
 */
-ma_spinlock_lock :: (pSpinlock: *ma_spinlock) -> ma_result #foreign miniaudio;
+ma_spinlock_lock :: (pSpinlock: *ma_spinlock) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Locks a spinlock, but does not yield() when looping.
 */
-ma_spinlock_lock_noyield :: (pSpinlock: *ma_spinlock) -> ma_result #foreign miniaudio;
+ma_spinlock_lock_noyield :: (pSpinlock: *ma_spinlock) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Unlocks a spinlock.
 */
-ma_spinlock_unlock :: (pSpinlock: *ma_spinlock) -> ma_result #foreign miniaudio;
+ma_spinlock_unlock :: (pSpinlock: *ma_spinlock) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Creates a mutex.
 
 A mutex must be created from a valid context. A mutex is initially unlocked.
 */
-ma_mutex_init :: (pMutex: *ma_mutex) -> ma_result #foreign miniaudio;
+ma_mutex_init :: (pMutex: *ma_mutex) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Deletes a mutex.
 */
-ma_mutex_uninit :: (pMutex: *ma_mutex) -> void #foreign miniaudio;
+ma_mutex_uninit :: (pMutex: *ma_mutex) -> void #foreign miniaudio_fdkaac;
 
 /*
 Locks a mutex with an infinite timeout.
 */
-ma_mutex_lock :: (pMutex: *ma_mutex) -> void #foreign miniaudio;
+ma_mutex_lock :: (pMutex: *ma_mutex) -> void #foreign miniaudio_fdkaac;
 
 /*
 Unlocks a mutex.
 */
-ma_mutex_unlock :: (pMutex: *ma_mutex) -> void #foreign miniaudio;
+ma_mutex_unlock :: (pMutex: *ma_mutex) -> void #foreign miniaudio_fdkaac;
 
 /*
 Initializes an auto-reset event.
 */
-ma_event_init :: (pEvent: *ma_event) -> ma_result #foreign miniaudio;
+ma_event_init :: (pEvent: *ma_event) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Uninitializes an auto-reset event.
 */
-ma_event_uninit :: (pEvent: *ma_event) -> void #foreign miniaudio;
+ma_event_uninit :: (pEvent: *ma_event) -> void #foreign miniaudio_fdkaac;
 
 /*
 Waits for the specified auto-reset event to become signalled.
 */
-ma_event_wait :: (pEvent: *ma_event) -> ma_result #foreign miniaudio;
+ma_event_wait :: (pEvent: *ma_event) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Signals the specified auto-reset event.
 */
-ma_event_signal :: (pEvent: *ma_event) -> ma_result #foreign miniaudio;
+ma_event_signal :: (pEvent: *ma_event) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Fence
@@ -2002,11 +2738,11 @@ ma_fence :: struct {
     counter: ma_uint32;
 }
 
-ma_fence_init :: (pFence: *ma_fence) -> ma_result #foreign miniaudio;
-ma_fence_uninit :: (pFence: *ma_fence) -> void #foreign miniaudio;
-ma_fence_acquire :: (pFence: *ma_fence) -> ma_result #foreign miniaudio;
-ma_fence_release :: (pFence: *ma_fence) -> ma_result #foreign miniaudio;
-ma_fence_wait :: (pFence: *ma_fence) -> ma_result #foreign miniaudio;
+ma_fence_init :: (pFence: *ma_fence) -> ma_result #foreign miniaudio_fdkaac;
+ma_fence_uninit :: (pFence: *ma_fence) -> void #foreign miniaudio_fdkaac;
+ma_fence_acquire :: (pFence: *ma_fence) -> ma_result #foreign miniaudio_fdkaac;
+ma_fence_release :: (pFence: *ma_fence) -> ma_result #foreign miniaudio_fdkaac;
+ma_fence_wait :: (pFence: *ma_fence) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Notification callback for asynchronous operations.
@@ -2017,7 +2753,7 @@ ma_async_notification_callbacks :: struct {
     onSignal: #type (pNotification: *ma_async_notification) -> void #c_call;
 }
 
-ma_async_notification_signal :: (pNotification: *ma_async_notification) -> ma_result #foreign miniaudio;
+ma_async_notification_signal :: (pNotification: *ma_async_notification) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Simple polling notification.
@@ -2029,8 +2765,8 @@ ma_async_notification_poll :: struct {
     signalled: ma_bool32;
 }
 
-ma_async_notification_poll_init :: (pNotificationPoll: *ma_async_notification_poll) -> ma_result #foreign miniaudio;
-ma_async_notification_poll_is_signalled :: (pNotificationPoll: *ma_async_notification_poll) -> ma_bool32 #foreign miniaudio;
+ma_async_notification_poll_init :: (pNotificationPoll: *ma_async_notification_poll) -> ma_result #foreign miniaudio_fdkaac;
+ma_async_notification_poll_is_signalled :: (pNotificationPoll: *ma_async_notification_poll) -> ma_bool32 #foreign miniaudio_fdkaac;
 
 /*
 Event Notification
@@ -2043,10 +2779,10 @@ ma_async_notification_event :: struct {
     e:  ma_event;
 }
 
-ma_async_notification_event_init :: (pNotificationEvent: *ma_async_notification_event) -> ma_result #foreign miniaudio;
-ma_async_notification_event_uninit :: (pNotificationEvent: *ma_async_notification_event) -> ma_result #foreign miniaudio;
-ma_async_notification_event_wait :: (pNotificationEvent: *ma_async_notification_event) -> ma_result #foreign miniaudio;
-ma_async_notification_event_signal :: (pNotificationEvent: *ma_async_notification_event) -> ma_result #foreign miniaudio;
+ma_async_notification_event_init :: (pNotificationEvent: *ma_async_notification_event) -> ma_result #foreign miniaudio_fdkaac;
+ma_async_notification_event_uninit :: (pNotificationEvent: *ma_async_notification_event) -> ma_result #foreign miniaudio_fdkaac;
+ma_async_notification_event_wait :: (pNotificationEvent: *ma_async_notification_event) -> ma_result #foreign miniaudio_fdkaac;
+ma_async_notification_event_signal :: (pNotificationEvent: *ma_async_notification_event) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Slot Allocator
@@ -2068,7 +2804,7 @@ ma_slot_allocator_config :: struct {
     capacity: ma_uint32; /* The number of slots to make available. */
 }
 
-ma_slot_allocator_config_init :: (capacity: ma_uint32) -> ma_slot_allocator_config #foreign miniaudio;
+ma_slot_allocator_config_init :: (capacity: ma_uint32) -> ma_slot_allocator_config #foreign miniaudio_fdkaac;
 
 ma_slot_allocator_group :: struct {
     bitfield: ma_uint32; /* Must be used atomically because the allocation and freeing routines need to make copies of this which must never be optimized away by the compiler. */
@@ -2085,12 +2821,12 @@ ma_slot_allocator :: struct {
     _pHeap:    *void;
 }
 
-ma_slot_allocator_get_heap_size :: (pConfig: *ma_slot_allocator_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_slot_allocator_init_preallocated :: (pConfig: *ma_slot_allocator_config, pHeap: *void, pAllocator: *ma_slot_allocator) -> ma_result #foreign miniaudio;
-ma_slot_allocator_init :: (pConfig: *ma_slot_allocator_config, pAllocationCallbacks: *ma_allocation_callbacks, pAllocator: *ma_slot_allocator) -> ma_result #foreign miniaudio;
-ma_slot_allocator_uninit :: (pAllocator: *ma_slot_allocator, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_slot_allocator_alloc :: (pAllocator: *ma_slot_allocator, pSlot: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_slot_allocator_free :: (pAllocator: *ma_slot_allocator, slot: ma_uint64) -> ma_result #foreign miniaudio;
+ma_slot_allocator_get_heap_size :: (pConfig: *ma_slot_allocator_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_slot_allocator_init_preallocated :: (pConfig: *ma_slot_allocator_config, pHeap: *void, pAllocator: *ma_slot_allocator) -> ma_result #foreign miniaudio_fdkaac;
+ma_slot_allocator_init :: (pConfig: *ma_slot_allocator_config, pAllocationCallbacks: *ma_allocation_callbacks, pAllocator: *ma_slot_allocator) -> ma_result #foreign miniaudio_fdkaac;
+ma_slot_allocator_uninit :: (pAllocator: *ma_slot_allocator, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_slot_allocator_alloc :: (pAllocator: *ma_slot_allocator, pSlot: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_slot_allocator_free :: (pAllocator: *ma_slot_allocator, slot: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Callback for processing a job. Each job type will have their own processing callback which will be
@@ -2223,8 +2959,8 @@ ma_job :: struct {
     };
 }
 
-ma_job_init :: (code: ma_uint16) -> ma_job #foreign miniaudio;
-ma_job_process :: (pJob: *ma_job) -> ma_result #foreign miniaudio;
+ma_job_init :: (code: ma_uint16) -> ma_job #foreign miniaudio_fdkaac;
+ma_job_process :: (pJob: *ma_job) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 When set, ma_job_queue_next() will not wait and no semaphore will be signaled in
@@ -2241,7 +2977,7 @@ ma_job_queue_config :: struct {
     capacity: ma_uint32; /* The maximum number of jobs that can fit in the queue at a time. */
 }
 
-ma_job_queue_config_init :: (flags: ma_uint32, capacity: ma_uint32) -> ma_job_queue_config #foreign miniaudio;
+ma_job_queue_config_init :: (flags: ma_uint32, capacity: ma_uint32) -> ma_job_queue_config #foreign miniaudio_fdkaac;
 
 ma_job_queue :: struct {
     flags:     ma_uint32; /* Flags passed in at initialization time. */
@@ -2261,12 +2997,12 @@ ma_job_queue :: struct {
     _ownsHeap: ma_bool32;
 }
 
-ma_job_queue_get_heap_size :: (pConfig: *ma_job_queue_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_job_queue_init_preallocated :: (pConfig: *ma_job_queue_config, pHeap: *void, pQueue: *ma_job_queue) -> ma_result #foreign miniaudio;
-ma_job_queue_init :: (pConfig: *ma_job_queue_config, pAllocationCallbacks: *ma_allocation_callbacks, pQueue: *ma_job_queue) -> ma_result #foreign miniaudio;
-ma_job_queue_uninit :: (pQueue: *ma_job_queue, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_job_queue_post :: (pQueue: *ma_job_queue, pJob: *ma_job) -> ma_result #foreign miniaudio;
-ma_job_queue_next :: (pQueue: *ma_job_queue, pJob: *ma_job) -> ma_result #foreign miniaudio;
+ma_job_queue_get_heap_size :: (pConfig: *ma_job_queue_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_job_queue_init_preallocated :: (pConfig: *ma_job_queue_config, pHeap: *void, pQueue: *ma_job_queue) -> ma_result #foreign miniaudio_fdkaac;
+ma_job_queue_init :: (pConfig: *ma_job_queue_config, pAllocationCallbacks: *ma_allocation_callbacks, pQueue: *ma_job_queue) -> ma_result #foreign miniaudio_fdkaac;
+ma_job_queue_uninit :: (pQueue: *ma_job_queue, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_job_queue_post :: (pQueue: *ma_job_queue, pJob: *ma_job) -> ma_result #foreign miniaudio_fdkaac;
+ma_job_queue_next :: (pQueue: *ma_job_queue, pJob: *ma_job) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_device_state :: enum u32 {
     uninitialized :: 0;
@@ -2312,7 +3048,7 @@ ma_device_job_thread_config :: struct {
     jobQueueFlags:    ma_uint32;
 }
 
-ma_device_job_thread_config_init :: () -> ma_device_job_thread_config #foreign miniaudio;
+ma_device_job_thread_config_init :: () -> ma_device_job_thread_config #foreign miniaudio_fdkaac;
 
 ma_device_job_thread :: struct {
     thread:     ma_thread;
@@ -2320,10 +3056,10 @@ ma_device_job_thread :: struct {
     _hasThread: ma_bool32;
 }
 
-ma_device_job_thread_init :: (pConfig: *ma_device_job_thread_config, pAllocationCallbacks: *ma_allocation_callbacks, pJobThread: *ma_device_job_thread) -> ma_result #foreign miniaudio;
-ma_device_job_thread_uninit :: (pJobThread: *ma_device_job_thread, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_device_job_thread_post :: (pJobThread: *ma_device_job_thread, pJob: *ma_job) -> ma_result #foreign miniaudio;
-ma_device_job_thread_next :: (pJobThread: *ma_device_job_thread, pJob: *ma_job) -> ma_result #foreign miniaudio;
+ma_device_job_thread_init :: (pConfig: *ma_device_job_thread_config, pAllocationCallbacks: *ma_allocation_callbacks, pJobThread: *ma_device_job_thread) -> ma_result #foreign miniaudio_fdkaac;
+ma_device_job_thread_uninit :: (pJobThread: *ma_device_job_thread, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_device_job_thread_post :: (pJobThread: *ma_device_job_thread, pJob: *ma_job) -> ma_result #foreign miniaudio_fdkaac;
+ma_device_job_thread_next :: (pJobThread: *ma_device_job_thread, pJob: *ma_job) -> ma_result #foreign miniaudio_fdkaac;
 
 /* Device notification types. */
 ma_device_notification_type :: enum u32 {
@@ -3213,7 +3949,7 @@ See Also
 --------
 ma_context_init()
 */
-ma_context_config_init :: () -> ma_context_config #foreign miniaudio;
+ma_context_config_init :: () -> ma_context_config #foreign miniaudio_fdkaac;
 
 /*
 Initializes a context.
@@ -3425,7 +4161,7 @@ See Also
 ma_context_config_init()
 ma_context_uninit()
 */
-ma_context_init :: (backends: *ma_backend, backendCount: ma_uint32, pConfig: *ma_context_config, pContext: *ma_context) -> ma_result #foreign miniaudio;
+ma_context_init :: (backends: *ma_backend, backendCount: ma_uint32, pConfig: *ma_context_config, pContext: *ma_context) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Uninitializes a context.
@@ -3450,14 +4186,14 @@ See Also
 --------
 ma_context_init()
 */
-ma_context_uninit :: (pContext: *ma_context) -> ma_result #foreign miniaudio;
+ma_context_uninit :: (pContext: *ma_context) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the size of the ma_context object.
 
 This is mainly for the purpose of bindings to know how much memory to allocate.
 */
-ma_context_sizeof :: () -> u64 #foreign miniaudio;
+ma_context_sizeof :: () -> u64 #foreign miniaudio_fdkaac;
 
 /*
 Retrieves a pointer to the log object associated with this context.
@@ -3476,7 +4212,7 @@ Return Value
 A pointer to the `ma_log` object that the context uses to post log messages. If some error occurs,
 NULL will be returned.
 */
-ma_context_get_log :: (pContext: *ma_context) -> *ma_log #foreign miniaudio;
+ma_context_get_log :: (pContext: *ma_context) -> *ma_log #foreign miniaudio_fdkaac;
 
 /*
 Enumerates over every device (both playback and capture).
@@ -3543,7 +4279,7 @@ See Also
 --------
 ma_context_get_devices()
 */
-ma_context_enumerate_devices :: (pContext: *ma_context, callback: ma_enum_devices_callback_proc, pUserData: *void) -> ma_result #foreign miniaudio;
+ma_context_enumerate_devices :: (pContext: *ma_context, callback: ma_enum_devices_callback_proc, pUserData: *void) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Retrieves basic information about every active playback and/or capture device.
@@ -3594,7 +4330,7 @@ See Also
 --------
 ma_context_get_devices()
 */
-ma_context_get_devices :: (pContext: *ma_context, ppPlaybackDeviceInfos: **ma_device_info, pPlaybackDeviceCount: *ma_uint32, ppCaptureDeviceInfos: **ma_device_info, pCaptureDeviceCount: *ma_uint32) -> ma_result #foreign miniaudio;
+ma_context_get_devices :: (pContext: *ma_context, ppPlaybackDeviceInfos: **ma_device_info, pPlaybackDeviceCount: *ma_uint32, ppCaptureDeviceInfos: **ma_device_info, pCaptureDeviceCount: *ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Retrieves information about a device of the given type, with the specified ID and share mode.
@@ -3636,7 +4372,7 @@ the requested share mode is unsupported.
 
 This leaves pDeviceInfo unmodified in the result of an error.
 */
-ma_context_get_device_info :: (pContext: *ma_context, deviceType: ma_device_type, pDeviceID: *ma_device_id, pDeviceInfo: *ma_device_info) -> ma_result #foreign miniaudio;
+ma_context_get_device_info :: (pContext: *ma_context, deviceType: ma_device_type, pDeviceID: *ma_device_id, pDeviceInfo: *ma_device_info) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Determines if the given context supports loopback mode.
@@ -3652,7 +4388,7 @@ Return Value
 ------------
 MA_TRUE if the context supports loopback mode; MA_FALSE otherwise.
 */
-ma_context_is_loopback_supported :: (pContext: *ma_context) -> ma_bool32 #foreign miniaudio;
+ma_context_is_loopback_supported :: (pContext: *ma_context) -> ma_bool32 #foreign miniaudio_fdkaac;
 
 /*
 Initializes a device config with default settings.
@@ -3718,7 +4454,7 @@ See Also
 ma_device_init()
 ma_device_init_ex()
 */
-ma_device_config_init :: (deviceType: ma_device_type) -> ma_device_config #foreign miniaudio;
+ma_device_config_init :: (deviceType: ma_device_type) -> ma_device_config #foreign miniaudio_fdkaac;
 
 /*
 Initializes a device.
@@ -4047,7 +4783,7 @@ ma_context_init()
 ma_context_get_devices()
 ma_context_enumerate_devices()
 */
-ma_device_init :: (pContext: *ma_context, pConfig: *ma_device_config, pDevice: *ma_device) -> ma_result #foreign miniaudio;
+ma_device_init :: (pContext: *ma_context, pConfig: *ma_device_config, pDevice: *ma_device) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Initializes a device without a context, with extra parameters for controlling the configuration of the internal self-managed context.
@@ -4105,7 +4841,7 @@ ma_device_uninit()
 ma_device_config_init()
 ma_context_init()
 */
-ma_device_init_ex :: (backends: *ma_backend, backendCount: ma_uint32, pContextConfig: *ma_context_config, pConfig: *ma_device_config, pDevice: *ma_device) -> ma_result #foreign miniaudio;
+ma_device_init_ex :: (backends: *ma_backend, backendCount: ma_uint32, pContextConfig: *ma_context_config, pConfig: *ma_device_config, pDevice: *ma_device) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Uninitializes a device.
@@ -4139,17 +4875,17 @@ See Also
 ma_device_init()
 ma_device_stop()
 */
-ma_device_uninit :: (pDevice: *ma_device) -> void #foreign miniaudio;
+ma_device_uninit :: (pDevice: *ma_device) -> void #foreign miniaudio_fdkaac;
 
 /*
 Retrieves a pointer to the context that owns the given device.
 */
-ma_device_get_context :: (pDevice: *ma_device) -> *ma_context #foreign miniaudio;
+ma_device_get_context :: (pDevice: *ma_device) -> *ma_context #foreign miniaudio_fdkaac;
 
 /*
 Helper function for retrieving the log object associated with the context that owns this device.
 */
-ma_device_get_log :: (pDevice: *ma_device) -> *ma_log #foreign miniaudio;
+ma_device_get_log :: (pDevice: *ma_device) -> *ma_log #foreign miniaudio_fdkaac;
 
 /*
 Retrieves information about the device.
@@ -4184,7 +4920,7 @@ Callback Safety
 Unsafe. You should avoid calling this in the data callback because it may call into the backend
 which may or may not be safe.
 */
-ma_device_get_info :: (pDevice: *ma_device, type: ma_device_type, pDeviceInfo: *ma_device_info) -> ma_result #foreign miniaudio;
+ma_device_get_info :: (pDevice: *ma_device, type: ma_device_type, pDeviceInfo: *ma_device_info) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the name of the device.
@@ -4236,7 +4972,7 @@ most cases and will avoid the need for the inefficiency of calling this function
 
 This is implemented in terms of `ma_device_get_info()`.
 */
-ma_device_get_name :: (pDevice: *ma_device, type: ma_device_type, pName: *u8, nameCap: u64, pLengthNotIncludingNullTerminator: *u64) -> ma_result #foreign miniaudio;
+ma_device_get_name :: (pDevice: *ma_device, type: ma_device_type, pName: *u8, nameCap: u64, pLengthNotIncludingNullTerminator: *u64) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Starts the device. For playback devices this begins playback. For capture devices it begins recording.
@@ -4279,7 +5015,7 @@ See Also
 --------
 ma_device_stop()
 */
-ma_device_start :: (pDevice: *ma_device) -> ma_result #foreign miniaudio;
+ma_device_start :: (pDevice: *ma_device) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Stops the device. For playback devices this stops playback. For capture devices it stops recording.
@@ -4325,7 +5061,7 @@ See Also
 --------
 ma_device_start()
 */
-ma_device_stop :: (pDevice: *ma_device) -> ma_result #foreign miniaudio;
+ma_device_stop :: (pDevice: *ma_device) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Determines whether or not the device is started.
@@ -4358,7 +5094,7 @@ See Also
 ma_device_start()
 ma_device_stop()
 */
-ma_device_is_started :: (pDevice: *ma_device) -> ma_bool32 #foreign miniaudio;
+ma_device_is_started :: (pDevice: *ma_device) -> ma_bool32 #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the state of the device.
@@ -4412,7 +5148,7 @@ When the state of the device is changed with `ma_device_start()` or `ma_device_s
 value returned by this function could potentially be out of sync. If this is significant to your program you need to implement your own
 synchronization.
 */
-ma_device_get_state :: (pDevice: *ma_device) -> ma_device_state #foreign miniaudio;
+ma_device_get_state :: (pDevice: *ma_device) -> ma_device_state #foreign miniaudio_fdkaac;
 
 /*
 Performs post backend initialization routines for setting up internal data conversion.
@@ -4460,7 +5196,7 @@ is specified as a parameter rather than deriving it from the device.
 You do not need to call this manually unless you are doing a custom backend, in which case you need
 only do it if you're manually performing rerouting or reinitialization.
 */
-ma_device_post_init :: (pDevice: *ma_device, deviceType: ma_device_type, pPlaybackDescriptor: *ma_device_descriptor, pCaptureDescriptor: *ma_device_descriptor) -> ma_result #foreign miniaudio;
+ma_device_post_init :: (pDevice: *ma_device, deviceType: ma_device_type, pPlaybackDescriptor: *ma_device_descriptor, pCaptureDescriptor: *ma_device_descriptor) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Sets the master volume factor for the device.
@@ -4508,7 +5244,7 @@ ma_device_get_master_volume()
 ma_device_set_master_volume_db()
 ma_device_get_master_volume_db()
 */
-ma_device_set_master_volume :: (pDevice: *ma_device, volume: float) -> ma_result #foreign miniaudio;
+ma_device_set_master_volume :: (pDevice: *ma_device, volume: float) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the master volume factor for the device.
@@ -4551,7 +5287,7 @@ ma_device_set_master_volume()
 ma_device_set_master_volume_gain_db()
 ma_device_get_master_volume_gain_db()
 */
-ma_device_get_master_volume :: (pDevice: *ma_device, pVolume: *float) -> ma_result #foreign miniaudio;
+ma_device_get_master_volume :: (pDevice: *ma_device, pVolume: *float) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Sets the master volume for the device as gain in decibels.
@@ -4598,7 +5334,7 @@ ma_device_get_master_volume_gain_db()
 ma_device_set_master_volume()
 ma_device_get_master_volume()
 */
-ma_device_set_master_volume_db :: (pDevice: *ma_device, gainDB: float) -> ma_result #foreign miniaudio;
+ma_device_set_master_volume_db :: (pDevice: *ma_device, gainDB: float) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the master gain in decibels.
@@ -4641,7 +5377,7 @@ ma_device_set_master_volume_db()
 ma_device_set_master_volume()
 ma_device_get_master_volume()
 */
-ma_device_get_master_volume_db :: (pDevice: *ma_device, pGainDB: *float) -> ma_result #foreign miniaudio;
+ma_device_get_master_volume_db :: (pDevice: *ma_device, pGainDB: *float) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Called from the data callback of asynchronous backends to allow miniaudio to process the data and fire the miniaudio data callback.
@@ -4688,7 +5424,7 @@ which case `pInput` will be processed first, followed by `pOutput`.
 If you are implementing a custom backend, and that backend uses a callback for data delivery, you'll need to call this from inside that
 callback.
 */
-ma_device_handle_backend_data_callback :: (pDevice: *ma_device, pOutput: *void, pInput: *void, frameCount: ma_uint32) -> ma_result #foreign miniaudio;
+ma_device_handle_backend_data_callback :: (pDevice: *ma_device, pOutput: *void, pInput: *void, frameCount: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Calculates an appropriate buffer size from a descriptor, native sample rate and performance profile.
@@ -4740,22 +5476,22 @@ Remarks
 If `nativeSampleRate` is zero, this function will fall back to `pDescriptor->sampleRate`. If that
 is also zero, `MA_DEFAULT_SAMPLE_RATE` will be used instead.
 */
-ma_calculate_buffer_size_in_frames_from_descriptor :: (pDescriptor: *ma_device_descriptor, nativeSampleRate: ma_uint32, performanceProfile: ma_performance_profile) -> ma_uint32 #foreign miniaudio;
+ma_calculate_buffer_size_in_frames_from_descriptor :: (pDescriptor: *ma_device_descriptor, nativeSampleRate: ma_uint32, performanceProfile: ma_performance_profile) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 /*
 Retrieves a friendly name for a backend.
 */
-ma_get_backend_name :: (backend: ma_backend) -> *u8 #foreign miniaudio;
+ma_get_backend_name :: (backend: ma_backend) -> *u8 #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the backend enum from the given name.
 */
-ma_get_backend_from_name :: (pBackendName: *u8, pBackend: *ma_backend) -> ma_result #foreign miniaudio;
+ma_get_backend_from_name :: (pBackendName: *u8, pBackend: *ma_backend) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Determines whether or not the given backend is available by the compilation environment.
 */
-ma_is_backend_enabled :: (backend: ma_backend) -> ma_bool32 #foreign miniaudio;
+ma_is_backend_enabled :: (backend: ma_backend) -> ma_bool32 #foreign miniaudio_fdkaac;
 
 /*
 Retrieves compile-time enabled backends.
@@ -4828,27 +5564,27 @@ See Also
 --------
 ma_is_backend_enabled()
 */
-ma_get_enabled_backends :: (pBackends: *ma_backend, backendCap: u64, pBackendCount: *u64) -> ma_result #foreign miniaudio;
+ma_get_enabled_backends :: (pBackends: *ma_backend, backendCap: u64, pBackendCount: *u64) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Determines whether or not loopback mode is support by a backend.
 */
-ma_is_loopback_supported :: (backend: ma_backend) -> ma_bool32 #foreign miniaudio;
+ma_is_loopback_supported :: (backend: ma_backend) -> ma_bool32 #foreign miniaudio_fdkaac;
 
 /*
 Calculates a buffer size in milliseconds from the specified number of frames and sample rate.
 */
-ma_calculate_buffer_size_in_milliseconds_from_frames :: (bufferSizeInFrames: ma_uint32, sampleRate: ma_uint32) -> ma_uint32 #foreign miniaudio;
+ma_calculate_buffer_size_in_milliseconds_from_frames :: (bufferSizeInFrames: ma_uint32, sampleRate: ma_uint32) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 /*
 Calculates a buffer size in frames from the specified number of milliseconds and sample rate.
 */
-ma_calculate_buffer_size_in_frames_from_milliseconds :: (bufferSizeInMilliseconds: ma_uint32, sampleRate: ma_uint32) -> ma_uint32 #foreign miniaudio;
+ma_calculate_buffer_size_in_frames_from_milliseconds :: (bufferSizeInMilliseconds: ma_uint32, sampleRate: ma_uint32) -> ma_uint32 #foreign miniaudio_fdkaac;
 
 /*
 Copies PCM frames from one buffer to another.
 */
-ma_copy_pcm_frames :: (dst: *void, src: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32) -> void #foreign miniaudio;
+ma_copy_pcm_frames :: (dst: *void, src: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32) -> void #foreign miniaudio_fdkaac;
 
 /*
 Copies silent frames into the given buffer.
@@ -4858,80 +5594,80 @@ Remarks
 For all formats except `ma_format_u8`, the output buffer will be filled with 0. For `ma_format_u8` it will be filled with 128. The reason for this is that it
 makes more sense for the purpose of mixing to initialize it to the center point.
 */
-ma_silence_pcm_frames :: (p: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32) -> void #foreign miniaudio;
+ma_silence_pcm_frames :: (p: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32) -> void #foreign miniaudio_fdkaac;
 
 /*
 Offsets a pointer by the specified number of PCM frames.
 */
-ma_offset_pcm_frames_ptr :: (p: *void, offsetInFrames: ma_uint64, format: ma_format, channels: ma_uint32) -> *void #foreign miniaudio;
-ma_offset_pcm_frames_const_ptr :: (p: *void, offsetInFrames: ma_uint64, format: ma_format, channels: ma_uint32) -> *void #foreign miniaudio;
+ma_offset_pcm_frames_ptr :: (p: *void, offsetInFrames: ma_uint64, format: ma_format, channels: ma_uint32) -> *void #foreign miniaudio_fdkaac;
+ma_offset_pcm_frames_const_ptr :: (p: *void, offsetInFrames: ma_uint64, format: ma_format, channels: ma_uint32) -> *void #foreign miniaudio_fdkaac;
 
 /*
 Clips samples.
 */
-ma_clip_samples_u8 :: (pDst: *ma_uint8, pSrc: *ma_int16, count: ma_uint64) -> void #foreign miniaudio;
-ma_clip_samples_s16 :: (pDst: *ma_int16, pSrc: *ma_int32, count: ma_uint64) -> void #foreign miniaudio;
-ma_clip_samples_s24 :: (pDst: *ma_uint8, pSrc: *ma_int64, count: ma_uint64) -> void #foreign miniaudio;
-ma_clip_samples_s32 :: (pDst: *ma_int32, pSrc: *ma_int64, count: ma_uint64) -> void #foreign miniaudio;
-ma_clip_samples_f32 :: (pDst: *float, pSrc: *float, count: ma_uint64) -> void #foreign miniaudio;
-ma_clip_pcm_frames :: (pDst: *void, pSrc: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32) -> void #foreign miniaudio;
+ma_clip_samples_u8 :: (pDst: *ma_uint8, pSrc: *ma_int16, count: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_clip_samples_s16 :: (pDst: *ma_int16, pSrc: *ma_int32, count: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_clip_samples_s24 :: (pDst: *ma_uint8, pSrc: *ma_int64, count: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_clip_samples_s32 :: (pDst: *ma_int32, pSrc: *ma_int64, count: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_clip_samples_f32 :: (pDst: *float, pSrc: *float, count: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_clip_pcm_frames :: (pDst: *void, pSrc: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32) -> void #foreign miniaudio_fdkaac;
 
 /*
 Helper for applying a volume factor to samples.
 
 Note that the source and destination buffers can be the same, in which case it'll perform the operation in-place.
 */
-ma_copy_and_apply_volume_factor_u8 :: (pSamplesOut: *ma_uint8, pSamplesIn: *ma_uint8, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_factor_s16 :: (pSamplesOut: *ma_int16, pSamplesIn: *ma_int16, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_factor_s24 :: (pSamplesOut: *void, pSamplesIn: *void, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_factor_s32 :: (pSamplesOut: *ma_int32, pSamplesIn: *ma_int32, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_factor_f32 :: (pSamplesOut: *float, pSamplesIn: *float, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio;
+ma_copy_and_apply_volume_factor_u8 :: (pSamplesOut: *ma_uint8, pSamplesIn: *ma_uint8, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_factor_s16 :: (pSamplesOut: *ma_int16, pSamplesIn: *ma_int16, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_factor_s24 :: (pSamplesOut: *void, pSamplesIn: *void, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_factor_s32 :: (pSamplesOut: *ma_int32, pSamplesIn: *ma_int32, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_factor_f32 :: (pSamplesOut: *float, pSamplesIn: *float, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio_fdkaac;
 
-ma_apply_volume_factor_u8 :: (pSamples: *ma_uint8, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio;
-ma_apply_volume_factor_s16 :: (pSamples: *ma_int16, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio;
-ma_apply_volume_factor_s24 :: (pSamples: *void, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio;
-ma_apply_volume_factor_s32 :: (pSamples: *ma_int32, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio;
-ma_apply_volume_factor_f32 :: (pSamples: *float, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio;
+ma_apply_volume_factor_u8 :: (pSamples: *ma_uint8, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_apply_volume_factor_s16 :: (pSamples: *ma_int16, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_apply_volume_factor_s24 :: (pSamples: *void, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_apply_volume_factor_s32 :: (pSamples: *ma_int32, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_apply_volume_factor_f32 :: (pSamples: *float, sampleCount: ma_uint64, factor: float) -> void #foreign miniaudio_fdkaac;
 
-ma_copy_and_apply_volume_factor_pcm_frames_u8 :: (pFramesOut: *ma_uint8, pFramesIn: *ma_uint8, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_factor_pcm_frames_s16 :: (pFramesOut: *ma_int16, pFramesIn: *ma_int16, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_factor_pcm_frames_s24 :: (pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_factor_pcm_frames_s32 :: (pFramesOut: *ma_int32, pFramesIn: *ma_int32, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_factor_pcm_frames_f32 :: (pFramesOut: *float, pFramesIn: *float, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_factor_pcm_frames :: (pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32, factor: float) -> void #foreign miniaudio;
+ma_copy_and_apply_volume_factor_pcm_frames_u8 :: (pFramesOut: *ma_uint8, pFramesIn: *ma_uint8, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_factor_pcm_frames_s16 :: (pFramesOut: *ma_int16, pFramesIn: *ma_int16, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_factor_pcm_frames_s24 :: (pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_factor_pcm_frames_s32 :: (pFramesOut: *ma_int32, pFramesIn: *ma_int32, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_factor_pcm_frames_f32 :: (pFramesOut: *float, pFramesIn: *float, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_factor_pcm_frames :: (pFramesOut: *void, pFramesIn: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32, factor: float) -> void #foreign miniaudio_fdkaac;
 
-ma_apply_volume_factor_pcm_frames_u8 :: (pFrames: *ma_uint8, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio;
-ma_apply_volume_factor_pcm_frames_s16 :: (pFrames: *ma_int16, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio;
-ma_apply_volume_factor_pcm_frames_s24 :: (pFrames: *void, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio;
-ma_apply_volume_factor_pcm_frames_s32 :: (pFrames: *ma_int32, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio;
-ma_apply_volume_factor_pcm_frames_f32 :: (pFrames: *float, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio;
-ma_apply_volume_factor_pcm_frames :: (pFrames: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32, factor: float) -> void #foreign miniaudio;
+ma_apply_volume_factor_pcm_frames_u8 :: (pFrames: *ma_uint8, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_apply_volume_factor_pcm_frames_s16 :: (pFrames: *ma_int16, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_apply_volume_factor_pcm_frames_s24 :: (pFrames: *void, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_apply_volume_factor_pcm_frames_s32 :: (pFrames: *ma_int32, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_apply_volume_factor_pcm_frames_f32 :: (pFrames: *float, frameCount: ma_uint64, channels: ma_uint32, factor: float) -> void #foreign miniaudio_fdkaac;
+ma_apply_volume_factor_pcm_frames :: (pFrames: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32, factor: float) -> void #foreign miniaudio_fdkaac;
 
-ma_copy_and_apply_volume_factor_per_channel_f32 :: (pFramesOut: *float, pFramesIn: *float, frameCount: ma_uint64, channels: ma_uint32, pChannelGains: *float) -> void #foreign miniaudio;
+ma_copy_and_apply_volume_factor_per_channel_f32 :: (pFramesOut: *float, pFramesIn: *float, frameCount: ma_uint64, channels: ma_uint32, pChannelGains: *float) -> void #foreign miniaudio_fdkaac;
 
-ma_copy_and_apply_volume_and_clip_samples_u8 :: (pDst: *ma_uint8, pSrc: *ma_int16, count: ma_uint64, volume: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_and_clip_samples_s16 :: (pDst: *ma_int16, pSrc: *ma_int32, count: ma_uint64, volume: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_and_clip_samples_s24 :: (pDst: *ma_uint8, pSrc: *ma_int64, count: ma_uint64, volume: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_and_clip_samples_s32 :: (pDst: *ma_int32, pSrc: *ma_int64, count: ma_uint64, volume: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_and_clip_samples_f32 :: (pDst: *float, pSrc: *float, count: ma_uint64, volume: float) -> void #foreign miniaudio;
-ma_copy_and_apply_volume_and_clip_pcm_frames :: (pDst: *void, pSrc: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32, volume: float) -> void #foreign miniaudio;
+ma_copy_and_apply_volume_and_clip_samples_u8 :: (pDst: *ma_uint8, pSrc: *ma_int16, count: ma_uint64, volume: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_and_clip_samples_s16 :: (pDst: *ma_int16, pSrc: *ma_int32, count: ma_uint64, volume: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_and_clip_samples_s24 :: (pDst: *ma_uint8, pSrc: *ma_int64, count: ma_uint64, volume: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_and_clip_samples_s32 :: (pDst: *ma_int32, pSrc: *ma_int64, count: ma_uint64, volume: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_and_clip_samples_f32 :: (pDst: *float, pSrc: *float, count: ma_uint64, volume: float) -> void #foreign miniaudio_fdkaac;
+ma_copy_and_apply_volume_and_clip_pcm_frames :: (pDst: *void, pSrc: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32, volume: float) -> void #foreign miniaudio_fdkaac;
 
 /*
 Helper for converting a linear factor to gain in decibels.
 */
-ma_volume_linear_to_db :: (factor: float) -> float #foreign miniaudio;
+ma_volume_linear_to_db :: (factor: float) -> float #foreign miniaudio_fdkaac;
 
 /*
 Helper for converting gain in decibels to a linear factor.
 */
-ma_volume_db_to_linear :: (gain: float) -> float #foreign miniaudio;
+ma_volume_db_to_linear :: (gain: float) -> float #foreign miniaudio_fdkaac;
 
 /*
 Mixes the specified number of frames in floating point format with a volume factor.
 
 This will run on an optimized path when the volume is equal to 1.
 */
-ma_mix_pcm_frames_f32 :: (pDst: *float, pSrc: *float, frameCount: ma_uint64, channels: ma_uint32, volume: float) -> ma_result #foreign miniaudio;
+ma_mix_pcm_frames_f32 :: (pDst: *float, pSrc: *float, frameCount: ma_uint64, channels: ma_uint32, volume: float) -> ma_result #foreign miniaudio_fdkaac;
 
 /************************************************************************************************************************************************************
 
@@ -4971,22 +5707,22 @@ ma_vfs_callbacks :: struct {
     onInfo:  #type (pVFS: *ma_vfs, file: ma_vfs_file, pInfo: *ma_file_info) -> ma_result #c_call;
 }
 
-ma_vfs_open :: (pVFS: *ma_vfs, pFilePath: *u8, openMode: ma_uint32, pFile: *ma_vfs_file) -> ma_result #foreign miniaudio;
-ma_vfs_open_w :: (pVFS: *ma_vfs, pFilePath: *s32, openMode: ma_uint32, pFile: *ma_vfs_file) -> ma_result #foreign miniaudio;
-ma_vfs_close :: (pVFS: *ma_vfs, file: ma_vfs_file) -> ma_result #foreign miniaudio;
-ma_vfs_read :: (pVFS: *ma_vfs, file: ma_vfs_file, pDst: *void, sizeInBytes: u64, pBytesRead: *u64) -> ma_result #foreign miniaudio;
-ma_vfs_write :: (pVFS: *ma_vfs, file: ma_vfs_file, pSrc: *void, sizeInBytes: u64, pBytesWritten: *u64) -> ma_result #foreign miniaudio;
-ma_vfs_seek :: (pVFS: *ma_vfs, file: ma_vfs_file, offset: ma_int64, origin: ma_seek_origin) -> ma_result #foreign miniaudio;
-ma_vfs_tell :: (pVFS: *ma_vfs, file: ma_vfs_file, pCursor: *ma_int64) -> ma_result #foreign miniaudio;
-ma_vfs_info :: (pVFS: *ma_vfs, file: ma_vfs_file, pInfo: *ma_file_info) -> ma_result #foreign miniaudio;
-ma_vfs_open_and_read_file :: (pVFS: *ma_vfs, pFilePath: *u8, ppData: **void, pSize: *u64, pAllocationCallbacks: *ma_allocation_callbacks) -> ma_result #foreign miniaudio;
+ma_vfs_open :: (pVFS: *ma_vfs, pFilePath: *u8, openMode: ma_uint32, pFile: *ma_vfs_file) -> ma_result #foreign miniaudio_fdkaac;
+ma_vfs_open_w :: (pVFS: *ma_vfs, pFilePath: *s32, openMode: ma_uint32, pFile: *ma_vfs_file) -> ma_result #foreign miniaudio_fdkaac;
+ma_vfs_close :: (pVFS: *ma_vfs, file: ma_vfs_file) -> ma_result #foreign miniaudio_fdkaac;
+ma_vfs_read :: (pVFS: *ma_vfs, file: ma_vfs_file, pDst: *void, sizeInBytes: u64, pBytesRead: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_vfs_write :: (pVFS: *ma_vfs, file: ma_vfs_file, pSrc: *void, sizeInBytes: u64, pBytesWritten: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_vfs_seek :: (pVFS: *ma_vfs, file: ma_vfs_file, offset: ma_int64, origin: ma_seek_origin) -> ma_result #foreign miniaudio_fdkaac;
+ma_vfs_tell :: (pVFS: *ma_vfs, file: ma_vfs_file, pCursor: *ma_int64) -> ma_result #foreign miniaudio_fdkaac;
+ma_vfs_info :: (pVFS: *ma_vfs, file: ma_vfs_file, pInfo: *ma_file_info) -> ma_result #foreign miniaudio_fdkaac;
+ma_vfs_open_and_read_file :: (pVFS: *ma_vfs, pFilePath: *u8, ppData: **void, pSize: *u64, pAllocationCallbacks: *ma_allocation_callbacks) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_default_vfs :: struct {
     cb:                  ma_vfs_callbacks;
     allocationCallbacks: ma_allocation_callbacks; /* Only used for the wchar_t version of open() on non-Windows platforms. */
 }
 
-ma_default_vfs_init :: (pVFS: *ma_default_vfs, pAllocationCallbacks: *ma_allocation_callbacks) -> ma_result #foreign miniaudio;
+ma_default_vfs_init :: (pVFS: *ma_default_vfs, pAllocationCallbacks: *ma_allocation_callbacks) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_read_proc :: #type (pUserData: *void, pBufferOut: *void, bytesToRead: u64, pBytesRead: *u64) -> ma_result #c_call;
 ma_seek_proc :: #type (pUserData: *void, offset: ma_int64, origin: ma_seek_origin) -> ma_result #c_call;
@@ -5005,7 +5741,7 @@ ma_decoding_backend_config :: struct {
     seekPointCount:  ma_uint32; /* Set to > 0 to generate a seektable if the decoding backend supports it. */
 }
 
-ma_decoding_backend_config_init :: (preferredFormat: ma_format, seekPointCount: ma_uint32) -> ma_decoding_backend_config #foreign miniaudio;
+ma_decoding_backend_config_init :: (preferredFormat: ma_format, seekPointCount: ma_uint32) -> ma_decoding_backend_config #foreign miniaudio_fdkaac;
 
 ma_decoding_backend_vtable :: struct {
     onInit:       #type (pUserData: *void, onRead: ma_read_proc, onSeek: ma_seek_proc, onTell: ma_tell_proc, pReadSeekTellUserData: *void, pConfig: *ma_decoding_backend_config, pAllocationCallbacks: *ma_allocation_callbacks, ppBackend: **ma_data_source) -> ma_result #c_call;
@@ -5068,44 +5804,44 @@ ma_decoder :: struct {
     };
 }
 
-ma_decoder_config_init :: (outputFormat: ma_format, outputChannels: ma_uint32, outputSampleRate: ma_uint32) -> ma_decoder_config #foreign miniaudio;
-ma_decoder_config_init_default :: () -> ma_decoder_config #foreign miniaudio;
+ma_decoder_config_init :: (outputFormat: ma_format, outputChannels: ma_uint32, outputSampleRate: ma_uint32) -> ma_decoder_config #foreign miniaudio_fdkaac;
+ma_decoder_config_init_default :: () -> ma_decoder_config #foreign miniaudio_fdkaac;
 
-ma_decoder_init :: (onRead: ma_decoder_read_proc, onSeek: ma_decoder_seek_proc, pUserData: *void, pConfig: *ma_decoder_config, pDecoder: *ma_decoder) -> ma_result #foreign miniaudio;
-ma_decoder_init_memory :: (pData: *void, dataSize: u64, pConfig: *ma_decoder_config, pDecoder: *ma_decoder) -> ma_result #foreign miniaudio;
-ma_decoder_init_vfs :: (pVFS: *ma_vfs, pFilePath: *u8, pConfig: *ma_decoder_config, pDecoder: *ma_decoder) -> ma_result #foreign miniaudio;
-ma_decoder_init_vfs_w :: (pVFS: *ma_vfs, pFilePath: *s32, pConfig: *ma_decoder_config, pDecoder: *ma_decoder) -> ma_result #foreign miniaudio;
-ma_decoder_init_file :: (pFilePath: *u8, pConfig: *ma_decoder_config, pDecoder: *ma_decoder) -> ma_result #foreign miniaudio;
-ma_decoder_init_file_w :: (pFilePath: *s32, pConfig: *ma_decoder_config, pDecoder: *ma_decoder) -> ma_result #foreign miniaudio;
+ma_decoder_init :: (onRead: ma_decoder_read_proc, onSeek: ma_decoder_seek_proc, pUserData: *void, pConfig: *ma_decoder_config, pDecoder: *ma_decoder) -> ma_result #foreign miniaudio_fdkaac;
+ma_decoder_init_memory :: (pData: *void, dataSize: u64, pConfig: *ma_decoder_config, pDecoder: *ma_decoder) -> ma_result #foreign miniaudio_fdkaac;
+ma_decoder_init_vfs :: (pVFS: *ma_vfs, pFilePath: *u8, pConfig: *ma_decoder_config, pDecoder: *ma_decoder) -> ma_result #foreign miniaudio_fdkaac;
+ma_decoder_init_vfs_w :: (pVFS: *ma_vfs, pFilePath: *s32, pConfig: *ma_decoder_config, pDecoder: *ma_decoder) -> ma_result #foreign miniaudio_fdkaac;
+ma_decoder_init_file :: (pFilePath: *u8, pConfig: *ma_decoder_config, pDecoder: *ma_decoder) -> ma_result #foreign miniaudio_fdkaac;
+ma_decoder_init_file_w :: (pFilePath: *s32, pConfig: *ma_decoder_config, pDecoder: *ma_decoder) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Uninitializes a decoder.
 */
-ma_decoder_uninit :: (pDecoder: *ma_decoder) -> ma_result #foreign miniaudio;
+ma_decoder_uninit :: (pDecoder: *ma_decoder) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Reads PCM frames from the given decoder.
 
 This is not thread safe without your own synchronization.
 */
-ma_decoder_read_pcm_frames :: (pDecoder: *ma_decoder, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_decoder_read_pcm_frames :: (pDecoder: *ma_decoder, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Seeks to a PCM frame based on it's absolute index.
 
 This is not thread safe without your own synchronization.
 */
-ma_decoder_seek_to_pcm_frame :: (pDecoder: *ma_decoder, frameIndex: ma_uint64) -> ma_result #foreign miniaudio;
+ma_decoder_seek_to_pcm_frame :: (pDecoder: *ma_decoder, frameIndex: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the decoder's output data format.
 */
-ma_decoder_get_data_format :: (pDecoder: *ma_decoder, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio;
+ma_decoder_get_data_format :: (pDecoder: *ma_decoder, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the current position of the read cursor in PCM frames.
 */
-ma_decoder_get_cursor_in_pcm_frames :: (pDecoder: *ma_decoder, pCursor: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_decoder_get_cursor_in_pcm_frames :: (pDecoder: *ma_decoder, pCursor: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the length of the decoder in PCM frames.
@@ -5121,7 +5857,7 @@ For MP3's, this will decode the entire file. Do not call this in time critical s
 
 This function is not thread safe without your own synchronization.
 */
-ma_decoder_get_length_in_pcm_frames :: (pDecoder: *ma_decoder, pLength: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_decoder_get_length_in_pcm_frames :: (pDecoder: *ma_decoder, pLength: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Retrieves the number of frames that can be read before reaching the end.
@@ -5132,15 +5868,15 @@ particular ensuring you do not call it on streams of an undefined length, such a
 If the total length of the decoder cannot be retrieved, such as with Vorbis decoders, `MA_NOT_IMPLEMENTED` will be
 returned.
 */
-ma_decoder_get_available_frames :: (pDecoder: *ma_decoder, pAvailableFrames: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_decoder_get_available_frames :: (pDecoder: *ma_decoder, pAvailableFrames: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /*
 Helper for opening and decoding a file into a heap allocated block of memory. Free the returned pointer with ma_free(). On input,
 pConfig should be set to what you want. On output it will be set to what you got.
 */
-ma_decode_from_vfs :: (pVFS: *ma_vfs, pFilePath: *u8, pConfig: *ma_decoder_config, pFrameCountOut: *ma_uint64, ppPCMFramesOut: **void) -> ma_result #foreign miniaudio;
-ma_decode_file :: (pFilePath: *u8, pConfig: *ma_decoder_config, pFrameCountOut: *ma_uint64, ppPCMFramesOut: **void) -> ma_result #foreign miniaudio;
-ma_decode_memory :: (pData: *void, dataSize: u64, pConfig: *ma_decoder_config, pFrameCountOut: *ma_uint64, ppPCMFramesOut: **void) -> ma_result #foreign miniaudio;
+ma_decode_from_vfs :: (pVFS: *ma_vfs, pFilePath: *u8, pConfig: *ma_decoder_config, pFrameCountOut: *ma_uint64, ppPCMFramesOut: **void) -> ma_result #foreign miniaudio_fdkaac;
+ma_decode_file :: (pFilePath: *u8, pConfig: *ma_decoder_config, pFrameCountOut: *ma_uint64, ppPCMFramesOut: **void) -> ma_result #foreign miniaudio_fdkaac;
+ma_decode_memory :: (pData: *void, dataSize: u64, pConfig: *ma_decoder_config, pFrameCountOut: *ma_uint64, ppPCMFramesOut: **void) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_encoder_write_proc :: #type (pEncoder: *ma_encoder, pBufferIn: *void, bytesToWrite: u64, pBytesWritten: *u64) -> ma_result #c_call;
 ma_encoder_seek_proc :: #type (pEncoder: *ma_encoder, offset: ma_int64, origin: ma_seek_origin) -> ma_result #c_call;
@@ -5156,7 +5892,7 @@ ma_encoder_config :: struct {
     allocationCallbacks: ma_allocation_callbacks;
 }
 
-ma_encoder_config_init :: (encodingFormat: ma_encoding_format, format: ma_format, channels: ma_uint32, sampleRate: ma_uint32) -> ma_encoder_config #foreign miniaudio;
+ma_encoder_config_init :: (encodingFormat: ma_encoding_format, format: ma_format, channels: ma_uint32, sampleRate: ma_uint32) -> ma_encoder_config #foreign miniaudio_fdkaac;
 
 ma_encoder :: struct {
     config:           ma_encoder_config;
@@ -5175,13 +5911,13 @@ ma_encoder :: struct {
     };
 }
 
-ma_encoder_init :: (onWrite: ma_encoder_write_proc, onSeek: ma_encoder_seek_proc, pUserData: *void, pConfig: *ma_encoder_config, pEncoder: *ma_encoder) -> ma_result #foreign miniaudio;
-ma_encoder_init_vfs :: (pVFS: *ma_vfs, pFilePath: *u8, pConfig: *ma_encoder_config, pEncoder: *ma_encoder) -> ma_result #foreign miniaudio;
-ma_encoder_init_vfs_w :: (pVFS: *ma_vfs, pFilePath: *s32, pConfig: *ma_encoder_config, pEncoder: *ma_encoder) -> ma_result #foreign miniaudio;
-ma_encoder_init_file :: (pFilePath: *u8, pConfig: *ma_encoder_config, pEncoder: *ma_encoder) -> ma_result #foreign miniaudio;
-ma_encoder_init_file_w :: (pFilePath: *s32, pConfig: *ma_encoder_config, pEncoder: *ma_encoder) -> ma_result #foreign miniaudio;
-ma_encoder_uninit :: (pEncoder: *ma_encoder) -> void #foreign miniaudio;
-ma_encoder_write_pcm_frames :: (pEncoder: *ma_encoder, pFramesIn: *void, frameCount: ma_uint64, pFramesWritten: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_encoder_init :: (onWrite: ma_encoder_write_proc, onSeek: ma_encoder_seek_proc, pUserData: *void, pConfig: *ma_encoder_config, pEncoder: *ma_encoder) -> ma_result #foreign miniaudio_fdkaac;
+ma_encoder_init_vfs :: (pVFS: *ma_vfs, pFilePath: *u8, pConfig: *ma_encoder_config, pEncoder: *ma_encoder) -> ma_result #foreign miniaudio_fdkaac;
+ma_encoder_init_vfs_w :: (pVFS: *ma_vfs, pFilePath: *s32, pConfig: *ma_encoder_config, pEncoder: *ma_encoder) -> ma_result #foreign miniaudio_fdkaac;
+ma_encoder_init_file :: (pFilePath: *u8, pConfig: *ma_encoder_config, pEncoder: *ma_encoder) -> ma_result #foreign miniaudio_fdkaac;
+ma_encoder_init_file_w :: (pFilePath: *s32, pConfig: *ma_encoder_config, pEncoder: *ma_encoder) -> ma_result #foreign miniaudio_fdkaac;
+ma_encoder_uninit :: (pEncoder: *ma_encoder) -> void #foreign miniaudio_fdkaac;
+ma_encoder_write_pcm_frames :: (pEncoder: *ma_encoder, pFramesIn: *void, frameCount: ma_uint64, pFramesWritten: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_waveform_type :: enum u32 {
     sine     :: 0;
@@ -5199,7 +5935,7 @@ ma_waveform_config :: struct {
     frequency:  float64;
 }
 
-ma_waveform_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, type: ma_waveform_type, amplitude: float64, frequency: float64) -> ma_waveform_config #foreign miniaudio;
+ma_waveform_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, type: ma_waveform_type, amplitude: float64, frequency: float64) -> ma_waveform_config #foreign miniaudio_fdkaac;
 
 ma_waveform :: struct {
     ds:      ma_data_source_base;
@@ -5208,14 +5944,14 @@ ma_waveform :: struct {
     time:    float64;
 }
 
-ma_waveform_init :: (pConfig: *ma_waveform_config, pWaveform: *ma_waveform) -> ma_result #foreign miniaudio;
-ma_waveform_uninit :: (pWaveform: *ma_waveform) -> void #foreign miniaudio;
-ma_waveform_read_pcm_frames :: (pWaveform: *ma_waveform, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_waveform_seek_to_pcm_frame :: (pWaveform: *ma_waveform, frameIndex: ma_uint64) -> ma_result #foreign miniaudio;
-ma_waveform_set_amplitude :: (pWaveform: *ma_waveform, amplitude: float64) -> ma_result #foreign miniaudio;
-ma_waveform_set_frequency :: (pWaveform: *ma_waveform, frequency: float64) -> ma_result #foreign miniaudio;
-ma_waveform_set_type :: (pWaveform: *ma_waveform, type: ma_waveform_type) -> ma_result #foreign miniaudio;
-ma_waveform_set_sample_rate :: (pWaveform: *ma_waveform, sampleRate: ma_uint32) -> ma_result #foreign miniaudio;
+ma_waveform_init :: (pConfig: *ma_waveform_config, pWaveform: *ma_waveform) -> ma_result #foreign miniaudio_fdkaac;
+ma_waveform_uninit :: (pWaveform: *ma_waveform) -> void #foreign miniaudio_fdkaac;
+ma_waveform_read_pcm_frames :: (pWaveform: *ma_waveform, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_waveform_seek_to_pcm_frame :: (pWaveform: *ma_waveform, frameIndex: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_waveform_set_amplitude :: (pWaveform: *ma_waveform, amplitude: float64) -> ma_result #foreign miniaudio_fdkaac;
+ma_waveform_set_frequency :: (pWaveform: *ma_waveform, frequency: float64) -> ma_result #foreign miniaudio_fdkaac;
+ma_waveform_set_type :: (pWaveform: *ma_waveform, type: ma_waveform_type) -> ma_result #foreign miniaudio_fdkaac;
+ma_waveform_set_sample_rate :: (pWaveform: *ma_waveform, sampleRate: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_pulsewave_config :: struct {
     format:     ma_format;
@@ -5226,21 +5962,21 @@ ma_pulsewave_config :: struct {
     frequency:  float64;
 }
 
-ma_pulsewave_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, dutyCycle: float64, amplitude: float64, frequency: float64) -> ma_pulsewave_config #foreign miniaudio;
+ma_pulsewave_config_init :: (format: ma_format, channels: ma_uint32, sampleRate: ma_uint32, dutyCycle: float64, amplitude: float64, frequency: float64) -> ma_pulsewave_config #foreign miniaudio_fdkaac;
 
 ma_pulsewave :: struct {
     waveform: ma_waveform;
     config:   ma_pulsewave_config;
 }
 
-ma_pulsewave_init :: (pConfig: *ma_pulsewave_config, pWaveform: *ma_pulsewave) -> ma_result #foreign miniaudio;
-ma_pulsewave_uninit :: (pWaveform: *ma_pulsewave) -> void #foreign miniaudio;
-ma_pulsewave_read_pcm_frames :: (pWaveform: *ma_pulsewave, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_pulsewave_seek_to_pcm_frame :: (pWaveform: *ma_pulsewave, frameIndex: ma_uint64) -> ma_result #foreign miniaudio;
-ma_pulsewave_set_amplitude :: (pWaveform: *ma_pulsewave, amplitude: float64) -> ma_result #foreign miniaudio;
-ma_pulsewave_set_frequency :: (pWaveform: *ma_pulsewave, frequency: float64) -> ma_result #foreign miniaudio;
-ma_pulsewave_set_sample_rate :: (pWaveform: *ma_pulsewave, sampleRate: ma_uint32) -> ma_result #foreign miniaudio;
-ma_pulsewave_set_duty_cycle :: (pWaveform: *ma_pulsewave, dutyCycle: float64) -> ma_result #foreign miniaudio;
+ma_pulsewave_init :: (pConfig: *ma_pulsewave_config, pWaveform: *ma_pulsewave) -> ma_result #foreign miniaudio_fdkaac;
+ma_pulsewave_uninit :: (pWaveform: *ma_pulsewave) -> void #foreign miniaudio_fdkaac;
+ma_pulsewave_read_pcm_frames :: (pWaveform: *ma_pulsewave, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_pulsewave_seek_to_pcm_frame :: (pWaveform: *ma_pulsewave, frameIndex: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_pulsewave_set_amplitude :: (pWaveform: *ma_pulsewave, amplitude: float64) -> ma_result #foreign miniaudio_fdkaac;
+ma_pulsewave_set_frequency :: (pWaveform: *ma_pulsewave, frequency: float64) -> ma_result #foreign miniaudio_fdkaac;
+ma_pulsewave_set_sample_rate :: (pWaveform: *ma_pulsewave, sampleRate: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_pulsewave_set_duty_cycle :: (pWaveform: *ma_pulsewave, dutyCycle: float64) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_noise_type :: enum u32 {
     white    :: 0;
@@ -5257,7 +5993,7 @@ ma_noise_config :: struct {
     duplicateChannels: ma_bool32;
 }
 
-ma_noise_config_init :: (format: ma_format, channels: ma_uint32, type: ma_noise_type, seed: ma_int32, amplitude: float64) -> ma_noise_config #foreign miniaudio;
+ma_noise_config_init :: (format: ma_format, channels: ma_uint32, type: ma_noise_type, seed: ma_int32, amplitude: float64) -> ma_noise_config #foreign miniaudio_fdkaac;
 
 ma_noise :: struct {
     ds:        ma_data_source_base;
@@ -5280,14 +6016,14 @@ ma_noise :: struct {
     _ownsHeap: ma_bool32;
 }
 
-ma_noise_get_heap_size :: (pConfig: *ma_noise_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_noise_init_preallocated :: (pConfig: *ma_noise_config, pHeap: *void, pNoise: *ma_noise) -> ma_result #foreign miniaudio;
-ma_noise_init :: (pConfig: *ma_noise_config, pAllocationCallbacks: *ma_allocation_callbacks, pNoise: *ma_noise) -> ma_result #foreign miniaudio;
-ma_noise_uninit :: (pNoise: *ma_noise, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_noise_read_pcm_frames :: (pNoise: *ma_noise, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_noise_set_amplitude :: (pNoise: *ma_noise, amplitude: float64) -> ma_result #foreign miniaudio;
-ma_noise_set_seed :: (pNoise: *ma_noise, seed: ma_int32) -> ma_result #foreign miniaudio;
-ma_noise_set_type :: (pNoise: *ma_noise, type: ma_noise_type) -> ma_result #foreign miniaudio;
+ma_noise_get_heap_size :: (pConfig: *ma_noise_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_noise_init_preallocated :: (pConfig: *ma_noise_config, pHeap: *void, pNoise: *ma_noise) -> ma_result #foreign miniaudio_fdkaac;
+ma_noise_init :: (pConfig: *ma_noise_config, pAllocationCallbacks: *ma_allocation_callbacks, pNoise: *ma_noise) -> ma_result #foreign miniaudio_fdkaac;
+ma_noise_uninit :: (pNoise: *ma_noise, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_noise_read_pcm_frames :: (pNoise: *ma_noise, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_noise_set_amplitude :: (pNoise: *ma_noise, amplitude: float64) -> ma_result #foreign miniaudio_fdkaac;
+ma_noise_set_seed :: (pNoise: *ma_noise, seed: ma_int32) -> ma_result #foreign miniaudio_fdkaac;
+ma_noise_set_type :: (pNoise: *ma_noise, type: ma_noise_type) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_resource_manager_data_source_flags :: enum u32 {
     STREAM         :: 1;
@@ -5310,7 +6046,7 @@ ma_resource_manager_pipeline_notifications :: struct {
     done: ma_resource_manager_pipeline_stage_notification; /* Decoding fully completed. */
 }
 
-ma_resource_manager_pipeline_notifications_init :: () -> ma_resource_manager_pipeline_notifications #foreign miniaudio;
+ma_resource_manager_pipeline_notifications_init :: () -> ma_resource_manager_pipeline_notifications #foreign miniaudio_fdkaac;
 
 ma_resource_manager_flags :: enum u32 {
     NON_BLOCKING :: 1;
@@ -5331,7 +6067,7 @@ ma_resource_manager_data_source_config :: struct {
     flags:                       ma_uint32;
 }
 
-ma_resource_manager_data_source_config_init :: () -> ma_resource_manager_data_source_config #foreign miniaudio;
+ma_resource_manager_data_source_config_init :: () -> ma_resource_manager_data_source_config #foreign miniaudio_fdkaac;
 
 ma_resource_manager_data_supply_type :: enum u32 {
     unknown       :: 0;
@@ -5448,7 +6184,7 @@ ma_resource_manager_config :: struct {
     pCustomDecodingBackendUserData: *void;
 }
 
-ma_resource_manager_config_init :: () -> ma_resource_manager_config #foreign miniaudio;
+ma_resource_manager_config_init :: () -> ma_resource_manager_config #foreign miniaudio_fdkaac;
 
 ma_resource_manager :: struct {
     config:              ma_resource_manager_config;
@@ -5463,75 +6199,75 @@ ma_resource_manager :: struct {
 }
 
 /* Init. */
-ma_resource_manager_init :: (pConfig: *ma_resource_manager_config, pResourceManager: *ma_resource_manager) -> ma_result #foreign miniaudio;
-ma_resource_manager_uninit :: (pResourceManager: *ma_resource_manager) -> void #foreign miniaudio;
-ma_resource_manager_get_log :: (pResourceManager: *ma_resource_manager) -> *ma_log #foreign miniaudio;
+ma_resource_manager_init :: (pConfig: *ma_resource_manager_config, pResourceManager: *ma_resource_manager) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_uninit :: (pResourceManager: *ma_resource_manager) -> void #foreign miniaudio_fdkaac;
+ma_resource_manager_get_log :: (pResourceManager: *ma_resource_manager) -> *ma_log #foreign miniaudio_fdkaac;
 
 /* Registration. */
-ma_resource_manager_register_file :: (pResourceManager: *ma_resource_manager, pFilePath: *u8, flags: ma_uint32) -> ma_result #foreign miniaudio;
-ma_resource_manager_register_file_w :: (pResourceManager: *ma_resource_manager, pFilePath: *s32, flags: ma_uint32) -> ma_result #foreign miniaudio;
-ma_resource_manager_register_decoded_data :: (pResourceManager: *ma_resource_manager, pName: *u8, pData: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32, sampleRate: ma_uint32) -> ma_result #foreign miniaudio;
-ma_resource_manager_register_decoded_data_w :: (pResourceManager: *ma_resource_manager, pName: *s32, pData: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32, sampleRate: ma_uint32) -> ma_result #foreign miniaudio;
-ma_resource_manager_register_encoded_data :: (pResourceManager: *ma_resource_manager, pName: *u8, pData: *void, sizeInBytes: u64) -> ma_result #foreign miniaudio;
-ma_resource_manager_register_encoded_data_w :: (pResourceManager: *ma_resource_manager, pName: *s32, pData: *void, sizeInBytes: u64) -> ma_result #foreign miniaudio;
-ma_resource_manager_unregister_file :: (pResourceManager: *ma_resource_manager, pFilePath: *u8) -> ma_result #foreign miniaudio;
-ma_resource_manager_unregister_file_w :: (pResourceManager: *ma_resource_manager, pFilePath: *s32) -> ma_result #foreign miniaudio;
-ma_resource_manager_unregister_data :: (pResourceManager: *ma_resource_manager, pName: *u8) -> ma_result #foreign miniaudio;
-ma_resource_manager_unregister_data_w :: (pResourceManager: *ma_resource_manager, pName: *s32) -> ma_result #foreign miniaudio;
+ma_resource_manager_register_file :: (pResourceManager: *ma_resource_manager, pFilePath: *u8, flags: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_register_file_w :: (pResourceManager: *ma_resource_manager, pFilePath: *s32, flags: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_register_decoded_data :: (pResourceManager: *ma_resource_manager, pName: *u8, pData: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32, sampleRate: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_register_decoded_data_w :: (pResourceManager: *ma_resource_manager, pName: *s32, pData: *void, frameCount: ma_uint64, format: ma_format, channels: ma_uint32, sampleRate: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_register_encoded_data :: (pResourceManager: *ma_resource_manager, pName: *u8, pData: *void, sizeInBytes: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_register_encoded_data_w :: (pResourceManager: *ma_resource_manager, pName: *s32, pData: *void, sizeInBytes: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_unregister_file :: (pResourceManager: *ma_resource_manager, pFilePath: *u8) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_unregister_file_w :: (pResourceManager: *ma_resource_manager, pFilePath: *s32) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_unregister_data :: (pResourceManager: *ma_resource_manager, pName: *u8) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_unregister_data_w :: (pResourceManager: *ma_resource_manager, pName: *s32) -> ma_result #foreign miniaudio_fdkaac;
 
 /* Data Buffers. */
-ma_resource_manager_data_buffer_init_ex :: (pResourceManager: *ma_resource_manager, pConfig: *ma_resource_manager_data_source_config, pDataBuffer: *ma_resource_manager_data_buffer) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_buffer_init :: (pResourceManager: *ma_resource_manager, pFilePath: *u8, flags: ma_uint32, pNotifications: *ma_resource_manager_pipeline_notifications, pDataBuffer: *ma_resource_manager_data_buffer) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_buffer_init_w :: (pResourceManager: *ma_resource_manager, pFilePath: *s32, flags: ma_uint32, pNotifications: *ma_resource_manager_pipeline_notifications, pDataBuffer: *ma_resource_manager_data_buffer) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_buffer_init_copy :: (pResourceManager: *ma_resource_manager, pExistingDataBuffer: *ma_resource_manager_data_buffer, pDataBuffer: *ma_resource_manager_data_buffer) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_buffer_uninit :: (pDataBuffer: *ma_resource_manager_data_buffer) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_buffer_read_pcm_frames :: (pDataBuffer: *ma_resource_manager_data_buffer, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_buffer_seek_to_pcm_frame :: (pDataBuffer: *ma_resource_manager_data_buffer, frameIndex: ma_uint64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_buffer_get_data_format :: (pDataBuffer: *ma_resource_manager_data_buffer, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_buffer_get_cursor_in_pcm_frames :: (pDataBuffer: *ma_resource_manager_data_buffer, pCursor: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_buffer_get_length_in_pcm_frames :: (pDataBuffer: *ma_resource_manager_data_buffer, pLength: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_buffer_result :: (pDataBuffer: *ma_resource_manager_data_buffer) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_buffer_set_looping :: (pDataBuffer: *ma_resource_manager_data_buffer, isLooping: ma_bool32) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_buffer_is_looping :: (pDataBuffer: *ma_resource_manager_data_buffer) -> ma_bool32 #foreign miniaudio;
-ma_resource_manager_data_buffer_get_available_frames :: (pDataBuffer: *ma_resource_manager_data_buffer, pAvailableFrames: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_resource_manager_data_buffer_init_ex :: (pResourceManager: *ma_resource_manager, pConfig: *ma_resource_manager_data_source_config, pDataBuffer: *ma_resource_manager_data_buffer) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_init :: (pResourceManager: *ma_resource_manager, pFilePath: *u8, flags: ma_uint32, pNotifications: *ma_resource_manager_pipeline_notifications, pDataBuffer: *ma_resource_manager_data_buffer) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_init_w :: (pResourceManager: *ma_resource_manager, pFilePath: *s32, flags: ma_uint32, pNotifications: *ma_resource_manager_pipeline_notifications, pDataBuffer: *ma_resource_manager_data_buffer) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_init_copy :: (pResourceManager: *ma_resource_manager, pExistingDataBuffer: *ma_resource_manager_data_buffer, pDataBuffer: *ma_resource_manager_data_buffer) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_uninit :: (pDataBuffer: *ma_resource_manager_data_buffer) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_read_pcm_frames :: (pDataBuffer: *ma_resource_manager_data_buffer, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_seek_to_pcm_frame :: (pDataBuffer: *ma_resource_manager_data_buffer, frameIndex: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_get_data_format :: (pDataBuffer: *ma_resource_manager_data_buffer, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_get_cursor_in_pcm_frames :: (pDataBuffer: *ma_resource_manager_data_buffer, pCursor: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_get_length_in_pcm_frames :: (pDataBuffer: *ma_resource_manager_data_buffer, pLength: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_result :: (pDataBuffer: *ma_resource_manager_data_buffer) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_set_looping :: (pDataBuffer: *ma_resource_manager_data_buffer, isLooping: ma_bool32) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_is_looping :: (pDataBuffer: *ma_resource_manager_data_buffer) -> ma_bool32 #foreign miniaudio_fdkaac;
+ma_resource_manager_data_buffer_get_available_frames :: (pDataBuffer: *ma_resource_manager_data_buffer, pAvailableFrames: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /* Data Streams. */
-ma_resource_manager_data_stream_init_ex :: (pResourceManager: *ma_resource_manager, pConfig: *ma_resource_manager_data_source_config, pDataStream: *ma_resource_manager_data_stream) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_stream_init :: (pResourceManager: *ma_resource_manager, pFilePath: *u8, flags: ma_uint32, pNotifications: *ma_resource_manager_pipeline_notifications, pDataStream: *ma_resource_manager_data_stream) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_stream_init_w :: (pResourceManager: *ma_resource_manager, pFilePath: *s32, flags: ma_uint32, pNotifications: *ma_resource_manager_pipeline_notifications, pDataStream: *ma_resource_manager_data_stream) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_stream_uninit :: (pDataStream: *ma_resource_manager_data_stream) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_stream_read_pcm_frames :: (pDataStream: *ma_resource_manager_data_stream, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_stream_seek_to_pcm_frame :: (pDataStream: *ma_resource_manager_data_stream, frameIndex: ma_uint64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_stream_get_data_format :: (pDataStream: *ma_resource_manager_data_stream, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_stream_get_cursor_in_pcm_frames :: (pDataStream: *ma_resource_manager_data_stream, pCursor: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_stream_get_length_in_pcm_frames :: (pDataStream: *ma_resource_manager_data_stream, pLength: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_stream_result :: (pDataStream: *ma_resource_manager_data_stream) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_stream_set_looping :: (pDataStream: *ma_resource_manager_data_stream, isLooping: ma_bool32) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_stream_is_looping :: (pDataStream: *ma_resource_manager_data_stream) -> ma_bool32 #foreign miniaudio;
-ma_resource_manager_data_stream_get_available_frames :: (pDataStream: *ma_resource_manager_data_stream, pAvailableFrames: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_resource_manager_data_stream_init_ex :: (pResourceManager: *ma_resource_manager, pConfig: *ma_resource_manager_data_source_config, pDataStream: *ma_resource_manager_data_stream) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_stream_init :: (pResourceManager: *ma_resource_manager, pFilePath: *u8, flags: ma_uint32, pNotifications: *ma_resource_manager_pipeline_notifications, pDataStream: *ma_resource_manager_data_stream) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_stream_init_w :: (pResourceManager: *ma_resource_manager, pFilePath: *s32, flags: ma_uint32, pNotifications: *ma_resource_manager_pipeline_notifications, pDataStream: *ma_resource_manager_data_stream) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_stream_uninit :: (pDataStream: *ma_resource_manager_data_stream) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_stream_read_pcm_frames :: (pDataStream: *ma_resource_manager_data_stream, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_stream_seek_to_pcm_frame :: (pDataStream: *ma_resource_manager_data_stream, frameIndex: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_stream_get_data_format :: (pDataStream: *ma_resource_manager_data_stream, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_stream_get_cursor_in_pcm_frames :: (pDataStream: *ma_resource_manager_data_stream, pCursor: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_stream_get_length_in_pcm_frames :: (pDataStream: *ma_resource_manager_data_stream, pLength: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_stream_result :: (pDataStream: *ma_resource_manager_data_stream) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_stream_set_looping :: (pDataStream: *ma_resource_manager_data_stream, isLooping: ma_bool32) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_stream_is_looping :: (pDataStream: *ma_resource_manager_data_stream) -> ma_bool32 #foreign miniaudio_fdkaac;
+ma_resource_manager_data_stream_get_available_frames :: (pDataStream: *ma_resource_manager_data_stream, pAvailableFrames: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /* Data Sources. */
-ma_resource_manager_data_source_init_ex :: (pResourceManager: *ma_resource_manager, pConfig: *ma_resource_manager_data_source_config, pDataSource: *ma_resource_manager_data_source) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_source_init :: (pResourceManager: *ma_resource_manager, pName: *u8, flags: ma_uint32, pNotifications: *ma_resource_manager_pipeline_notifications, pDataSource: *ma_resource_manager_data_source) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_source_init_w :: (pResourceManager: *ma_resource_manager, pName: *s32, flags: ma_uint32, pNotifications: *ma_resource_manager_pipeline_notifications, pDataSource: *ma_resource_manager_data_source) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_source_init_copy :: (pResourceManager: *ma_resource_manager, pExistingDataSource: *ma_resource_manager_data_source, pDataSource: *ma_resource_manager_data_source) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_source_uninit :: (pDataSource: *ma_resource_manager_data_source) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_source_read_pcm_frames :: (pDataSource: *ma_resource_manager_data_source, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_source_seek_to_pcm_frame :: (pDataSource: *ma_resource_manager_data_source, frameIndex: ma_uint64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_source_get_data_format :: (pDataSource: *ma_resource_manager_data_source, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_source_get_cursor_in_pcm_frames :: (pDataSource: *ma_resource_manager_data_source, pCursor: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_source_get_length_in_pcm_frames :: (pDataSource: *ma_resource_manager_data_source, pLength: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_source_result :: (pDataSource: *ma_resource_manager_data_source) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_source_set_looping :: (pDataSource: *ma_resource_manager_data_source, isLooping: ma_bool32) -> ma_result #foreign miniaudio;
-ma_resource_manager_data_source_is_looping :: (pDataSource: *ma_resource_manager_data_source) -> ma_bool32 #foreign miniaudio;
-ma_resource_manager_data_source_get_available_frames :: (pDataSource: *ma_resource_manager_data_source, pAvailableFrames: *ma_uint64) -> ma_result #foreign miniaudio;
+ma_resource_manager_data_source_init_ex :: (pResourceManager: *ma_resource_manager, pConfig: *ma_resource_manager_data_source_config, pDataSource: *ma_resource_manager_data_source) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_init :: (pResourceManager: *ma_resource_manager, pName: *u8, flags: ma_uint32, pNotifications: *ma_resource_manager_pipeline_notifications, pDataSource: *ma_resource_manager_data_source) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_init_w :: (pResourceManager: *ma_resource_manager, pName: *s32, flags: ma_uint32, pNotifications: *ma_resource_manager_pipeline_notifications, pDataSource: *ma_resource_manager_data_source) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_init_copy :: (pResourceManager: *ma_resource_manager, pExistingDataSource: *ma_resource_manager_data_source, pDataSource: *ma_resource_manager_data_source) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_uninit :: (pDataSource: *ma_resource_manager_data_source) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_read_pcm_frames :: (pDataSource: *ma_resource_manager_data_source, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_seek_to_pcm_frame :: (pDataSource: *ma_resource_manager_data_source, frameIndex: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_get_data_format :: (pDataSource: *ma_resource_manager_data_source, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_get_cursor_in_pcm_frames :: (pDataSource: *ma_resource_manager_data_source, pCursor: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_get_length_in_pcm_frames :: (pDataSource: *ma_resource_manager_data_source, pLength: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_result :: (pDataSource: *ma_resource_manager_data_source) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_set_looping :: (pDataSource: *ma_resource_manager_data_source, isLooping: ma_bool32) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_is_looping :: (pDataSource: *ma_resource_manager_data_source) -> ma_bool32 #foreign miniaudio_fdkaac;
+ma_resource_manager_data_source_get_available_frames :: (pDataSource: *ma_resource_manager_data_source, pAvailableFrames: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /* Job management. */
-ma_resource_manager_post_job :: (pResourceManager: *ma_resource_manager, pJob: *ma_job) -> ma_result #foreign miniaudio;
-ma_resource_manager_post_job_quit :: (pResourceManager: *ma_resource_manager) -> ma_result #foreign miniaudio;
-ma_resource_manager_next_job :: (pResourceManager: *ma_resource_manager, pJob: *ma_job) -> ma_result #foreign miniaudio;
-ma_resource_manager_process_job :: (pResourceManager: *ma_resource_manager, pJob: *ma_job) -> ma_result #foreign miniaudio;
-ma_resource_manager_process_next_job :: (pResourceManager: *ma_resource_manager) -> ma_result #foreign miniaudio;
+ma_resource_manager_post_job :: (pResourceManager: *ma_resource_manager, pJob: *ma_job) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_post_job_quit :: (pResourceManager: *ma_resource_manager) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_next_job :: (pResourceManager: *ma_resource_manager, pJob: *ma_job) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_process_job :: (pResourceManager: *ma_resource_manager, pJob: *ma_job) -> ma_result #foreign miniaudio_fdkaac;
+ma_resource_manager_process_next_job :: (pResourceManager: *ma_resource_manager) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_node :: void;
 
@@ -5601,7 +6337,7 @@ ma_node_config :: struct {
     pOutputChannels: *ma_uint32; /* The number of elements are determined by the output bus count as determined by the vtable, or `outputBusCount` if the vtable specifies `MA_NODE_BUS_COUNT_UNKNOWN`. */
 }
 
-ma_node_config_init :: () -> ma_node_config #foreign miniaudio;
+ma_node_config_init :: () -> ma_node_config #foreign miniaudio_fdkaac;
 
 ma_node_output_bus :: struct {
     pNode:                  *ma_node; /* The node that owns this output bus. The input node. Will be null for dummy head and tail nodes. */
@@ -5653,35 +6389,35 @@ ma_node_base :: struct {
     _ownsHeap:                   ma_bool32; /* If set to true, the node owns the heap allocation and _pHeap will be freed in ma_node_uninit(). */
 }
 
-ma_node_get_heap_size :: (pNodeGraph: *ma_node_graph, pConfig: *ma_node_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_node_init_preallocated :: (pNodeGraph: *ma_node_graph, pConfig: *ma_node_config, pHeap: *void, pNode: *ma_node) -> ma_result #foreign miniaudio;
-ma_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_node) -> ma_result #foreign miniaudio;
-ma_node_uninit :: (pNode: *ma_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_node_get_node_graph :: (pNode: *ma_node) -> *ma_node_graph #foreign miniaudio;
-ma_node_get_input_bus_count :: (pNode: *ma_node) -> ma_uint32 #foreign miniaudio;
-ma_node_get_output_bus_count :: (pNode: *ma_node) -> ma_uint32 #foreign miniaudio;
-ma_node_get_input_channels :: (pNode: *ma_node, inputBusIndex: ma_uint32) -> ma_uint32 #foreign miniaudio;
-ma_node_get_output_channels :: (pNode: *ma_node, outputBusIndex: ma_uint32) -> ma_uint32 #foreign miniaudio;
-ma_node_attach_output_bus :: (pNode: *ma_node, outputBusIndex: ma_uint32, pOtherNode: *ma_node, otherNodeInputBusIndex: ma_uint32) -> ma_result #foreign miniaudio;
-ma_node_detach_output_bus :: (pNode: *ma_node, outputBusIndex: ma_uint32) -> ma_result #foreign miniaudio;
-ma_node_detach_all_output_buses :: (pNode: *ma_node) -> ma_result #foreign miniaudio;
-ma_node_set_output_bus_volume :: (pNode: *ma_node, outputBusIndex: ma_uint32, volume: float) -> ma_result #foreign miniaudio;
-ma_node_get_output_bus_volume :: (pNode: *ma_node, outputBusIndex: ma_uint32) -> float #foreign miniaudio;
-ma_node_set_state :: (pNode: *ma_node, state: ma_node_state) -> ma_result #foreign miniaudio;
-ma_node_get_state :: (pNode: *ma_node) -> ma_node_state #foreign miniaudio;
-ma_node_set_state_time :: (pNode: *ma_node, state: ma_node_state, globalTime: ma_uint64) -> ma_result #foreign miniaudio;
-ma_node_get_state_time :: (pNode: *ma_node, state: ma_node_state) -> ma_uint64 #foreign miniaudio;
-ma_node_get_state_by_time :: (pNode: *ma_node, globalTime: ma_uint64) -> ma_node_state #foreign miniaudio;
-ma_node_get_state_by_time_range :: (pNode: *ma_node, globalTimeBeg: ma_uint64, globalTimeEnd: ma_uint64) -> ma_node_state #foreign miniaudio;
-ma_node_get_time :: (pNode: *ma_node) -> ma_uint64 #foreign miniaudio;
-ma_node_set_time :: (pNode: *ma_node, localTime: ma_uint64) -> ma_result #foreign miniaudio;
+ma_node_get_heap_size :: (pNodeGraph: *ma_node_graph, pConfig: *ma_node_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_node_init_preallocated :: (pNodeGraph: *ma_node_graph, pConfig: *ma_node_config, pHeap: *void, pNode: *ma_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_node_uninit :: (pNode: *ma_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_node_get_node_graph :: (pNode: *ma_node) -> *ma_node_graph #foreign miniaudio_fdkaac;
+ma_node_get_input_bus_count :: (pNode: *ma_node) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_node_get_output_bus_count :: (pNode: *ma_node) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_node_get_input_channels :: (pNode: *ma_node, inputBusIndex: ma_uint32) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_node_get_output_channels :: (pNode: *ma_node, outputBusIndex: ma_uint32) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_node_attach_output_bus :: (pNode: *ma_node, outputBusIndex: ma_uint32, pOtherNode: *ma_node, otherNodeInputBusIndex: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_node_detach_output_bus :: (pNode: *ma_node, outputBusIndex: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_node_detach_all_output_buses :: (pNode: *ma_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_node_set_output_bus_volume :: (pNode: *ma_node, outputBusIndex: ma_uint32, volume: float) -> ma_result #foreign miniaudio_fdkaac;
+ma_node_get_output_bus_volume :: (pNode: *ma_node, outputBusIndex: ma_uint32) -> float #foreign miniaudio_fdkaac;
+ma_node_set_state :: (pNode: *ma_node, state: ma_node_state) -> ma_result #foreign miniaudio_fdkaac;
+ma_node_get_state :: (pNode: *ma_node) -> ma_node_state #foreign miniaudio_fdkaac;
+ma_node_set_state_time :: (pNode: *ma_node, state: ma_node_state, globalTime: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_node_get_state_time :: (pNode: *ma_node, state: ma_node_state) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_node_get_state_by_time :: (pNode: *ma_node, globalTime: ma_uint64) -> ma_node_state #foreign miniaudio_fdkaac;
+ma_node_get_state_by_time_range :: (pNode: *ma_node, globalTimeBeg: ma_uint64, globalTimeEnd: ma_uint64) -> ma_node_state #foreign miniaudio_fdkaac;
+ma_node_get_time :: (pNode: *ma_node) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_node_set_time :: (pNode: *ma_node, localTime: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 ma_node_graph_config :: struct {
     channels:             ma_uint32;
     nodeCacheCapInFrames: ma_uint16;
 }
 
-ma_node_graph_config_init :: (channels: ma_uint32) -> ma_node_graph_config #foreign miniaudio;
+ma_node_graph_config_init :: (channels: ma_uint32) -> ma_node_graph_config #foreign miniaudio_fdkaac;
 
 ma_node_graph :: struct {
     base:                 ma_node_base; /* The node graph itself is a node so it can be connected as an input to different node graph. This has zero inputs and calls ma_node_graph_read_pcm_frames() to generate it's output. */
@@ -5692,13 +6428,13 @@ ma_node_graph :: struct {
     isReading:            ma_bool32;
 }
 
-ma_node_graph_init :: (pConfig: *ma_node_graph_config, pAllocationCallbacks: *ma_allocation_callbacks, pNodeGraph: *ma_node_graph) -> ma_result #foreign miniaudio;
-ma_node_graph_uninit :: (pNodeGraph: *ma_node_graph, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_node_graph_get_endpoint :: (pNodeGraph: *ma_node_graph) -> *ma_node #foreign miniaudio;
-ma_node_graph_read_pcm_frames :: (pNodeGraph: *ma_node_graph, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_node_graph_get_channels :: (pNodeGraph: *ma_node_graph) -> ma_uint32 #foreign miniaudio;
-ma_node_graph_get_time :: (pNodeGraph: *ma_node_graph) -> ma_uint64 #foreign miniaudio;
-ma_node_graph_set_time :: (pNodeGraph: *ma_node_graph, globalTime: ma_uint64) -> ma_result #foreign miniaudio;
+ma_node_graph_init :: (pConfig: *ma_node_graph_config, pAllocationCallbacks: *ma_allocation_callbacks, pNodeGraph: *ma_node_graph) -> ma_result #foreign miniaudio_fdkaac;
+ma_node_graph_uninit :: (pNodeGraph: *ma_node_graph, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_node_graph_get_endpoint :: (pNodeGraph: *ma_node_graph) -> *ma_node #foreign miniaudio_fdkaac;
+ma_node_graph_read_pcm_frames :: (pNodeGraph: *ma_node_graph, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_node_graph_get_channels :: (pNodeGraph: *ma_node_graph) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_node_graph_get_time :: (pNodeGraph: *ma_node_graph) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_node_graph_set_time :: (pNodeGraph: *ma_node_graph, globalTime: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
 
 /* Data source node. 0 input buses, 1 output bus. Used for reading from a data source. */
 ma_data_source_node_config :: struct {
@@ -5706,17 +6442,17 @@ ma_data_source_node_config :: struct {
     pDataSource: *ma_data_source;
 }
 
-ma_data_source_node_config_init :: (pDataSource: *ma_data_source) -> ma_data_source_node_config #foreign miniaudio;
+ma_data_source_node_config_init :: (pDataSource: *ma_data_source) -> ma_data_source_node_config #foreign miniaudio_fdkaac;
 
 ma_data_source_node :: struct {
     base:        ma_node_base;
     pDataSource: *ma_data_source;
 }
 
-ma_data_source_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_data_source_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pDataSourceNode: *ma_data_source_node) -> ma_result #foreign miniaudio;
-ma_data_source_node_uninit :: (pDataSourceNode: *ma_data_source_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_data_source_node_set_looping :: (pDataSourceNode: *ma_data_source_node, isLooping: ma_bool32) -> ma_result #foreign miniaudio;
-ma_data_source_node_is_looping :: (pDataSourceNode: *ma_data_source_node) -> ma_bool32 #foreign miniaudio;
+ma_data_source_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_data_source_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pDataSourceNode: *ma_data_source_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_node_uninit :: (pDataSourceNode: *ma_data_source_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_data_source_node_set_looping :: (pDataSourceNode: *ma_data_source_node, isLooping: ma_bool32) -> ma_result #foreign miniaudio_fdkaac;
+ma_data_source_node_is_looping :: (pDataSourceNode: *ma_data_source_node) -> ma_bool32 #foreign miniaudio_fdkaac;
 
 /* Splitter Node. 1 input, many outputs. Used for splitting/copying a stream so it can be as input into two separate output nodes. */
 ma_splitter_node_config :: struct {
@@ -5725,14 +6461,14 @@ ma_splitter_node_config :: struct {
     outputBusCount: ma_uint32;
 }
 
-ma_splitter_node_config_init :: (channels: ma_uint32) -> ma_splitter_node_config #foreign miniaudio;
+ma_splitter_node_config_init :: (channels: ma_uint32) -> ma_splitter_node_config #foreign miniaudio_fdkaac;
 
 ma_splitter_node :: struct {
     base: ma_node_base;
 }
 
-ma_splitter_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_splitter_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pSplitterNode: *ma_splitter_node) -> ma_result #foreign miniaudio;
-ma_splitter_node_uninit :: (pSplitterNode: *ma_splitter_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_splitter_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_splitter_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pSplitterNode: *ma_splitter_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_splitter_node_uninit :: (pSplitterNode: *ma_splitter_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 /*
 Biquad Node
@@ -5742,16 +6478,16 @@ ma_biquad_node_config :: struct {
     biquad:     ma_biquad_config;
 }
 
-ma_biquad_node_config_init :: (channels: ma_uint32, b0: float, b1: float, b2: float, a0: float, a1: float, a2: float) -> ma_biquad_node_config #foreign miniaudio;
+ma_biquad_node_config_init :: (channels: ma_uint32, b0: float, b1: float, b2: float, a0: float, a1: float, a2: float) -> ma_biquad_node_config #foreign miniaudio_fdkaac;
 
 ma_biquad_node :: struct {
     baseNode: ma_node_base;
     biquad:   ma_biquad;
 }
 
-ma_biquad_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_biquad_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_biquad_node) -> ma_result #foreign miniaudio;
-ma_biquad_node_reinit :: (pConfig: *ma_biquad_config, pNode: *ma_biquad_node) -> ma_result #foreign miniaudio;
-ma_biquad_node_uninit :: (pNode: *ma_biquad_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_biquad_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_biquad_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_biquad_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_biquad_node_reinit :: (pConfig: *ma_biquad_config, pNode: *ma_biquad_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_biquad_node_uninit :: (pNode: *ma_biquad_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 /*
 Low Pass Filter Node
@@ -5761,16 +6497,16 @@ ma_lpf_node_config :: struct {
     lpf:        ma_lpf_config;
 }
 
-ma_lpf_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, order: ma_uint32) -> ma_lpf_node_config #foreign miniaudio;
+ma_lpf_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, order: ma_uint32) -> ma_lpf_node_config #foreign miniaudio_fdkaac;
 
 ma_lpf_node :: struct {
     baseNode: ma_node_base;
     lpf:      ma_lpf;
 }
 
-ma_lpf_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_lpf_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_lpf_node) -> ma_result #foreign miniaudio;
-ma_lpf_node_reinit :: (pConfig: *ma_lpf_config, pNode: *ma_lpf_node) -> ma_result #foreign miniaudio;
-ma_lpf_node_uninit :: (pNode: *ma_lpf_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_lpf_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_lpf_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_lpf_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf_node_reinit :: (pConfig: *ma_lpf_config, pNode: *ma_lpf_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_lpf_node_uninit :: (pNode: *ma_lpf_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 /*
 High Pass Filter Node
@@ -5780,16 +6516,16 @@ ma_hpf_node_config :: struct {
     hpf:        ma_hpf_config;
 }
 
-ma_hpf_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, order: ma_uint32) -> ma_hpf_node_config #foreign miniaudio;
+ma_hpf_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, order: ma_uint32) -> ma_hpf_node_config #foreign miniaudio_fdkaac;
 
 ma_hpf_node :: struct {
     baseNode: ma_node_base;
     hpf:      ma_hpf;
 }
 
-ma_hpf_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_hpf_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_hpf_node) -> ma_result #foreign miniaudio;
-ma_hpf_node_reinit :: (pConfig: *ma_hpf_config, pNode: *ma_hpf_node) -> ma_result #foreign miniaudio;
-ma_hpf_node_uninit :: (pNode: *ma_hpf_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_hpf_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_hpf_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_hpf_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf_node_reinit :: (pConfig: *ma_hpf_config, pNode: *ma_hpf_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_hpf_node_uninit :: (pNode: *ma_hpf_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 /*
 Band Pass Filter Node
@@ -5799,16 +6535,16 @@ ma_bpf_node_config :: struct {
     bpf:        ma_bpf_config;
 }
 
-ma_bpf_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, order: ma_uint32) -> ma_bpf_node_config #foreign miniaudio;
+ma_bpf_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, cutoffFrequency: float64, order: ma_uint32) -> ma_bpf_node_config #foreign miniaudio_fdkaac;
 
 ma_bpf_node :: struct {
     baseNode: ma_node_base;
     bpf:      ma_bpf;
 }
 
-ma_bpf_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_bpf_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_bpf_node) -> ma_result #foreign miniaudio;
-ma_bpf_node_reinit :: (pConfig: *ma_bpf_config, pNode: *ma_bpf_node) -> ma_result #foreign miniaudio;
-ma_bpf_node_uninit :: (pNode: *ma_bpf_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_bpf_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_bpf_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_bpf_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_bpf_node_reinit :: (pConfig: *ma_bpf_config, pNode: *ma_bpf_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_bpf_node_uninit :: (pNode: *ma_bpf_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 /*
 Notching Filter Node
@@ -5818,16 +6554,16 @@ ma_notch_node_config :: struct {
     notch:      ma_notch_config;
 }
 
-ma_notch_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, q: float64, frequency: float64) -> ma_notch_node_config #foreign miniaudio;
+ma_notch_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, q: float64, frequency: float64) -> ma_notch_node_config #foreign miniaudio_fdkaac;
 
 ma_notch_node :: struct {
     baseNode: ma_node_base;
     notch:    ma_notch2;
 }
 
-ma_notch_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_notch_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_notch_node) -> ma_result #foreign miniaudio;
-ma_notch_node_reinit :: (pConfig: *ma_notch_config, pNode: *ma_notch_node) -> ma_result #foreign miniaudio;
-ma_notch_node_uninit :: (pNode: *ma_notch_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_notch_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_notch_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_notch_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_notch_node_reinit :: (pConfig: *ma_notch_config, pNode: *ma_notch_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_notch_node_uninit :: (pNode: *ma_notch_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 /*
 Peaking Filter Node
@@ -5837,16 +6573,16 @@ ma_peak_node_config :: struct {
     peak:       ma_peak_config;
 }
 
-ma_peak_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, gainDB: float64, q: float64, frequency: float64) -> ma_peak_node_config #foreign miniaudio;
+ma_peak_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, gainDB: float64, q: float64, frequency: float64) -> ma_peak_node_config #foreign miniaudio_fdkaac;
 
 ma_peak_node :: struct {
     baseNode: ma_node_base;
     peak:     ma_peak2;
 }
 
-ma_peak_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_peak_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_peak_node) -> ma_result #foreign miniaudio;
-ma_peak_node_reinit :: (pConfig: *ma_peak_config, pNode: *ma_peak_node) -> ma_result #foreign miniaudio;
-ma_peak_node_uninit :: (pNode: *ma_peak_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_peak_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_peak_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_peak_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_peak_node_reinit :: (pConfig: *ma_peak_config, pNode: *ma_peak_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_peak_node_uninit :: (pNode: *ma_peak_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 /*
 Low Shelf Filter Node
@@ -5856,16 +6592,16 @@ ma_loshelf_node_config :: struct {
     loshelf:    ma_loshelf_config;
 }
 
-ma_loshelf_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, gainDB: float64, q: float64, frequency: float64) -> ma_loshelf_node_config #foreign miniaudio;
+ma_loshelf_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, gainDB: float64, q: float64, frequency: float64) -> ma_loshelf_node_config #foreign miniaudio_fdkaac;
 
 ma_loshelf_node :: struct {
     baseNode: ma_node_base;
     loshelf:  ma_loshelf2;
 }
 
-ma_loshelf_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_loshelf_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_loshelf_node) -> ma_result #foreign miniaudio;
-ma_loshelf_node_reinit :: (pConfig: *ma_loshelf_config, pNode: *ma_loshelf_node) -> ma_result #foreign miniaudio;
-ma_loshelf_node_uninit :: (pNode: *ma_loshelf_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_loshelf_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_loshelf_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_loshelf_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_loshelf_node_reinit :: (pConfig: *ma_loshelf_config, pNode: *ma_loshelf_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_loshelf_node_uninit :: (pNode: *ma_loshelf_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 /*
 High Shelf Filter Node
@@ -5875,37 +6611,37 @@ ma_hishelf_node_config :: struct {
     hishelf:    ma_hishelf_config;
 }
 
-ma_hishelf_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, gainDB: float64, q: float64, frequency: float64) -> ma_hishelf_node_config #foreign miniaudio;
+ma_hishelf_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, gainDB: float64, q: float64, frequency: float64) -> ma_hishelf_node_config #foreign miniaudio_fdkaac;
 
 ma_hishelf_node :: struct {
     baseNode: ma_node_base;
     hishelf:  ma_hishelf2;
 }
 
-ma_hishelf_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_hishelf_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_hishelf_node) -> ma_result #foreign miniaudio;
-ma_hishelf_node_reinit :: (pConfig: *ma_hishelf_config, pNode: *ma_hishelf_node) -> ma_result #foreign miniaudio;
-ma_hishelf_node_uninit :: (pNode: *ma_hishelf_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_hishelf_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_hishelf_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pNode: *ma_hishelf_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_hishelf_node_reinit :: (pConfig: *ma_hishelf_config, pNode: *ma_hishelf_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_hishelf_node_uninit :: (pNode: *ma_hishelf_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 ma_delay_node_config :: struct {
     nodeConfig: ma_node_config;
     delay:      ma_delay_config;
 }
 
-ma_delay_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, delayInFrames: ma_uint32, decay: float) -> ma_delay_node_config #foreign miniaudio;
+ma_delay_node_config_init :: (channels: ma_uint32, sampleRate: ma_uint32, delayInFrames: ma_uint32, decay: float) -> ma_delay_node_config #foreign miniaudio_fdkaac;
 
 ma_delay_node :: struct {
     baseNode: ma_node_base;
     delay:    ma_delay;
 }
 
-ma_delay_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_delay_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pDelayNode: *ma_delay_node) -> ma_result #foreign miniaudio;
-ma_delay_node_uninit :: (pDelayNode: *ma_delay_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
-ma_delay_node_set_wet :: (pDelayNode: *ma_delay_node, value: float) -> void #foreign miniaudio;
-ma_delay_node_get_wet :: (pDelayNode: *ma_delay_node) -> float #foreign miniaudio;
-ma_delay_node_set_dry :: (pDelayNode: *ma_delay_node, value: float) -> void #foreign miniaudio;
-ma_delay_node_get_dry :: (pDelayNode: *ma_delay_node) -> float #foreign miniaudio;
-ma_delay_node_set_decay :: (pDelayNode: *ma_delay_node, value: float) -> void #foreign miniaudio;
-ma_delay_node_get_decay :: (pDelayNode: *ma_delay_node) -> float #foreign miniaudio;
+ma_delay_node_init :: (pNodeGraph: *ma_node_graph, pConfig: *ma_delay_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pDelayNode: *ma_delay_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_delay_node_uninit :: (pDelayNode: *ma_delay_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_delay_node_set_wet :: (pDelayNode: *ma_delay_node, value: float) -> void #foreign miniaudio_fdkaac;
+ma_delay_node_get_wet :: (pDelayNode: *ma_delay_node) -> float #foreign miniaudio_fdkaac;
+ma_delay_node_set_dry :: (pDelayNode: *ma_delay_node, value: float) -> void #foreign miniaudio_fdkaac;
+ma_delay_node_get_dry :: (pDelayNode: *ma_delay_node) -> float #foreign miniaudio_fdkaac;
+ma_delay_node_set_decay :: (pDelayNode: *ma_delay_node, value: float) -> void #foreign miniaudio_fdkaac;
+ma_delay_node_get_decay :: (pDelayNode: *ma_delay_node) -> float #foreign miniaudio_fdkaac;
 
 /* Sound flags. */
 ma_sound_flags :: enum u32 {
@@ -5938,7 +6674,7 @@ ma_engine_node_config :: struct {
     pinnedListenerIndex:         ma_uint8; /* The index of the listener this node should always use for spatialization. If set to MA_LISTENER_INDEX_CLOSEST the engine will use the closest listener. */
 }
 
-ma_engine_node_config_init :: (pEngine: *ma_engine, type: ma_engine_node_type, flags: ma_uint32) -> ma_engine_node_config #foreign miniaudio;
+ma_engine_node_config_init :: (pEngine: *ma_engine, type: ma_engine_node_type, flags: ma_uint32) -> ma_engine_node_config #foreign miniaudio_fdkaac;
 
 /* Base node object for both ma_sound and ma_sound_group. */
 ma_engine_node :: struct {
@@ -5972,10 +6708,10 @@ ma_engine_node :: struct {
     _pHeap:                      *void;
 }
 
-ma_engine_node_get_heap_size :: (pConfig: *ma_engine_node_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio;
-ma_engine_node_init_preallocated :: (pConfig: *ma_engine_node_config, pHeap: *void, pEngineNode: *ma_engine_node) -> ma_result #foreign miniaudio;
-ma_engine_node_init :: (pConfig: *ma_engine_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pEngineNode: *ma_engine_node) -> ma_result #foreign miniaudio;
-ma_engine_node_uninit :: (pEngineNode: *ma_engine_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio;
+ma_engine_node_get_heap_size :: (pConfig: *ma_engine_node_config, pHeapSizeInBytes: *u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_node_init_preallocated :: (pConfig: *ma_engine_node_config, pHeap: *void, pEngineNode: *ma_engine_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_node_init :: (pConfig: *ma_engine_node_config, pAllocationCallbacks: *ma_allocation_callbacks, pEngineNode: *ma_engine_node) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_node_uninit :: (pEngineNode: *ma_engine_node, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 /* Callback for when a sound reaches the end. */
 ma_sound_end_proc :: #type (pUserData: *void, pSound: *ma_sound) -> void #c_call;
@@ -6005,8 +6741,8 @@ ma_sound_config :: struct {
     pDoneFence:                     *ma_fence; /* Deprecated. Use initNotifications instead. Released when the resource manager has finished decoding the entire sound. Not used with streams. */
 }
 
-ma_sound_config_init :: () -> ma_sound_config #foreign miniaudio;
-ma_sound_config_init_2 :: (pEngine: *ma_engine) -> ma_sound_config #foreign miniaudio;
+ma_sound_config_init :: () -> ma_sound_config #foreign miniaudio_fdkaac;
+ma_sound_config_init_2 :: (pEngine: *ma_engine) -> ma_sound_config #foreign miniaudio_fdkaac;
 
 ma_sound :: struct {
     engineNode:                 ma_engine_node; /* Must be the first member for compatibility with the ma_node API. */
@@ -6030,8 +6766,8 @@ ma_sound_inlined :: struct {
 ma_sound_group_config :: ma_sound_config;
 ma_sound_group :: ma_sound;
 
-ma_sound_group_config_init :: () -> ma_sound_group_config #foreign miniaudio;
-ma_sound_group_config_init_2 :: (pEngine: *ma_engine) -> ma_sound_group_config #foreign miniaudio;
+ma_sound_group_config_init :: () -> ma_sound_group_config #foreign miniaudio_fdkaac;
+ma_sound_group_config_init_2 :: (pEngine: *ma_engine) -> ma_sound_group_config #foreign miniaudio_fdkaac;
 
 ma_engine_process_proc :: #type (pUserData: *void, pFramesOut: *float, frameCount: ma_uint64) -> void #c_call;
 
@@ -6062,7 +6798,7 @@ ma_engine_config :: struct {
     pProcessUserData:                   *void; /* User data that's passed into onProcess. */
 }
 
-ma_engine_config_init :: () -> ma_engine_config #foreign miniaudio;
+ma_engine_config_init :: () -> ma_engine_config #foreign miniaudio_fdkaac;
 
 ma_engine :: struct {
     nodeGraph:                          ma_node_graph; /* An engine is a node graph. It should be able to be plugged into any ma_node_graph API (with a cast) which means this must be the first member of this struct. */
@@ -6088,183 +6824,3616 @@ ma_engine :: struct {
     pProcessUserData:                   *void;
 }
 
-ma_engine_init :: (pConfig: *ma_engine_config, pEngine: *ma_engine) -> ma_result #foreign miniaudio;
-ma_engine_uninit :: (pEngine: *ma_engine) -> void #foreign miniaudio;
-ma_engine_read_pcm_frames :: (pEngine: *ma_engine, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_engine_get_node_graph :: (pEngine: *ma_engine) -> *ma_node_graph #foreign miniaudio;
+ma_engine_init :: (pConfig: *ma_engine_config, pEngine: *ma_engine) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_uninit :: (pEngine: *ma_engine) -> void #foreign miniaudio_fdkaac;
+ma_engine_read_pcm_frames :: (pEngine: *ma_engine, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_get_node_graph :: (pEngine: *ma_engine) -> *ma_node_graph #foreign miniaudio_fdkaac;
 
-ma_engine_get_resource_manager :: (pEngine: *ma_engine) -> *ma_resource_manager #foreign miniaudio;
+ma_engine_get_resource_manager :: (pEngine: *ma_engine) -> *ma_resource_manager #foreign miniaudio_fdkaac;
 
-ma_engine_get_device :: (pEngine: *ma_engine) -> *ma_device #foreign miniaudio;
-ma_engine_get_log :: (pEngine: *ma_engine) -> *ma_log #foreign miniaudio;
-ma_engine_get_endpoint :: (pEngine: *ma_engine) -> *ma_node #foreign miniaudio;
-ma_engine_get_time_in_pcm_frames :: (pEngine: *ma_engine) -> ma_uint64 #foreign miniaudio;
-ma_engine_get_time_in_milliseconds :: (pEngine: *ma_engine) -> ma_uint64 #foreign miniaudio;
-ma_engine_set_time_in_pcm_frames :: (pEngine: *ma_engine, globalTime: ma_uint64) -> ma_result #foreign miniaudio;
-ma_engine_set_time_in_milliseconds :: (pEngine: *ma_engine, globalTime: ma_uint64) -> ma_result #foreign miniaudio;
-ma_engine_get_time :: (pEngine: *ma_engine) -> ma_uint64 #foreign miniaudio;
-ma_engine_set_time :: (pEngine: *ma_engine, globalTime: ma_uint64) -> ma_result #foreign miniaudio;
-ma_engine_get_channels :: (pEngine: *ma_engine) -> ma_uint32 #foreign miniaudio;
-ma_engine_get_sample_rate :: (pEngine: *ma_engine) -> ma_uint32 #foreign miniaudio;
+ma_engine_get_device :: (pEngine: *ma_engine) -> *ma_device #foreign miniaudio_fdkaac;
+ma_engine_get_log :: (pEngine: *ma_engine) -> *ma_log #foreign miniaudio_fdkaac;
+ma_engine_get_endpoint :: (pEngine: *ma_engine) -> *ma_node #foreign miniaudio_fdkaac;
+ma_engine_get_time_in_pcm_frames :: (pEngine: *ma_engine) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_engine_get_time_in_milliseconds :: (pEngine: *ma_engine) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_engine_set_time_in_pcm_frames :: (pEngine: *ma_engine, globalTime: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_set_time_in_milliseconds :: (pEngine: *ma_engine, globalTime: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_get_time :: (pEngine: *ma_engine) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_engine_set_time :: (pEngine: *ma_engine, globalTime: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_get_channels :: (pEngine: *ma_engine) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_engine_get_sample_rate :: (pEngine: *ma_engine) -> ma_uint32 #foreign miniaudio_fdkaac;
 
-ma_engine_start :: (pEngine: *ma_engine) -> ma_result #foreign miniaudio;
-ma_engine_stop :: (pEngine: *ma_engine) -> ma_result #foreign miniaudio;
-ma_engine_set_volume :: (pEngine: *ma_engine, volume: float) -> ma_result #foreign miniaudio;
-ma_engine_get_volume :: (pEngine: *ma_engine) -> float #foreign miniaudio;
-ma_engine_set_gain_db :: (pEngine: *ma_engine, gainDB: float) -> ma_result #foreign miniaudio;
-ma_engine_get_gain_db :: (pEngine: *ma_engine) -> float #foreign miniaudio;
+ma_engine_start :: (pEngine: *ma_engine) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_stop :: (pEngine: *ma_engine) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_set_volume :: (pEngine: *ma_engine, volume: float) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_get_volume :: (pEngine: *ma_engine) -> float #foreign miniaudio_fdkaac;
+ma_engine_set_gain_db :: (pEngine: *ma_engine, gainDB: float) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_get_gain_db :: (pEngine: *ma_engine) -> float #foreign miniaudio_fdkaac;
 
-ma_engine_get_listener_count :: (pEngine: *ma_engine) -> ma_uint32 #foreign miniaudio;
-ma_engine_find_closest_listener :: (pEngine: *ma_engine, absolutePosX: float, absolutePosY: float, absolutePosZ: float) -> ma_uint32 #foreign miniaudio;
-ma_engine_listener_set_position :: (pEngine: *ma_engine, listenerIndex: ma_uint32, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_engine_listener_get_position :: (pEngine: *ma_engine, listenerIndex: ma_uint32) -> ma_vec3f #foreign miniaudio;
-ma_engine_listener_set_direction :: (pEngine: *ma_engine, listenerIndex: ma_uint32, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_engine_listener_get_direction :: (pEngine: *ma_engine, listenerIndex: ma_uint32) -> ma_vec3f #foreign miniaudio;
-ma_engine_listener_set_velocity :: (pEngine: *ma_engine, listenerIndex: ma_uint32, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_engine_listener_get_velocity :: (pEngine: *ma_engine, listenerIndex: ma_uint32) -> ma_vec3f #foreign miniaudio;
-ma_engine_listener_set_cone :: (pEngine: *ma_engine, listenerIndex: ma_uint32, innerAngleInRadians: float, outerAngleInRadians: float, outerGain: float) -> void #foreign miniaudio;
-ma_engine_listener_get_cone :: (pEngine: *ma_engine, listenerIndex: ma_uint32, pInnerAngleInRadians: *float, pOuterAngleInRadians: *float, pOuterGain: *float) -> void #foreign miniaudio;
-ma_engine_listener_set_world_up :: (pEngine: *ma_engine, listenerIndex: ma_uint32, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_engine_listener_get_world_up :: (pEngine: *ma_engine, listenerIndex: ma_uint32) -> ma_vec3f #foreign miniaudio;
-ma_engine_listener_set_enabled :: (pEngine: *ma_engine, listenerIndex: ma_uint32, isEnabled: ma_bool32) -> void #foreign miniaudio;
-ma_engine_listener_is_enabled :: (pEngine: *ma_engine, listenerIndex: ma_uint32) -> ma_bool32 #foreign miniaudio;
+ma_engine_get_listener_count :: (pEngine: *ma_engine) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_engine_find_closest_listener :: (pEngine: *ma_engine, absolutePosX: float, absolutePosY: float, absolutePosZ: float) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_engine_listener_set_position :: (pEngine: *ma_engine, listenerIndex: ma_uint32, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_engine_listener_get_position :: (pEngine: *ma_engine, listenerIndex: ma_uint32) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_engine_listener_set_direction :: (pEngine: *ma_engine, listenerIndex: ma_uint32, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_engine_listener_get_direction :: (pEngine: *ma_engine, listenerIndex: ma_uint32) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_engine_listener_set_velocity :: (pEngine: *ma_engine, listenerIndex: ma_uint32, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_engine_listener_get_velocity :: (pEngine: *ma_engine, listenerIndex: ma_uint32) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_engine_listener_set_cone :: (pEngine: *ma_engine, listenerIndex: ma_uint32, innerAngleInRadians: float, outerAngleInRadians: float, outerGain: float) -> void #foreign miniaudio_fdkaac;
+ma_engine_listener_get_cone :: (pEngine: *ma_engine, listenerIndex: ma_uint32, pInnerAngleInRadians: *float, pOuterAngleInRadians: *float, pOuterGain: *float) -> void #foreign miniaudio_fdkaac;
+ma_engine_listener_set_world_up :: (pEngine: *ma_engine, listenerIndex: ma_uint32, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_engine_listener_get_world_up :: (pEngine: *ma_engine, listenerIndex: ma_uint32) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_engine_listener_set_enabled :: (pEngine: *ma_engine, listenerIndex: ma_uint32, isEnabled: ma_bool32) -> void #foreign miniaudio_fdkaac;
+ma_engine_listener_is_enabled :: (pEngine: *ma_engine, listenerIndex: ma_uint32) -> ma_bool32 #foreign miniaudio_fdkaac;
 
-ma_engine_play_sound_ex :: (pEngine: *ma_engine, pFilePath: *u8, pNode: *ma_node, nodeInputBusIndex: ma_uint32) -> ma_result #foreign miniaudio;
-ma_engine_play_sound :: (pEngine: *ma_engine, pFilePath: *u8, pGroup: *ma_sound_group) -> ma_result #foreign miniaudio;
+ma_engine_play_sound_ex :: (pEngine: *ma_engine, pFilePath: *u8, pNode: *ma_node, nodeInputBusIndex: ma_uint32) -> ma_result #foreign miniaudio_fdkaac;
+ma_engine_play_sound :: (pEngine: *ma_engine, pFilePath: *u8, pGroup: *ma_sound_group) -> ma_result #foreign miniaudio_fdkaac;
 
-ma_sound_init_from_file :: (pEngine: *ma_engine, pFilePath: *u8, flags: ma_uint32, pGroup: *ma_sound_group, pDoneFence: *ma_fence, pSound: *ma_sound) -> ma_result #foreign miniaudio;
-ma_sound_init_from_file_w :: (pEngine: *ma_engine, pFilePath: *s32, flags: ma_uint32, pGroup: *ma_sound_group, pDoneFence: *ma_fence, pSound: *ma_sound) -> ma_result #foreign miniaudio;
-ma_sound_init_copy :: (pEngine: *ma_engine, pExistingSound: *ma_sound, flags: ma_uint32, pGroup: *ma_sound_group, pSound: *ma_sound) -> ma_result #foreign miniaudio;
+ma_sound_init_from_file :: (pEngine: *ma_engine, pFilePath: *u8, flags: ma_uint32, pGroup: *ma_sound_group, pDoneFence: *ma_fence, pSound: *ma_sound) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_init_from_file_w :: (pEngine: *ma_engine, pFilePath: *s32, flags: ma_uint32, pGroup: *ma_sound_group, pDoneFence: *ma_fence, pSound: *ma_sound) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_init_copy :: (pEngine: *ma_engine, pExistingSound: *ma_sound, flags: ma_uint32, pGroup: *ma_sound_group, pSound: *ma_sound) -> ma_result #foreign miniaudio_fdkaac;
 
-ma_sound_init_from_data_source :: (pEngine: *ma_engine, pDataSource: *ma_data_source, flags: ma_uint32, pGroup: *ma_sound_group, pSound: *ma_sound) -> ma_result #foreign miniaudio;
-ma_sound_init_ex :: (pEngine: *ma_engine, pConfig: *ma_sound_config, pSound: *ma_sound) -> ma_result #foreign miniaudio;
-ma_sound_uninit :: (pSound: *ma_sound) -> void #foreign miniaudio;
-ma_sound_get_engine :: (pSound: *ma_sound) -> *ma_engine #foreign miniaudio;
-ma_sound_get_data_source :: (pSound: *ma_sound) -> *ma_data_source #foreign miniaudio;
-ma_sound_start :: (pSound: *ma_sound) -> ma_result #foreign miniaudio;
-ma_sound_stop :: (pSound: *ma_sound) -> ma_result #foreign miniaudio;
-ma_sound_stop_with_fade_in_pcm_frames :: (pSound: *ma_sound, fadeLengthInFrames: ma_uint64) -> ma_result #foreign miniaudio;
-ma_sound_stop_with_fade_in_milliseconds :: (pSound: *ma_sound, fadeLengthInFrames: ma_uint64) -> ma_result #foreign miniaudio;
-ma_sound_set_volume :: (pSound: *ma_sound, volume: float) -> void #foreign miniaudio;
-ma_sound_get_volume :: (pSound: *ma_sound) -> float #foreign miniaudio;
-ma_sound_set_pan :: (pSound: *ma_sound, pan: float) -> void #foreign miniaudio;
-ma_sound_get_pan :: (pSound: *ma_sound) -> float #foreign miniaudio;
-ma_sound_set_pan_mode :: (pSound: *ma_sound, panMode: ma_pan_mode) -> void #foreign miniaudio;
-ma_sound_get_pan_mode :: (pSound: *ma_sound) -> ma_pan_mode #foreign miniaudio;
-ma_sound_set_pitch :: (pSound: *ma_sound, pitch: float) -> void #foreign miniaudio;
-ma_sound_get_pitch :: (pSound: *ma_sound) -> float #foreign miniaudio;
-ma_sound_set_spatialization_enabled :: (pSound: *ma_sound, enabled: ma_bool32) -> void #foreign miniaudio;
-ma_sound_is_spatialization_enabled :: (pSound: *ma_sound) -> ma_bool32 #foreign miniaudio;
-ma_sound_set_pinned_listener_index :: (pSound: *ma_sound, listenerIndex: ma_uint32) -> void #foreign miniaudio;
-ma_sound_get_pinned_listener_index :: (pSound: *ma_sound) -> ma_uint32 #foreign miniaudio;
-ma_sound_get_listener_index :: (pSound: *ma_sound) -> ma_uint32 #foreign miniaudio;
-ma_sound_get_direction_to_listener :: (pSound: *ma_sound) -> ma_vec3f #foreign miniaudio;
-ma_sound_set_position :: (pSound: *ma_sound, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_sound_get_position :: (pSound: *ma_sound) -> ma_vec3f #foreign miniaudio;
-ma_sound_set_direction :: (pSound: *ma_sound, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_sound_get_direction :: (pSound: *ma_sound) -> ma_vec3f #foreign miniaudio;
-ma_sound_set_velocity :: (pSound: *ma_sound, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_sound_get_velocity :: (pSound: *ma_sound) -> ma_vec3f #foreign miniaudio;
-ma_sound_set_attenuation_model :: (pSound: *ma_sound, attenuationModel: ma_attenuation_model) -> void #foreign miniaudio;
-ma_sound_get_attenuation_model :: (pSound: *ma_sound) -> ma_attenuation_model #foreign miniaudio;
-ma_sound_set_positioning :: (pSound: *ma_sound, positioning: ma_positioning) -> void #foreign miniaudio;
-ma_sound_get_positioning :: (pSound: *ma_sound) -> ma_positioning #foreign miniaudio;
-ma_sound_set_rolloff :: (pSound: *ma_sound, rolloff: float) -> void #foreign miniaudio;
-ma_sound_get_rolloff :: (pSound: *ma_sound) -> float #foreign miniaudio;
-ma_sound_set_min_gain :: (pSound: *ma_sound, minGain: float) -> void #foreign miniaudio;
-ma_sound_get_min_gain :: (pSound: *ma_sound) -> float #foreign miniaudio;
-ma_sound_set_max_gain :: (pSound: *ma_sound, maxGain: float) -> void #foreign miniaudio;
-ma_sound_get_max_gain :: (pSound: *ma_sound) -> float #foreign miniaudio;
-ma_sound_set_min_distance :: (pSound: *ma_sound, minDistance: float) -> void #foreign miniaudio;
-ma_sound_get_min_distance :: (pSound: *ma_sound) -> float #foreign miniaudio;
-ma_sound_set_max_distance :: (pSound: *ma_sound, maxDistance: float) -> void #foreign miniaudio;
-ma_sound_get_max_distance :: (pSound: *ma_sound) -> float #foreign miniaudio;
-ma_sound_set_cone :: (pSound: *ma_sound, innerAngleInRadians: float, outerAngleInRadians: float, outerGain: float) -> void #foreign miniaudio;
-ma_sound_get_cone :: (pSound: *ma_sound, pInnerAngleInRadians: *float, pOuterAngleInRadians: *float, pOuterGain: *float) -> void #foreign miniaudio;
-ma_sound_set_doppler_factor :: (pSound: *ma_sound, dopplerFactor: float) -> void #foreign miniaudio;
-ma_sound_get_doppler_factor :: (pSound: *ma_sound) -> float #foreign miniaudio;
-ma_sound_set_directional_attenuation_factor :: (pSound: *ma_sound, directionalAttenuationFactor: float) -> void #foreign miniaudio;
-ma_sound_get_directional_attenuation_factor :: (pSound: *ma_sound) -> float #foreign miniaudio;
-ma_sound_set_fade_in_pcm_frames :: (pSound: *ma_sound, volumeBeg: float, volumeEnd: float, fadeLengthInFrames: ma_uint64) -> void #foreign miniaudio;
-ma_sound_set_fade_in_milliseconds :: (pSound: *ma_sound, volumeBeg: float, volumeEnd: float, fadeLengthInMilliseconds: ma_uint64) -> void #foreign miniaudio;
-ma_sound_set_fade_start_in_pcm_frames :: (pSound: *ma_sound, volumeBeg: float, volumeEnd: float, fadeLengthInFrames: ma_uint64, absoluteGlobalTimeInFrames: ma_uint64) -> void #foreign miniaudio;
-ma_sound_set_fade_start_in_milliseconds :: (pSound: *ma_sound, volumeBeg: float, volumeEnd: float, fadeLengthInMilliseconds: ma_uint64, absoluteGlobalTimeInMilliseconds: ma_uint64) -> void #foreign miniaudio;
-ma_sound_get_current_fade_volume :: (pSound: *ma_sound) -> float #foreign miniaudio;
-ma_sound_set_start_time_in_pcm_frames :: (pSound: *ma_sound, absoluteGlobalTimeInFrames: ma_uint64) -> void #foreign miniaudio;
-ma_sound_set_start_time_in_milliseconds :: (pSound: *ma_sound, absoluteGlobalTimeInMilliseconds: ma_uint64) -> void #foreign miniaudio;
-ma_sound_set_stop_time_in_pcm_frames :: (pSound: *ma_sound, absoluteGlobalTimeInFrames: ma_uint64) -> void #foreign miniaudio;
-ma_sound_set_stop_time_in_milliseconds :: (pSound: *ma_sound, absoluteGlobalTimeInMilliseconds: ma_uint64) -> void #foreign miniaudio;
-ma_sound_set_stop_time_with_fade_in_pcm_frames :: (pSound: *ma_sound, stopAbsoluteGlobalTimeInFrames: ma_uint64, fadeLengthInFrames: ma_uint64) -> void #foreign miniaudio;
-ma_sound_set_stop_time_with_fade_in_milliseconds :: (pSound: *ma_sound, stopAbsoluteGlobalTimeInMilliseconds: ma_uint64, fadeLengthInMilliseconds: ma_uint64) -> void #foreign miniaudio;
-ma_sound_is_playing :: (pSound: *ma_sound) -> ma_bool32 #foreign miniaudio;
-ma_sound_get_time_in_pcm_frames :: (pSound: *ma_sound) -> ma_uint64 #foreign miniaudio;
-ma_sound_get_time_in_milliseconds :: (pSound: *ma_sound) -> ma_uint64 #foreign miniaudio;
-ma_sound_set_looping :: (pSound: *ma_sound, isLooping: ma_bool32) -> void #foreign miniaudio;
-ma_sound_is_looping :: (pSound: *ma_sound) -> ma_bool32 #foreign miniaudio;
-ma_sound_at_end :: (pSound: *ma_sound) -> ma_bool32 #foreign miniaudio;
-ma_sound_seek_to_pcm_frame :: (pSound: *ma_sound, frameIndex: ma_uint64) -> ma_result #foreign miniaudio;
-ma_sound_get_data_format :: (pSound: *ma_sound, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio;
-ma_sound_get_cursor_in_pcm_frames :: (pSound: *ma_sound, pCursor: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_sound_get_length_in_pcm_frames :: (pSound: *ma_sound, pLength: *ma_uint64) -> ma_result #foreign miniaudio;
-ma_sound_get_cursor_in_seconds :: (pSound: *ma_sound, pCursor: *float) -> ma_result #foreign miniaudio;
-ma_sound_get_length_in_seconds :: (pSound: *ma_sound, pLength: *float) -> ma_result #foreign miniaudio;
-ma_sound_set_end_callback :: (pSound: *ma_sound, callback: ma_sound_end_proc, pUserData: *void) -> ma_result #foreign miniaudio;
+ma_sound_init_from_data_source :: (pEngine: *ma_engine, pDataSource: *ma_data_source, flags: ma_uint32, pGroup: *ma_sound_group, pSound: *ma_sound) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_init_ex :: (pEngine: *ma_engine, pConfig: *ma_sound_config, pSound: *ma_sound) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_uninit :: (pSound: *ma_sound) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_engine :: (pSound: *ma_sound) -> *ma_engine #foreign miniaudio_fdkaac;
+ma_sound_get_data_source :: (pSound: *ma_sound) -> *ma_data_source #foreign miniaudio_fdkaac;
+ma_sound_start :: (pSound: *ma_sound) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_stop :: (pSound: *ma_sound) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_stop_with_fade_in_pcm_frames :: (pSound: *ma_sound, fadeLengthInFrames: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_stop_with_fade_in_milliseconds :: (pSound: *ma_sound, fadeLengthInFrames: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_set_volume :: (pSound: *ma_sound, volume: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_volume :: (pSound: *ma_sound) -> float #foreign miniaudio_fdkaac;
+ma_sound_set_pan :: (pSound: *ma_sound, pan: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_pan :: (pSound: *ma_sound) -> float #foreign miniaudio_fdkaac;
+ma_sound_set_pan_mode :: (pSound: *ma_sound, panMode: ma_pan_mode) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_pan_mode :: (pSound: *ma_sound) -> ma_pan_mode #foreign miniaudio_fdkaac;
+ma_sound_set_pitch :: (pSound: *ma_sound, pitch: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_pitch :: (pSound: *ma_sound) -> float #foreign miniaudio_fdkaac;
+ma_sound_set_spatialization_enabled :: (pSound: *ma_sound, enabled: ma_bool32) -> void #foreign miniaudio_fdkaac;
+ma_sound_is_spatialization_enabled :: (pSound: *ma_sound) -> ma_bool32 #foreign miniaudio_fdkaac;
+ma_sound_set_pinned_listener_index :: (pSound: *ma_sound, listenerIndex: ma_uint32) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_pinned_listener_index :: (pSound: *ma_sound) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_sound_get_listener_index :: (pSound: *ma_sound) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_sound_get_direction_to_listener :: (pSound: *ma_sound) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_sound_set_position :: (pSound: *ma_sound, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_position :: (pSound: *ma_sound) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_sound_set_direction :: (pSound: *ma_sound, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_direction :: (pSound: *ma_sound) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_sound_set_velocity :: (pSound: *ma_sound, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_velocity :: (pSound: *ma_sound) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_sound_set_attenuation_model :: (pSound: *ma_sound, attenuationModel: ma_attenuation_model) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_attenuation_model :: (pSound: *ma_sound) -> ma_attenuation_model #foreign miniaudio_fdkaac;
+ma_sound_set_positioning :: (pSound: *ma_sound, positioning: ma_positioning) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_positioning :: (pSound: *ma_sound) -> ma_positioning #foreign miniaudio_fdkaac;
+ma_sound_set_rolloff :: (pSound: *ma_sound, rolloff: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_rolloff :: (pSound: *ma_sound) -> float #foreign miniaudio_fdkaac;
+ma_sound_set_min_gain :: (pSound: *ma_sound, minGain: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_min_gain :: (pSound: *ma_sound) -> float #foreign miniaudio_fdkaac;
+ma_sound_set_max_gain :: (pSound: *ma_sound, maxGain: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_max_gain :: (pSound: *ma_sound) -> float #foreign miniaudio_fdkaac;
+ma_sound_set_min_distance :: (pSound: *ma_sound, minDistance: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_min_distance :: (pSound: *ma_sound) -> float #foreign miniaudio_fdkaac;
+ma_sound_set_max_distance :: (pSound: *ma_sound, maxDistance: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_max_distance :: (pSound: *ma_sound) -> float #foreign miniaudio_fdkaac;
+ma_sound_set_cone :: (pSound: *ma_sound, innerAngleInRadians: float, outerAngleInRadians: float, outerGain: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_cone :: (pSound: *ma_sound, pInnerAngleInRadians: *float, pOuterAngleInRadians: *float, pOuterGain: *float) -> void #foreign miniaudio_fdkaac;
+ma_sound_set_doppler_factor :: (pSound: *ma_sound, dopplerFactor: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_doppler_factor :: (pSound: *ma_sound) -> float #foreign miniaudio_fdkaac;
+ma_sound_set_directional_attenuation_factor :: (pSound: *ma_sound, directionalAttenuationFactor: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_directional_attenuation_factor :: (pSound: *ma_sound) -> float #foreign miniaudio_fdkaac;
+ma_sound_set_fade_in_pcm_frames :: (pSound: *ma_sound, volumeBeg: float, volumeEnd: float, fadeLengthInFrames: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_set_fade_in_milliseconds :: (pSound: *ma_sound, volumeBeg: float, volumeEnd: float, fadeLengthInMilliseconds: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_set_fade_start_in_pcm_frames :: (pSound: *ma_sound, volumeBeg: float, volumeEnd: float, fadeLengthInFrames: ma_uint64, absoluteGlobalTimeInFrames: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_set_fade_start_in_milliseconds :: (pSound: *ma_sound, volumeBeg: float, volumeEnd: float, fadeLengthInMilliseconds: ma_uint64, absoluteGlobalTimeInMilliseconds: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_get_current_fade_volume :: (pSound: *ma_sound) -> float #foreign miniaudio_fdkaac;
+ma_sound_set_start_time_in_pcm_frames :: (pSound: *ma_sound, absoluteGlobalTimeInFrames: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_set_start_time_in_milliseconds :: (pSound: *ma_sound, absoluteGlobalTimeInMilliseconds: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_set_stop_time_in_pcm_frames :: (pSound: *ma_sound, absoluteGlobalTimeInFrames: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_set_stop_time_in_milliseconds :: (pSound: *ma_sound, absoluteGlobalTimeInMilliseconds: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_set_stop_time_with_fade_in_pcm_frames :: (pSound: *ma_sound, stopAbsoluteGlobalTimeInFrames: ma_uint64, fadeLengthInFrames: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_set_stop_time_with_fade_in_milliseconds :: (pSound: *ma_sound, stopAbsoluteGlobalTimeInMilliseconds: ma_uint64, fadeLengthInMilliseconds: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_is_playing :: (pSound: *ma_sound) -> ma_bool32 #foreign miniaudio_fdkaac;
+ma_sound_get_time_in_pcm_frames :: (pSound: *ma_sound) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_sound_get_time_in_milliseconds :: (pSound: *ma_sound) -> ma_uint64 #foreign miniaudio_fdkaac;
+ma_sound_set_looping :: (pSound: *ma_sound, isLooping: ma_bool32) -> void #foreign miniaudio_fdkaac;
+ma_sound_is_looping :: (pSound: *ma_sound) -> ma_bool32 #foreign miniaudio_fdkaac;
+ma_sound_at_end :: (pSound: *ma_sound) -> ma_bool32 #foreign miniaudio_fdkaac;
+ma_sound_seek_to_pcm_frame :: (pSound: *ma_sound, frameIndex: ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_get_data_format :: (pSound: *ma_sound, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_get_cursor_in_pcm_frames :: (pSound: *ma_sound, pCursor: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_get_length_in_pcm_frames :: (pSound: *ma_sound, pLength: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_get_cursor_in_seconds :: (pSound: *ma_sound, pCursor: *float) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_get_length_in_seconds :: (pSound: *ma_sound, pLength: *float) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_set_end_callback :: (pSound: *ma_sound, callback: ma_sound_end_proc, pUserData: *void) -> ma_result #foreign miniaudio_fdkaac;
 
-ma_sound_group_init :: (pEngine: *ma_engine, flags: ma_uint32, pParentGroup: *ma_sound_group, pGroup: *ma_sound_group) -> ma_result #foreign miniaudio;
-ma_sound_group_init_ex :: (pEngine: *ma_engine, pConfig: *ma_sound_group_config, pGroup: *ma_sound_group) -> ma_result #foreign miniaudio;
-ma_sound_group_uninit :: (pGroup: *ma_sound_group) -> void #foreign miniaudio;
-ma_sound_group_get_engine :: (pGroup: *ma_sound_group) -> *ma_engine #foreign miniaudio;
-ma_sound_group_start :: (pGroup: *ma_sound_group) -> ma_result #foreign miniaudio;
-ma_sound_group_stop :: (pGroup: *ma_sound_group) -> ma_result #foreign miniaudio;
-ma_sound_group_set_volume :: (pGroup: *ma_sound_group, volume: float) -> void #foreign miniaudio;
-ma_sound_group_get_volume :: (pGroup: *ma_sound_group) -> float #foreign miniaudio;
-ma_sound_group_set_pan :: (pGroup: *ma_sound_group, pan: float) -> void #foreign miniaudio;
-ma_sound_group_get_pan :: (pGroup: *ma_sound_group) -> float #foreign miniaudio;
-ma_sound_group_set_pan_mode :: (pGroup: *ma_sound_group, panMode: ma_pan_mode) -> void #foreign miniaudio;
-ma_sound_group_get_pan_mode :: (pGroup: *ma_sound_group) -> ma_pan_mode #foreign miniaudio;
-ma_sound_group_set_pitch :: (pGroup: *ma_sound_group, pitch: float) -> void #foreign miniaudio;
-ma_sound_group_get_pitch :: (pGroup: *ma_sound_group) -> float #foreign miniaudio;
-ma_sound_group_set_spatialization_enabled :: (pGroup: *ma_sound_group, enabled: ma_bool32) -> void #foreign miniaudio;
-ma_sound_group_is_spatialization_enabled :: (pGroup: *ma_sound_group) -> ma_bool32 #foreign miniaudio;
-ma_sound_group_set_pinned_listener_index :: (pGroup: *ma_sound_group, listenerIndex: ma_uint32) -> void #foreign miniaudio;
-ma_sound_group_get_pinned_listener_index :: (pGroup: *ma_sound_group) -> ma_uint32 #foreign miniaudio;
-ma_sound_group_get_listener_index :: (pGroup: *ma_sound_group) -> ma_uint32 #foreign miniaudio;
-ma_sound_group_get_direction_to_listener :: (pGroup: *ma_sound_group) -> ma_vec3f #foreign miniaudio;
-ma_sound_group_set_position :: (pGroup: *ma_sound_group, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_sound_group_get_position :: (pGroup: *ma_sound_group) -> ma_vec3f #foreign miniaudio;
-ma_sound_group_set_direction :: (pGroup: *ma_sound_group, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_sound_group_get_direction :: (pGroup: *ma_sound_group) -> ma_vec3f #foreign miniaudio;
-ma_sound_group_set_velocity :: (pGroup: *ma_sound_group, x: float, y: float, z: float) -> void #foreign miniaudio;
-ma_sound_group_get_velocity :: (pGroup: *ma_sound_group) -> ma_vec3f #foreign miniaudio;
-ma_sound_group_set_attenuation_model :: (pGroup: *ma_sound_group, attenuationModel: ma_attenuation_model) -> void #foreign miniaudio;
-ma_sound_group_get_attenuation_model :: (pGroup: *ma_sound_group) -> ma_attenuation_model #foreign miniaudio;
-ma_sound_group_set_positioning :: (pGroup: *ma_sound_group, positioning: ma_positioning) -> void #foreign miniaudio;
-ma_sound_group_get_positioning :: (pGroup: *ma_sound_group) -> ma_positioning #foreign miniaudio;
-ma_sound_group_set_rolloff :: (pGroup: *ma_sound_group, rolloff: float) -> void #foreign miniaudio;
-ma_sound_group_get_rolloff :: (pGroup: *ma_sound_group) -> float #foreign miniaudio;
-ma_sound_group_set_min_gain :: (pGroup: *ma_sound_group, minGain: float) -> void #foreign miniaudio;
-ma_sound_group_get_min_gain :: (pGroup: *ma_sound_group) -> float #foreign miniaudio;
-ma_sound_group_set_max_gain :: (pGroup: *ma_sound_group, maxGain: float) -> void #foreign miniaudio;
-ma_sound_group_get_max_gain :: (pGroup: *ma_sound_group) -> float #foreign miniaudio;
-ma_sound_group_set_min_distance :: (pGroup: *ma_sound_group, minDistance: float) -> void #foreign miniaudio;
-ma_sound_group_get_min_distance :: (pGroup: *ma_sound_group) -> float #foreign miniaudio;
-ma_sound_group_set_max_distance :: (pGroup: *ma_sound_group, maxDistance: float) -> void #foreign miniaudio;
-ma_sound_group_get_max_distance :: (pGroup: *ma_sound_group) -> float #foreign miniaudio;
-ma_sound_group_set_cone :: (pGroup: *ma_sound_group, innerAngleInRadians: float, outerAngleInRadians: float, outerGain: float) -> void #foreign miniaudio;
-ma_sound_group_get_cone :: (pGroup: *ma_sound_group, pInnerAngleInRadians: *float, pOuterAngleInRadians: *float, pOuterGain: *float) -> void #foreign miniaudio;
-ma_sound_group_set_doppler_factor :: (pGroup: *ma_sound_group, dopplerFactor: float) -> void #foreign miniaudio;
-ma_sound_group_get_doppler_factor :: (pGroup: *ma_sound_group) -> float #foreign miniaudio;
-ma_sound_group_set_directional_attenuation_factor :: (pGroup: *ma_sound_group, directionalAttenuationFactor: float) -> void #foreign miniaudio;
-ma_sound_group_get_directional_attenuation_factor :: (pGroup: *ma_sound_group) -> float #foreign miniaudio;
-ma_sound_group_set_fade_in_pcm_frames :: (pGroup: *ma_sound_group, volumeBeg: float, volumeEnd: float, fadeLengthInFrames: ma_uint64) -> void #foreign miniaudio;
-ma_sound_group_set_fade_in_milliseconds :: (pGroup: *ma_sound_group, volumeBeg: float, volumeEnd: float, fadeLengthInMilliseconds: ma_uint64) -> void #foreign miniaudio;
-ma_sound_group_get_current_fade_volume :: (pGroup: *ma_sound_group) -> float #foreign miniaudio;
-ma_sound_group_set_start_time_in_pcm_frames :: (pGroup: *ma_sound_group, absoluteGlobalTimeInFrames: ma_uint64) -> void #foreign miniaudio;
-ma_sound_group_set_start_time_in_milliseconds :: (pGroup: *ma_sound_group, absoluteGlobalTimeInMilliseconds: ma_uint64) -> void #foreign miniaudio;
-ma_sound_group_set_stop_time_in_pcm_frames :: (pGroup: *ma_sound_group, absoluteGlobalTimeInFrames: ma_uint64) -> void #foreign miniaudio;
-ma_sound_group_set_stop_time_in_milliseconds :: (pGroup: *ma_sound_group, absoluteGlobalTimeInMilliseconds: ma_uint64) -> void #foreign miniaudio;
-ma_sound_group_is_playing :: (pGroup: *ma_sound_group) -> ma_bool32 #foreign miniaudio;
-ma_sound_group_get_time_in_pcm_frames :: (pGroup: *ma_sound_group) -> ma_uint64 #foreign miniaudio;
+ma_sound_group_init :: (pEngine: *ma_engine, flags: ma_uint32, pParentGroup: *ma_sound_group, pGroup: *ma_sound_group) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_group_init_ex :: (pEngine: *ma_engine, pConfig: *ma_sound_group_config, pGroup: *ma_sound_group) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_group_uninit :: (pGroup: *ma_sound_group) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_engine :: (pGroup: *ma_sound_group) -> *ma_engine #foreign miniaudio_fdkaac;
+ma_sound_group_start :: (pGroup: *ma_sound_group) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_group_stop :: (pGroup: *ma_sound_group) -> ma_result #foreign miniaudio_fdkaac;
+ma_sound_group_set_volume :: (pGroup: *ma_sound_group, volume: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_volume :: (pGroup: *ma_sound_group) -> float #foreign miniaudio_fdkaac;
+ma_sound_group_set_pan :: (pGroup: *ma_sound_group, pan: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_pan :: (pGroup: *ma_sound_group) -> float #foreign miniaudio_fdkaac;
+ma_sound_group_set_pan_mode :: (pGroup: *ma_sound_group, panMode: ma_pan_mode) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_pan_mode :: (pGroup: *ma_sound_group) -> ma_pan_mode #foreign miniaudio_fdkaac;
+ma_sound_group_set_pitch :: (pGroup: *ma_sound_group, pitch: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_pitch :: (pGroup: *ma_sound_group) -> float #foreign miniaudio_fdkaac;
+ma_sound_group_set_spatialization_enabled :: (pGroup: *ma_sound_group, enabled: ma_bool32) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_is_spatialization_enabled :: (pGroup: *ma_sound_group) -> ma_bool32 #foreign miniaudio_fdkaac;
+ma_sound_group_set_pinned_listener_index :: (pGroup: *ma_sound_group, listenerIndex: ma_uint32) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_pinned_listener_index :: (pGroup: *ma_sound_group) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_sound_group_get_listener_index :: (pGroup: *ma_sound_group) -> ma_uint32 #foreign miniaudio_fdkaac;
+ma_sound_group_get_direction_to_listener :: (pGroup: *ma_sound_group) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_sound_group_set_position :: (pGroup: *ma_sound_group, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_position :: (pGroup: *ma_sound_group) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_sound_group_set_direction :: (pGroup: *ma_sound_group, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_direction :: (pGroup: *ma_sound_group) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_sound_group_set_velocity :: (pGroup: *ma_sound_group, x: float, y: float, z: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_velocity :: (pGroup: *ma_sound_group) -> ma_vec3f #foreign miniaudio_fdkaac;
+ma_sound_group_set_attenuation_model :: (pGroup: *ma_sound_group, attenuationModel: ma_attenuation_model) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_attenuation_model :: (pGroup: *ma_sound_group) -> ma_attenuation_model #foreign miniaudio_fdkaac;
+ma_sound_group_set_positioning :: (pGroup: *ma_sound_group, positioning: ma_positioning) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_positioning :: (pGroup: *ma_sound_group) -> ma_positioning #foreign miniaudio_fdkaac;
+ma_sound_group_set_rolloff :: (pGroup: *ma_sound_group, rolloff: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_rolloff :: (pGroup: *ma_sound_group) -> float #foreign miniaudio_fdkaac;
+ma_sound_group_set_min_gain :: (pGroup: *ma_sound_group, minGain: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_min_gain :: (pGroup: *ma_sound_group) -> float #foreign miniaudio_fdkaac;
+ma_sound_group_set_max_gain :: (pGroup: *ma_sound_group, maxGain: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_max_gain :: (pGroup: *ma_sound_group) -> float #foreign miniaudio_fdkaac;
+ma_sound_group_set_min_distance :: (pGroup: *ma_sound_group, minDistance: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_min_distance :: (pGroup: *ma_sound_group) -> float #foreign miniaudio_fdkaac;
+ma_sound_group_set_max_distance :: (pGroup: *ma_sound_group, maxDistance: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_max_distance :: (pGroup: *ma_sound_group) -> float #foreign miniaudio_fdkaac;
+ma_sound_group_set_cone :: (pGroup: *ma_sound_group, innerAngleInRadians: float, outerAngleInRadians: float, outerGain: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_cone :: (pGroup: *ma_sound_group, pInnerAngleInRadians: *float, pOuterAngleInRadians: *float, pOuterGain: *float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_set_doppler_factor :: (pGroup: *ma_sound_group, dopplerFactor: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_doppler_factor :: (pGroup: *ma_sound_group) -> float #foreign miniaudio_fdkaac;
+ma_sound_group_set_directional_attenuation_factor :: (pGroup: *ma_sound_group, directionalAttenuationFactor: float) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_directional_attenuation_factor :: (pGroup: *ma_sound_group) -> float #foreign miniaudio_fdkaac;
+ma_sound_group_set_fade_in_pcm_frames :: (pGroup: *ma_sound_group, volumeBeg: float, volumeEnd: float, fadeLengthInFrames: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_set_fade_in_milliseconds :: (pGroup: *ma_sound_group, volumeBeg: float, volumeEnd: float, fadeLengthInMilliseconds: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_get_current_fade_volume :: (pGroup: *ma_sound_group) -> float #foreign miniaudio_fdkaac;
+ma_sound_group_set_start_time_in_pcm_frames :: (pGroup: *ma_sound_group, absoluteGlobalTimeInFrames: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_set_start_time_in_milliseconds :: (pGroup: *ma_sound_group, absoluteGlobalTimeInMilliseconds: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_set_stop_time_in_pcm_frames :: (pGroup: *ma_sound_group, absoluteGlobalTimeInFrames: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_set_stop_time_in_milliseconds :: (pGroup: *ma_sound_group, absoluteGlobalTimeInMilliseconds: ma_uint64) -> void #foreign miniaudio_fdkaac;
+ma_sound_group_is_playing :: (pGroup: *ma_sound_group) -> ma_bool32 #foreign miniaudio_fdkaac;
+ma_sound_group_get_time_in_pcm_frames :: (pGroup: *ma_sound_group) -> ma_uint64 #foreign miniaudio_fdkaac;
+
+avutil_version :: () -> u32 #foreign miniaudio_fdkaac;
+
+av_version_info :: () -> *u8 #foreign miniaudio_fdkaac;
+
+avutil_configuration :: () -> *u8 #foreign miniaudio_fdkaac;
+
+avutil_license :: () -> *u8 #foreign miniaudio_fdkaac;
+
+AVMediaType :: enum s32 {
+    UNKNOWN    :: -1;
+    VIDEO      :: 0;
+    AUDIO      :: 1;
+    DATA       :: 2;
+    SUBTITLE   :: 3;
+    ATTACHMENT :: 4;
+    NB         :: 5;
+}
+
+av_get_media_type_string :: (media_type: AVMediaType) -> *u8 #foreign miniaudio_fdkaac;
+
+AVPictureType :: enum u32 {
+    NONE :: 0;
+    I    :: 1;
+    P    :: 2;
+    B    :: 3;
+    S    :: 4;
+    SI   :: 5;
+    SP   :: 6;
+    BI   :: 7;
+}
+
+av_get_picture_type_char :: (pict_type: AVPictureType) -> u8 #foreign miniaudio_fdkaac;
+
+av_strerror :: (errnum: s32, errbuf: *u8, errbuf_size: u64) -> s32 #foreign miniaudio_fdkaac;
+
+av_malloc :: (size: u64) -> *void #foreign miniaudio_fdkaac;
+
+av_mallocz :: (size: u64) -> *void #foreign miniaudio_fdkaac;
+
+av_malloc_array :: (nmemb: u64, size: u64) -> *void #foreign miniaudio_fdkaac;
+
+av_calloc :: (nmemb: u64, size: u64) -> *void #foreign miniaudio_fdkaac;
+
+av_realloc :: (ptr: *void, size: u64) -> *void #foreign miniaudio_fdkaac;
+
+av_reallocp :: (ptr: *void, size: u64) -> s32 #foreign miniaudio_fdkaac;
+
+av_realloc_f :: (ptr: *void, nelem: u64, elsize: u64) -> *void #foreign miniaudio_fdkaac;
+
+av_realloc_array :: (ptr: *void, nmemb: u64, size: u64) -> *void #foreign miniaudio_fdkaac;
+
+av_reallocp_array :: (ptr: *void, nmemb: u64, size: u64) -> s32 #foreign miniaudio_fdkaac;
+
+av_fast_realloc :: (ptr: *void, size: *u32, min_size: u64) -> *void #foreign miniaudio_fdkaac;
+
+av_fast_malloc :: (ptr: *void, size: *u32, min_size: u64) -> void #foreign miniaudio_fdkaac;
+
+av_fast_mallocz :: (ptr: *void, size: *u32, min_size: u64) -> void #foreign miniaudio_fdkaac;
+
+av_free :: (ptr: *void) -> void #foreign miniaudio_fdkaac;
+
+av_freep :: (ptr: *void) -> void #foreign miniaudio_fdkaac;
+
+av_strdup :: (s: *u8) -> *u8 #foreign miniaudio_fdkaac;
+
+av_strndup :: (s: *u8, len: u64) -> *u8 #foreign miniaudio_fdkaac;
+
+av_memdup :: (p: *void, size: u64) -> *void #foreign miniaudio_fdkaac;
+
+av_memcpy_backptr :: (dst: *u8, back: s32, cnt: s32) -> void #foreign miniaudio_fdkaac;
+
+av_dynarray_add :: (tab_ptr: *void, nb_ptr: *s32, elem: *void) -> void #foreign miniaudio_fdkaac;
+
+av_dynarray_add_nofree :: (tab_ptr: *void, nb_ptr: *s32, elem: *void) -> s32 #foreign miniaudio_fdkaac;
+
+av_dynarray2_add :: (tab_ptr: **void, nb_ptr: *s32, elem_size: u64, elem_data: *u8) -> *void #foreign miniaudio_fdkaac;
+
+av_size_mult :: (a: u64, b: u64, r: *u64) -> s32 #foreign miniaudio_fdkaac;
+
+av_max_alloc :: (max: u64) -> void #foreign miniaudio_fdkaac;
+
+av_log2 :: (v: u32) -> s32 #foreign miniaudio_fdkaac;
+
+av_log2_16bit :: (v: u32) -> s32 #foreign miniaudio_fdkaac;
+
+AVRational :: struct {
+    num: s32;
+    den: s32;
+}
+
+av_reduce :: (dst_num: *s32, dst_den: *s32, num: s64, den: s64, max: s64) -> s32 #foreign miniaudio_fdkaac;
+
+av_mul_q :: (b: AVRational, c: AVRational) -> AVRational #foreign miniaudio_fdkaac;
+
+av_div_q :: (b: AVRational, c: AVRational) -> AVRational #foreign miniaudio_fdkaac;
+
+av_add_q :: (b: AVRational, c: AVRational) -> AVRational #foreign miniaudio_fdkaac;
+
+av_sub_q :: (b: AVRational, c: AVRational) -> AVRational #foreign miniaudio_fdkaac;
+
+av_d2q :: (d: float64, max: s32) -> AVRational #foreign miniaudio_fdkaac;
+
+av_nearer_q :: (q: AVRational, q1: AVRational, q2: AVRational) -> s32 #foreign miniaudio_fdkaac;
+
+av_find_nearest_q_idx :: (q: AVRational, q_list: *AVRational) -> s32 #foreign miniaudio_fdkaac;
+
+av_q2intfloat :: (q: AVRational) -> u32 #foreign miniaudio_fdkaac;
+
+av_gcd_q :: (a: AVRational, b: AVRational, max_den: s32, def: AVRational) -> AVRational #foreign miniaudio_fdkaac;
+
+av_intfloat32 :: union {
+    i: u32;
+    f: float;
+}
+
+av_intfloat64 :: union {
+    i: u64;
+    f: float64;
+}
+
+AVRounding :: enum u32 {
+    ZERO        :: 0;
+    INF         :: 1;
+    DOWN        :: 2;
+    UP          :: 3;
+    NEAR_INF    :: 5;
+
+    PASS_MINMAX :: 8192;
+}
+
+av_gcd :: (a: s64, b: s64) -> s64 #foreign miniaudio_fdkaac;
+
+av_rescale :: (a: s64, b: s64, c: s64) -> s64 #foreign miniaudio_fdkaac;
+
+av_rescale_rnd :: (a: s64, b: s64, c: s64, rnd: AVRounding) -> s64 #foreign miniaudio_fdkaac;
+
+av_rescale_q :: (a: s64, bq: AVRational, cq: AVRational) -> s64 #foreign miniaudio_fdkaac;
+
+av_rescale_q_rnd :: (a: s64, bq: AVRational, cq: AVRational, rnd: AVRounding) -> s64 #foreign miniaudio_fdkaac;
+
+av_compare_ts :: (ts_a: s64, tb_a: AVRational, ts_b: s64, tb_b: AVRational) -> s32 #foreign miniaudio_fdkaac;
+
+av_compare_mod :: (a: u64, b: u64, mod: u64) -> s64 #foreign miniaudio_fdkaac;
+
+av_rescale_delta :: (in_tb: AVRational, in_ts: s64, fs_tb: AVRational, duration: s32, last: *s64, out_tb: AVRational) -> s64 #foreign miniaudio_fdkaac;
+
+av_add_stable :: (ts_tb: AVRational, ts: s64, inc_tb: AVRational, inc: s64) -> s64 #foreign miniaudio_fdkaac;
+
+av_bessel_i0 :: (x: float64) -> float64 #foreign miniaudio_fdkaac;
+
+AVClassCategory :: enum u32 {
+    NA                  :: 0;
+    INPUT               :: 1;
+    OUTPUT              :: 2;
+    MUXER               :: 3;
+    DEMUXER             :: 4;
+    ENCODER             :: 5;
+    DECODER             :: 6;
+    FILTER              :: 7;
+    BITSTREAM_FILTER    :: 8;
+    SWSCALER            :: 9;
+    SWRESAMPLER         :: 10;
+    DEVICE_VIDEO_OUTPUT :: 40;
+    DEVICE_VIDEO_INPUT  :: 41;
+    DEVICE_AUDIO_OUTPUT :: 42;
+    DEVICE_AUDIO_INPUT  :: 43;
+    DEVICE_OUTPUT       :: 44;
+    DEVICE_INPUT        :: 45;
+    NB                  :: 46;
+}
+
+AVOptionRanges :: struct {}
+
+AVClass :: struct {
+    class_name:                *u8;
+
+    item_name:                 #type (ctx: *void) -> *u8 #c_call;
+
+    AVOption :: struct {}
+    option:                    *AVOption;
+
+    version:                   s32;
+
+    log_level_offset_offset:   s32;
+
+    parent_log_context_offset: s32;
+
+    category:                  AVClassCategory;
+
+    get_category:              #type (ctx: *void) -> AVClassCategory #c_call;
+
+    query_ranges:              #type (unknown0: **AVOptionRanges, obj: *void, key: *u8, flags: s32) -> s32 #c_call;
+
+    child_next:                #type (obj: *void, prev: *void) -> *void #c_call;
+
+    child_class_iterate:       #type (iter: **void) -> *AVClass #c_call;
+}
+
+av_log_CFormat :: (avcl: *void, level: s32, fmt: *u8, __args: ..Any) -> void #foreign miniaudio_fdkaac "av_log";
+av_log :: (avcl: *void, level: s32, fmt: string, __args: ..Any) {
+    push_allocator(temp);
+    formatted_text_builder: String_Builder;
+    print_to_builder(*formatted_text_builder, fmt, ..__args);
+    append(*formatted_text_builder, "\0");
+    formatted_text := builder_to_string(*formatted_text_builder);
+    av_log_CFormat(avcl, level, "%s", formatted_text.data);
+} @PrintLike
+
+av_log_once_CFormat :: (avcl: *void, initial_level: s32, subsequent_level: s32, state: *s32, fmt: *u8, __args: ..Any) -> void #foreign miniaudio_fdkaac "av_log_once";
+av_log_once :: (avcl: *void, initial_level: s32, subsequent_level: s32, state: *s32, fmt: string, __args: ..Any) {
+    push_allocator(temp);
+    formatted_text_builder: String_Builder;
+    print_to_builder(*formatted_text_builder, fmt, ..__args);
+    append(*formatted_text_builder, "\0");
+    formatted_text := builder_to_string(*formatted_text_builder);
+    av_log_once_CFormat(avcl, initial_level, subsequent_level, state, "%s", formatted_text.data);
+} @PrintLike
+
+av_log_get_level :: () -> s32 #foreign miniaudio_fdkaac;
+
+av_log_set_level :: (level: s32) -> void #foreign miniaudio_fdkaac;
+
+av_log_set_callback :: (callback: *void /* function type contained C va_list argument */) -> void #foreign miniaudio_fdkaac;
+
+av_default_item_name :: (ctx: *void) -> *u8 #foreign miniaudio_fdkaac;
+av_default_get_category :: (ptr: *void) -> AVClassCategory #foreign miniaudio_fdkaac;
+
+av_log_set_flags :: (arg: s32) -> void #foreign miniaudio_fdkaac;
+av_log_get_flags :: () -> s32 #foreign miniaudio_fdkaac;
+
+AVPixelFormat :: enum s32 {
+    NONE           :: -1;
+    YUV420P        :: 0;
+    YUYV422        :: 1;
+    RGB24          :: 2;
+    BGR24          :: 3;
+    YUV422P        :: 4;
+    YUV444P        :: 5;
+    YUV410P        :: 6;
+    YUV411P        :: 7;
+    GRAY8          :: 8;
+    MONOWHITE      :: 9;
+    MONOBLACK      :: 10;
+    PAL8           :: 11;
+    YUVJ420P       :: 12;
+    YUVJ422P       :: 13;
+    YUVJ444P       :: 14;
+    UYVY422        :: 15;
+    UYYVYY411      :: 16;
+    BGR8           :: 17;
+    BGR4           :: 18;
+    BGR4_BYTE      :: 19;
+    RGB8           :: 20;
+    RGB4           :: 21;
+    RGB4_BYTE      :: 22;
+    NV12           :: 23;
+    NV21           :: 24;
+
+    ARGB           :: 25;
+    RGBA           :: 26;
+    ABGR           :: 27;
+    BGRA           :: 28;
+
+    GRAY16BE       :: 29;
+    GRAY16LE       :: 30;
+    YUV440P        :: 31;
+    YUVJ440P       :: 32;
+    YUVA420P       :: 33;
+    RGB48BE        :: 34;
+    RGB48LE        :: 35;
+
+    RGB565BE       :: 36;
+    RGB565LE       :: 37;
+    RGB555BE       :: 38;
+    RGB555LE       :: 39;
+
+    BGR565BE       :: 40;
+    BGR565LE       :: 41;
+    BGR555BE       :: 42;
+    BGR555LE       :: 43;
+
+    VAAPI          :: 44;
+
+    YUV420P16LE    :: 45;
+    YUV420P16BE    :: 46;
+    YUV422P16LE    :: 47;
+    YUV422P16BE    :: 48;
+    YUV444P16LE    :: 49;
+    YUV444P16BE    :: 50;
+    DXVA2_VLD      :: 51;
+
+    RGB444LE       :: 52;
+    RGB444BE       :: 53;
+    BGR444LE       :: 54;
+    BGR444BE       :: 55;
+    YA8            :: 56;
+
+    Y400A          :: 56;
+    GRAY8A         :: 56;
+
+    BGR48BE        :: 57;
+    BGR48LE        :: 58;
+
+    YUV420P9BE     :: 59;
+    YUV420P9LE     :: 60;
+    YUV420P10BE    :: 61;
+    YUV420P10LE    :: 62;
+    YUV422P10BE    :: 63;
+    YUV422P10LE    :: 64;
+    YUV444P9BE     :: 65;
+    YUV444P9LE     :: 66;
+    YUV444P10BE    :: 67;
+    YUV444P10LE    :: 68;
+    YUV422P9BE     :: 69;
+    YUV422P9LE     :: 70;
+    GBRP           :: 71;
+    GBR24P         :: 71;
+    GBRP9BE        :: 72;
+    GBRP9LE        :: 73;
+    GBRP10BE       :: 74;
+    GBRP10LE       :: 75;
+    GBRP16BE       :: 76;
+    GBRP16LE       :: 77;
+    YUVA422P       :: 78;
+    YUVA444P       :: 79;
+    YUVA420P9BE    :: 80;
+    YUVA420P9LE    :: 81;
+    YUVA422P9BE    :: 82;
+    YUVA422P9LE    :: 83;
+    YUVA444P9BE    :: 84;
+    YUVA444P9LE    :: 85;
+    YUVA420P10BE   :: 86;
+    YUVA420P10LE   :: 87;
+    YUVA422P10BE   :: 88;
+    YUVA422P10LE   :: 89;
+    YUVA444P10BE   :: 90;
+    YUVA444P10LE   :: 91;
+    YUVA420P16BE   :: 92;
+    YUVA420P16LE   :: 93;
+    YUVA422P16BE   :: 94;
+    YUVA422P16LE   :: 95;
+    YUVA444P16BE   :: 96;
+    YUVA444P16LE   :: 97;
+
+    VDPAU          :: 98;
+
+    XYZ12LE        :: 99;
+    XYZ12BE        :: 100;
+    NV16           :: 101;
+    NV20LE         :: 102;
+    NV20BE         :: 103;
+
+    RGBA64BE       :: 104;
+    RGBA64LE       :: 105;
+    BGRA64BE       :: 106;
+    BGRA64LE       :: 107;
+
+    YVYU422        :: 108;
+
+    YA16BE         :: 109;
+    YA16LE         :: 110;
+
+    GBRAP          :: 111;
+    GBRAP16BE      :: 112;
+    GBRAP16LE      :: 113;
+
+    QSV            :: 114;
+
+    MMAL           :: 115;
+
+    D3D11VA_VLD    :: 116;
+
+    CUDA           :: 117;
+
+    _0RGB          :: 118;
+    RGB0           :: 119;
+    _0BGR          :: 120;
+    BGR0           :: 121;
+
+    YUV420P12BE    :: 122;
+    YUV420P12LE    :: 123;
+    YUV420P14BE    :: 124;
+    YUV420P14LE    :: 125;
+    YUV422P12BE    :: 126;
+    YUV422P12LE    :: 127;
+    YUV422P14BE    :: 128;
+    YUV422P14LE    :: 129;
+    YUV444P12BE    :: 130;
+    YUV444P12LE    :: 131;
+    YUV444P14BE    :: 132;
+    YUV444P14LE    :: 133;
+    GBRP12BE       :: 134;
+    GBRP12LE       :: 135;
+    GBRP14BE       :: 136;
+    GBRP14LE       :: 137;
+    YUVJ411P       :: 138;
+
+    BAYER_BGGR8    :: 139;
+    BAYER_RGGB8    :: 140;
+    BAYER_GBRG8    :: 141;
+    BAYER_GRBG8    :: 142;
+    BAYER_BGGR16LE :: 143;
+    BAYER_BGGR16BE :: 144;
+    BAYER_RGGB16LE :: 145;
+    BAYER_RGGB16BE :: 146;
+    BAYER_GBRG16LE :: 147;
+    BAYER_GBRG16BE :: 148;
+    BAYER_GRBG16LE :: 149;
+    BAYER_GRBG16BE :: 150;
+
+    YUV440P10LE    :: 151;
+    YUV440P10BE    :: 152;
+    YUV440P12LE    :: 153;
+    YUV440P12BE    :: 154;
+    AYUV64LE       :: 155;
+    AYUV64BE       :: 156;
+
+    VIDEOTOOLBOX   :: 157;
+
+    P010LE         :: 158;
+    P010BE         :: 159;
+
+    GBRAP12BE      :: 160;
+    GBRAP12LE      :: 161;
+
+    GBRAP10BE      :: 162;
+    GBRAP10LE      :: 163;
+
+    MEDIACODEC     :: 164;
+
+    GRAY12BE       :: 165;
+    GRAY12LE       :: 166;
+    GRAY10BE       :: 167;
+    GRAY10LE       :: 168;
+
+    P016LE         :: 169;
+    P016BE         :: 170;
+
+    D3D11          :: 171;
+
+    GRAY9BE        :: 172;
+    GRAY9LE        :: 173;
+
+    GBRPF32BE      :: 174;
+    GBRPF32LE      :: 175;
+    GBRAPF32BE     :: 176;
+    GBRAPF32LE     :: 177;
+
+    DRM_PRIME      :: 178;
+
+    OPENCL         :: 179;
+
+    GRAY14BE       :: 180;
+    GRAY14LE       :: 181;
+
+    GRAYF32BE      :: 182;
+    GRAYF32LE      :: 183;
+
+    YUVA422P12BE   :: 184;
+    YUVA422P12LE   :: 185;
+    YUVA444P12BE   :: 186;
+    YUVA444P12LE   :: 187;
+
+    NV24           :: 188;
+    NV42           :: 189;
+
+    VULKAN         :: 190;
+
+    Y210BE         :: 191;
+    Y210LE         :: 192;
+
+    X2RGB10LE      :: 193;
+    X2RGB10BE      :: 194;
+    X2BGR10LE      :: 195;
+    X2BGR10BE      :: 196;
+
+    P210BE         :: 197;
+    P210LE         :: 198;
+
+    P410BE         :: 199;
+    P410LE         :: 200;
+
+    P216BE         :: 201;
+    P216LE         :: 202;
+
+    P416BE         :: 203;
+    P416LE         :: 204;
+
+    VUYA           :: 205;
+
+    RGBAF16BE      :: 206;
+    RGBAF16LE      :: 207;
+
+    VUYX           :: 208;
+
+    P012LE         :: 209;
+    P012BE         :: 210;
+
+    Y212BE         :: 211;
+    Y212LE         :: 212;
+
+    XV30BE         :: 213;
+    XV30LE         :: 214;
+
+    XV36BE         :: 215;
+    XV36LE         :: 216;
+
+    RGBF32BE       :: 217;
+    RGBF32LE       :: 218;
+
+    RGBAF32BE      :: 219;
+    RGBAF32LE      :: 220;
+
+    P212BE         :: 221;
+    P212LE         :: 222;
+
+    P412BE         :: 223;
+    P412LE         :: 224;
+
+    GBRAP14BE      :: 225;
+    GBRAP14LE      :: 226;
+
+    D3D12          :: 227;
+
+    NB             :: 228;
+}
+
+AVColorPrimaries :: enum u32 {
+    RESERVED0    :: 0;
+    BT709        :: 1;
+    UNSPECIFIED  :: 2;
+    RESERVED     :: 3;
+    BT470M       :: 4;
+
+    BT470BG      :: 5;
+    SMPTE170M    :: 6;
+    SMPTE240M    :: 7;
+    FILM         :: 8;
+    BT2020       :: 9;
+    SMPTE428     :: 10;
+    SMPTEST428_1 :: 10;
+    SMPTE431     :: 11;
+    SMPTE432     :: 12;
+    EBU3213      :: 22;
+    JEDEC_P22    :: 22;
+    NB           :: 23;
+}
+
+AVColorTransferCharacteristic :: enum u32 {
+    RESERVED0    :: 0;
+    BT709        :: 1;
+    UNSPECIFIED  :: 2;
+    RESERVED     :: 3;
+    GAMMA22      :: 4;
+    GAMMA28      :: 5;
+    SMPTE170M    :: 6;
+    SMPTE240M    :: 7;
+    LINEAR       :: 8;
+    LOG          :: 9;
+    LOG_SQRT     :: 10;
+    IEC61966_2_4 :: 11;
+    BT1361_ECG   :: 12;
+    IEC61966_2_1 :: 13;
+    BT2020_10    :: 14;
+    BT2020_12    :: 15;
+    SMPTE2084    :: 16;
+    SMPTEST2084  :: 16;
+    SMPTE428     :: 17;
+    SMPTEST428_1 :: 17;
+    ARIB_STD_B67 :: 18;
+    NB           :: 19;
+}
+
+AVColorSpace :: enum u32 {
+    RGB                :: 0;
+    BT709              :: 1;
+    UNSPECIFIED        :: 2;
+    RESERVED           :: 3;
+    FCC                :: 4;
+    BT470BG            :: 5;
+    SMPTE170M          :: 6;
+    SMPTE240M          :: 7;
+    YCGCO              :: 8;
+    YCOCG              :: 8;
+    BT2020_NCL         :: 9;
+    BT2020_CL          :: 10;
+    SMPTE2085          :: 11;
+    CHROMA_DERIVED_NCL :: 12;
+    CHROMA_DERIVED_CL  :: 13;
+    ICTCP              :: 14;
+    NB                 :: 15;
+}
+
+AVColorRange :: enum u32 {
+    UNSPECIFIED :: 0;
+
+    MPEG        :: 1;
+
+    JPEG        :: 2;
+    NB          :: 3;
+}
+
+AVChromaLocation :: enum u32 {
+    UNSPECIFIED :: 0;
+    LEFT        :: 1;
+    CENTER      :: 2;
+    TOPLEFT     :: 3;
+    TOP         :: 4;
+    BOTTOMLEFT  :: 5;
+    BOTTOM      :: 6;
+    NB          :: 7;
+}
+
+av_int_list_length_for_size :: (elsize: u32, list: *void, term: u64) -> u32 #foreign miniaudio_fdkaac;
+
+av_get_time_base_q :: () -> AVRational #foreign miniaudio_fdkaac;
+
+av_fourcc_make_string :: (buf: *u8, fourcc: u32) -> *u8 #foreign miniaudio_fdkaac;
+
+AVChannel :: enum s32 {
+    NONE                  :: -1;
+    FRONT_LEFT            :: 0;
+    FRONT_RIGHT           :: 1;
+    FRONT_CENTER          :: 2;
+    LOW_FREQUENCY         :: 3;
+    BACK_LEFT             :: 4;
+    BACK_RIGHT            :: 5;
+    FRONT_LEFT_OF_CENTER  :: 6;
+    FRONT_RIGHT_OF_CENTER :: 7;
+    BACK_CENTER           :: 8;
+    SIDE_LEFT             :: 9;
+    SIDE_RIGHT            :: 10;
+    TOP_CENTER            :: 11;
+    TOP_FRONT_LEFT        :: 12;
+    TOP_FRONT_CENTER      :: 13;
+    TOP_FRONT_RIGHT       :: 14;
+    TOP_BACK_LEFT         :: 15;
+    TOP_BACK_CENTER       :: 16;
+    TOP_BACK_RIGHT        :: 17;
+
+    STEREO_LEFT           :: 29;
+
+    STEREO_RIGHT          :: 30;
+    WIDE_LEFT             :: 31;
+    WIDE_RIGHT            :: 32;
+    SURROUND_DIRECT_LEFT  :: 33;
+    SURROUND_DIRECT_RIGHT :: 34;
+    LOW_FREQUENCY_2       :: 35;
+    TOP_SIDE_LEFT         :: 36;
+    TOP_SIDE_RIGHT        :: 37;
+    BOTTOM_FRONT_CENTER   :: 38;
+    BOTTOM_FRONT_LEFT     :: 39;
+    BOTTOM_FRONT_RIGHT    :: 40;
+
+    UNUSED                :: 512;
+
+    UNKNOWN               :: 768;
+
+    AMBISONIC_BASE        :: 1024;
+
+    AMBISONIC_END         :: 2047;
+}
+
+AVChannelOrder :: enum u32 {
+    AV_CHANNEL_ORDER_UNSPEC    :: 0;
+
+    AV_CHANNEL_ORDER_NATIVE    :: 1;
+
+    AV_CHANNEL_ORDER_CUSTOM    :: 2;
+
+    AV_CHANNEL_ORDER_AMBISONIC :: 3;
+
+    FF_CHANNEL_ORDER_NB        :: 4;
+}
+
+AVMatrixEncoding :: enum u32 {
+    NONE           :: 0;
+    DOLBY          :: 1;
+    DPLII          :: 2;
+    DPLIIX         :: 3;
+    DPLIIZ         :: 4;
+    DOLBYEX        :: 5;
+    DOLBYHEADPHONE :: 6;
+    NB             :: 7;
+}
+
+AVChannelCustom :: struct {
+    id:     AVChannel;
+    name:   [16] u8;
+    opaque: *void;
+}
+
+AVChannelLayout :: struct {
+    order:       AVChannelOrder;
+
+    nb_channels: s32;
+
+    u:           union {
+        mask: u64;
+
+        map:  *AVChannelCustom;
+    };
+
+    opaque:      *void;
+}
+
+AVBPrint :: struct {}
+
+av_channel_name :: (buf: *u8, buf_size: u64, channel: AVChannel) -> s32 #foreign miniaudio_fdkaac;
+
+av_channel_name_bprint :: (bp: *AVBPrint, channel_id: AVChannel) -> void #foreign miniaudio_fdkaac;
+
+av_channel_description :: (buf: *u8, buf_size: u64, channel: AVChannel) -> s32 #foreign miniaudio_fdkaac;
+
+av_channel_description_bprint :: (bp: *AVBPrint, channel_id: AVChannel) -> void #foreign miniaudio_fdkaac;
+
+av_channel_from_string :: (name: *u8) -> AVChannel #foreign miniaudio_fdkaac;
+
+av_channel_layout_custom_init :: (channel_layout: *AVChannelLayout, nb_channels: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_channel_layout_from_mask :: (channel_layout: *AVChannelLayout, mask: u64) -> s32 #foreign miniaudio_fdkaac;
+
+av_channel_layout_from_string :: (channel_layout: *AVChannelLayout, str: *u8) -> s32 #foreign miniaudio_fdkaac;
+
+av_channel_layout_default :: (ch_layout: *AVChannelLayout, nb_channels: s32) -> void #foreign miniaudio_fdkaac;
+
+av_channel_layout_standard :: (opaque: **void) -> *AVChannelLayout #foreign miniaudio_fdkaac;
+
+av_channel_layout_uninit :: (channel_layout: *AVChannelLayout) -> void #foreign miniaudio_fdkaac;
+
+av_channel_layout_copy :: (dst: *AVChannelLayout, src: *AVChannelLayout) -> s32 #foreign miniaudio_fdkaac;
+
+av_channel_layout_describe :: (channel_layout: *AVChannelLayout, buf: *u8, buf_size: u64) -> s32 #foreign miniaudio_fdkaac;
+
+av_channel_layout_describe_bprint :: (channel_layout: *AVChannelLayout, bp: *AVBPrint) -> s32 #foreign miniaudio_fdkaac;
+
+av_channel_layout_channel_from_index :: (channel_layout: *AVChannelLayout, idx: u32) -> AVChannel #foreign miniaudio_fdkaac;
+
+av_channel_layout_index_from_channel :: (channel_layout: *AVChannelLayout, channel: AVChannel) -> s32 #foreign miniaudio_fdkaac;
+
+av_channel_layout_index_from_string :: (channel_layout: *AVChannelLayout, name: *u8) -> s32 #foreign miniaudio_fdkaac;
+
+av_channel_layout_channel_from_string :: (channel_layout: *AVChannelLayout, name: *u8) -> AVChannel #foreign miniaudio_fdkaac;
+
+av_channel_layout_subset :: (channel_layout: *AVChannelLayout, mask: u64) -> u64 #foreign miniaudio_fdkaac;
+
+av_channel_layout_check :: (channel_layout: *AVChannelLayout) -> s32 #foreign miniaudio_fdkaac;
+
+av_channel_layout_compare :: (chl: *AVChannelLayout, chl1: *AVChannelLayout) -> s32 #foreign miniaudio_fdkaac;
+
+av_channel_layout_retype :: (channel_layout: *AVChannelLayout, order: AVChannelOrder, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+AVSampleFormat :: enum s32 {
+    NONE :: -1;
+    U8   :: 0;
+    S16  :: 1;
+    S32  :: 2;
+    FLT  :: 3;
+    DBL  :: 4;
+
+    U8P  :: 5;
+    S16P :: 6;
+    S32P :: 7;
+    FLTP :: 8;
+    DBLP :: 9;
+    S64  :: 10;
+    S64P :: 11;
+
+    NB   :: 12;
+}
+
+av_get_sample_fmt_name :: (sample_fmt: AVSampleFormat) -> *u8 #foreign miniaudio_fdkaac;
+
+av_get_sample_fmt :: (name: *u8) -> AVSampleFormat #foreign miniaudio_fdkaac;
+
+av_get_alt_sample_fmt :: (sample_fmt: AVSampleFormat, planar: s32) -> AVSampleFormat #foreign miniaudio_fdkaac;
+
+av_get_packed_sample_fmt :: (sample_fmt: AVSampleFormat) -> AVSampleFormat #foreign miniaudio_fdkaac;
+
+av_get_planar_sample_fmt :: (sample_fmt: AVSampleFormat) -> AVSampleFormat #foreign miniaudio_fdkaac;
+
+av_get_sample_fmt_string :: (buf: *u8, buf_size: s32, sample_fmt: AVSampleFormat) -> *u8 #foreign miniaudio_fdkaac;
+
+av_get_bytes_per_sample :: (sample_fmt: AVSampleFormat) -> s32 #foreign miniaudio_fdkaac;
+
+av_sample_fmt_is_planar :: (sample_fmt: AVSampleFormat) -> s32 #foreign miniaudio_fdkaac;
+
+av_samples_get_buffer_size :: (linesize: *s32, nb_channels: s32, nb_samples: s32, sample_fmt: AVSampleFormat, align: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_samples_fill_arrays :: (audio_data: **u8, linesize: *s32, buf: *u8, nb_channels: s32, nb_samples: s32, sample_fmt: AVSampleFormat, align: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_samples_alloc :: (audio_data: **u8, linesize: *s32, nb_channels: s32, nb_samples: s32, sample_fmt: AVSampleFormat, align: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_samples_alloc_array_and_samples :: (audio_data: ***u8, linesize: *s32, nb_channels: s32, nb_samples: s32, sample_fmt: AVSampleFormat, align: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_samples_copy :: (dst: **u8, src: **u8, dst_offset: s32, src_offset: s32, nb_samples: s32, nb_channels: s32, sample_fmt: AVSampleFormat) -> s32 #foreign miniaudio_fdkaac;
+
+av_samples_set_silence :: (audio_data: **u8, offset: s32, nb_samples: s32, nb_channels: s32, sample_fmt: AVSampleFormat) -> s32 #foreign miniaudio_fdkaac;
+
+AVCodecID :: enum u32 {
+    NONE               :: 0;
+
+    MPEG1VIDEO         :: 1;
+    MPEG2VIDEO         :: 2;
+    H261               :: 3;
+    H263               :: 4;
+    RV10               :: 5;
+    RV20               :: 6;
+    MJPEG              :: 7;
+    MJPEGB             :: 8;
+    LJPEG              :: 9;
+    SP5X               :: 10;
+    JPEGLS             :: 11;
+    MPEG4              :: 12;
+    RAWVIDEO           :: 13;
+    MSMPEG4V1          :: 14;
+    MSMPEG4V2          :: 15;
+    MSMPEG4V3          :: 16;
+    WMV1               :: 17;
+    WMV2               :: 18;
+    H263P              :: 19;
+    H263I              :: 20;
+    FLV1               :: 21;
+    SVQ1               :: 22;
+    SVQ3               :: 23;
+    DVVIDEO            :: 24;
+    HUFFYUV            :: 25;
+    CYUV               :: 26;
+    H264               :: 27;
+    INDEO3             :: 28;
+    VP3                :: 29;
+    THEORA             :: 30;
+    ASV1               :: 31;
+    ASV2               :: 32;
+    FFV1               :: 33;
+    _4XM               :: 34;
+    VCR1               :: 35;
+    CLJR               :: 36;
+    MDEC               :: 37;
+    ROQ                :: 38;
+    INTERPLAY_VIDEO    :: 39;
+    XAN_WC3            :: 40;
+    XAN_WC4            :: 41;
+    RPZA               :: 42;
+    CINEPAK            :: 43;
+    WS_VQA             :: 44;
+    MSRLE              :: 45;
+    MSVIDEO1           :: 46;
+    IDCIN              :: 47;
+    _8BPS              :: 48;
+    SMC                :: 49;
+    FLIC               :: 50;
+    TRUEMOTION1        :: 51;
+    VMDVIDEO           :: 52;
+    MSZH               :: 53;
+    ZLIB               :: 54;
+    QTRLE              :: 55;
+    TSCC               :: 56;
+    ULTI               :: 57;
+    QDRAW              :: 58;
+    VIXL               :: 59;
+    QPEG               :: 60;
+    PNG                :: 61;
+    PPM                :: 62;
+    PBM                :: 63;
+    PGM                :: 64;
+    PGMYUV             :: 65;
+    PAM                :: 66;
+    FFVHUFF            :: 67;
+    RV30               :: 68;
+    RV40               :: 69;
+    VC1                :: 70;
+    WMV3               :: 71;
+    LOCO               :: 72;
+    WNV1               :: 73;
+    AASC               :: 74;
+    INDEO2             :: 75;
+    FRAPS              :: 76;
+    TRUEMOTION2        :: 77;
+    BMP                :: 78;
+    CSCD               :: 79;
+    MMVIDEO            :: 80;
+    ZMBV               :: 81;
+    AVS                :: 82;
+    SMACKVIDEO         :: 83;
+    NUV                :: 84;
+    KMVC               :: 85;
+    FLASHSV            :: 86;
+    CAVS               :: 87;
+    JPEG2000           :: 88;
+    VMNC               :: 89;
+    VP5                :: 90;
+    VP6                :: 91;
+    VP6F               :: 92;
+    TARGA              :: 93;
+    DSICINVIDEO        :: 94;
+    TIERTEXSEQVIDEO    :: 95;
+    TIFF               :: 96;
+    GIF                :: 97;
+    DXA                :: 98;
+    DNXHD              :: 99;
+    THP                :: 100;
+    SGI                :: 101;
+    C93                :: 102;
+    BETHSOFTVID        :: 103;
+    PTX                :: 104;
+    TXD                :: 105;
+    VP6A               :: 106;
+    AMV                :: 107;
+    VB                 :: 108;
+    PCX                :: 109;
+    SUNRAST            :: 110;
+    INDEO4             :: 111;
+    INDEO5             :: 112;
+    MIMIC              :: 113;
+    RL2                :: 114;
+    ESCAPE124          :: 115;
+    DIRAC              :: 116;
+    BFI                :: 117;
+    CMV                :: 118;
+    MOTIONPIXELS       :: 119;
+    TGV                :: 120;
+    TGQ                :: 121;
+    TQI                :: 122;
+    AURA               :: 123;
+    AURA2              :: 124;
+    V210X              :: 125;
+    TMV                :: 126;
+    V210               :: 127;
+    DPX                :: 128;
+    MAD                :: 129;
+    FRWU               :: 130;
+    FLASHSV2           :: 131;
+    CDGRAPHICS         :: 132;
+    R210               :: 133;
+    ANM                :: 134;
+    BINKVIDEO          :: 135;
+    IFF_ILBM           :: 136;
+
+    KGV1               :: 137;
+    YOP                :: 138;
+    VP8                :: 139;
+    PICTOR             :: 140;
+    ANSI               :: 141;
+    A64_MULTI          :: 142;
+    A64_MULTI5         :: 143;
+    R10K               :: 144;
+    MXPEG              :: 145;
+    LAGARITH           :: 146;
+    PRORES             :: 147;
+    JV                 :: 148;
+    DFA                :: 149;
+    WMV3IMAGE          :: 150;
+    VC1IMAGE           :: 151;
+    UTVIDEO            :: 152;
+    BMV_VIDEO          :: 153;
+    VBLE               :: 154;
+    DXTORY             :: 155;
+    V410               :: 156;
+    XWD                :: 157;
+    CDXL               :: 158;
+    XBM                :: 159;
+    ZEROCODEC          :: 160;
+    MSS1               :: 161;
+    MSA1               :: 162;
+    TSCC2              :: 163;
+    MTS2               :: 164;
+    CLLC               :: 165;
+    MSS2               :: 166;
+    VP9                :: 167;
+    AIC                :: 168;
+    ESCAPE130          :: 169;
+    G2M                :: 170;
+    WEBP               :: 171;
+    HNM4_VIDEO         :: 172;
+    HEVC               :: 173;
+
+    FIC                :: 174;
+    ALIAS_PIX          :: 175;
+    BRENDER_PIX        :: 176;
+    PAF_VIDEO          :: 177;
+    EXR                :: 178;
+    VP7                :: 179;
+    SANM               :: 180;
+    SGIRLE             :: 181;
+    MVC1               :: 182;
+    MVC2               :: 183;
+    HQX                :: 184;
+    TDSC               :: 185;
+    HQ_HQA             :: 186;
+    HAP                :: 187;
+    DDS                :: 188;
+    DXV                :: 189;
+    SCREENPRESSO       :: 190;
+    RSCC               :: 191;
+    AVS2               :: 192;
+    PGX                :: 193;
+    AVS3               :: 194;
+    MSP2               :: 195;
+    VVC                :: 196;
+
+    Y41P               :: 197;
+    AVRP               :: 198;
+    _012V              :: 199;
+    AVUI               :: 200;
+    TARGA_Y216         :: 201;
+    V308               :: 202;
+    V408               :: 203;
+    YUV4               :: 204;
+    AVRN               :: 205;
+    CPIA               :: 206;
+    XFACE              :: 207;
+    SNOW               :: 208;
+    SMVJPEG            :: 209;
+    APNG               :: 210;
+    DAALA              :: 211;
+    CFHD               :: 212;
+    TRUEMOTION2RT      :: 213;
+    M101               :: 214;
+    MAGICYUV           :: 215;
+    SHEERVIDEO         :: 216;
+    YLC                :: 217;
+    PSD                :: 218;
+    PIXLET             :: 219;
+    SPEEDHQ            :: 220;
+    FMVC               :: 221;
+    SCPR               :: 222;
+    CLEARVIDEO         :: 223;
+    XPM                :: 224;
+    AV1                :: 225;
+    BITPACKED          :: 226;
+    MSCC               :: 227;
+    SRGC               :: 228;
+    SVG                :: 229;
+    GDV                :: 230;
+    FITS               :: 231;
+    IMM4               :: 232;
+    PROSUMER           :: 233;
+    MWSC               :: 234;
+    WCMV               :: 235;
+    RASC               :: 236;
+    HYMT               :: 237;
+    ARBC               :: 238;
+    AGM                :: 239;
+    LSCR               :: 240;
+    VP4                :: 241;
+    IMM5               :: 242;
+    MVDV               :: 243;
+    MVHA               :: 244;
+    CDTOONS            :: 245;
+    MV30               :: 246;
+    NOTCHLC            :: 247;
+    PFM                :: 248;
+    MOBICLIP           :: 249;
+    PHOTOCD            :: 250;
+    IPU                :: 251;
+    ARGO               :: 252;
+    CRI                :: 253;
+    SIMBIOSIS_IMX      :: 254;
+    SGA_VIDEO          :: 255;
+    GEM                :: 256;
+    VBN                :: 257;
+    JPEGXL             :: 258;
+    QOI                :: 259;
+    PHM                :: 260;
+    RADIANCE_HDR       :: 261;
+    WBMP               :: 262;
+    MEDIA100           :: 263;
+    VQC                :: 264;
+    PDV                :: 265;
+    EVC                :: 266;
+    RTV1               :: 267;
+    VMIX               :: 268;
+    LEAD               :: 269;
+
+    FIRST_AUDIO        :: 65536;
+    PCM_S16LE          :: 65536;
+    PCM_S16BE          :: 65537;
+    PCM_U16LE          :: 65538;
+    PCM_U16BE          :: 65539;
+    PCM_S8             :: 65540;
+    PCM_U8             :: 65541;
+    PCM_MULAW          :: 65542;
+    PCM_ALAW           :: 65543;
+    PCM_S32LE          :: 65544;
+    PCM_S32BE          :: 65545;
+    PCM_U32LE          :: 65546;
+    PCM_U32BE          :: 65547;
+    PCM_S24LE          :: 65548;
+    PCM_S24BE          :: 65549;
+    PCM_U24LE          :: 65550;
+    PCM_U24BE          :: 65551;
+    PCM_S24DAUD        :: 65552;
+    PCM_ZORK           :: 65553;
+    PCM_S16LE_PLANAR   :: 65554;
+    PCM_DVD            :: 65555;
+    PCM_F32BE          :: 65556;
+    PCM_F32LE          :: 65557;
+    PCM_F64BE          :: 65558;
+    PCM_F64LE          :: 65559;
+    PCM_BLURAY         :: 65560;
+    PCM_LXF            :: 65561;
+    S302M              :: 65562;
+    PCM_S8_PLANAR      :: 65563;
+    PCM_S24LE_PLANAR   :: 65564;
+    PCM_S32LE_PLANAR   :: 65565;
+    PCM_S16BE_PLANAR   :: 65566;
+    PCM_S64LE          :: 65567;
+    PCM_S64BE          :: 65568;
+    PCM_F16LE          :: 65569;
+    PCM_F24LE          :: 65570;
+    PCM_VIDC           :: 65571;
+    PCM_SGA            :: 65572;
+
+    ADPCM_IMA_QT       :: 69632;
+    ADPCM_IMA_WAV      :: 69633;
+    ADPCM_IMA_DK3      :: 69634;
+    ADPCM_IMA_DK4      :: 69635;
+    ADPCM_IMA_WS       :: 69636;
+    ADPCM_IMA_SMJPEG   :: 69637;
+    ADPCM_MS           :: 69638;
+    ADPCM_4XM          :: 69639;
+    ADPCM_XA           :: 69640;
+    ADPCM_ADX          :: 69641;
+    ADPCM_EA           :: 69642;
+    ADPCM_G726         :: 69643;
+    ADPCM_CT           :: 69644;
+    ADPCM_SWF          :: 69645;
+    ADPCM_YAMAHA       :: 69646;
+    ADPCM_SBPRO_4      :: 69647;
+    ADPCM_SBPRO_3      :: 69648;
+    ADPCM_SBPRO_2      :: 69649;
+    ADPCM_THP          :: 69650;
+    ADPCM_IMA_AMV      :: 69651;
+    ADPCM_EA_R1        :: 69652;
+    ADPCM_EA_R3        :: 69653;
+    ADPCM_EA_R2        :: 69654;
+    ADPCM_IMA_EA_SEAD  :: 69655;
+    ADPCM_IMA_EA_EACS  :: 69656;
+    ADPCM_EA_XAS       :: 69657;
+    ADPCM_EA_MAXIS_XA  :: 69658;
+    ADPCM_IMA_ISS      :: 69659;
+    ADPCM_G722         :: 69660;
+    ADPCM_IMA_APC      :: 69661;
+    ADPCM_VIMA         :: 69662;
+    ADPCM_AFC          :: 69663;
+    ADPCM_IMA_OKI      :: 69664;
+    ADPCM_DTK          :: 69665;
+    ADPCM_IMA_RAD      :: 69666;
+    ADPCM_G726LE       :: 69667;
+    ADPCM_THP_LE       :: 69668;
+    ADPCM_PSX          :: 69669;
+    ADPCM_AICA         :: 69670;
+    ADPCM_IMA_DAT4     :: 69671;
+    ADPCM_MTAF         :: 69672;
+    ADPCM_AGM          :: 69673;
+    ADPCM_ARGO         :: 69674;
+    ADPCM_IMA_SSI      :: 69675;
+    ADPCM_ZORK         :: 69676;
+    ADPCM_IMA_APM      :: 69677;
+    ADPCM_IMA_ALP      :: 69678;
+    ADPCM_IMA_MTF      :: 69679;
+    ADPCM_IMA_CUNNING  :: 69680;
+    ADPCM_IMA_MOFLEX   :: 69681;
+    ADPCM_IMA_ACORN    :: 69682;
+    ADPCM_XMD          :: 69683;
+
+    AMR_NB             :: 73728;
+    AMR_WB             :: 73729;
+
+    RA_144             :: 77824;
+    RA_288             :: 77825;
+
+    ROQ_DPCM           :: 81920;
+    INTERPLAY_DPCM     :: 81921;
+    XAN_DPCM           :: 81922;
+    SOL_DPCM           :: 81923;
+    SDX2_DPCM          :: 81924;
+    GREMLIN_DPCM       :: 81925;
+    DERF_DPCM          :: 81926;
+    WADY_DPCM          :: 81927;
+    CBD2_DPCM          :: 81928;
+
+    MP2                :: 86016;
+    MP3                :: 86017;
+    AAC                :: 86018;
+    AC3                :: 86019;
+    DTS                :: 86020;
+    VORBIS             :: 86021;
+    DVAUDIO            :: 86022;
+    WMAV1              :: 86023;
+    WMAV2              :: 86024;
+    MACE3              :: 86025;
+    MACE6              :: 86026;
+    VMDAUDIO           :: 86027;
+    FLAC               :: 86028;
+    MP3ADU             :: 86029;
+    MP3ON4             :: 86030;
+    SHORTEN            :: 86031;
+    ALAC               :: 86032;
+    WESTWOOD_SND1      :: 86033;
+    GSM                :: 86034;
+    QDM2               :: 86035;
+    COOK               :: 86036;
+    TRUESPEECH         :: 86037;
+    TTA                :: 86038;
+    SMACKAUDIO         :: 86039;
+    QCELP              :: 86040;
+    WAVPACK            :: 86041;
+    DSICINAUDIO        :: 86042;
+    IMC                :: 86043;
+    MUSEPACK7          :: 86044;
+    MLP                :: 86045;
+    GSM_MS             :: 86046;
+    ATRAC3             :: 86047;
+    APE                :: 86048;
+    NELLYMOSER         :: 86049;
+    MUSEPACK8          :: 86050;
+    SPEEX              :: 86051;
+    WMAVOICE           :: 86052;
+    WMAPRO             :: 86053;
+    WMALOSSLESS        :: 86054;
+    ATRAC3P            :: 86055;
+    EAC3               :: 86056;
+    SIPR               :: 86057;
+    MP1                :: 86058;
+    TWINVQ             :: 86059;
+    TRUEHD             :: 86060;
+    MP4ALS             :: 86061;
+    ATRAC1             :: 86062;
+    BINKAUDIO_RDFT     :: 86063;
+    BINKAUDIO_DCT      :: 86064;
+    AAC_LATM           :: 86065;
+    QDMC               :: 86066;
+    CELT               :: 86067;
+    G723_1             :: 86068;
+    G729               :: 86069;
+    _8SVX_EXP          :: 86070;
+    _8SVX_FIB          :: 86071;
+    BMV_AUDIO          :: 86072;
+    RALF               :: 86073;
+    IAC                :: 86074;
+    ILBC               :: 86075;
+    OPUS               :: 86076;
+    COMFORT_NOISE      :: 86077;
+    TAK                :: 86078;
+    METASOUND          :: 86079;
+    PAF_AUDIO          :: 86080;
+    ON2AVC             :: 86081;
+    DSS_SP             :: 86082;
+    CODEC2             :: 86083;
+    FFWAVESYNTH        :: 86084;
+    SONIC              :: 86085;
+    SONIC_LS           :: 86086;
+    EVRC               :: 86087;
+    SMV                :: 86088;
+    DSD_LSBF           :: 86089;
+    DSD_MSBF           :: 86090;
+    DSD_LSBF_PLANAR    :: 86091;
+    DSD_MSBF_PLANAR    :: 86092;
+    _4GV               :: 86093;
+    INTERPLAY_ACM      :: 86094;
+    XMA1               :: 86095;
+    XMA2               :: 86096;
+    DST                :: 86097;
+    ATRAC3AL           :: 86098;
+    ATRAC3PAL          :: 86099;
+    DOLBY_E            :: 86100;
+    APTX               :: 86101;
+    APTX_HD            :: 86102;
+    SBC                :: 86103;
+    ATRAC9             :: 86104;
+    HCOM               :: 86105;
+    ACELP_KELVIN       :: 86106;
+    MPEGH_3D_AUDIO     :: 86107;
+    SIREN              :: 86108;
+    HCA                :: 86109;
+    FASTAUDIO          :: 86110;
+    MSNSIREN           :: 86111;
+    DFPWM              :: 86112;
+    BONK               :: 86113;
+    MISC4              :: 86114;
+    APAC               :: 86115;
+    FTR                :: 86116;
+    WAVARC             :: 86117;
+    RKA                :: 86118;
+    AC4                :: 86119;
+    OSQ                :: 86120;
+    QOA                :: 86121;
+
+    FIRST_SUBTITLE     :: 94208;
+    DVD_SUBTITLE       :: 94208;
+    DVB_SUBTITLE       :: 94209;
+    TEXT               :: 94210;
+    XSUB               :: 94211;
+    SSA                :: 94212;
+    MOV_TEXT           :: 94213;
+    HDMV_PGS_SUBTITLE  :: 94214;
+    DVB_TELETEXT       :: 94215;
+    SRT                :: 94216;
+    MICRODVD           :: 94217;
+    EIA_608            :: 94218;
+    JACOSUB            :: 94219;
+    SAMI               :: 94220;
+    REALTEXT           :: 94221;
+    STL                :: 94222;
+    SUBVIEWER1         :: 94223;
+    SUBVIEWER          :: 94224;
+    SUBRIP             :: 94225;
+    WEBVTT             :: 94226;
+    MPL2               :: 94227;
+    VPLAYER            :: 94228;
+    PJS                :: 94229;
+    ASS                :: 94230;
+    HDMV_TEXT_SUBTITLE :: 94231;
+    TTML               :: 94232;
+    ARIB_CAPTION       :: 94233;
+
+    FIRST_UNKNOWN      :: 98304;
+    TTF                :: 98304;
+
+    SCTE_35            :: 98305;
+    EPG                :: 98306;
+    BINTEXT            :: 98307;
+    XBIN               :: 98308;
+    IDF                :: 98309;
+    OTF                :: 98310;
+    SMPTE_KLV          :: 98311;
+    DVD_NAV            :: 98312;
+    TIMED_ID3          :: 98313;
+    BIN_DATA           :: 98314;
+    SMPTE_2038         :: 98315;
+
+    PROBE              :: 102400;
+
+    MPEG2TS            :: 131072;
+
+    MPEG4SYSTEMS       :: 131073;
+
+    FFMETADATA         :: 135168;
+    WRAPPED_AVFRAME    :: 135169;
+
+    VNULL              :: 135170;
+
+    ANULL              :: 135171;
+}
+
+avcodec_get_type :: (codec_id: AVCodecID) -> AVMediaType #foreign miniaudio_fdkaac;
+
+avcodec_get_name :: (id: AVCodecID) -> *u8 #foreign miniaudio_fdkaac;
+
+av_get_bits_per_sample :: (codec_id: AVCodecID) -> s32 #foreign miniaudio_fdkaac;
+
+av_get_exact_bits_per_sample :: (codec_id: AVCodecID) -> s32 #foreign miniaudio_fdkaac;
+
+avcodec_profile_name :: (codec_id: AVCodecID, profile: s32) -> *u8 #foreign miniaudio_fdkaac;
+
+av_get_pcm_codec :: (fmt: AVSampleFormat, be: s32) -> AVCodecID #foreign miniaudio_fdkaac;
+
+AVFieldOrder :: enum u32 {
+    UNKNOWN     :: 0;
+    PROGRESSIVE :: 1;
+    TT          :: 2;
+    BB          :: 3;
+    TB          :: 4;
+    BT          :: 5;
+}
+
+AVDiscard :: enum s32 {
+    NONE     :: -16;
+    DEFAULT  :: 0;
+    NONREF   :: 8;
+    BIDIR    :: 16;
+    NONINTRA :: 24;
+    NONKEY   :: 32;
+    ALL      :: 48;
+}
+
+AVAudioServiceType :: enum u32 {
+    MAIN              :: 0;
+    EFFECTS           :: 1;
+    VISUALLY_IMPAIRED :: 2;
+    HEARING_IMPAIRED  :: 3;
+    DIALOGUE          :: 4;
+    COMMENTARY        :: 5;
+    EMERGENCY         :: 6;
+    VOICE_OVER        :: 7;
+    KARAOKE           :: 8;
+    NB                :: 9;
+}
+
+AVPanScan :: struct {
+    id:       s32;
+
+    width:    s32;
+    height:   s32;
+
+    position: [3] [2] s16;
+}
+
+AVCPBProperties :: struct {
+    max_bitrate: s64;
+
+    min_bitrate: s64;
+
+    avg_bitrate: s64;
+
+    buffer_size: s64;
+
+    vbv_delay:   u64;
+}
+
+av_cpb_properties_alloc :: (size: *u64) -> *AVCPBProperties #foreign miniaudio_fdkaac;
+
+AVProducerReferenceTime :: struct {
+    wallclock: s64;
+    flags:     s32;
+}
+
+av_xiphlacing :: (s: *u8, v: u32) -> u32 #foreign miniaudio_fdkaac;
+
+AVBuffer :: struct {}
+
+AVBufferRef :: struct {
+    buffer: *AVBuffer;
+
+    data:   *u8;
+
+    size:   u64;
+}
+
+av_buffer_alloc :: (size: u64) -> *AVBufferRef #foreign miniaudio_fdkaac;
+
+av_buffer_allocz :: (size: u64) -> *AVBufferRef #foreign miniaudio_fdkaac;
+
+av_buffer_create :: (data: *u8, size: u64, free: #type (opaque: *void, data: *u8) -> void #c_call, opaque: *void, flags: s32) -> *AVBufferRef #foreign miniaudio_fdkaac;
+
+av_buffer_default_free :: (opaque: *void, data: *u8) -> void #foreign miniaudio_fdkaac;
+
+av_buffer_ref :: (buf: *AVBufferRef) -> *AVBufferRef #foreign miniaudio_fdkaac;
+
+av_buffer_unref :: (buf: **AVBufferRef) -> void #foreign miniaudio_fdkaac;
+
+av_buffer_is_writable :: (buf: *AVBufferRef) -> s32 #foreign miniaudio_fdkaac;
+
+av_buffer_get_opaque :: (buf: *AVBufferRef) -> *void #foreign miniaudio_fdkaac;
+
+av_buffer_get_ref_count :: (buf: *AVBufferRef) -> s32 #foreign miniaudio_fdkaac;
+
+av_buffer_make_writable :: (buf: **AVBufferRef) -> s32 #foreign miniaudio_fdkaac;
+
+av_buffer_realloc :: (buf: **AVBufferRef, size: u64) -> s32 #foreign miniaudio_fdkaac;
+
+av_buffer_replace :: (dst: **AVBufferRef, src: *AVBufferRef) -> s32 #foreign miniaudio_fdkaac;
+
+AVBufferPool :: struct {}
+
+av_buffer_pool_init :: (size: u64, alloc: #type (size: u64) -> *AVBufferRef #c_call) -> *AVBufferPool #foreign miniaudio_fdkaac;
+
+av_buffer_pool_init2 :: (size: u64, opaque: *void, alloc: #type (opaque: *void, size: u64) -> *AVBufferRef #c_call, pool_free: #type (opaque: *void) -> void #c_call) -> *AVBufferPool #foreign miniaudio_fdkaac;
+
+av_buffer_pool_uninit :: (pool: **AVBufferPool) -> void #foreign miniaudio_fdkaac;
+
+av_buffer_pool_get :: (pool: *AVBufferPool) -> *AVBufferRef #foreign miniaudio_fdkaac;
+
+av_buffer_pool_buffer_get_opaque :: (ref: *AVBufferRef) -> *void #foreign miniaudio_fdkaac;
+
+AVDictionaryEntry :: struct {
+    key:   *u8;
+    value: *u8;
+}
+
+AVDictionary :: struct {}
+
+av_dict_get :: (m: *AVDictionary, key: *u8, prev: *AVDictionaryEntry, flags: s32) -> *AVDictionaryEntry #foreign miniaudio_fdkaac;
+
+av_dict_iterate :: (m: *AVDictionary, prev: *AVDictionaryEntry) -> *AVDictionaryEntry #foreign miniaudio_fdkaac;
+
+av_dict_count :: (m: *AVDictionary) -> s32 #foreign miniaudio_fdkaac;
+
+av_dict_set :: (pm: **AVDictionary, key: *u8, value: *u8, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_dict_set_int :: (pm: **AVDictionary, key: *u8, value: s64, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_dict_parse_string :: (pm: **AVDictionary, str: *u8, key_val_sep: *u8, pairs_sep: *u8, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_dict_copy :: (dst: **AVDictionary, src: *AVDictionary, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_dict_free :: (m: **AVDictionary) -> void #foreign miniaudio_fdkaac;
+
+av_dict_get_string :: (m: *AVDictionary, buffer: **u8, key_val_sep: u8, pairs_sep: u8) -> s32 #foreign miniaudio_fdkaac;
+
+AVPacketSideDataType :: enum u32 {
+    PALETTE                     :: 0;
+
+    NEW_EXTRADATA               :: 1;
+
+    PARAM_CHANGE                :: 2;
+
+    H263_MB_INFO                :: 3;
+
+    REPLAYGAIN                  :: 4;
+
+    DISPLAYMATRIX               :: 5;
+
+    STEREO3D                    :: 6;
+
+    AUDIO_SERVICE_TYPE          :: 7;
+
+    QUALITY_STATS               :: 8;
+
+    FALLBACK_TRACK              :: 9;
+
+    CPB_PROPERTIES              :: 10;
+
+    SKIP_SAMPLES                :: 11;
+
+    JP_DUALMONO                 :: 12;
+
+    STRINGS_METADATA            :: 13;
+
+    SUBTITLE_POSITION           :: 14;
+
+    MATROSKA_BLOCKADDITIONAL    :: 15;
+
+    WEBVTT_IDENTIFIER           :: 16;
+
+    WEBVTT_SETTINGS             :: 17;
+
+    METADATA_UPDATE             :: 18;
+
+    MPEGTS_STREAM_ID            :: 19;
+
+    MASTERING_DISPLAY_METADATA  :: 20;
+
+    SPHERICAL                   :: 21;
+
+    CONTENT_LIGHT_LEVEL         :: 22;
+
+    A53_CC                      :: 23;
+
+    ENCRYPTION_INIT_INFO        :: 24;
+
+    ENCRYPTION_INFO             :: 25;
+
+    AFD                         :: 26;
+
+    PRFT                        :: 27;
+
+    ICC_PROFILE                 :: 28;
+
+    DOVI_CONF                   :: 29;
+
+    S12M_TIMECODE               :: 30;
+
+    DYNAMIC_HDR10_PLUS          :: 31;
+
+    IAMF_MIX_GAIN_PARAM         :: 32;
+
+    IAMF_DEMIXING_INFO_PARAM    :: 33;
+
+    IAMF_RECON_GAIN_INFO_PARAM  :: 34;
+
+    AMBIENT_VIEWING_ENVIRONMENT :: 35;
+
+    NB                          :: 36;
+}
+
+AVPacketSideData :: struct {
+    data: *u8;
+    size: u64;
+    type: AVPacketSideDataType;
+}
+
+av_packet_side_data_new :: (psd: **AVPacketSideData, pnb_sd: *s32, type: AVPacketSideDataType, size: u64, flags: s32) -> *AVPacketSideData #foreign miniaudio_fdkaac;
+
+av_packet_side_data_add :: (sd: **AVPacketSideData, nb_sd: *s32, type: AVPacketSideDataType, data: *void, size: u64, flags: s32) -> *AVPacketSideData #foreign miniaudio_fdkaac;
+
+av_packet_side_data_get :: (sd: *AVPacketSideData, nb_sd: s32, type: AVPacketSideDataType) -> *AVPacketSideData #foreign miniaudio_fdkaac;
+
+av_packet_side_data_remove :: (sd: *AVPacketSideData, nb_sd: *s32, type: AVPacketSideDataType) -> void #foreign miniaudio_fdkaac;
+
+av_packet_side_data_free :: (sd: **AVPacketSideData, nb_sd: *s32) -> void #foreign miniaudio_fdkaac;
+
+av_packet_side_data_name :: (type: AVPacketSideDataType) -> *u8 #foreign miniaudio_fdkaac;
+
+AVPacket :: struct {
+    buf:             *AVBufferRef;
+
+    pts:             s64;
+
+    dts:             s64;
+    data:            *u8;
+    size:            s32;
+    stream_index:    s32;
+
+    flags:           s32;
+
+    side_data:       *AVPacketSideData;
+    side_data_elems: s32;
+
+    duration:        s64;
+
+    pos:             s64;
+
+    opaque:          *void;
+
+    opaque_ref:      *AVBufferRef;
+
+    time_base:       AVRational;
+}
+
+AVPacketList :: struct {
+    pkt:  AVPacket;
+    next: *AVPacketList;
+}
+
+AVSideDataParamChangeFlags :: enum u32 {
+    SAMPLE_RATE :: 4;
+    DIMENSIONS  :: 8;
+}
+
+av_packet_alloc :: () -> *AVPacket #foreign miniaudio_fdkaac;
+
+av_packet_clone :: (src: *AVPacket) -> *AVPacket #foreign miniaudio_fdkaac;
+
+av_packet_free :: (pkt: **AVPacket) -> void #foreign miniaudio_fdkaac;
+
+av_init_packet :: (pkt: *AVPacket) -> void #foreign miniaudio_fdkaac;
+
+av_new_packet :: (pkt: *AVPacket, size: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_shrink_packet :: (pkt: *AVPacket, size: s32) -> void #foreign miniaudio_fdkaac;
+
+av_grow_packet :: (pkt: *AVPacket, grow_by: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_packet_from_data :: (pkt: *AVPacket, data: *u8, size: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_packet_new_side_data :: (pkt: *AVPacket, type: AVPacketSideDataType, size: u64) -> *u8 #foreign miniaudio_fdkaac;
+
+av_packet_add_side_data :: (pkt: *AVPacket, type: AVPacketSideDataType, data: *u8, size: u64) -> s32 #foreign miniaudio_fdkaac;
+
+av_packet_shrink_side_data :: (pkt: *AVPacket, type: AVPacketSideDataType, size: u64) -> s32 #foreign miniaudio_fdkaac;
+
+av_packet_get_side_data :: (pkt: *AVPacket, type: AVPacketSideDataType, size: *u64) -> *u8 #foreign miniaudio_fdkaac;
+
+av_packet_pack_dictionary :: (dict: *AVDictionary, size: *u64) -> *u8 #foreign miniaudio_fdkaac;
+
+av_packet_unpack_dictionary :: (data: *u8, size: u64, dict: **AVDictionary) -> s32 #foreign miniaudio_fdkaac;
+
+av_packet_free_side_data :: (pkt: *AVPacket) -> void #foreign miniaudio_fdkaac;
+
+av_packet_ref :: (dst: *AVPacket, src: *AVPacket) -> s32 #foreign miniaudio_fdkaac;
+
+av_packet_unref :: (pkt: *AVPacket) -> void #foreign miniaudio_fdkaac;
+
+av_packet_move_ref :: (dst: *AVPacket, src: *AVPacket) -> void #foreign miniaudio_fdkaac;
+
+av_packet_copy_props :: (dst: *AVPacket, src: *AVPacket) -> s32 #foreign miniaudio_fdkaac;
+
+av_packet_make_refcounted :: (pkt: *AVPacket) -> s32 #foreign miniaudio_fdkaac;
+
+av_packet_make_writable :: (pkt: *AVPacket) -> s32 #foreign miniaudio_fdkaac;
+
+av_packet_rescale_ts :: (pkt: *AVPacket, tb_src: AVRational, tb_dst: AVRational) -> void #foreign miniaudio_fdkaac;
+
+AVCodecParameters :: struct {
+    codec_type:            AVMediaType;
+
+    codec_id:              AVCodecID;
+
+    codec_tag:             u32;
+
+    extradata:             *u8;
+
+    extradata_size:        s32;
+
+    coded_side_data:       *AVPacketSideData;
+
+    nb_coded_side_data:    s32;
+
+    format:                s32;
+
+    bit_rate:              s64;
+
+    bits_per_coded_sample: s32;
+
+    bits_per_raw_sample:   s32;
+
+    profile:               s32;
+    level:                 s32;
+
+    width:                 s32;
+    height:                s32;
+
+    sample_aspect_ratio:   AVRational;
+
+    framerate:             AVRational;
+
+    field_order:           AVFieldOrder;
+
+    color_range:           AVColorRange;
+    color_primaries:       AVColorPrimaries;
+    color_trc:             AVColorTransferCharacteristic;
+    color_space:           AVColorSpace;
+    chroma_location:       AVChromaLocation;
+
+    video_delay:           s32;
+
+    ch_layout:             AVChannelLayout;
+
+    sample_rate:           s32;
+
+    block_align:           s32;
+
+    frame_size:            s32;
+
+    initial_padding:       s32;
+
+    trailing_padding:      s32;
+
+    seek_preroll:          s32;
+}
+
+avcodec_parameters_alloc :: () -> *AVCodecParameters #foreign miniaudio_fdkaac;
+
+avcodec_parameters_free :: (par: **AVCodecParameters) -> void #foreign miniaudio_fdkaac;
+
+avcodec_parameters_copy :: (dst: *AVCodecParameters, src: *AVCodecParameters) -> s32 #foreign miniaudio_fdkaac;
+
+av_get_audio_frame_duration2 :: (par: *AVCodecParameters, frame_bytes: s32) -> s32 #foreign miniaudio_fdkaac;
+
+AVIOInterruptCB :: struct {
+    callback: #type (unknown0: *void) -> s32 #c_call;
+    opaque:   *void;
+}
+
+AVIODirEntryType :: enum u32 {
+    UNKNOWN          :: 0;
+    BLOCK_DEVICE     :: 1;
+    CHARACTER_DEVICE :: 2;
+    DIRECTORY        :: 3;
+    NAMED_PIPE       :: 4;
+    SYMBOLIC_LINK    :: 5;
+    SOCKET           :: 6;
+    FILE             :: 7;
+    SERVER           :: 8;
+    SHARE            :: 9;
+    WORKGROUP        :: 10;
+}
+
+AVIODirEntry :: struct {
+    name:                    *u8;
+    type:                    s32;
+    utf8:                    s32;
+
+    size:                    s64;
+    modification_timestamp:  s64;
+
+    access_timestamp:        s64;
+
+    status_change_timestamp: s64;
+
+    user_id:                 s64;
+    group_id:                s64;
+    filemode:                s64;
+}
+
+AVIODirContext :: struct {}
+
+AVIODataMarkerType :: enum u32 {
+    HEADER         :: 0;
+
+    SYNC_POINT     :: 1;
+
+    BOUNDARY_POINT :: 2;
+
+    UNKNOWN        :: 3;
+
+    TRAILER        :: 4;
+
+    FLUSH_POINT    :: 5;
+}
+
+AVIOContext :: struct {
+    av_class:              *AVClass;
+
+    buffer:                *u8;
+    buffer_size:           s32;
+    buf_ptr:               *u8;
+    buf_end:               *u8;
+
+    opaque:                *void;
+
+    read_packet:           #type (opaque: *void, buf: *u8, buf_size: s32) -> s32 #c_call;
+    write_packet:          #type (opaque: *void, buf: *u8, buf_size: s32) -> s32 #c_call;
+    seek:                  #type (opaque: *void, offset: s64, whence: s32) -> s64 #c_call;
+    pos:                   s64;
+    eof_reached:           s32;
+    error:                 s32;
+    write_flag:            s32;
+    max_packet_size:       s32;
+    min_packet_size:       s32;
+
+    checksum:              u64;
+    checksum_ptr:          *u8;
+    update_checksum:       #type (checksum: u64, buf: *u8, size: u32) -> u64 #c_call;
+
+    read_pause:            #type (opaque: *void, pause: s32) -> s32 #c_call;
+
+    read_seek:             #type (opaque: *void, stream_index: s32, timestamp: s64, flags: s32) -> s64 #c_call;
+
+    seekable:              s32;
+
+    direct:                s32;
+
+    protocol_whitelist:    *u8;
+
+    protocol_blacklist:    *u8;
+
+    write_data_type:       #type (opaque: *void, buf: *u8, buf_size: s32, type: AVIODataMarkerType, time: s64) -> s32 #c_call;
+
+    ignore_boundary_point: s32;
+
+    buf_ptr_max:           *u8;
+
+    bytes_read:            s64;
+
+    bytes_written:         s64;
+}
+
+avio_find_protocol_name :: (url: *u8) -> *u8 #foreign miniaudio_fdkaac;
+
+avio_check :: (url: *u8, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+avio_open_dir :: (s: **AVIODirContext, url: *u8, options: **AVDictionary) -> s32 #foreign miniaudio_fdkaac;
+
+avio_read_dir :: (s: *AVIODirContext, next: **AVIODirEntry) -> s32 #foreign miniaudio_fdkaac;
+
+avio_close_dir :: (s: **AVIODirContext) -> s32 #foreign miniaudio_fdkaac;
+
+avio_free_directory_entry :: (entry: **AVIODirEntry) -> void #foreign miniaudio_fdkaac;
+
+avio_alloc_context :: (buffer: *u8, buffer_size: s32, write_flag: s32, opaque: *void, read_packet: #type (opaque: *void, buf: *u8, buf_size: s32) -> s32 #c_call, write_packet: #type (opaque: *void, buf: *u8, buf_size: s32) -> s32 #c_call, seek: #type (opaque: *void, offset: s64, whence: s32) -> s64 #c_call) -> *AVIOContext #foreign miniaudio_fdkaac;
+
+avio_context_free :: (s: **AVIOContext) -> void #foreign miniaudio_fdkaac;
+
+avio_w8 :: (s: *AVIOContext, b: s32) -> void #foreign miniaudio_fdkaac;
+avio_write :: (s: *AVIOContext, buf: *u8, size: s32) -> void #foreign miniaudio_fdkaac;
+avio_wl64 :: (s: *AVIOContext, val: u64) -> void #foreign miniaudio_fdkaac;
+avio_wb64 :: (s: *AVIOContext, val: u64) -> void #foreign miniaudio_fdkaac;
+avio_wl32 :: (s: *AVIOContext, val: u32) -> void #foreign miniaudio_fdkaac;
+avio_wb32 :: (s: *AVIOContext, val: u32) -> void #foreign miniaudio_fdkaac;
+avio_wl24 :: (s: *AVIOContext, val: u32) -> void #foreign miniaudio_fdkaac;
+avio_wb24 :: (s: *AVIOContext, val: u32) -> void #foreign miniaudio_fdkaac;
+avio_wl16 :: (s: *AVIOContext, val: u32) -> void #foreign miniaudio_fdkaac;
+avio_wb16 :: (s: *AVIOContext, val: u32) -> void #foreign miniaudio_fdkaac;
+
+avio_put_str :: (s: *AVIOContext, str: *u8) -> s32 #foreign miniaudio_fdkaac;
+
+avio_put_str16le :: (s: *AVIOContext, str: *u8) -> s32 #foreign miniaudio_fdkaac;
+
+avio_put_str16be :: (s: *AVIOContext, str: *u8) -> s32 #foreign miniaudio_fdkaac;
+
+avio_write_marker :: (s: *AVIOContext, time: s64, type: AVIODataMarkerType) -> void #foreign miniaudio_fdkaac;
+
+avio_seek :: (s: *AVIOContext, offset: s64, whence: s32) -> s64 #foreign miniaudio_fdkaac;
+
+avio_skip :: (s: *AVIOContext, offset: s64) -> s64 #foreign miniaudio_fdkaac;
+
+avio_size :: (s: *AVIOContext) -> s64 #foreign miniaudio_fdkaac;
+
+avio_feof :: (s: *AVIOContext) -> s32 #foreign miniaudio_fdkaac;
+
+avio_printf_CFormat :: (s: *AVIOContext, fmt: *u8, __args: ..Any) -> s32 #foreign miniaudio_fdkaac "avio_printf";
+avio_printf :: (s: *AVIOContext, fmt: string, __args: ..Any) -> s32 {
+    push_allocator(temp);
+    formatted_text_builder: String_Builder;
+    print_to_builder(*formatted_text_builder, fmt, ..__args);
+    append(*formatted_text_builder, "\0");
+    formatted_text := builder_to_string(*formatted_text_builder);
+    return avio_printf_CFormat(s, "%s", formatted_text.data);
+} @PrintLike
+
+avio_print_string_array :: (s: *AVIOContext, strings: **u8) -> void #foreign miniaudio_fdkaac;
+
+avio_flush :: (s: *AVIOContext) -> void #foreign miniaudio_fdkaac;
+
+avio_read :: (s: *AVIOContext, buf: *u8, size: s32) -> s32 #foreign miniaudio_fdkaac;
+
+avio_read_partial :: (s: *AVIOContext, buf: *u8, size: s32) -> s32 #foreign miniaudio_fdkaac;
+
+avio_r8 :: (s: *AVIOContext) -> s32 #foreign miniaudio_fdkaac;
+avio_rl16 :: (s: *AVIOContext) -> u32 #foreign miniaudio_fdkaac;
+avio_rl24 :: (s: *AVIOContext) -> u32 #foreign miniaudio_fdkaac;
+avio_rl32 :: (s: *AVIOContext) -> u32 #foreign miniaudio_fdkaac;
+avio_rl64 :: (s: *AVIOContext) -> u64 #foreign miniaudio_fdkaac;
+avio_rb16 :: (s: *AVIOContext) -> u32 #foreign miniaudio_fdkaac;
+avio_rb24 :: (s: *AVIOContext) -> u32 #foreign miniaudio_fdkaac;
+avio_rb32 :: (s: *AVIOContext) -> u32 #foreign miniaudio_fdkaac;
+avio_rb64 :: (s: *AVIOContext) -> u64 #foreign miniaudio_fdkaac;
+
+avio_get_str :: (pb: *AVIOContext, maxlen: s32, buf: *u8, buflen: s32) -> s32 #foreign miniaudio_fdkaac;
+
+avio_get_str16le :: (pb: *AVIOContext, maxlen: s32, buf: *u8, buflen: s32) -> s32 #foreign miniaudio_fdkaac;
+avio_get_str16be :: (pb: *AVIOContext, maxlen: s32, buf: *u8, buflen: s32) -> s32 #foreign miniaudio_fdkaac;
+
+avio_open :: (s: **AVIOContext, url: *u8, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+avio_open2 :: (s: **AVIOContext, url: *u8, flags: s32, int_cb: *AVIOInterruptCB, options: **AVDictionary) -> s32 #foreign miniaudio_fdkaac;
+
+avio_close :: (s: *AVIOContext) -> s32 #foreign miniaudio_fdkaac;
+
+avio_closep :: (s: **AVIOContext) -> s32 #foreign miniaudio_fdkaac;
+
+avio_open_dyn_buf :: (s: **AVIOContext) -> s32 #foreign miniaudio_fdkaac;
+
+avio_get_dyn_buf :: (s: *AVIOContext, pbuffer: **u8) -> s32 #foreign miniaudio_fdkaac;
+
+avio_close_dyn_buf :: (s: *AVIOContext, pbuffer: **u8) -> s32 #foreign miniaudio_fdkaac;
+
+avio_enum_protocols :: (opaque: **void, output: s32) -> *u8 #foreign miniaudio_fdkaac;
+
+avio_protocol_get_class :: (name: *u8) -> *AVClass #foreign miniaudio_fdkaac;
+
+avio_pause :: (h: *AVIOContext, pause: s32) -> s32 #foreign miniaudio_fdkaac;
+
+avio_seek_time :: (h: *AVIOContext, stream_index: s32, timestamp: s64, flags: s32) -> s64 #foreign miniaudio_fdkaac;
+
+avio_read_to_bprint :: (h: *AVIOContext, pb: *AVBPrint, max_size: u64) -> s32 #foreign miniaudio_fdkaac;
+
+avio_accept :: (s: *AVIOContext, c: **AVIOContext) -> s32 #foreign miniaudio_fdkaac;
+
+avio_handshake :: (c: *AVIOContext) -> s32 #foreign miniaudio_fdkaac;
+
+AVFrameSideDataType :: enum u32 {
+    PANSCAN                     :: 0;
+
+    A53_CC                      :: 1;
+
+    STEREO3D                    :: 2;
+
+    MATRIXENCODING              :: 3;
+
+    DOWNMIX_INFO                :: 4;
+
+    REPLAYGAIN                  :: 5;
+
+    DISPLAYMATRIX               :: 6;
+
+    AFD                         :: 7;
+
+    MOTION_VECTORS              :: 8;
+
+    SKIP_SAMPLES                :: 9;
+
+    AUDIO_SERVICE_TYPE          :: 10;
+
+    MASTERING_DISPLAY_METADATA  :: 11;
+
+    GOP_TIMECODE                :: 12;
+
+    SPHERICAL                   :: 13;
+
+    CONTENT_LIGHT_LEVEL         :: 14;
+
+    ICC_PROFILE                 :: 15;
+
+    S12M_TIMECODE               :: 16;
+
+    DYNAMIC_HDR_PLUS            :: 17;
+
+    REGIONS_OF_INTEREST         :: 18;
+
+    VIDEO_ENC_PARAMS            :: 19;
+
+    SEI_UNREGISTERED            :: 20;
+
+    FILM_GRAIN_PARAMS           :: 21;
+
+    DETECTION_BBOXES            :: 22;
+
+    DOVI_RPU_BUFFER             :: 23;
+
+    DOVI_METADATA               :: 24;
+
+    DYNAMIC_HDR_VIVID           :: 25;
+
+    AMBIENT_VIEWING_ENVIRONMENT :: 26;
+
+    VIDEO_HINT                  :: 27;
+}
+
+AVActiveFormatDescription :: enum u32 {
+    SAME          :: 8;
+    _4_3          :: 9;
+    _16_9         :: 10;
+    _14_9         :: 11;
+    _4_3_SP_14_9  :: 13;
+    _16_9_SP_14_9 :: 14;
+    SP_4_3        :: 15;
+}
+
+AVFrameSideData :: struct {
+    type:     AVFrameSideDataType;
+    data:     *u8;
+    size:     u64;
+    metadata: *AVDictionary;
+    buf:      *AVBufferRef;
+}
+
+AVRegionOfInterest :: struct {
+    self_size: u32;
+
+    top:       s32;
+    bottom:    s32;
+    left:      s32;
+    right:     s32;
+
+    qoffset:   AVRational;
+}
+
+AVFrame :: struct {
+    data:                  [8] *u8;
+
+    linesize:              [8] s32;
+
+    extended_data:         **u8;
+
+    width:                 s32;
+    height:                s32;
+
+    nb_samples:            s32;
+
+    format:                s32;
+
+    key_frame:             s32;
+
+    pict_type:             AVPictureType;
+
+    sample_aspect_ratio:   AVRational;
+
+    pts:                   s64;
+
+    pkt_dts:               s64;
+
+    time_base:             AVRational;
+
+    quality:               s32;
+
+    opaque:                *void;
+
+    repeat_pict:           s32;
+
+    interlaced_frame:      s32;
+
+    top_field_first:       s32;
+
+    palette_has_changed:   s32;
+
+    sample_rate:           s32;
+
+    buf:                   [8] *AVBufferRef;
+
+    extended_buf:          **AVBufferRef;
+
+    nb_extended_buf:       s32;
+
+    side_data:             **AVFrameSideData;
+    nb_side_data:          s32;
+
+    flags:                 s32;
+
+    color_range:           AVColorRange;
+
+    color_primaries:       AVColorPrimaries;
+
+    color_trc:             AVColorTransferCharacteristic;
+
+    colorspace:            AVColorSpace;
+
+    chroma_location:       AVChromaLocation;
+
+    best_effort_timestamp: s64;
+
+    pkt_pos:               s64;
+
+    metadata:              *AVDictionary;
+
+    decode_error_flags:    s32;
+
+    pkt_size:              s32;
+
+    hw_frames_ctx:         *AVBufferRef;
+
+    opaque_ref:            *AVBufferRef;
+
+    crop_top:              u64;
+    crop_bottom:           u64;
+    crop_left:             u64;
+    crop_right:            u64;
+
+    private_ref:           *AVBufferRef;
+
+    ch_layout:             AVChannelLayout;
+
+    duration:              s64;
+}
+
+av_frame_alloc :: () -> *AVFrame #foreign miniaudio_fdkaac;
+
+av_frame_free :: (frame: **AVFrame) -> void #foreign miniaudio_fdkaac;
+
+av_frame_ref :: (dst: *AVFrame, src: *AVFrame) -> s32 #foreign miniaudio_fdkaac;
+
+av_frame_replace :: (dst: *AVFrame, src: *AVFrame) -> s32 #foreign miniaudio_fdkaac;
+
+av_frame_clone :: (src: *AVFrame) -> *AVFrame #foreign miniaudio_fdkaac;
+
+av_frame_unref :: (frame: *AVFrame) -> void #foreign miniaudio_fdkaac;
+
+av_frame_move_ref :: (dst: *AVFrame, src: *AVFrame) -> void #foreign miniaudio_fdkaac;
+
+av_frame_get_buffer :: (frame: *AVFrame, align: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_frame_is_writable :: (frame: *AVFrame) -> s32 #foreign miniaudio_fdkaac;
+
+av_frame_make_writable :: (frame: *AVFrame) -> s32 #foreign miniaudio_fdkaac;
+
+av_frame_copy :: (dst: *AVFrame, src: *AVFrame) -> s32 #foreign miniaudio_fdkaac;
+
+av_frame_copy_props :: (dst: *AVFrame, src: *AVFrame) -> s32 #foreign miniaudio_fdkaac;
+
+av_frame_get_plane_buffer :: (frame: *AVFrame, plane: s32) -> *AVBufferRef #foreign miniaudio_fdkaac;
+
+av_frame_new_side_data :: (frame: *AVFrame, type: AVFrameSideDataType, size: u64) -> *AVFrameSideData #foreign miniaudio_fdkaac;
+
+av_frame_new_side_data_from_buf :: (frame: *AVFrame, type: AVFrameSideDataType, buf: *AVBufferRef) -> *AVFrameSideData #foreign miniaudio_fdkaac;
+
+av_frame_get_side_data :: (frame: *AVFrame, type: AVFrameSideDataType) -> *AVFrameSideData #foreign miniaudio_fdkaac;
+
+av_frame_remove_side_data :: (frame: *AVFrame, type: AVFrameSideDataType) -> void #foreign miniaudio_fdkaac;
+
+anon_enum :: enum u32 {
+    AV_FRAME_CROP_UNALIGNED :: 1;
+}
+
+av_frame_apply_cropping :: (frame: *AVFrame, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_frame_side_data_name :: (type: AVFrameSideDataType) -> *u8 #foreign miniaudio_fdkaac;
+
+av_frame_side_data_free :: (sd: ***AVFrameSideData, nb_sd: *s32) -> void #foreign miniaudio_fdkaac;
+
+av_frame_side_data_new :: (sd: ***AVFrameSideData, nb_sd: *s32, type: AVFrameSideDataType, size: u64, flags: u32) -> *AVFrameSideData #foreign miniaudio_fdkaac;
+
+av_frame_side_data_clone :: (sd: ***AVFrameSideData, nb_sd: *s32, src: *AVFrameSideData, flags: u32) -> s32 #foreign miniaudio_fdkaac;
+
+av_frame_side_data_get_c :: (sd: **AVFrameSideData, nb_sd: s32, type: AVFrameSideDataType) -> *AVFrameSideData #foreign miniaudio_fdkaac;
+
+AVHWDeviceType :: enum u32 {
+    NONE         :: 0;
+    VDPAU        :: 1;
+    CUDA         :: 2;
+    VAAPI        :: 3;
+    DXVA2        :: 4;
+    QSV          :: 5;
+    VIDEOTOOLBOX :: 6;
+    D3D11VA      :: 7;
+    DRM          :: 8;
+    OPENCL       :: 9;
+    MEDIACODEC   :: 10;
+    VULKAN       :: 11;
+    D3D12VA      :: 12;
+}
+
+AVHWDeviceContext :: struct {
+    av_class:    *AVClass;
+
+    type:        AVHWDeviceType;
+
+    hwctx:       *void;
+
+    free:        #type (ctx: *AVHWDeviceContext) -> void #c_call;
+
+    user_opaque: *void;
+}
+
+AVHWFramesContext :: struct {
+    av_class:          *AVClass;
+
+    device_ref:        *AVBufferRef;
+
+    device_ctx:        *AVHWDeviceContext;
+
+    hwctx:             *void;
+
+    free:              #type (ctx: *AVHWFramesContext) -> void #c_call;
+
+    user_opaque:       *void;
+
+    pool:              *AVBufferPool;
+
+    initial_pool_size: s32;
+
+    format:            AVPixelFormat;
+
+    sw_format:         AVPixelFormat;
+
+    width:             s32;
+    height:            s32;
+}
+
+av_hwdevice_find_type_by_name :: (name: *u8) -> AVHWDeviceType #foreign miniaudio_fdkaac;
+
+av_hwdevice_get_type_name :: (type: AVHWDeviceType) -> *u8 #foreign miniaudio_fdkaac;
+
+av_hwdevice_iterate_types :: (prev: AVHWDeviceType) -> AVHWDeviceType #foreign miniaudio_fdkaac;
+
+av_hwdevice_ctx_alloc :: (type: AVHWDeviceType) -> *AVBufferRef #foreign miniaudio_fdkaac;
+
+av_hwdevice_ctx_init :: (ref: *AVBufferRef) -> s32 #foreign miniaudio_fdkaac;
+
+av_hwdevice_ctx_create :: (device_ctx: **AVBufferRef, type: AVHWDeviceType, device: *u8, opts: *AVDictionary, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_hwdevice_ctx_create_derived :: (dst_ctx: **AVBufferRef, type: AVHWDeviceType, src_ctx: *AVBufferRef, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_hwdevice_ctx_create_derived_opts :: (dst_ctx: **AVBufferRef, type: AVHWDeviceType, src_ctx: *AVBufferRef, options: *AVDictionary, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_hwframe_ctx_alloc :: (device_ctx: *AVBufferRef) -> *AVBufferRef #foreign miniaudio_fdkaac;
+
+av_hwframe_ctx_init :: (ref: *AVBufferRef) -> s32 #foreign miniaudio_fdkaac;
+
+av_hwframe_get_buffer :: (hwframe_ctx: *AVBufferRef, frame: *AVFrame, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_hwframe_transfer_data :: (dst: *AVFrame, src: *AVFrame, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+AVHWFrameTransferDirection :: enum u32 {
+    FROM :: 0;
+
+    TO   :: 1;
+}
+
+av_hwframe_transfer_get_formats :: (hwframe_ctx: *AVBufferRef, dir: AVHWFrameTransferDirection, formats: **AVPixelFormat, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+AVHWFramesConstraints :: struct {
+    valid_hw_formats: *AVPixelFormat;
+
+    valid_sw_formats: *AVPixelFormat;
+
+    min_width:        s32;
+    min_height:       s32;
+
+    max_width:        s32;
+    max_height:       s32;
+}
+
+av_hwdevice_hwconfig_alloc :: (device_ctx: *AVBufferRef) -> *void #foreign miniaudio_fdkaac;
+
+av_hwdevice_get_hwframe_constraints :: (ref: *AVBufferRef, hwconfig: *void) -> *AVHWFramesConstraints #foreign miniaudio_fdkaac;
+
+av_hwframe_constraints_free :: (constraints: **AVHWFramesConstraints) -> void #foreign miniaudio_fdkaac;
+
+AV_HWFRAME_MAP :: enum u32 {
+    READ      :: 1;
+
+    WRITE     :: 2;
+
+    OVERWRITE :: 4;
+
+    DIRECT    :: 8;
+}
+
+av_hwframe_map :: (dst: *AVFrame, src: *AVFrame, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_hwframe_ctx_create_derived :: (derived_frame_ctx: **AVBufferRef, format: AVPixelFormat, derived_device_ctx: *AVBufferRef, source_frame_ctx: *AVBufferRef, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+AVProfile :: struct {
+    profile: s32;
+    name:    *u8;
+}
+
+AVCodec :: struct {
+    name:                  *u8;
+
+    long_name:             *u8;
+    type:                  AVMediaType;
+    id:                    AVCodecID;
+
+    capabilities:          s32;
+    max_lowres:            u8;
+    supported_framerates:  *AVRational;
+    pix_fmts:              *AVPixelFormat;
+    supported_samplerates: *s32;
+    sample_fmts:           *AVSampleFormat;
+    priv_class:            *AVClass;
+    profiles:              *AVProfile;
+
+    wrapper_name:          *u8;
+
+    ch_layouts:            *AVChannelLayout;
+}
+
+av_codec_iterate :: (opaque: **void) -> *AVCodec #foreign miniaudio_fdkaac;
+
+avcodec_find_decoder :: (id: AVCodecID) -> *AVCodec #foreign miniaudio_fdkaac;
+
+avcodec_find_decoder_by_name :: (name: *u8) -> *AVCodec #foreign miniaudio_fdkaac;
+
+avcodec_find_encoder :: (id: AVCodecID) -> *AVCodec #foreign miniaudio_fdkaac;
+
+avcodec_find_encoder_by_name :: (name: *u8) -> *AVCodec #foreign miniaudio_fdkaac;
+
+av_codec_is_encoder :: (codec: *AVCodec) -> s32 #foreign miniaudio_fdkaac;
+
+av_codec_is_decoder :: (codec: *AVCodec) -> s32 #foreign miniaudio_fdkaac;
+
+av_get_profile_name :: (codec: *AVCodec, profile: s32) -> *u8 #foreign miniaudio_fdkaac;
+
+AV_CODEC_HW_CONFIG_METHOD :: enum u32 {
+    HW_DEVICE_CTX :: 1;
+
+    HW_FRAMES_CTX :: 2;
+
+    INTERNAL      :: 4;
+
+    AD_HOC        :: 8;
+}
+
+AVCodecHWConfig :: struct {
+    pix_fmt:     AVPixelFormat;
+
+    methods:     s32;
+
+    device_type: AVHWDeviceType;
+}
+
+avcodec_get_hw_config :: (codec: *AVCodec, index: s32) -> *AVCodecHWConfig #foreign miniaudio_fdkaac;
+
+av_get_packet :: (s: *AVIOContext, pkt: *AVPacket, size: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_append_packet :: (s: *AVIOContext, pkt: *AVPacket, size: s32) -> s32 #foreign miniaudio_fdkaac;
+
+AVCodecTag :: struct {}
+
+AVProbeData :: struct {
+    filename:  *u8;
+    buf:       *u8;
+    buf_size:  s32;
+    mime_type: *u8;
+}
+
+AVOutputFormat :: struct {
+    name:           *u8;
+
+    long_name:      *u8;
+    mime_type:      *u8;
+    extensions:     *u8;
+
+    audio_codec:    AVCodecID;
+    video_codec:    AVCodecID;
+    subtitle_codec: AVCodecID;
+
+    flags:          s32;
+
+    codec_tag:      **AVCodecTag;
+
+    priv_class:     *AVClass;
+}
+
+AVInputFormat :: struct {
+    name:       *u8;
+
+    long_name:  *u8;
+
+    flags:      s32;
+
+    extensions: *u8;
+
+    codec_tag:  **AVCodecTag;
+
+    priv_class: *AVClass;
+
+    mime_type:  *u8;
+}
+
+AVStreamParseType :: enum u32 {
+    NONE       :: 0;
+    FULL       :: 1;
+    HEADERS    :: 2;
+    TIMESTAMPS :: 3;
+    FULL_ONCE  :: 4;
+    FULL_RAW   :: 5;
+}
+
+AVIndexEntry :: struct {
+    pos:          s64;
+    timestamp:    s64;
+
+    flags:        s32;
+    #place flags; /*bitfield 2*/ size:         s32;
+    min_distance: s32;
+}
+
+av_disposition_from_string :: (disp: *u8) -> s32 #foreign miniaudio_fdkaac;
+
+av_disposition_to_string :: (disposition: s32) -> *u8 #foreign miniaudio_fdkaac;
+
+AVStream :: struct {
+    av_class:            *AVClass;
+
+    index:               s32;
+
+    id:                  s32;
+
+    codecpar:            *AVCodecParameters;
+
+    priv_data:           *void;
+
+    time_base:           AVRational;
+
+    start_time:          s64;
+
+    duration:            s64;
+
+    nb_frames:           s64;
+
+    disposition:         s32;
+
+    discard:             AVDiscard;
+
+    sample_aspect_ratio: AVRational;
+
+    metadata:            *AVDictionary;
+
+    avg_frame_rate:      AVRational;
+
+    attached_pic:        AVPacket;
+
+    side_data:           *AVPacketSideData;
+
+    nb_side_data:        s32;
+
+    event_flags:         s32;
+
+    r_frame_rate:        AVRational;
+
+    pts_wrap_bits:       s32;
+}
+
+AVStreamGroupTileGrid :: struct {
+    av_class:          *AVClass;
+
+    nb_tiles:          u32;
+
+    coded_width:       s32;
+
+    coded_height:      s32;
+
+    offsets:           *struct {
+        idx:        u32;
+
+        horizontal: s32;
+
+        vertical:   s32;
+    };
+
+    background:        [4] u8;
+
+    horizontal_offset: s32;
+
+    vertical_offset:   s32;
+
+    width:             s32;
+
+    height:            s32;
+}
+
+AVStreamGroupParamsType :: enum u32 {
+    NONE                  :: 0;
+    IAMF_AUDIO_ELEMENT    :: 1;
+    IAMF_MIX_PRESENTATION :: 2;
+    TILE_GRID             :: 3;
+}
+
+AVIAMFAudioElement :: struct {}
+AVIAMFMixPresentation :: struct {}
+
+AVStreamGroup :: struct {
+    av_class:    *AVClass;
+
+    priv_data:   *void;
+
+    index:       u32;
+
+    id:          s64;
+
+    type:        AVStreamGroupParamsType;
+
+    params:      union {
+        iamf_audio_element:    *AVIAMFAudioElement;
+        iamf_mix_presentation: *AVIAMFMixPresentation;
+        tile_grid:             *AVStreamGroupTileGrid;
+    };
+
+    metadata:    *AVDictionary;
+
+    nb_streams:  u32;
+
+    streams:     **AVStream;
+
+    disposition: s32;
+}
+
+AVCodecParserContext :: struct {}
+av_stream_get_parser :: (s: *AVStream) -> *AVCodecParserContext #foreign miniaudio_fdkaac;
+
+av_stream_get_first_dts :: (st: *AVStream) -> s64 #foreign miniaudio_fdkaac;
+
+AVProgram :: struct {
+    id:                 s32;
+    flags:              s32;
+    discard:            AVDiscard;
+    stream_index:       *u32;
+    nb_stream_indexes:  u32;
+    metadata:           *AVDictionary;
+
+    program_num:        s32;
+    pmt_pid:            s32;
+    pcr_pid:            s32;
+    pmt_version:        s32;
+
+    start_time:         s64;
+    end_time:           s64;
+
+    pts_wrap_reference: s64;
+    pts_wrap_behavior:  s32;
+}
+
+AVChapter :: struct {
+    id:        s64;
+    time_base: AVRational;
+    start:     s64;
+    end:       s64;
+    metadata:  *AVDictionary;
+}
+
+av_format_control_message :: #type (s: *AVFormatContext, type: s32, data: *void, data_size: u64) -> s32 #c_call;
+
+AVOpenCallback :: #type (s: *AVFormatContext, pb: **AVIOContext, url: *u8, flags: s32, int_cb: *AVIOInterruptCB, options: **AVDictionary) -> s32 #c_call;
+
+AVDurationEstimationMethod :: enum u32 {
+    PTS     :: 0;
+    STREAM  :: 1;
+    BITRATE :: 2;
+}
+
+AVFormatContext :: struct {
+    av_class:                        *AVClass;
+
+    iformat:                         *AVInputFormat;
+
+    oformat:                         *AVOutputFormat;
+
+    priv_data:                       *void;
+
+    pb:                              *AVIOContext;
+
+    ctx_flags:                       s32;
+
+    nb_streams:                      u32;
+
+    streams:                         **AVStream;
+
+    nb_stream_groups:                u32;
+
+    stream_groups:                   **AVStreamGroup;
+
+    nb_chapters:                     u32;
+    chapters:                        **AVChapter;
+
+    url:                             *u8;
+
+    start_time:                      s64;
+
+    duration:                        s64;
+
+    bit_rate:                        s64;
+
+    packet_size:                     u32;
+    max_delay:                       s32;
+
+    flags:                           s32;
+
+    probesize:                       s64;
+
+    max_analyze_duration:            s64;
+
+    key:                             *u8;
+    keylen:                          s32;
+
+    nb_programs:                     u32;
+    programs:                        **AVProgram;
+
+    video_codec_id:                  AVCodecID;
+
+    audio_codec_id:                  AVCodecID;
+
+    subtitle_codec_id:               AVCodecID;
+
+    data_codec_id:                   AVCodecID;
+
+    metadata:                        *AVDictionary;
+
+    start_time_realtime:             s64;
+
+    fps_probe_size:                  s32;
+
+    error_recognition:               s32;
+
+    interrupt_callback:              AVIOInterruptCB;
+
+    debug:                           s32;
+
+    max_streams:                     s32;
+
+    max_index_size:                  u32;
+
+    max_picture_buffer:              u32;
+
+    max_interleave_delta:            s64;
+
+    max_ts_probe:                    s32;
+
+    max_chunk_duration:              s32;
+
+    max_chunk_size:                  s32;
+
+    max_probe_packets:               s32;
+
+    strict_std_compliance:           s32;
+
+    event_flags:                     s32;
+
+    avoid_negative_ts:               s32;
+
+    audio_preload:                   s32;
+
+    use_wallclock_as_timestamps:     s32;
+
+    skip_estimate_duration_from_pts: s32;
+
+    avio_flags:                      s32;
+
+    duration_estimation_method:      AVDurationEstimationMethod;
+
+    skip_initial_bytes:              s64;
+
+    correct_ts_overflow:             u32;
+
+    seek2any:                        s32;
+
+    flush_packets:                   s32;
+
+    probe_score:                     s32;
+
+    format_probesize:                s32;
+
+    codec_whitelist:                 *u8;
+
+    format_whitelist:                *u8;
+
+    protocol_whitelist:              *u8;
+
+    protocol_blacklist:              *u8;
+
+    io_repositioned:                 s32;
+
+    video_codec:                     *AVCodec;
+
+    audio_codec:                     *AVCodec;
+
+    subtitle_codec:                  *AVCodec;
+
+    data_codec:                      *AVCodec;
+
+    metadata_header_padding:         s32;
+
+    opaque:                          *void;
+
+    control_message_cb:              av_format_control_message;
+
+    output_ts_offset:                s64;
+
+    dump_separator:                  *u8;
+
+    io_open:                         #type (s: *AVFormatContext, pb: **AVIOContext, url: *u8, flags: s32, options: **AVDictionary) -> s32 #c_call;
+
+    io_close2:                       #type (s: *AVFormatContext, pb: *AVIOContext) -> s32 #c_call;
+}
+
+av_format_inject_global_side_data :: (s: *AVFormatContext) -> void #foreign miniaudio_fdkaac;
+
+av_fmt_ctx_get_duration_estimation_method :: (ctx: *AVFormatContext) -> AVDurationEstimationMethod #foreign miniaudio_fdkaac;
+
+avformat_version :: () -> u32 #foreign miniaudio_fdkaac;
+
+avformat_configuration :: () -> *u8 #foreign miniaudio_fdkaac;
+
+avformat_license :: () -> *u8 #foreign miniaudio_fdkaac;
+
+avformat_network_init :: () -> s32 #foreign miniaudio_fdkaac;
+
+avformat_network_deinit :: () -> s32 #foreign miniaudio_fdkaac;
+
+av_muxer_iterate :: (opaque: **void) -> *AVOutputFormat #foreign miniaudio_fdkaac;
+
+av_demuxer_iterate :: (opaque: **void) -> *AVInputFormat #foreign miniaudio_fdkaac;
+
+avformat_alloc_context :: () -> *AVFormatContext #foreign miniaudio_fdkaac;
+
+avformat_free_context :: (s: *AVFormatContext) -> void #foreign miniaudio_fdkaac;
+
+avformat_get_class :: () -> *AVClass #foreign miniaudio_fdkaac;
+
+av_stream_get_class :: () -> *AVClass #foreign miniaudio_fdkaac;
+
+av_stream_group_get_class :: () -> *AVClass #foreign miniaudio_fdkaac;
+
+avformat_stream_group_name :: (type: AVStreamGroupParamsType) -> *u8 #foreign miniaudio_fdkaac;
+
+avformat_stream_group_create :: (s: *AVFormatContext, type: AVStreamGroupParamsType, options: **AVDictionary) -> *AVStreamGroup #foreign miniaudio_fdkaac;
+
+avformat_new_stream :: (s: *AVFormatContext, c: *AVCodec) -> *AVStream #foreign miniaudio_fdkaac;
+
+avformat_stream_group_add_stream :: (stg: *AVStreamGroup, st: *AVStream) -> s32 #foreign miniaudio_fdkaac;
+
+av_stream_add_side_data :: (st: *AVStream, type: AVPacketSideDataType, data: *u8, size: u64) -> s32 #foreign miniaudio_fdkaac;
+
+av_stream_new_side_data :: (stream: *AVStream, type: AVPacketSideDataType, size: u64) -> *u8 #foreign miniaudio_fdkaac;
+
+av_stream_get_side_data :: (stream: *AVStream, type: AVPacketSideDataType, size: *u64) -> *u8 #foreign miniaudio_fdkaac;
+
+av_new_program :: (s: *AVFormatContext, id: s32) -> *AVProgram #foreign miniaudio_fdkaac;
+
+avformat_alloc_output_context2 :: (ctx: **AVFormatContext, oformat: *AVOutputFormat, format_name: *u8, filename: *u8) -> s32 #foreign miniaudio_fdkaac;
+
+av_find_input_format :: (short_name: *u8) -> *AVInputFormat #foreign miniaudio_fdkaac;
+
+av_probe_input_format :: (pd: *AVProbeData, is_opened: s32) -> *AVInputFormat #foreign miniaudio_fdkaac;
+
+av_probe_input_format2 :: (pd: *AVProbeData, is_opened: s32, score_max: *s32) -> *AVInputFormat #foreign miniaudio_fdkaac;
+
+av_probe_input_format3 :: (pd: *AVProbeData, is_opened: s32, score_ret: *s32) -> *AVInputFormat #foreign miniaudio_fdkaac;
+
+av_probe_input_buffer2 :: (pb: *AVIOContext, fmt: **AVInputFormat, url: *u8, logctx: *void, offset: u32, max_probe_size: u32) -> s32 #foreign miniaudio_fdkaac;
+
+av_probe_input_buffer :: (pb: *AVIOContext, fmt: **AVInputFormat, url: *u8, logctx: *void, offset: u32, max_probe_size: u32) -> s32 #foreign miniaudio_fdkaac;
+
+avformat_open_input :: (ps: **AVFormatContext, url: *u8, fmt: *AVInputFormat, options: **AVDictionary) -> s32 #foreign miniaudio_fdkaac;
+
+avformat_find_stream_info :: (ic: *AVFormatContext, options: **AVDictionary) -> s32 #foreign miniaudio_fdkaac;
+
+av_find_program_from_stream :: (ic: *AVFormatContext, last: *AVProgram, s: s32) -> *AVProgram #foreign miniaudio_fdkaac;
+
+av_program_add_stream_index :: (ac: *AVFormatContext, progid: s32, idx: u32) -> void #foreign miniaudio_fdkaac;
+
+av_find_best_stream :: (ic: *AVFormatContext, type: AVMediaType, wanted_stream_nb: s32, related_stream: s32, decoder_ret: **AVCodec, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_read_frame :: (s: *AVFormatContext, pkt: *AVPacket) -> s32 #foreign miniaudio_fdkaac;
+
+av_seek_frame :: (s: *AVFormatContext, stream_index: s32, timestamp: s64, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+avformat_seek_file :: (s: *AVFormatContext, stream_index: s32, min_ts: s64, ts: s64, max_ts: s64, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+avformat_flush :: (s: *AVFormatContext) -> s32 #foreign miniaudio_fdkaac;
+
+av_read_play :: (s: *AVFormatContext) -> s32 #foreign miniaudio_fdkaac;
+
+av_read_pause :: (s: *AVFormatContext) -> s32 #foreign miniaudio_fdkaac;
+
+avformat_close_input :: (s: **AVFormatContext) -> void #foreign miniaudio_fdkaac;
+
+avformat_write_header :: (s: *AVFormatContext, options: **AVDictionary) -> s32 #foreign miniaudio_fdkaac;
+
+avformat_init_output :: (s: *AVFormatContext, options: **AVDictionary) -> s32 #foreign miniaudio_fdkaac;
+
+av_write_frame :: (s: *AVFormatContext, pkt: *AVPacket) -> s32 #foreign miniaudio_fdkaac;
+
+av_interleaved_write_frame :: (s: *AVFormatContext, pkt: *AVPacket) -> s32 #foreign miniaudio_fdkaac;
+
+av_write_uncoded_frame :: (s: *AVFormatContext, stream_index: s32, frame: *AVFrame) -> s32 #foreign miniaudio_fdkaac;
+
+av_interleaved_write_uncoded_frame :: (s: *AVFormatContext, stream_index: s32, frame: *AVFrame) -> s32 #foreign miniaudio_fdkaac;
+
+av_write_uncoded_frame_query :: (s: *AVFormatContext, stream_index: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_write_trailer :: (s: *AVFormatContext) -> s32 #foreign miniaudio_fdkaac;
+
+av_guess_format :: (short_name: *u8, filename: *u8, mime_type: *u8) -> *AVOutputFormat #foreign miniaudio_fdkaac;
+
+av_guess_codec :: (fmt: *AVOutputFormat, short_name: *u8, filename: *u8, mime_type: *u8, type: AVMediaType) -> AVCodecID #foreign miniaudio_fdkaac;
+
+av_get_output_timestamp :: (s: *AVFormatContext, stream: s32, dts: *s64, wall: *s64) -> s32 #foreign miniaudio_fdkaac;
+
+av_hex_dump :: (f: *FILE, buf: *u8, size: s32) -> void #foreign miniaudio_fdkaac;
+
+av_hex_dump_log :: (avcl: *void, level: s32, buf: *u8, size: s32) -> void #foreign miniaudio_fdkaac;
+
+av_pkt_dump2 :: (f: *FILE, pkt: *AVPacket, dump_payload: s32, st: *AVStream) -> void #foreign miniaudio_fdkaac;
+
+av_pkt_dump_log2 :: (avcl: *void, level: s32, pkt: *AVPacket, dump_payload: s32, st: *AVStream) -> void #foreign miniaudio_fdkaac;
+
+av_codec_get_id :: (tags: **AVCodecTag, tag: u32) -> AVCodecID #foreign miniaudio_fdkaac;
+
+av_codec_get_tag :: (tags: **AVCodecTag, id: AVCodecID) -> u32 #foreign miniaudio_fdkaac;
+
+av_codec_get_tag2 :: (tags: **AVCodecTag, id: AVCodecID, tag: *u32) -> s32 #foreign miniaudio_fdkaac;
+
+av_find_default_stream_index :: (s: *AVFormatContext) -> s32 #foreign miniaudio_fdkaac;
+
+av_index_search_timestamp :: (st: *AVStream, timestamp: s64, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+avformat_index_get_entries_count :: (st: *AVStream) -> s32 #foreign miniaudio_fdkaac;
+
+avformat_index_get_entry :: (st: *AVStream, idx: s32) -> *AVIndexEntry #foreign miniaudio_fdkaac;
+
+avformat_index_get_entry_from_timestamp :: (st: *AVStream, wanted_timestamp: s64, flags: s32) -> *AVIndexEntry #foreign miniaudio_fdkaac;
+
+av_add_index_entry :: (st: *AVStream, pos: s64, timestamp: s64, size: s32, distance: s32, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_url_split :: (proto: *u8, proto_size: s32, authorization: *u8, authorization_size: s32, hostname: *u8, hostname_size: s32, port_ptr: *s32, path: *u8, path_size: s32, url: *u8) -> void #foreign miniaudio_fdkaac;
+
+av_dump_format :: (ic: *AVFormatContext, index: s32, url: *u8, is_output: s32) -> void #foreign miniaudio_fdkaac;
+
+av_get_frame_filename2 :: (buf: *u8, buf_size: s32, path: *u8, number: s32, flags: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_get_frame_filename :: (buf: *u8, buf_size: s32, path: *u8, number: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_filename_number_test :: (filename: *u8) -> s32 #foreign miniaudio_fdkaac;
+
+av_sdp_create :: (ac: **AVFormatContext, n_files: s32, buf: *u8, size: s32) -> s32 #foreign miniaudio_fdkaac;
+
+av_match_ext :: (filename: *u8, extensions: *u8) -> s32 #foreign miniaudio_fdkaac;
+
+avformat_query_codec :: (ofmt: *AVOutputFormat, codec_id: AVCodecID, std_compliance: s32) -> s32 #foreign miniaudio_fdkaac;
+
+avformat_get_riff_video_tags :: () -> *AVCodecTag #foreign miniaudio_fdkaac;
+
+avformat_get_riff_audio_tags :: () -> *AVCodecTag #foreign miniaudio_fdkaac;
+
+avformat_get_mov_video_tags :: () -> *AVCodecTag #foreign miniaudio_fdkaac;
+
+avformat_get_mov_audio_tags :: () -> *AVCodecTag #foreign miniaudio_fdkaac;
+
+av_guess_sample_aspect_ratio :: (format: *AVFormatContext, stream: *AVStream, frame: *AVFrame) -> AVRational #foreign miniaudio_fdkaac;
+
+av_guess_frame_rate :: (ctx: *AVFormatContext, stream: *AVStream, frame: *AVFrame) -> AVRational #foreign miniaudio_fdkaac;
+
+avformat_match_stream_specifier :: (s: *AVFormatContext, st: *AVStream, spec: *u8) -> s32 #foreign miniaudio_fdkaac;
+
+avformat_queue_attached_pictures :: (s: *AVFormatContext) -> s32 #foreign miniaudio_fdkaac;
+
+AVTimebaseSource :: enum s32 {
+    AUTO        :: -1;
+    DECODER     :: 0;
+    DEMUXER     :: 1;
+
+    R_FRAMERATE :: 2;
+}
+
+avformat_transfer_internal_stream_timing_info :: (ofmt: *AVOutputFormat, ost: *AVStream, ist: *AVStream, copy_tb: AVTimebaseSource) -> s32 #foreign miniaudio_fdkaac;
+
+av_stream_get_codec_timebase :: (st: *AVStream) -> AVRational #foreign miniaudio_fdkaac;
+
+SCHAR :: s8;
+
+INT_PCM :: s16;
+
+MEMORY_SECTION :: enum u32 {
+    DATA_L1          :: 8192;
+    DATA_L2          :: 8193;
+    DATA_L1_A        :: 8194;
+    DATA_L1_B        :: 8195;
+    CONSTDATA_L1     :: 8196;
+
+    DATA_EXTERN      :: 16384;
+    CONSTDATA_EXTERN :: 16385;
+}
+
+FDKFILE :: void;
+
+CHANNEL_MAP_INFO :: struct {
+    pChannelMap: *u8;
+    numChannels: u8;
+}
+
+FDK_channelMapDescr :: struct {
+    pMapInfoTab:   *CHANNEL_MAP_INFO;
+    mapInfoTabLen: u32;
+    fPassThrough:  u32;
+}
+
+FILE_FORMAT :: enum s32 {
+    UNKNOWN    :: -1;
+    RAW        :: 0;
+
+    MP4_3GPP   :: 3;
+    MP4_MP4F   :: 4;
+
+    RAWPACKETS :: 5;
+}
+
+TRANSPORT_TYPE :: enum s32 {
+    UNKNOWN       :: -1;
+    MP4_RAW       :: 0;
+
+    MP4_ADIF      :: 1;
+    MP4_ADTS      :: 2;
+
+    MP4_LATM_MCP1 :: 6;
+    MP4_LATM_MCP0 :: 7;
+
+    MP4_LOAS      :: 10;
+
+    DRM           :: 12;
+}
+
+AUDIO_OBJECT_TYPE :: enum s32 {
+    NONE             :: -1;
+    NULL_OBJECT      :: 0;
+    AAC_MAIN         :: 1;
+    AAC_LC           :: 2;
+    AAC_SSR          :: 3;
+    AAC_LTP          :: 4;
+    SBR              :: 5;
+    AAC_SCAL         :: 6;
+    TWIN_VQ          :: 7;
+    CELP             :: 8;
+    HVXC             :: 9;
+    RSVD_10          :: 10;
+    RSVD_11          :: 11;
+    TTSI             :: 12;
+    MAIN_SYNTH       :: 13;
+    WAV_TAB_SYNTH    :: 14;
+    GEN_MIDI         :: 15;
+    ALG_SYNTH_AUD_FX :: 16;
+    ER_AAC_LC        :: 17;
+    RSVD_18          :: 18;
+    ER_AAC_LTP       :: 19;
+    ER_AAC_SCAL      :: 20;
+    ER_TWIN_VQ       :: 21;
+    ER_BSAC          :: 22;
+    ER_AAC_LD        :: 23;
+    ER_CELP          :: 24;
+    ER_HVXC          :: 25;
+    ER_HILN          :: 26;
+    ER_PARA          :: 27;
+    RSVD_28          :: 28;
+    PS               :: 29;
+    MPEGS            :: 30;
+
+    ESCAPE           :: 31;
+
+    MP3ONMP4_L1      :: 32;
+    MP3ONMP4_L2      :: 33;
+    MP3ONMP4_L3      :: 34;
+    RSVD_35          :: 35;
+    RSVD_36          :: 36;
+    AAC_SLS          :: 37;
+    SLS              :: 38;
+    ER_AAC_ELD       :: 39;
+
+    USAC             :: 42;
+    SAOC             :: 43;
+    LD_MPEGS         :: 44;
+
+    MP2_AAC_LC       :: 129;
+    MP2_SBR          :: 132;
+
+    DRM_AAC          :: 143;
+    DRM_SBR          :: 144;
+    DRM_MPEG_PS      :: 145;
+
+    DRM_SURROUND     :: 146;
+
+    DRM_USAC         :: 147;
+}
+
+CHANNEL_MODE :: enum s32 {
+    INVALID            :: -1;
+    UNKNOWN            :: 0;
+    _1                 :: 1;
+    _2                 :: 2;
+    _1_2               :: 3;
+    _1_2_1             :: 4;
+    _1_2_2             :: 5;
+    _1_2_2_1           :: 6;
+    _1_2_2_2_1         :: 7;
+
+    _6_1               :: 11;
+    _7_1_BACK          :: 12;
+    _7_1_TOP_FRONT     :: 14;
+
+    _7_1_REAR_SURROUND :: 33;
+    _7_1_FRONT_CENTER  :: 34;
+
+    _212               :: 128;
+}
+
+AUDIO_CHANNEL_TYPE :: enum u32 {
+    NONE         :: 0;
+    FRONT        :: 1;
+    SIDE         :: 2;
+    BACK         :: 3;
+    LFE          :: 4;
+
+    TOP          :: 16;
+
+    FRONT_TOP    :: 17;
+    SIDE_TOP     :: 18;
+    BACK_TOP     :: 19;
+
+    BOTTOM       :: 32;
+
+    FRONT_BOTTOM :: 33;
+    SIDE_BOTTOM  :: 34;
+    BACK_BOTTOM  :: 35;
+}
+
+SBR_PS_SIGNALING :: enum s32 {
+    UNKNOWN                :: -1;
+    IMPLICIT               :: 0;
+    EXPLICIT_BW_COMPATIBLE :: 1;
+    EXPLICIT_HIERARCHICAL  :: 2;
+}
+
+CODER_CONFIG :: struct {
+    aot:                   AUDIO_OBJECT_TYPE;
+    extAOT:                AUDIO_OBJECT_TYPE;
+    channelMode:           CHANNEL_MODE;
+    channelConfigZero:     u8;
+
+    samplingRate:          s32;
+    extSamplingRate:       s32;
+    downscaleSamplingRate: s32;
+
+    bitRate:               s32;
+    samplesPerFrame:       s32;
+
+    noChannels:            s32;
+    bitsFrame:             s32;
+    nSubFrames:            s32;
+    BSACnumOfSubFrame:     s32;
+
+    BSAClayerLength:       s32;
+
+    flags:                 u32;
+    matrixMixdownA:        u8;
+
+    headerPeriod:          u8;
+
+    stereoConfigIndex:     u8;
+    sbrMode:               u8;
+    sbrSignaling:          SBR_PS_SIGNALING;
+
+    rawConfig:             [64] u8;
+    rawConfigBits:         s32;
+
+    sbrPresent:            u8;
+    psPresent:             u8;
+}
+
+MP4_ELEMENT_ID :: enum s32 {
+    NONE     :: -1;
+    SCE      :: 0;
+    CPE      :: 1;
+    CCE      :: 2;
+    LFE      :: 3;
+    DSE      :: 4;
+
+    PCE      :: 5;
+    FIL      :: 6;
+    END      :: 7;
+    EXT      :: 8;
+    SCAL     :: 9;
+
+    USAC_SCE :: 16;
+    USAC_CPE :: 17;
+    USAC_LFE :: 18;
+    USAC_EXT :: 19;
+    USAC_END :: 20;
+    LAST     :: 21;
+}
+
+CONFIG_EXT_ID :: enum u32 {
+    FILL            :: 0;
+
+    DOWNMIX         :: 1;
+    LOUDNESS_INFO   :: 2;
+    AUDIOSCENE_INFO :: 3;
+    HOA_MATRIX      :: 4;
+    SIG_GROUP_INFO  :: 6;
+}
+
+EXT_PAYLOAD_TYPE :: enum u32 {
+    FIL           :: 0;
+    FILL_DATA     :: 1;
+    DATA_ELEMENT  :: 2;
+    DATA_LENGTH   :: 3;
+    UNI_DRC       :: 4;
+    LDSAC_DATA    :: 9;
+    SAOC_DATA     :: 10;
+    DYNAMIC_RANGE :: 11;
+    SAC_DATA      :: 12;
+    SBR_DATA      :: 13;
+    SBR_DATA_CRC  :: 14;
+}
+
+USAC_EXT_ELEMENT_TYPE :: enum u32 {
+    FILL                  :: 0;
+    MPEGS                 :: 1;
+    SAOC                  :: 2;
+    AUDIOPREROLL          :: 3;
+    UNI_DRC               :: 4;
+
+    OBJ_METADATA          :: 5;
+    SAOC_3D               :: 6;
+    HOA                   :: 7;
+    FMT_CNVRTR            :: 8;
+    MCT                   :: 9;
+    ENHANCED_OBJ_METADATA :: 13;
+
+    VR_METADATA           :: 129;
+    UNKNOWN               :: 255;
+}
+
+TP_CONFIG_TYPE :: enum u32 {
+    NOTHING       :: 0;
+    RAW_ADTS      :: 2;
+    RAW_LATM_MCP1 :: 6;
+    RAW_SDC       :: 21;
+}
+
+FDK_MODULE_ID :: enum u32 {
+    NONE          :: 0;
+    TOOLS         :: 1;
+    SYSLIB        :: 2;
+    AACDEC        :: 3;
+    AACENC        :: 4;
+    SBRDEC        :: 5;
+    SBRENC        :: 6;
+    TPDEC         :: 7;
+    TPENC         :: 8;
+    MPSDEC        :: 9;
+    MPEGFILEREAD  :: 10;
+    MPEGFILEWRITE :: 11;
+    PCMDMX        :: 31;
+    MPSENC        :: 34;
+    TDLIMIT       :: 35;
+    UNIDRCDEC     :: 38;
+
+    MODULE_LAST   :: 39;
+}
+
+LIB_INFO :: struct {
+    title:      *u8;
+    build_date: *u8;
+    build_time: *u8;
+    module_id:  FDK_MODULE_ID;
+    version:    s32;
+    flags:      u32;
+    versionStr: [32] u8;
+}
+
+FDK_bufDescr :: struct {
+    ppBase:   **void;
+
+    pBufSize: *u32;
+
+    pEleSize: *u32;
+
+    pBufType: *u32;
+
+    numBufs:  u32;
+}
+
+AAC_DECODER_ERROR :: enum u32 {
+    AAC_DEC_OK                            :: 0;
+
+    AAC_DEC_OUT_OF_MEMORY                 :: 2;
+
+    AAC_DEC_UNKNOWN                       :: 5;
+
+    aac_dec_sync_error_start              :: 4096;
+    AAC_DEC_TRANSPORT_SYNC_ERROR          :: 4097;
+
+    AAC_DEC_NOT_ENOUGH_BITS               :: 4098;
+    aac_dec_sync_error_end                :: 8191;
+
+    aac_dec_init_error_start              :: 8192;
+    AAC_DEC_INVALID_HANDLE                :: 8193;
+
+    AAC_DEC_UNSUPPORTED_AOT               :: 8194;
+
+    AAC_DEC_UNSUPPORTED_FORMAT            :: 8195;
+
+    AAC_DEC_UNSUPPORTED_ER_FORMAT         :: 8196;
+
+    AAC_DEC_UNSUPPORTED_EPCONFIG          :: 8197;
+
+    AAC_DEC_UNSUPPORTED_MULTILAYER        :: 8198;
+
+    AAC_DEC_UNSUPPORTED_CHANNELCONFIG     :: 8199;
+
+    AAC_DEC_UNSUPPORTED_SAMPLINGRATE      :: 8200;
+
+    AAC_DEC_INVALID_SBR_CONFIG            :: 8201;
+
+    AAC_DEC_SET_PARAM_FAIL                :: 8202;
+
+    AAC_DEC_NEED_TO_RESTART               :: 8203;
+
+    AAC_DEC_OUTPUT_BUFFER_TOO_SMALL       :: 8204;
+
+    aac_dec_init_error_end                :: 12287;
+
+    aac_dec_decode_error_start            :: 16384;
+    AAC_DEC_TRANSPORT_ERROR               :: 16385;
+
+    AAC_DEC_PARSE_ERROR                   :: 16386;
+
+    AAC_DEC_UNSUPPORTED_EXTENSION_PAYLOAD :: 16387;
+
+    AAC_DEC_DECODE_FRAME_ERROR            :: 16388;
+
+    AAC_DEC_CRC_ERROR                     :: 16389;
+    AAC_DEC_INVALID_CODE_BOOK             :: 16390;
+
+    AAC_DEC_UNSUPPORTED_PREDICTION        :: 16391;
+
+    AAC_DEC_UNSUPPORTED_CCE               :: 16392;
+
+    AAC_DEC_UNSUPPORTED_LFE               :: 16393;
+
+    AAC_DEC_UNSUPPORTED_GAIN_CONTROL_DATA :: 16394;
+
+    AAC_DEC_UNSUPPORTED_SBA               :: 16395;
+
+    AAC_DEC_TNS_READ_ERROR                :: 16396;
+
+    AAC_DEC_RVLC_ERROR                    :: 16397;
+
+    aac_dec_decode_error_end              :: 20479;
+
+    aac_dec_anc_data_error_start          :: 32768;
+    AAC_DEC_ANC_DATA_ERROR                :: 32769;
+
+    AAC_DEC_TOO_SMALL_ANC_BUFFER          :: 32770;
+
+    AAC_DEC_TOO_MANY_ANC_ELEMENTS         :: 32771;
+
+    aac_dec_anc_data_error_end            :: 36863;
+}
+
+AAC_MD_PROFILE :: enum u32 {
+    MPEG_STANDARD    :: 0;
+
+    MPEG_LEGACY      :: 1;
+
+    MPEG_LEGACY_PRIO :: 2;
+
+    ARIB_JAPAN       :: 3;
+}
+
+AAC_DRC_DEFAULT_PRESENTATION_MODE_OPTIONS :: enum s32 {
+    PARAMETER_HANDLING_DISABLED :: -1;
+
+    PARAMETER_HANDLING_ENABLED  :: 0;
+
+    PRESENTATION_MODE_1_DEFAULT :: 1;
+
+    PRESENTATION_MODE_2_DEFAULT :: 2;
+}
+
+AACDEC_PARAM :: enum u32 {
+    PCM_DUAL_CHANNEL_OUTPUT_MODE  :: 2;
+
+    PCM_OUTPUT_CHANNEL_MAPPING    :: 3;
+
+    PCM_LIMITER_ENABLE            :: 4;
+
+    PCM_LIMITER_ATTACK_TIME       :: 5;
+
+    PCM_LIMITER_RELEAS_TIME       :: 6;
+
+    PCM_MIN_OUTPUT_CHANNELS       :: 17;
+
+    PCM_MAX_OUTPUT_CHANNELS       :: 18;
+
+    METADATA_PROFILE              :: 32;
+
+    METADATA_EXPIRY_TIME          :: 33;
+
+    CONCEAL_METHOD                :: 256;
+
+    DRC_BOOST_FACTOR              :: 512;
+
+    DRC_ATTENUATION_FACTOR        :: 513;
+
+    DRC_REFERENCE_LEVEL           :: 514;
+
+    DRC_HEAVY_COMPRESSION         :: 515;
+
+    DRC_DEFAULT_PRESENTATION_MODE :: 516;
+
+    DRC_ENC_TARGET_LEVEL          :: 517;
+
+    UNIDRC_SET_EFFECT             :: 518;
+
+    UNIDRC_ALBUM_MODE             :: 519;
+
+    QMF_LOWPOWER                  :: 768;
+
+    TPDEC_CLEAR_BUFFER            :: 1539;
+}
+
+CStreamInfo :: struct {
+    sampleRate:          s32;
+    frameSize:           s32;
+
+    numChannels:         s32;
+
+    pChannelType:        *AUDIO_CHANNEL_TYPE;
+    pChannelIndices:     *u8;
+
+    aacSampleRate:       s32;
+
+    profile:             s32;
+
+    aot:                 AUDIO_OBJECT_TYPE;
+
+    channelConfig:       s32;
+
+    bitRate:             s32;
+    aacSamplesPerFrame:  s32;
+
+    aacNumChannels:      s32;
+
+    extAot:              AUDIO_OBJECT_TYPE;
+    extSamplingRate:     s32;
+
+    outputDelay:         u32;
+
+    flags:               u32;
+
+    epConfig:            SCHAR;
+
+    numLostAccessUnits:  s32;
+
+    numTotalBytes:       s64;
+
+    numBadBytes:         s64;
+
+    numTotalAccessUnits: s64;
+
+    numBadAccessUnits:   s64;
+
+    drcProgRefLev:       SCHAR;
+
+    drcPresMode:         SCHAR;
+
+    outputLoudness:      s32;
+}
+
+AAC_DECODER_INSTANCE :: struct {}
+HANDLE_AACDECODER :: *AAC_DECODER_INSTANCE;
+
+aacDecoder_AncDataInit :: (self: HANDLE_AACDECODER, buffer: *u8, size: s32) -> AAC_DECODER_ERROR #foreign miniaudio_fdkaac;
+
+aacDecoder_AncDataGet :: (self: HANDLE_AACDECODER, index: s32, ptr: **u8, size: *s32) -> AAC_DECODER_ERROR #foreign miniaudio_fdkaac;
+
+aacDecoder_SetParam :: (self: HANDLE_AACDECODER, param: AACDEC_PARAM, value: s32) -> AAC_DECODER_ERROR #foreign miniaudio_fdkaac;
+
+aacDecoder_GetFreeBytes :: (self: HANDLE_AACDECODER, pFreeBytes: *u32) -> AAC_DECODER_ERROR #foreign miniaudio_fdkaac;
+
+aacDecoder_Open :: (transportFmt: TRANSPORT_TYPE, nrOfLayers: u32) -> HANDLE_AACDECODER #foreign miniaudio_fdkaac;
+
+aacDecoder_ConfigRaw :: (self: HANDLE_AACDECODER, conf: **u8, length: *u32) -> AAC_DECODER_ERROR #foreign miniaudio_fdkaac;
+
+aacDecoder_Fill :: (self: HANDLE_AACDECODER, pBuffer: **u8, bufferSize: *u32, bytesValid: *u32) -> AAC_DECODER_ERROR #foreign miniaudio_fdkaac;
+
+aacDecoder_DecodeFrame :: (self: HANDLE_AACDECODER, pTimeData: *INT_PCM, timeDataSize: s32, flags: u32) -> AAC_DECODER_ERROR #foreign miniaudio_fdkaac;
+
+aacDecoder_Close :: (self: HANDLE_AACDECODER) -> void #foreign miniaudio_fdkaac;
+
+aacDecoder_GetStreamInfo :: (self: HANDLE_AACDECODER) -> *CStreamInfo #foreign miniaudio_fdkaac;
+
+aacDecoder_GetLibInfo :: (info: *LIB_INFO) -> s32 #foreign miniaudio_fdkaac;
+
+ma_fdkaac :: struct {
+    ds:                    ma_data_source_base; /* The aac decoder can be used independently as a data source. */
+    onRead:                ma_read_proc;
+    onSeek:                ma_seek_proc;
+    onTell:                ma_tell_proc;
+    pReadSeekTellUserData: *void;
+    format:                ma_format; /* Will be either f32 or s16. */
+
+    handle:                HANDLE_AACDECODER;
+    in:                    *AVFormatContext;
+    st:                    *AVStream;
+
+    decode_buf:            *INT_PCM;
+    decode_buf_size:       s32; // total size of the decode buffer
+    decode_buf_start:      s32; // index of the first unprocessed pcm value in the decode buffer
+
+    pcm_frame_cursor:      u64;
+
+    info:                  *CStreamInfo;
+}
+
+ma_fdkaac_init :: (onRead: ma_read_proc, onSeek: ma_seek_proc, onTell: ma_tell_proc, pReadSeekTellUserData: *void, pConfig: *ma_decoding_backend_config, pAllocationCallbacks: *ma_allocation_callbacks, pAAC: *ma_fdkaac) -> ma_result #foreign miniaudio_fdkaac;
+ma_fdkaac_init_file :: (pFilePath: *u8, pConfig: *ma_decoding_backend_config, pAllocationCallbacks: *ma_allocation_callbacks, pAAC: *ma_fdkaac) -> ma_result #foreign miniaudio_fdkaac;
+ma_fdkaac_uninit :: (pAAC: *ma_fdkaac, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
+ma_fdkaac_read_pcm_frames :: (pAAC: *ma_fdkaac, pFramesOut: *void, frameCount: ma_uint64, pFramesRead: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+
+ma_fdkaac_get_data_format :: (pAAC: *ma_fdkaac, pFormat: *ma_format, pChannels: *ma_uint32, pSampleRate: *ma_uint32, pChannelMap: *ma_channel, channelMapCap: u64) -> ma_result #foreign miniaudio_fdkaac;
+ma_fdkaac_get_cursor_in_pcm_frames :: (pAAC: *ma_fdkaac, pCursor: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+ma_fdkaac_get_length_in_pcm_frames :: (pAAC: *ma_fdkaac, pLength: *ma_uint64) -> ma_result #foreign miniaudio_fdkaac;
+
+ma_decoding_backend_init__fdkaac :: (pUserData: *void, onRead: ma_read_proc, onSeek: ma_seek_proc, onTell: ma_tell_proc, pReadSeekTellUserData: *void, pConfig: *ma_decoding_backend_config, pAllocationCallbacks: *ma_allocation_callbacks, ppBackend: **ma_data_source) -> ma_result #foreign miniaudio_fdkaac;
+ma_decoding_backend_init_file__fdkaac :: (pUserData: *void, pFilePath: *u8, pConfig: *ma_decoding_backend_config, pAllocationCallbacks: *ma_allocation_callbacks, ppBackend: **ma_data_source) -> ma_result #foreign miniaudio_fdkaac;
+ma_decoding_backend_uninit__fdkaac :: (pUserData: *void, pBackend: *ma_data_source, pAllocationCallbacks: *ma_allocation_callbacks) -> void #foreign miniaudio_fdkaac;
 
 #scope_file
 
@@ -8904,12 +13073,1166 @@ ma_sound_group_get_time_in_pcm_frames :: (pGroup: *ma_sound_group) -> ma_uint64 
         assert(size_of(type_of(ma_engine.pProcessUserData)) == 8, "ma_engine.pProcessUserData has unexpected size % instead of 8", size_of(type_of(ma_engine.pProcessUserData)));
         assert(size_of(ma_engine) == 1288, "ma_engine has size % instead of 1288", size_of(ma_engine));
     }
+
+    {
+        instance: AVRational;
+        assert(((cast(*void)(*instance.num)) - cast(*void)(*instance)) == 0, "AVRational.num has unexpected offset % instead of 0", ((cast(*void)(*instance.num)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVRational.num)) == 4, "AVRational.num has unexpected size % instead of 4", size_of(type_of(AVRational.num)));
+        assert(((cast(*void)(*instance.den)) - cast(*void)(*instance)) == 4, "AVRational.den has unexpected offset % instead of 4", ((cast(*void)(*instance.den)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVRational.den)) == 4, "AVRational.den has unexpected size % instead of 4", size_of(type_of(AVRational.den)));
+        assert(size_of(AVRational) == 8, "AVRational has size % instead of 8", size_of(AVRational));
+    }
+
+    {
+        instance: av_intfloat32;
+        assert(((cast(*void)(*instance.i)) - cast(*void)(*instance)) == 0, "av_intfloat32.i has unexpected offset % instead of 0", ((cast(*void)(*instance.i)) - cast(*void)(*instance)));
+        assert(size_of(type_of(av_intfloat32.i)) == 4, "av_intfloat32.i has unexpected size % instead of 4", size_of(type_of(av_intfloat32.i)));
+        assert(((cast(*void)(*instance.f)) - cast(*void)(*instance)) == 0, "av_intfloat32.f has unexpected offset % instead of 0", ((cast(*void)(*instance.f)) - cast(*void)(*instance)));
+        assert(size_of(type_of(av_intfloat32.f)) == 4, "av_intfloat32.f has unexpected size % instead of 4", size_of(type_of(av_intfloat32.f)));
+        assert(size_of(av_intfloat32) == 4, "av_intfloat32 has size % instead of 4", size_of(av_intfloat32));
+    }
+
+    {
+        instance: av_intfloat64;
+        assert(((cast(*void)(*instance.i)) - cast(*void)(*instance)) == 0, "av_intfloat64.i has unexpected offset % instead of 0", ((cast(*void)(*instance.i)) - cast(*void)(*instance)));
+        assert(size_of(type_of(av_intfloat64.i)) == 8, "av_intfloat64.i has unexpected size % instead of 8", size_of(type_of(av_intfloat64.i)));
+        assert(((cast(*void)(*instance.f)) - cast(*void)(*instance)) == 0, "av_intfloat64.f has unexpected offset % instead of 0", ((cast(*void)(*instance.f)) - cast(*void)(*instance)));
+        assert(size_of(type_of(av_intfloat64.f)) == 8, "av_intfloat64.f has unexpected size % instead of 8", size_of(type_of(av_intfloat64.f)));
+        assert(size_of(av_intfloat64) == 8, "av_intfloat64 has size % instead of 8", size_of(av_intfloat64));
+    }
+
+    {
+        instance: AVClass;
+        assert(((cast(*void)(*instance.class_name)) - cast(*void)(*instance)) == 0, "AVClass.class_name has unexpected offset % instead of 0", ((cast(*void)(*instance.class_name)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVClass.class_name)) == 8, "AVClass.class_name has unexpected size % instead of 8", size_of(type_of(AVClass.class_name)));
+        assert(((cast(*void)(*instance.item_name)) - cast(*void)(*instance)) == 8, "AVClass.item_name has unexpected offset % instead of 8", ((cast(*void)(*instance.item_name)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVClass.item_name)) == 8, "AVClass.item_name has unexpected size % instead of 8", size_of(type_of(AVClass.item_name)));
+        assert(((cast(*void)(*instance.option)) - cast(*void)(*instance)) == 16, "AVClass.option has unexpected offset % instead of 16", ((cast(*void)(*instance.option)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVClass.option)) == 8, "AVClass.option has unexpected size % instead of 8", size_of(type_of(AVClass.option)));
+        assert(((cast(*void)(*instance.version)) - cast(*void)(*instance)) == 24, "AVClass.version has unexpected offset % instead of 24", ((cast(*void)(*instance.version)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVClass.version)) == 4, "AVClass.version has unexpected size % instead of 4", size_of(type_of(AVClass.version)));
+        assert(((cast(*void)(*instance.log_level_offset_offset)) - cast(*void)(*instance)) == 28, "AVClass.log_level_offset_offset has unexpected offset % instead of 28", ((cast(*void)(*instance.log_level_offset_offset)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVClass.log_level_offset_offset)) == 4, "AVClass.log_level_offset_offset has unexpected size % instead of 4", size_of(type_of(AVClass.log_level_offset_offset)));
+        assert(((cast(*void)(*instance.parent_log_context_offset)) - cast(*void)(*instance)) == 32, "AVClass.parent_log_context_offset has unexpected offset % instead of 32", ((cast(*void)(*instance.parent_log_context_offset)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVClass.parent_log_context_offset)) == 4, "AVClass.parent_log_context_offset has unexpected size % instead of 4", size_of(type_of(AVClass.parent_log_context_offset)));
+        assert(((cast(*void)(*instance.category)) - cast(*void)(*instance)) == 36, "AVClass.category has unexpected offset % instead of 36", ((cast(*void)(*instance.category)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVClass.category)) == 4, "AVClass.category has unexpected size % instead of 4", size_of(type_of(AVClass.category)));
+        assert(((cast(*void)(*instance.get_category)) - cast(*void)(*instance)) == 40, "AVClass.get_category has unexpected offset % instead of 40", ((cast(*void)(*instance.get_category)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVClass.get_category)) == 8, "AVClass.get_category has unexpected size % instead of 8", size_of(type_of(AVClass.get_category)));
+        assert(((cast(*void)(*instance.query_ranges)) - cast(*void)(*instance)) == 48, "AVClass.query_ranges has unexpected offset % instead of 48", ((cast(*void)(*instance.query_ranges)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVClass.query_ranges)) == 8, "AVClass.query_ranges has unexpected size % instead of 8", size_of(type_of(AVClass.query_ranges)));
+        assert(((cast(*void)(*instance.child_next)) - cast(*void)(*instance)) == 56, "AVClass.child_next has unexpected offset % instead of 56", ((cast(*void)(*instance.child_next)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVClass.child_next)) == 8, "AVClass.child_next has unexpected size % instead of 8", size_of(type_of(AVClass.child_next)));
+        assert(((cast(*void)(*instance.child_class_iterate)) - cast(*void)(*instance)) == 64, "AVClass.child_class_iterate has unexpected offset % instead of 64", ((cast(*void)(*instance.child_class_iterate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVClass.child_class_iterate)) == 8, "AVClass.child_class_iterate has unexpected size % instead of 8", size_of(type_of(AVClass.child_class_iterate)));
+        assert(size_of(AVClass) == 72, "AVClass has size % instead of 72", size_of(AVClass));
+    }
+
+    {
+        instance: AVChannelCustom;
+        assert(((cast(*void)(*instance.id)) - cast(*void)(*instance)) == 0, "AVChannelCustom.id has unexpected offset % instead of 0", ((cast(*void)(*instance.id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVChannelCustom.id)) == 4, "AVChannelCustom.id has unexpected size % instead of 4", size_of(type_of(AVChannelCustom.id)));
+        assert(((cast(*void)(*instance.name)) - cast(*void)(*instance)) == 4, "AVChannelCustom.name has unexpected offset % instead of 4", ((cast(*void)(*instance.name)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVChannelCustom.name)) == 16, "AVChannelCustom.name has unexpected size % instead of 16", size_of(type_of(AVChannelCustom.name)));
+        assert(((cast(*void)(*instance.opaque)) - cast(*void)(*instance)) == 24, "AVChannelCustom.opaque has unexpected offset % instead of 24", ((cast(*void)(*instance.opaque)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVChannelCustom.opaque)) == 8, "AVChannelCustom.opaque has unexpected size % instead of 8", size_of(type_of(AVChannelCustom.opaque)));
+        assert(size_of(AVChannelCustom) == 32, "AVChannelCustom has size % instead of 32", size_of(AVChannelCustom));
+    }
+
+    {
+        instance: AVChannelLayout;
+        assert(((cast(*void)(*instance.order)) - cast(*void)(*instance)) == 0, "AVChannelLayout.order has unexpected offset % instead of 0", ((cast(*void)(*instance.order)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVChannelLayout.order)) == 4, "AVChannelLayout.order has unexpected size % instead of 4", size_of(type_of(AVChannelLayout.order)));
+        assert(((cast(*void)(*instance.nb_channels)) - cast(*void)(*instance)) == 4, "AVChannelLayout.nb_channels has unexpected offset % instead of 4", ((cast(*void)(*instance.nb_channels)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVChannelLayout.nb_channels)) == 4, "AVChannelLayout.nb_channels has unexpected size % instead of 4", size_of(type_of(AVChannelLayout.nb_channels)));
+        assert(((cast(*void)(*instance.u)) - cast(*void)(*instance)) == 8, "AVChannelLayout.u has unexpected offset % instead of 8", ((cast(*void)(*instance.u)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVChannelLayout.u)) == 8, "AVChannelLayout.u has unexpected size % instead of 8", size_of(type_of(AVChannelLayout.u)));
+        assert(((cast(*void)(*instance.opaque)) - cast(*void)(*instance)) == 16, "AVChannelLayout.opaque has unexpected offset % instead of 16", ((cast(*void)(*instance.opaque)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVChannelLayout.opaque)) == 8, "AVChannelLayout.opaque has unexpected size % instead of 8", size_of(type_of(AVChannelLayout.opaque)));
+        assert(size_of(AVChannelLayout) == 24, "AVChannelLayout has size % instead of 24", size_of(AVChannelLayout));
+    }
+
+    {
+        instance: AVPanScan;
+        assert(((cast(*void)(*instance.id)) - cast(*void)(*instance)) == 0, "AVPanScan.id has unexpected offset % instead of 0", ((cast(*void)(*instance.id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPanScan.id)) == 4, "AVPanScan.id has unexpected size % instead of 4", size_of(type_of(AVPanScan.id)));
+        assert(((cast(*void)(*instance.width)) - cast(*void)(*instance)) == 4, "AVPanScan.width has unexpected offset % instead of 4", ((cast(*void)(*instance.width)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPanScan.width)) == 4, "AVPanScan.width has unexpected size % instead of 4", size_of(type_of(AVPanScan.width)));
+        assert(((cast(*void)(*instance.height)) - cast(*void)(*instance)) == 8, "AVPanScan.height has unexpected offset % instead of 8", ((cast(*void)(*instance.height)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPanScan.height)) == 4, "AVPanScan.height has unexpected size % instead of 4", size_of(type_of(AVPanScan.height)));
+        assert(((cast(*void)(*instance.position)) - cast(*void)(*instance)) == 12, "AVPanScan.position has unexpected offset % instead of 12", ((cast(*void)(*instance.position)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPanScan.position)) == 12, "AVPanScan.position has unexpected size % instead of 12", size_of(type_of(AVPanScan.position)));
+        assert(size_of(AVPanScan) == 24, "AVPanScan has size % instead of 24", size_of(AVPanScan));
+    }
+
+    {
+        instance: AVCPBProperties;
+        assert(((cast(*void)(*instance.max_bitrate)) - cast(*void)(*instance)) == 0, "AVCPBProperties.max_bitrate has unexpected offset % instead of 0", ((cast(*void)(*instance.max_bitrate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCPBProperties.max_bitrate)) == 8, "AVCPBProperties.max_bitrate has unexpected size % instead of 8", size_of(type_of(AVCPBProperties.max_bitrate)));
+        assert(((cast(*void)(*instance.min_bitrate)) - cast(*void)(*instance)) == 8, "AVCPBProperties.min_bitrate has unexpected offset % instead of 8", ((cast(*void)(*instance.min_bitrate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCPBProperties.min_bitrate)) == 8, "AVCPBProperties.min_bitrate has unexpected size % instead of 8", size_of(type_of(AVCPBProperties.min_bitrate)));
+        assert(((cast(*void)(*instance.avg_bitrate)) - cast(*void)(*instance)) == 16, "AVCPBProperties.avg_bitrate has unexpected offset % instead of 16", ((cast(*void)(*instance.avg_bitrate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCPBProperties.avg_bitrate)) == 8, "AVCPBProperties.avg_bitrate has unexpected size % instead of 8", size_of(type_of(AVCPBProperties.avg_bitrate)));
+        assert(((cast(*void)(*instance.buffer_size)) - cast(*void)(*instance)) == 24, "AVCPBProperties.buffer_size has unexpected offset % instead of 24", ((cast(*void)(*instance.buffer_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCPBProperties.buffer_size)) == 8, "AVCPBProperties.buffer_size has unexpected size % instead of 8", size_of(type_of(AVCPBProperties.buffer_size)));
+        assert(((cast(*void)(*instance.vbv_delay)) - cast(*void)(*instance)) == 32, "AVCPBProperties.vbv_delay has unexpected offset % instead of 32", ((cast(*void)(*instance.vbv_delay)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCPBProperties.vbv_delay)) == 8, "AVCPBProperties.vbv_delay has unexpected size % instead of 8", size_of(type_of(AVCPBProperties.vbv_delay)));
+        assert(size_of(AVCPBProperties) == 40, "AVCPBProperties has size % instead of 40", size_of(AVCPBProperties));
+    }
+
+    {
+        instance: AVProducerReferenceTime;
+        assert(((cast(*void)(*instance.wallclock)) - cast(*void)(*instance)) == 0, "AVProducerReferenceTime.wallclock has unexpected offset % instead of 0", ((cast(*void)(*instance.wallclock)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProducerReferenceTime.wallclock)) == 8, "AVProducerReferenceTime.wallclock has unexpected size % instead of 8", size_of(type_of(AVProducerReferenceTime.wallclock)));
+        assert(((cast(*void)(*instance.flags)) - cast(*void)(*instance)) == 8, "AVProducerReferenceTime.flags has unexpected offset % instead of 8", ((cast(*void)(*instance.flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProducerReferenceTime.flags)) == 4, "AVProducerReferenceTime.flags has unexpected size % instead of 4", size_of(type_of(AVProducerReferenceTime.flags)));
+        assert(size_of(AVProducerReferenceTime) == 16, "AVProducerReferenceTime has size % instead of 16", size_of(AVProducerReferenceTime));
+    }
+
+    {
+        instance: AVBufferRef;
+        assert(((cast(*void)(*instance.buffer)) - cast(*void)(*instance)) == 0, "AVBufferRef.buffer has unexpected offset % instead of 0", ((cast(*void)(*instance.buffer)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVBufferRef.buffer)) == 8, "AVBufferRef.buffer has unexpected size % instead of 8", size_of(type_of(AVBufferRef.buffer)));
+        assert(((cast(*void)(*instance.data)) - cast(*void)(*instance)) == 8, "AVBufferRef.data has unexpected offset % instead of 8", ((cast(*void)(*instance.data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVBufferRef.data)) == 8, "AVBufferRef.data has unexpected size % instead of 8", size_of(type_of(AVBufferRef.data)));
+        assert(((cast(*void)(*instance.size)) - cast(*void)(*instance)) == 16, "AVBufferRef.size has unexpected offset % instead of 16", ((cast(*void)(*instance.size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVBufferRef.size)) == 8, "AVBufferRef.size has unexpected size % instead of 8", size_of(type_of(AVBufferRef.size)));
+        assert(size_of(AVBufferRef) == 24, "AVBufferRef has size % instead of 24", size_of(AVBufferRef));
+    }
+
+    {
+        instance: AVDictionaryEntry;
+        assert(((cast(*void)(*instance.key)) - cast(*void)(*instance)) == 0, "AVDictionaryEntry.key has unexpected offset % instead of 0", ((cast(*void)(*instance.key)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVDictionaryEntry.key)) == 8, "AVDictionaryEntry.key has unexpected size % instead of 8", size_of(type_of(AVDictionaryEntry.key)));
+        assert(((cast(*void)(*instance.value)) - cast(*void)(*instance)) == 8, "AVDictionaryEntry.value has unexpected offset % instead of 8", ((cast(*void)(*instance.value)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVDictionaryEntry.value)) == 8, "AVDictionaryEntry.value has unexpected size % instead of 8", size_of(type_of(AVDictionaryEntry.value)));
+        assert(size_of(AVDictionaryEntry) == 16, "AVDictionaryEntry has size % instead of 16", size_of(AVDictionaryEntry));
+    }
+
+    {
+        instance: AVPacketSideData;
+        assert(((cast(*void)(*instance.data)) - cast(*void)(*instance)) == 0, "AVPacketSideData.data has unexpected offset % instead of 0", ((cast(*void)(*instance.data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacketSideData.data)) == 8, "AVPacketSideData.data has unexpected size % instead of 8", size_of(type_of(AVPacketSideData.data)));
+        assert(((cast(*void)(*instance.size)) - cast(*void)(*instance)) == 8, "AVPacketSideData.size has unexpected offset % instead of 8", ((cast(*void)(*instance.size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacketSideData.size)) == 8, "AVPacketSideData.size has unexpected size % instead of 8", size_of(type_of(AVPacketSideData.size)));
+        assert(((cast(*void)(*instance.type)) - cast(*void)(*instance)) == 16, "AVPacketSideData.type has unexpected offset % instead of 16", ((cast(*void)(*instance.type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacketSideData.type)) == 4, "AVPacketSideData.type has unexpected size % instead of 4", size_of(type_of(AVPacketSideData.type)));
+        assert(size_of(AVPacketSideData) == 24, "AVPacketSideData has size % instead of 24", size_of(AVPacketSideData));
+    }
+
+    {
+        instance: AVPacket;
+        assert(((cast(*void)(*instance.buf)) - cast(*void)(*instance)) == 0, "AVPacket.buf has unexpected offset % instead of 0", ((cast(*void)(*instance.buf)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.buf)) == 8, "AVPacket.buf has unexpected size % instead of 8", size_of(type_of(AVPacket.buf)));
+        assert(((cast(*void)(*instance.pts)) - cast(*void)(*instance)) == 8, "AVPacket.pts has unexpected offset % instead of 8", ((cast(*void)(*instance.pts)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.pts)) == 8, "AVPacket.pts has unexpected size % instead of 8", size_of(type_of(AVPacket.pts)));
+        assert(((cast(*void)(*instance.dts)) - cast(*void)(*instance)) == 16, "AVPacket.dts has unexpected offset % instead of 16", ((cast(*void)(*instance.dts)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.dts)) == 8, "AVPacket.dts has unexpected size % instead of 8", size_of(type_of(AVPacket.dts)));
+        assert(((cast(*void)(*instance.data)) - cast(*void)(*instance)) == 24, "AVPacket.data has unexpected offset % instead of 24", ((cast(*void)(*instance.data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.data)) == 8, "AVPacket.data has unexpected size % instead of 8", size_of(type_of(AVPacket.data)));
+        assert(((cast(*void)(*instance.size)) - cast(*void)(*instance)) == 32, "AVPacket.size has unexpected offset % instead of 32", ((cast(*void)(*instance.size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.size)) == 4, "AVPacket.size has unexpected size % instead of 4", size_of(type_of(AVPacket.size)));
+        assert(((cast(*void)(*instance.stream_index)) - cast(*void)(*instance)) == 36, "AVPacket.stream_index has unexpected offset % instead of 36", ((cast(*void)(*instance.stream_index)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.stream_index)) == 4, "AVPacket.stream_index has unexpected size % instead of 4", size_of(type_of(AVPacket.stream_index)));
+        assert(((cast(*void)(*instance.flags)) - cast(*void)(*instance)) == 40, "AVPacket.flags has unexpected offset % instead of 40", ((cast(*void)(*instance.flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.flags)) == 4, "AVPacket.flags has unexpected size % instead of 4", size_of(type_of(AVPacket.flags)));
+        assert(((cast(*void)(*instance.side_data)) - cast(*void)(*instance)) == 48, "AVPacket.side_data has unexpected offset % instead of 48", ((cast(*void)(*instance.side_data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.side_data)) == 8, "AVPacket.side_data has unexpected size % instead of 8", size_of(type_of(AVPacket.side_data)));
+        assert(((cast(*void)(*instance.side_data_elems)) - cast(*void)(*instance)) == 56, "AVPacket.side_data_elems has unexpected offset % instead of 56", ((cast(*void)(*instance.side_data_elems)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.side_data_elems)) == 4, "AVPacket.side_data_elems has unexpected size % instead of 4", size_of(type_of(AVPacket.side_data_elems)));
+        assert(((cast(*void)(*instance.duration)) - cast(*void)(*instance)) == 64, "AVPacket.duration has unexpected offset % instead of 64", ((cast(*void)(*instance.duration)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.duration)) == 8, "AVPacket.duration has unexpected size % instead of 8", size_of(type_of(AVPacket.duration)));
+        assert(((cast(*void)(*instance.pos)) - cast(*void)(*instance)) == 72, "AVPacket.pos has unexpected offset % instead of 72", ((cast(*void)(*instance.pos)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.pos)) == 8, "AVPacket.pos has unexpected size % instead of 8", size_of(type_of(AVPacket.pos)));
+        assert(((cast(*void)(*instance.opaque)) - cast(*void)(*instance)) == 80, "AVPacket.opaque has unexpected offset % instead of 80", ((cast(*void)(*instance.opaque)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.opaque)) == 8, "AVPacket.opaque has unexpected size % instead of 8", size_of(type_of(AVPacket.opaque)));
+        assert(((cast(*void)(*instance.opaque_ref)) - cast(*void)(*instance)) == 88, "AVPacket.opaque_ref has unexpected offset % instead of 88", ((cast(*void)(*instance.opaque_ref)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.opaque_ref)) == 8, "AVPacket.opaque_ref has unexpected size % instead of 8", size_of(type_of(AVPacket.opaque_ref)));
+        assert(((cast(*void)(*instance.time_base)) - cast(*void)(*instance)) == 96, "AVPacket.time_base has unexpected offset % instead of 96", ((cast(*void)(*instance.time_base)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacket.time_base)) == 8, "AVPacket.time_base has unexpected size % instead of 8", size_of(type_of(AVPacket.time_base)));
+        assert(size_of(AVPacket) == 104, "AVPacket has size % instead of 104", size_of(AVPacket));
+    }
+
+    {
+        instance: AVPacketList;
+        assert(((cast(*void)(*instance.pkt)) - cast(*void)(*instance)) == 0, "AVPacketList.pkt has unexpected offset % instead of 0", ((cast(*void)(*instance.pkt)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacketList.pkt)) == 104, "AVPacketList.pkt has unexpected size % instead of 104", size_of(type_of(AVPacketList.pkt)));
+        assert(((cast(*void)(*instance.next)) - cast(*void)(*instance)) == 104, "AVPacketList.next has unexpected offset % instead of 104", ((cast(*void)(*instance.next)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVPacketList.next)) == 8, "AVPacketList.next has unexpected size % instead of 8", size_of(type_of(AVPacketList.next)));
+        assert(size_of(AVPacketList) == 112, "AVPacketList has size % instead of 112", size_of(AVPacketList));
+    }
+
+    {
+        instance: AVCodecParameters;
+        assert(((cast(*void)(*instance.codec_type)) - cast(*void)(*instance)) == 0, "AVCodecParameters.codec_type has unexpected offset % instead of 0", ((cast(*void)(*instance.codec_type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.codec_type)) == 4, "AVCodecParameters.codec_type has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.codec_type)));
+        assert(((cast(*void)(*instance.codec_id)) - cast(*void)(*instance)) == 4, "AVCodecParameters.codec_id has unexpected offset % instead of 4", ((cast(*void)(*instance.codec_id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.codec_id)) == 4, "AVCodecParameters.codec_id has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.codec_id)));
+        assert(((cast(*void)(*instance.codec_tag)) - cast(*void)(*instance)) == 8, "AVCodecParameters.codec_tag has unexpected offset % instead of 8", ((cast(*void)(*instance.codec_tag)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.codec_tag)) == 4, "AVCodecParameters.codec_tag has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.codec_tag)));
+        assert(((cast(*void)(*instance.extradata)) - cast(*void)(*instance)) == 16, "AVCodecParameters.extradata has unexpected offset % instead of 16", ((cast(*void)(*instance.extradata)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.extradata)) == 8, "AVCodecParameters.extradata has unexpected size % instead of 8", size_of(type_of(AVCodecParameters.extradata)));
+        assert(((cast(*void)(*instance.extradata_size)) - cast(*void)(*instance)) == 24, "AVCodecParameters.extradata_size has unexpected offset % instead of 24", ((cast(*void)(*instance.extradata_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.extradata_size)) == 4, "AVCodecParameters.extradata_size has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.extradata_size)));
+        assert(((cast(*void)(*instance.coded_side_data)) - cast(*void)(*instance)) == 32, "AVCodecParameters.coded_side_data has unexpected offset % instead of 32", ((cast(*void)(*instance.coded_side_data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.coded_side_data)) == 8, "AVCodecParameters.coded_side_data has unexpected size % instead of 8", size_of(type_of(AVCodecParameters.coded_side_data)));
+        assert(((cast(*void)(*instance.nb_coded_side_data)) - cast(*void)(*instance)) == 40, "AVCodecParameters.nb_coded_side_data has unexpected offset % instead of 40", ((cast(*void)(*instance.nb_coded_side_data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.nb_coded_side_data)) == 4, "AVCodecParameters.nb_coded_side_data has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.nb_coded_side_data)));
+        assert(((cast(*void)(*instance.format)) - cast(*void)(*instance)) == 44, "AVCodecParameters.format has unexpected offset % instead of 44", ((cast(*void)(*instance.format)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.format)) == 4, "AVCodecParameters.format has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.format)));
+        assert(((cast(*void)(*instance.bit_rate)) - cast(*void)(*instance)) == 48, "AVCodecParameters.bit_rate has unexpected offset % instead of 48", ((cast(*void)(*instance.bit_rate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.bit_rate)) == 8, "AVCodecParameters.bit_rate has unexpected size % instead of 8", size_of(type_of(AVCodecParameters.bit_rate)));
+        assert(((cast(*void)(*instance.bits_per_coded_sample)) - cast(*void)(*instance)) == 56, "AVCodecParameters.bits_per_coded_sample has unexpected offset % instead of 56", ((cast(*void)(*instance.bits_per_coded_sample)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.bits_per_coded_sample)) == 4, "AVCodecParameters.bits_per_coded_sample has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.bits_per_coded_sample)));
+        assert(((cast(*void)(*instance.bits_per_raw_sample)) - cast(*void)(*instance)) == 60, "AVCodecParameters.bits_per_raw_sample has unexpected offset % instead of 60", ((cast(*void)(*instance.bits_per_raw_sample)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.bits_per_raw_sample)) == 4, "AVCodecParameters.bits_per_raw_sample has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.bits_per_raw_sample)));
+        assert(((cast(*void)(*instance.profile)) - cast(*void)(*instance)) == 64, "AVCodecParameters.profile has unexpected offset % instead of 64", ((cast(*void)(*instance.profile)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.profile)) == 4, "AVCodecParameters.profile has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.profile)));
+        assert(((cast(*void)(*instance.level)) - cast(*void)(*instance)) == 68, "AVCodecParameters.level has unexpected offset % instead of 68", ((cast(*void)(*instance.level)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.level)) == 4, "AVCodecParameters.level has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.level)));
+        assert(((cast(*void)(*instance.width)) - cast(*void)(*instance)) == 72, "AVCodecParameters.width has unexpected offset % instead of 72", ((cast(*void)(*instance.width)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.width)) == 4, "AVCodecParameters.width has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.width)));
+        assert(((cast(*void)(*instance.height)) - cast(*void)(*instance)) == 76, "AVCodecParameters.height has unexpected offset % instead of 76", ((cast(*void)(*instance.height)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.height)) == 4, "AVCodecParameters.height has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.height)));
+        assert(((cast(*void)(*instance.sample_aspect_ratio)) - cast(*void)(*instance)) == 80, "AVCodecParameters.sample_aspect_ratio has unexpected offset % instead of 80", ((cast(*void)(*instance.sample_aspect_ratio)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.sample_aspect_ratio)) == 8, "AVCodecParameters.sample_aspect_ratio has unexpected size % instead of 8", size_of(type_of(AVCodecParameters.sample_aspect_ratio)));
+        assert(((cast(*void)(*instance.framerate)) - cast(*void)(*instance)) == 88, "AVCodecParameters.framerate has unexpected offset % instead of 88", ((cast(*void)(*instance.framerate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.framerate)) == 8, "AVCodecParameters.framerate has unexpected size % instead of 8", size_of(type_of(AVCodecParameters.framerate)));
+        assert(((cast(*void)(*instance.field_order)) - cast(*void)(*instance)) == 96, "AVCodecParameters.field_order has unexpected offset % instead of 96", ((cast(*void)(*instance.field_order)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.field_order)) == 4, "AVCodecParameters.field_order has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.field_order)));
+        assert(((cast(*void)(*instance.color_range)) - cast(*void)(*instance)) == 100, "AVCodecParameters.color_range has unexpected offset % instead of 100", ((cast(*void)(*instance.color_range)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.color_range)) == 4, "AVCodecParameters.color_range has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.color_range)));
+        assert(((cast(*void)(*instance.color_primaries)) - cast(*void)(*instance)) == 104, "AVCodecParameters.color_primaries has unexpected offset % instead of 104", ((cast(*void)(*instance.color_primaries)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.color_primaries)) == 4, "AVCodecParameters.color_primaries has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.color_primaries)));
+        assert(((cast(*void)(*instance.color_trc)) - cast(*void)(*instance)) == 108, "AVCodecParameters.color_trc has unexpected offset % instead of 108", ((cast(*void)(*instance.color_trc)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.color_trc)) == 4, "AVCodecParameters.color_trc has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.color_trc)));
+        assert(((cast(*void)(*instance.color_space)) - cast(*void)(*instance)) == 112, "AVCodecParameters.color_space has unexpected offset % instead of 112", ((cast(*void)(*instance.color_space)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.color_space)) == 4, "AVCodecParameters.color_space has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.color_space)));
+        assert(((cast(*void)(*instance.chroma_location)) - cast(*void)(*instance)) == 116, "AVCodecParameters.chroma_location has unexpected offset % instead of 116", ((cast(*void)(*instance.chroma_location)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.chroma_location)) == 4, "AVCodecParameters.chroma_location has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.chroma_location)));
+        assert(((cast(*void)(*instance.video_delay)) - cast(*void)(*instance)) == 120, "AVCodecParameters.video_delay has unexpected offset % instead of 120", ((cast(*void)(*instance.video_delay)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.video_delay)) == 4, "AVCodecParameters.video_delay has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.video_delay)));
+        assert(((cast(*void)(*instance.ch_layout)) - cast(*void)(*instance)) == 128, "AVCodecParameters.ch_layout has unexpected offset % instead of 128", ((cast(*void)(*instance.ch_layout)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.ch_layout)) == 24, "AVCodecParameters.ch_layout has unexpected size % instead of 24", size_of(type_of(AVCodecParameters.ch_layout)));
+        assert(((cast(*void)(*instance.sample_rate)) - cast(*void)(*instance)) == 152, "AVCodecParameters.sample_rate has unexpected offset % instead of 152", ((cast(*void)(*instance.sample_rate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.sample_rate)) == 4, "AVCodecParameters.sample_rate has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.sample_rate)));
+        assert(((cast(*void)(*instance.block_align)) - cast(*void)(*instance)) == 156, "AVCodecParameters.block_align has unexpected offset % instead of 156", ((cast(*void)(*instance.block_align)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.block_align)) == 4, "AVCodecParameters.block_align has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.block_align)));
+        assert(((cast(*void)(*instance.frame_size)) - cast(*void)(*instance)) == 160, "AVCodecParameters.frame_size has unexpected offset % instead of 160", ((cast(*void)(*instance.frame_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.frame_size)) == 4, "AVCodecParameters.frame_size has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.frame_size)));
+        assert(((cast(*void)(*instance.initial_padding)) - cast(*void)(*instance)) == 164, "AVCodecParameters.initial_padding has unexpected offset % instead of 164", ((cast(*void)(*instance.initial_padding)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.initial_padding)) == 4, "AVCodecParameters.initial_padding has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.initial_padding)));
+        assert(((cast(*void)(*instance.trailing_padding)) - cast(*void)(*instance)) == 168, "AVCodecParameters.trailing_padding has unexpected offset % instead of 168", ((cast(*void)(*instance.trailing_padding)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.trailing_padding)) == 4, "AVCodecParameters.trailing_padding has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.trailing_padding)));
+        assert(((cast(*void)(*instance.seek_preroll)) - cast(*void)(*instance)) == 172, "AVCodecParameters.seek_preroll has unexpected offset % instead of 172", ((cast(*void)(*instance.seek_preroll)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecParameters.seek_preroll)) == 4, "AVCodecParameters.seek_preroll has unexpected size % instead of 4", size_of(type_of(AVCodecParameters.seek_preroll)));
+        assert(size_of(AVCodecParameters) == 176, "AVCodecParameters has size % instead of 176", size_of(AVCodecParameters));
+    }
+
+    {
+        instance: AVIOInterruptCB;
+        assert(((cast(*void)(*instance.callback)) - cast(*void)(*instance)) == 0, "AVIOInterruptCB.callback has unexpected offset % instead of 0", ((cast(*void)(*instance.callback)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOInterruptCB.callback)) == 8, "AVIOInterruptCB.callback has unexpected size % instead of 8", size_of(type_of(AVIOInterruptCB.callback)));
+        assert(((cast(*void)(*instance.opaque)) - cast(*void)(*instance)) == 8, "AVIOInterruptCB.opaque has unexpected offset % instead of 8", ((cast(*void)(*instance.opaque)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOInterruptCB.opaque)) == 8, "AVIOInterruptCB.opaque has unexpected size % instead of 8", size_of(type_of(AVIOInterruptCB.opaque)));
+        assert(size_of(AVIOInterruptCB) == 16, "AVIOInterruptCB has size % instead of 16", size_of(AVIOInterruptCB));
+    }
+
+    {
+        instance: AVIODirEntry;
+        assert(((cast(*void)(*instance.name)) - cast(*void)(*instance)) == 0, "AVIODirEntry.name has unexpected offset % instead of 0", ((cast(*void)(*instance.name)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIODirEntry.name)) == 8, "AVIODirEntry.name has unexpected size % instead of 8", size_of(type_of(AVIODirEntry.name)));
+        assert(((cast(*void)(*instance.type)) - cast(*void)(*instance)) == 8, "AVIODirEntry.type has unexpected offset % instead of 8", ((cast(*void)(*instance.type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIODirEntry.type)) == 4, "AVIODirEntry.type has unexpected size % instead of 4", size_of(type_of(AVIODirEntry.type)));
+        assert(((cast(*void)(*instance.utf8)) - cast(*void)(*instance)) == 12, "AVIODirEntry.utf8 has unexpected offset % instead of 12", ((cast(*void)(*instance.utf8)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIODirEntry.utf8)) == 4, "AVIODirEntry.utf8 has unexpected size % instead of 4", size_of(type_of(AVIODirEntry.utf8)));
+        assert(((cast(*void)(*instance.size)) - cast(*void)(*instance)) == 16, "AVIODirEntry.size has unexpected offset % instead of 16", ((cast(*void)(*instance.size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIODirEntry.size)) == 8, "AVIODirEntry.size has unexpected size % instead of 8", size_of(type_of(AVIODirEntry.size)));
+        assert(((cast(*void)(*instance.modification_timestamp)) - cast(*void)(*instance)) == 24, "AVIODirEntry.modification_timestamp has unexpected offset % instead of 24", ((cast(*void)(*instance.modification_timestamp)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIODirEntry.modification_timestamp)) == 8, "AVIODirEntry.modification_timestamp has unexpected size % instead of 8", size_of(type_of(AVIODirEntry.modification_timestamp)));
+        assert(((cast(*void)(*instance.access_timestamp)) - cast(*void)(*instance)) == 32, "AVIODirEntry.access_timestamp has unexpected offset % instead of 32", ((cast(*void)(*instance.access_timestamp)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIODirEntry.access_timestamp)) == 8, "AVIODirEntry.access_timestamp has unexpected size % instead of 8", size_of(type_of(AVIODirEntry.access_timestamp)));
+        assert(((cast(*void)(*instance.status_change_timestamp)) - cast(*void)(*instance)) == 40, "AVIODirEntry.status_change_timestamp has unexpected offset % instead of 40", ((cast(*void)(*instance.status_change_timestamp)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIODirEntry.status_change_timestamp)) == 8, "AVIODirEntry.status_change_timestamp has unexpected size % instead of 8", size_of(type_of(AVIODirEntry.status_change_timestamp)));
+        assert(((cast(*void)(*instance.user_id)) - cast(*void)(*instance)) == 48, "AVIODirEntry.user_id has unexpected offset % instead of 48", ((cast(*void)(*instance.user_id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIODirEntry.user_id)) == 8, "AVIODirEntry.user_id has unexpected size % instead of 8", size_of(type_of(AVIODirEntry.user_id)));
+        assert(((cast(*void)(*instance.group_id)) - cast(*void)(*instance)) == 56, "AVIODirEntry.group_id has unexpected offset % instead of 56", ((cast(*void)(*instance.group_id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIODirEntry.group_id)) == 8, "AVIODirEntry.group_id has unexpected size % instead of 8", size_of(type_of(AVIODirEntry.group_id)));
+        assert(((cast(*void)(*instance.filemode)) - cast(*void)(*instance)) == 64, "AVIODirEntry.filemode has unexpected offset % instead of 64", ((cast(*void)(*instance.filemode)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIODirEntry.filemode)) == 8, "AVIODirEntry.filemode has unexpected size % instead of 8", size_of(type_of(AVIODirEntry.filemode)));
+        assert(size_of(AVIODirEntry) == 72, "AVIODirEntry has size % instead of 72", size_of(AVIODirEntry));
+    }
+
+    {
+        instance: AVIOContext;
+        assert(((cast(*void)(*instance.av_class)) - cast(*void)(*instance)) == 0, "AVIOContext.av_class has unexpected offset % instead of 0", ((cast(*void)(*instance.av_class)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.av_class)) == 8, "AVIOContext.av_class has unexpected size % instead of 8", size_of(type_of(AVIOContext.av_class)));
+        assert(((cast(*void)(*instance.buffer)) - cast(*void)(*instance)) == 8, "AVIOContext.buffer has unexpected offset % instead of 8", ((cast(*void)(*instance.buffer)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.buffer)) == 8, "AVIOContext.buffer has unexpected size % instead of 8", size_of(type_of(AVIOContext.buffer)));
+        assert(((cast(*void)(*instance.buffer_size)) - cast(*void)(*instance)) == 16, "AVIOContext.buffer_size has unexpected offset % instead of 16", ((cast(*void)(*instance.buffer_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.buffer_size)) == 4, "AVIOContext.buffer_size has unexpected size % instead of 4", size_of(type_of(AVIOContext.buffer_size)));
+        assert(((cast(*void)(*instance.buf_ptr)) - cast(*void)(*instance)) == 24, "AVIOContext.buf_ptr has unexpected offset % instead of 24", ((cast(*void)(*instance.buf_ptr)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.buf_ptr)) == 8, "AVIOContext.buf_ptr has unexpected size % instead of 8", size_of(type_of(AVIOContext.buf_ptr)));
+        assert(((cast(*void)(*instance.buf_end)) - cast(*void)(*instance)) == 32, "AVIOContext.buf_end has unexpected offset % instead of 32", ((cast(*void)(*instance.buf_end)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.buf_end)) == 8, "AVIOContext.buf_end has unexpected size % instead of 8", size_of(type_of(AVIOContext.buf_end)));
+        assert(((cast(*void)(*instance.opaque)) - cast(*void)(*instance)) == 40, "AVIOContext.opaque has unexpected offset % instead of 40", ((cast(*void)(*instance.opaque)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.opaque)) == 8, "AVIOContext.opaque has unexpected size % instead of 8", size_of(type_of(AVIOContext.opaque)));
+        assert(((cast(*void)(*instance.read_packet)) - cast(*void)(*instance)) == 48, "AVIOContext.read_packet has unexpected offset % instead of 48", ((cast(*void)(*instance.read_packet)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.read_packet)) == 8, "AVIOContext.read_packet has unexpected size % instead of 8", size_of(type_of(AVIOContext.read_packet)));
+        assert(((cast(*void)(*instance.write_packet)) - cast(*void)(*instance)) == 56, "AVIOContext.write_packet has unexpected offset % instead of 56", ((cast(*void)(*instance.write_packet)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.write_packet)) == 8, "AVIOContext.write_packet has unexpected size % instead of 8", size_of(type_of(AVIOContext.write_packet)));
+        assert(((cast(*void)(*instance.seek)) - cast(*void)(*instance)) == 64, "AVIOContext.seek has unexpected offset % instead of 64", ((cast(*void)(*instance.seek)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.seek)) == 8, "AVIOContext.seek has unexpected size % instead of 8", size_of(type_of(AVIOContext.seek)));
+        assert(((cast(*void)(*instance.pos)) - cast(*void)(*instance)) == 72, "AVIOContext.pos has unexpected offset % instead of 72", ((cast(*void)(*instance.pos)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.pos)) == 8, "AVIOContext.pos has unexpected size % instead of 8", size_of(type_of(AVIOContext.pos)));
+        assert(((cast(*void)(*instance.eof_reached)) - cast(*void)(*instance)) == 80, "AVIOContext.eof_reached has unexpected offset % instead of 80", ((cast(*void)(*instance.eof_reached)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.eof_reached)) == 4, "AVIOContext.eof_reached has unexpected size % instead of 4", size_of(type_of(AVIOContext.eof_reached)));
+        assert(((cast(*void)(*instance.error)) - cast(*void)(*instance)) == 84, "AVIOContext.error has unexpected offset % instead of 84", ((cast(*void)(*instance.error)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.error)) == 4, "AVIOContext.error has unexpected size % instead of 4", size_of(type_of(AVIOContext.error)));
+        assert(((cast(*void)(*instance.write_flag)) - cast(*void)(*instance)) == 88, "AVIOContext.write_flag has unexpected offset % instead of 88", ((cast(*void)(*instance.write_flag)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.write_flag)) == 4, "AVIOContext.write_flag has unexpected size % instead of 4", size_of(type_of(AVIOContext.write_flag)));
+        assert(((cast(*void)(*instance.max_packet_size)) - cast(*void)(*instance)) == 92, "AVIOContext.max_packet_size has unexpected offset % instead of 92", ((cast(*void)(*instance.max_packet_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.max_packet_size)) == 4, "AVIOContext.max_packet_size has unexpected size % instead of 4", size_of(type_of(AVIOContext.max_packet_size)));
+        assert(((cast(*void)(*instance.min_packet_size)) - cast(*void)(*instance)) == 96, "AVIOContext.min_packet_size has unexpected offset % instead of 96", ((cast(*void)(*instance.min_packet_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.min_packet_size)) == 4, "AVIOContext.min_packet_size has unexpected size % instead of 4", size_of(type_of(AVIOContext.min_packet_size)));
+        assert(((cast(*void)(*instance.checksum)) - cast(*void)(*instance)) == 104, "AVIOContext.checksum has unexpected offset % instead of 104", ((cast(*void)(*instance.checksum)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.checksum)) == 8, "AVIOContext.checksum has unexpected size % instead of 8", size_of(type_of(AVIOContext.checksum)));
+        assert(((cast(*void)(*instance.checksum_ptr)) - cast(*void)(*instance)) == 112, "AVIOContext.checksum_ptr has unexpected offset % instead of 112", ((cast(*void)(*instance.checksum_ptr)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.checksum_ptr)) == 8, "AVIOContext.checksum_ptr has unexpected size % instead of 8", size_of(type_of(AVIOContext.checksum_ptr)));
+        assert(((cast(*void)(*instance.update_checksum)) - cast(*void)(*instance)) == 120, "AVIOContext.update_checksum has unexpected offset % instead of 120", ((cast(*void)(*instance.update_checksum)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.update_checksum)) == 8, "AVIOContext.update_checksum has unexpected size % instead of 8", size_of(type_of(AVIOContext.update_checksum)));
+        assert(((cast(*void)(*instance.read_pause)) - cast(*void)(*instance)) == 128, "AVIOContext.read_pause has unexpected offset % instead of 128", ((cast(*void)(*instance.read_pause)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.read_pause)) == 8, "AVIOContext.read_pause has unexpected size % instead of 8", size_of(type_of(AVIOContext.read_pause)));
+        assert(((cast(*void)(*instance.read_seek)) - cast(*void)(*instance)) == 136, "AVIOContext.read_seek has unexpected offset % instead of 136", ((cast(*void)(*instance.read_seek)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.read_seek)) == 8, "AVIOContext.read_seek has unexpected size % instead of 8", size_of(type_of(AVIOContext.read_seek)));
+        assert(((cast(*void)(*instance.seekable)) - cast(*void)(*instance)) == 144, "AVIOContext.seekable has unexpected offset % instead of 144", ((cast(*void)(*instance.seekable)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.seekable)) == 4, "AVIOContext.seekable has unexpected size % instead of 4", size_of(type_of(AVIOContext.seekable)));
+        assert(((cast(*void)(*instance.direct)) - cast(*void)(*instance)) == 148, "AVIOContext.direct has unexpected offset % instead of 148", ((cast(*void)(*instance.direct)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.direct)) == 4, "AVIOContext.direct has unexpected size % instead of 4", size_of(type_of(AVIOContext.direct)));
+        assert(((cast(*void)(*instance.protocol_whitelist)) - cast(*void)(*instance)) == 152, "AVIOContext.protocol_whitelist has unexpected offset % instead of 152", ((cast(*void)(*instance.protocol_whitelist)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.protocol_whitelist)) == 8, "AVIOContext.protocol_whitelist has unexpected size % instead of 8", size_of(type_of(AVIOContext.protocol_whitelist)));
+        assert(((cast(*void)(*instance.protocol_blacklist)) - cast(*void)(*instance)) == 160, "AVIOContext.protocol_blacklist has unexpected offset % instead of 160", ((cast(*void)(*instance.protocol_blacklist)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.protocol_blacklist)) == 8, "AVIOContext.protocol_blacklist has unexpected size % instead of 8", size_of(type_of(AVIOContext.protocol_blacklist)));
+        assert(((cast(*void)(*instance.write_data_type)) - cast(*void)(*instance)) == 168, "AVIOContext.write_data_type has unexpected offset % instead of 168", ((cast(*void)(*instance.write_data_type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.write_data_type)) == 8, "AVIOContext.write_data_type has unexpected size % instead of 8", size_of(type_of(AVIOContext.write_data_type)));
+        assert(((cast(*void)(*instance.ignore_boundary_point)) - cast(*void)(*instance)) == 176, "AVIOContext.ignore_boundary_point has unexpected offset % instead of 176", ((cast(*void)(*instance.ignore_boundary_point)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.ignore_boundary_point)) == 4, "AVIOContext.ignore_boundary_point has unexpected size % instead of 4", size_of(type_of(AVIOContext.ignore_boundary_point)));
+        assert(((cast(*void)(*instance.buf_ptr_max)) - cast(*void)(*instance)) == 184, "AVIOContext.buf_ptr_max has unexpected offset % instead of 184", ((cast(*void)(*instance.buf_ptr_max)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.buf_ptr_max)) == 8, "AVIOContext.buf_ptr_max has unexpected size % instead of 8", size_of(type_of(AVIOContext.buf_ptr_max)));
+        assert(((cast(*void)(*instance.bytes_read)) - cast(*void)(*instance)) == 192, "AVIOContext.bytes_read has unexpected offset % instead of 192", ((cast(*void)(*instance.bytes_read)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.bytes_read)) == 8, "AVIOContext.bytes_read has unexpected size % instead of 8", size_of(type_of(AVIOContext.bytes_read)));
+        assert(((cast(*void)(*instance.bytes_written)) - cast(*void)(*instance)) == 200, "AVIOContext.bytes_written has unexpected offset % instead of 200", ((cast(*void)(*instance.bytes_written)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIOContext.bytes_written)) == 8, "AVIOContext.bytes_written has unexpected size % instead of 8", size_of(type_of(AVIOContext.bytes_written)));
+        assert(size_of(AVIOContext) == 208, "AVIOContext has size % instead of 208", size_of(AVIOContext));
+    }
+
+    {
+        instance: AVFrameSideData;
+        assert(((cast(*void)(*instance.type)) - cast(*void)(*instance)) == 0, "AVFrameSideData.type has unexpected offset % instead of 0", ((cast(*void)(*instance.type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrameSideData.type)) == 4, "AVFrameSideData.type has unexpected size % instead of 4", size_of(type_of(AVFrameSideData.type)));
+        assert(((cast(*void)(*instance.data)) - cast(*void)(*instance)) == 8, "AVFrameSideData.data has unexpected offset % instead of 8", ((cast(*void)(*instance.data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrameSideData.data)) == 8, "AVFrameSideData.data has unexpected size % instead of 8", size_of(type_of(AVFrameSideData.data)));
+        assert(((cast(*void)(*instance.size)) - cast(*void)(*instance)) == 16, "AVFrameSideData.size has unexpected offset % instead of 16", ((cast(*void)(*instance.size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrameSideData.size)) == 8, "AVFrameSideData.size has unexpected size % instead of 8", size_of(type_of(AVFrameSideData.size)));
+        assert(((cast(*void)(*instance.metadata)) - cast(*void)(*instance)) == 24, "AVFrameSideData.metadata has unexpected offset % instead of 24", ((cast(*void)(*instance.metadata)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrameSideData.metadata)) == 8, "AVFrameSideData.metadata has unexpected size % instead of 8", size_of(type_of(AVFrameSideData.metadata)));
+        assert(((cast(*void)(*instance.buf)) - cast(*void)(*instance)) == 32, "AVFrameSideData.buf has unexpected offset % instead of 32", ((cast(*void)(*instance.buf)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrameSideData.buf)) == 8, "AVFrameSideData.buf has unexpected size % instead of 8", size_of(type_of(AVFrameSideData.buf)));
+        assert(size_of(AVFrameSideData) == 40, "AVFrameSideData has size % instead of 40", size_of(AVFrameSideData));
+    }
+
+    {
+        instance: AVRegionOfInterest;
+        assert(((cast(*void)(*instance.self_size)) - cast(*void)(*instance)) == 0, "AVRegionOfInterest.self_size has unexpected offset % instead of 0", ((cast(*void)(*instance.self_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVRegionOfInterest.self_size)) == 4, "AVRegionOfInterest.self_size has unexpected size % instead of 4", size_of(type_of(AVRegionOfInterest.self_size)));
+        assert(((cast(*void)(*instance.top)) - cast(*void)(*instance)) == 4, "AVRegionOfInterest.top has unexpected offset % instead of 4", ((cast(*void)(*instance.top)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVRegionOfInterest.top)) == 4, "AVRegionOfInterest.top has unexpected size % instead of 4", size_of(type_of(AVRegionOfInterest.top)));
+        assert(((cast(*void)(*instance.bottom)) - cast(*void)(*instance)) == 8, "AVRegionOfInterest.bottom has unexpected offset % instead of 8", ((cast(*void)(*instance.bottom)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVRegionOfInterest.bottom)) == 4, "AVRegionOfInterest.bottom has unexpected size % instead of 4", size_of(type_of(AVRegionOfInterest.bottom)));
+        assert(((cast(*void)(*instance.left)) - cast(*void)(*instance)) == 12, "AVRegionOfInterest.left has unexpected offset % instead of 12", ((cast(*void)(*instance.left)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVRegionOfInterest.left)) == 4, "AVRegionOfInterest.left has unexpected size % instead of 4", size_of(type_of(AVRegionOfInterest.left)));
+        assert(((cast(*void)(*instance.right)) - cast(*void)(*instance)) == 16, "AVRegionOfInterest.right has unexpected offset % instead of 16", ((cast(*void)(*instance.right)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVRegionOfInterest.right)) == 4, "AVRegionOfInterest.right has unexpected size % instead of 4", size_of(type_of(AVRegionOfInterest.right)));
+        assert(((cast(*void)(*instance.qoffset)) - cast(*void)(*instance)) == 20, "AVRegionOfInterest.qoffset has unexpected offset % instead of 20", ((cast(*void)(*instance.qoffset)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVRegionOfInterest.qoffset)) == 8, "AVRegionOfInterest.qoffset has unexpected size % instead of 8", size_of(type_of(AVRegionOfInterest.qoffset)));
+        assert(size_of(AVRegionOfInterest) == 28, "AVRegionOfInterest has size % instead of 28", size_of(AVRegionOfInterest));
+    }
+
+    {
+        instance: AVFrame;
+        assert(((cast(*void)(*instance.data)) - cast(*void)(*instance)) == 0, "AVFrame.data has unexpected offset % instead of 0", ((cast(*void)(*instance.data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.data)) == 64, "AVFrame.data has unexpected size % instead of 64", size_of(type_of(AVFrame.data)));
+        assert(((cast(*void)(*instance.linesize)) - cast(*void)(*instance)) == 64, "AVFrame.linesize has unexpected offset % instead of 64", ((cast(*void)(*instance.linesize)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.linesize)) == 32, "AVFrame.linesize has unexpected size % instead of 32", size_of(type_of(AVFrame.linesize)));
+        assert(((cast(*void)(*instance.extended_data)) - cast(*void)(*instance)) == 96, "AVFrame.extended_data has unexpected offset % instead of 96", ((cast(*void)(*instance.extended_data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.extended_data)) == 8, "AVFrame.extended_data has unexpected size % instead of 8", size_of(type_of(AVFrame.extended_data)));
+        assert(((cast(*void)(*instance.width)) - cast(*void)(*instance)) == 104, "AVFrame.width has unexpected offset % instead of 104", ((cast(*void)(*instance.width)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.width)) == 4, "AVFrame.width has unexpected size % instead of 4", size_of(type_of(AVFrame.width)));
+        assert(((cast(*void)(*instance.height)) - cast(*void)(*instance)) == 108, "AVFrame.height has unexpected offset % instead of 108", ((cast(*void)(*instance.height)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.height)) == 4, "AVFrame.height has unexpected size % instead of 4", size_of(type_of(AVFrame.height)));
+        assert(((cast(*void)(*instance.nb_samples)) - cast(*void)(*instance)) == 112, "AVFrame.nb_samples has unexpected offset % instead of 112", ((cast(*void)(*instance.nb_samples)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.nb_samples)) == 4, "AVFrame.nb_samples has unexpected size % instead of 4", size_of(type_of(AVFrame.nb_samples)));
+        assert(((cast(*void)(*instance.format)) - cast(*void)(*instance)) == 116, "AVFrame.format has unexpected offset % instead of 116", ((cast(*void)(*instance.format)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.format)) == 4, "AVFrame.format has unexpected size % instead of 4", size_of(type_of(AVFrame.format)));
+        assert(((cast(*void)(*instance.key_frame)) - cast(*void)(*instance)) == 120, "AVFrame.key_frame has unexpected offset % instead of 120", ((cast(*void)(*instance.key_frame)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.key_frame)) == 4, "AVFrame.key_frame has unexpected size % instead of 4", size_of(type_of(AVFrame.key_frame)));
+        assert(((cast(*void)(*instance.pict_type)) - cast(*void)(*instance)) == 124, "AVFrame.pict_type has unexpected offset % instead of 124", ((cast(*void)(*instance.pict_type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.pict_type)) == 4, "AVFrame.pict_type has unexpected size % instead of 4", size_of(type_of(AVFrame.pict_type)));
+        assert(((cast(*void)(*instance.sample_aspect_ratio)) - cast(*void)(*instance)) == 128, "AVFrame.sample_aspect_ratio has unexpected offset % instead of 128", ((cast(*void)(*instance.sample_aspect_ratio)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.sample_aspect_ratio)) == 8, "AVFrame.sample_aspect_ratio has unexpected size % instead of 8", size_of(type_of(AVFrame.sample_aspect_ratio)));
+        assert(((cast(*void)(*instance.pts)) - cast(*void)(*instance)) == 136, "AVFrame.pts has unexpected offset % instead of 136", ((cast(*void)(*instance.pts)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.pts)) == 8, "AVFrame.pts has unexpected size % instead of 8", size_of(type_of(AVFrame.pts)));
+        assert(((cast(*void)(*instance.pkt_dts)) - cast(*void)(*instance)) == 144, "AVFrame.pkt_dts has unexpected offset % instead of 144", ((cast(*void)(*instance.pkt_dts)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.pkt_dts)) == 8, "AVFrame.pkt_dts has unexpected size % instead of 8", size_of(type_of(AVFrame.pkt_dts)));
+        assert(((cast(*void)(*instance.time_base)) - cast(*void)(*instance)) == 152, "AVFrame.time_base has unexpected offset % instead of 152", ((cast(*void)(*instance.time_base)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.time_base)) == 8, "AVFrame.time_base has unexpected size % instead of 8", size_of(type_of(AVFrame.time_base)));
+        assert(((cast(*void)(*instance.quality)) - cast(*void)(*instance)) == 160, "AVFrame.quality has unexpected offset % instead of 160", ((cast(*void)(*instance.quality)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.quality)) == 4, "AVFrame.quality has unexpected size % instead of 4", size_of(type_of(AVFrame.quality)));
+        assert(((cast(*void)(*instance.opaque)) - cast(*void)(*instance)) == 168, "AVFrame.opaque has unexpected offset % instead of 168", ((cast(*void)(*instance.opaque)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.opaque)) == 8, "AVFrame.opaque has unexpected size % instead of 8", size_of(type_of(AVFrame.opaque)));
+        assert(((cast(*void)(*instance.repeat_pict)) - cast(*void)(*instance)) == 176, "AVFrame.repeat_pict has unexpected offset % instead of 176", ((cast(*void)(*instance.repeat_pict)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.repeat_pict)) == 4, "AVFrame.repeat_pict has unexpected size % instead of 4", size_of(type_of(AVFrame.repeat_pict)));
+        assert(((cast(*void)(*instance.interlaced_frame)) - cast(*void)(*instance)) == 180, "AVFrame.interlaced_frame has unexpected offset % instead of 180", ((cast(*void)(*instance.interlaced_frame)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.interlaced_frame)) == 4, "AVFrame.interlaced_frame has unexpected size % instead of 4", size_of(type_of(AVFrame.interlaced_frame)));
+        assert(((cast(*void)(*instance.top_field_first)) - cast(*void)(*instance)) == 184, "AVFrame.top_field_first has unexpected offset % instead of 184", ((cast(*void)(*instance.top_field_first)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.top_field_first)) == 4, "AVFrame.top_field_first has unexpected size % instead of 4", size_of(type_of(AVFrame.top_field_first)));
+        assert(((cast(*void)(*instance.palette_has_changed)) - cast(*void)(*instance)) == 188, "AVFrame.palette_has_changed has unexpected offset % instead of 188", ((cast(*void)(*instance.palette_has_changed)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.palette_has_changed)) == 4, "AVFrame.palette_has_changed has unexpected size % instead of 4", size_of(type_of(AVFrame.palette_has_changed)));
+        assert(((cast(*void)(*instance.sample_rate)) - cast(*void)(*instance)) == 192, "AVFrame.sample_rate has unexpected offset % instead of 192", ((cast(*void)(*instance.sample_rate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.sample_rate)) == 4, "AVFrame.sample_rate has unexpected size % instead of 4", size_of(type_of(AVFrame.sample_rate)));
+        assert(((cast(*void)(*instance.buf)) - cast(*void)(*instance)) == 200, "AVFrame.buf has unexpected offset % instead of 200", ((cast(*void)(*instance.buf)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.buf)) == 64, "AVFrame.buf has unexpected size % instead of 64", size_of(type_of(AVFrame.buf)));
+        assert(((cast(*void)(*instance.extended_buf)) - cast(*void)(*instance)) == 264, "AVFrame.extended_buf has unexpected offset % instead of 264", ((cast(*void)(*instance.extended_buf)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.extended_buf)) == 8, "AVFrame.extended_buf has unexpected size % instead of 8", size_of(type_of(AVFrame.extended_buf)));
+        assert(((cast(*void)(*instance.nb_extended_buf)) - cast(*void)(*instance)) == 272, "AVFrame.nb_extended_buf has unexpected offset % instead of 272", ((cast(*void)(*instance.nb_extended_buf)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.nb_extended_buf)) == 4, "AVFrame.nb_extended_buf has unexpected size % instead of 4", size_of(type_of(AVFrame.nb_extended_buf)));
+        assert(((cast(*void)(*instance.side_data)) - cast(*void)(*instance)) == 280, "AVFrame.side_data has unexpected offset % instead of 280", ((cast(*void)(*instance.side_data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.side_data)) == 8, "AVFrame.side_data has unexpected size % instead of 8", size_of(type_of(AVFrame.side_data)));
+        assert(((cast(*void)(*instance.nb_side_data)) - cast(*void)(*instance)) == 288, "AVFrame.nb_side_data has unexpected offset % instead of 288", ((cast(*void)(*instance.nb_side_data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.nb_side_data)) == 4, "AVFrame.nb_side_data has unexpected size % instead of 4", size_of(type_of(AVFrame.nb_side_data)));
+        assert(((cast(*void)(*instance.flags)) - cast(*void)(*instance)) == 292, "AVFrame.flags has unexpected offset % instead of 292", ((cast(*void)(*instance.flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.flags)) == 4, "AVFrame.flags has unexpected size % instead of 4", size_of(type_of(AVFrame.flags)));
+        assert(((cast(*void)(*instance.color_range)) - cast(*void)(*instance)) == 296, "AVFrame.color_range has unexpected offset % instead of 296", ((cast(*void)(*instance.color_range)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.color_range)) == 4, "AVFrame.color_range has unexpected size % instead of 4", size_of(type_of(AVFrame.color_range)));
+        assert(((cast(*void)(*instance.color_primaries)) - cast(*void)(*instance)) == 300, "AVFrame.color_primaries has unexpected offset % instead of 300", ((cast(*void)(*instance.color_primaries)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.color_primaries)) == 4, "AVFrame.color_primaries has unexpected size % instead of 4", size_of(type_of(AVFrame.color_primaries)));
+        assert(((cast(*void)(*instance.color_trc)) - cast(*void)(*instance)) == 304, "AVFrame.color_trc has unexpected offset % instead of 304", ((cast(*void)(*instance.color_trc)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.color_trc)) == 4, "AVFrame.color_trc has unexpected size % instead of 4", size_of(type_of(AVFrame.color_trc)));
+        assert(((cast(*void)(*instance.colorspace)) - cast(*void)(*instance)) == 308, "AVFrame.colorspace has unexpected offset % instead of 308", ((cast(*void)(*instance.colorspace)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.colorspace)) == 4, "AVFrame.colorspace has unexpected size % instead of 4", size_of(type_of(AVFrame.colorspace)));
+        assert(((cast(*void)(*instance.chroma_location)) - cast(*void)(*instance)) == 312, "AVFrame.chroma_location has unexpected offset % instead of 312", ((cast(*void)(*instance.chroma_location)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.chroma_location)) == 4, "AVFrame.chroma_location has unexpected size % instead of 4", size_of(type_of(AVFrame.chroma_location)));
+        assert(((cast(*void)(*instance.best_effort_timestamp)) - cast(*void)(*instance)) == 320, "AVFrame.best_effort_timestamp has unexpected offset % instead of 320", ((cast(*void)(*instance.best_effort_timestamp)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.best_effort_timestamp)) == 8, "AVFrame.best_effort_timestamp has unexpected size % instead of 8", size_of(type_of(AVFrame.best_effort_timestamp)));
+        assert(((cast(*void)(*instance.pkt_pos)) - cast(*void)(*instance)) == 328, "AVFrame.pkt_pos has unexpected offset % instead of 328", ((cast(*void)(*instance.pkt_pos)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.pkt_pos)) == 8, "AVFrame.pkt_pos has unexpected size % instead of 8", size_of(type_of(AVFrame.pkt_pos)));
+        assert(((cast(*void)(*instance.metadata)) - cast(*void)(*instance)) == 336, "AVFrame.metadata has unexpected offset % instead of 336", ((cast(*void)(*instance.metadata)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.metadata)) == 8, "AVFrame.metadata has unexpected size % instead of 8", size_of(type_of(AVFrame.metadata)));
+        assert(((cast(*void)(*instance.decode_error_flags)) - cast(*void)(*instance)) == 344, "AVFrame.decode_error_flags has unexpected offset % instead of 344", ((cast(*void)(*instance.decode_error_flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.decode_error_flags)) == 4, "AVFrame.decode_error_flags has unexpected size % instead of 4", size_of(type_of(AVFrame.decode_error_flags)));
+        assert(((cast(*void)(*instance.pkt_size)) - cast(*void)(*instance)) == 348, "AVFrame.pkt_size has unexpected offset % instead of 348", ((cast(*void)(*instance.pkt_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.pkt_size)) == 4, "AVFrame.pkt_size has unexpected size % instead of 4", size_of(type_of(AVFrame.pkt_size)));
+        assert(((cast(*void)(*instance.hw_frames_ctx)) - cast(*void)(*instance)) == 352, "AVFrame.hw_frames_ctx has unexpected offset % instead of 352", ((cast(*void)(*instance.hw_frames_ctx)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.hw_frames_ctx)) == 8, "AVFrame.hw_frames_ctx has unexpected size % instead of 8", size_of(type_of(AVFrame.hw_frames_ctx)));
+        assert(((cast(*void)(*instance.opaque_ref)) - cast(*void)(*instance)) == 360, "AVFrame.opaque_ref has unexpected offset % instead of 360", ((cast(*void)(*instance.opaque_ref)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.opaque_ref)) == 8, "AVFrame.opaque_ref has unexpected size % instead of 8", size_of(type_of(AVFrame.opaque_ref)));
+        assert(((cast(*void)(*instance.crop_top)) - cast(*void)(*instance)) == 368, "AVFrame.crop_top has unexpected offset % instead of 368", ((cast(*void)(*instance.crop_top)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.crop_top)) == 8, "AVFrame.crop_top has unexpected size % instead of 8", size_of(type_of(AVFrame.crop_top)));
+        assert(((cast(*void)(*instance.crop_bottom)) - cast(*void)(*instance)) == 376, "AVFrame.crop_bottom has unexpected offset % instead of 376", ((cast(*void)(*instance.crop_bottom)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.crop_bottom)) == 8, "AVFrame.crop_bottom has unexpected size % instead of 8", size_of(type_of(AVFrame.crop_bottom)));
+        assert(((cast(*void)(*instance.crop_left)) - cast(*void)(*instance)) == 384, "AVFrame.crop_left has unexpected offset % instead of 384", ((cast(*void)(*instance.crop_left)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.crop_left)) == 8, "AVFrame.crop_left has unexpected size % instead of 8", size_of(type_of(AVFrame.crop_left)));
+        assert(((cast(*void)(*instance.crop_right)) - cast(*void)(*instance)) == 392, "AVFrame.crop_right has unexpected offset % instead of 392", ((cast(*void)(*instance.crop_right)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.crop_right)) == 8, "AVFrame.crop_right has unexpected size % instead of 8", size_of(type_of(AVFrame.crop_right)));
+        assert(((cast(*void)(*instance.private_ref)) - cast(*void)(*instance)) == 400, "AVFrame.private_ref has unexpected offset % instead of 400", ((cast(*void)(*instance.private_ref)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.private_ref)) == 8, "AVFrame.private_ref has unexpected size % instead of 8", size_of(type_of(AVFrame.private_ref)));
+        assert(((cast(*void)(*instance.ch_layout)) - cast(*void)(*instance)) == 408, "AVFrame.ch_layout has unexpected offset % instead of 408", ((cast(*void)(*instance.ch_layout)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.ch_layout)) == 24, "AVFrame.ch_layout has unexpected size % instead of 24", size_of(type_of(AVFrame.ch_layout)));
+        assert(((cast(*void)(*instance.duration)) - cast(*void)(*instance)) == 432, "AVFrame.duration has unexpected offset % instead of 432", ((cast(*void)(*instance.duration)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFrame.duration)) == 8, "AVFrame.duration has unexpected size % instead of 8", size_of(type_of(AVFrame.duration)));
+        assert(size_of(AVFrame) == 440, "AVFrame has size % instead of 440", size_of(AVFrame));
+    }
+
+    {
+        instance: AVHWDeviceContext;
+        assert(((cast(*void)(*instance.av_class)) - cast(*void)(*instance)) == 0, "AVHWDeviceContext.av_class has unexpected offset % instead of 0", ((cast(*void)(*instance.av_class)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWDeviceContext.av_class)) == 8, "AVHWDeviceContext.av_class has unexpected size % instead of 8", size_of(type_of(AVHWDeviceContext.av_class)));
+        assert(((cast(*void)(*instance.type)) - cast(*void)(*instance)) == 8, "AVHWDeviceContext.type has unexpected offset % instead of 8", ((cast(*void)(*instance.type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWDeviceContext.type)) == 4, "AVHWDeviceContext.type has unexpected size % instead of 4", size_of(type_of(AVHWDeviceContext.type)));
+        assert(((cast(*void)(*instance.hwctx)) - cast(*void)(*instance)) == 16, "AVHWDeviceContext.hwctx has unexpected offset % instead of 16", ((cast(*void)(*instance.hwctx)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWDeviceContext.hwctx)) == 8, "AVHWDeviceContext.hwctx has unexpected size % instead of 8", size_of(type_of(AVHWDeviceContext.hwctx)));
+        assert(((cast(*void)(*instance.free)) - cast(*void)(*instance)) == 24, "AVHWDeviceContext.free has unexpected offset % instead of 24", ((cast(*void)(*instance.free)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWDeviceContext.free)) == 8, "AVHWDeviceContext.free has unexpected size % instead of 8", size_of(type_of(AVHWDeviceContext.free)));
+        assert(((cast(*void)(*instance.user_opaque)) - cast(*void)(*instance)) == 32, "AVHWDeviceContext.user_opaque has unexpected offset % instead of 32", ((cast(*void)(*instance.user_opaque)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWDeviceContext.user_opaque)) == 8, "AVHWDeviceContext.user_opaque has unexpected size % instead of 8", size_of(type_of(AVHWDeviceContext.user_opaque)));
+        assert(size_of(AVHWDeviceContext) == 40, "AVHWDeviceContext has size % instead of 40", size_of(AVHWDeviceContext));
+    }
+
+    {
+        instance: AVHWFramesContext;
+        assert(((cast(*void)(*instance.av_class)) - cast(*void)(*instance)) == 0, "AVHWFramesContext.av_class has unexpected offset % instead of 0", ((cast(*void)(*instance.av_class)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesContext.av_class)) == 8, "AVHWFramesContext.av_class has unexpected size % instead of 8", size_of(type_of(AVHWFramesContext.av_class)));
+        assert(((cast(*void)(*instance.device_ref)) - cast(*void)(*instance)) == 8, "AVHWFramesContext.device_ref has unexpected offset % instead of 8", ((cast(*void)(*instance.device_ref)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesContext.device_ref)) == 8, "AVHWFramesContext.device_ref has unexpected size % instead of 8", size_of(type_of(AVHWFramesContext.device_ref)));
+        assert(((cast(*void)(*instance.device_ctx)) - cast(*void)(*instance)) == 16, "AVHWFramesContext.device_ctx has unexpected offset % instead of 16", ((cast(*void)(*instance.device_ctx)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesContext.device_ctx)) == 8, "AVHWFramesContext.device_ctx has unexpected size % instead of 8", size_of(type_of(AVHWFramesContext.device_ctx)));
+        assert(((cast(*void)(*instance.hwctx)) - cast(*void)(*instance)) == 24, "AVHWFramesContext.hwctx has unexpected offset % instead of 24", ((cast(*void)(*instance.hwctx)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesContext.hwctx)) == 8, "AVHWFramesContext.hwctx has unexpected size % instead of 8", size_of(type_of(AVHWFramesContext.hwctx)));
+        assert(((cast(*void)(*instance.free)) - cast(*void)(*instance)) == 32, "AVHWFramesContext.free has unexpected offset % instead of 32", ((cast(*void)(*instance.free)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesContext.free)) == 8, "AVHWFramesContext.free has unexpected size % instead of 8", size_of(type_of(AVHWFramesContext.free)));
+        assert(((cast(*void)(*instance.user_opaque)) - cast(*void)(*instance)) == 40, "AVHWFramesContext.user_opaque has unexpected offset % instead of 40", ((cast(*void)(*instance.user_opaque)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesContext.user_opaque)) == 8, "AVHWFramesContext.user_opaque has unexpected size % instead of 8", size_of(type_of(AVHWFramesContext.user_opaque)));
+        assert(((cast(*void)(*instance.pool)) - cast(*void)(*instance)) == 48, "AVHWFramesContext.pool has unexpected offset % instead of 48", ((cast(*void)(*instance.pool)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesContext.pool)) == 8, "AVHWFramesContext.pool has unexpected size % instead of 8", size_of(type_of(AVHWFramesContext.pool)));
+        assert(((cast(*void)(*instance.initial_pool_size)) - cast(*void)(*instance)) == 56, "AVHWFramesContext.initial_pool_size has unexpected offset % instead of 56", ((cast(*void)(*instance.initial_pool_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesContext.initial_pool_size)) == 4, "AVHWFramesContext.initial_pool_size has unexpected size % instead of 4", size_of(type_of(AVHWFramesContext.initial_pool_size)));
+        assert(((cast(*void)(*instance.format)) - cast(*void)(*instance)) == 60, "AVHWFramesContext.format has unexpected offset % instead of 60", ((cast(*void)(*instance.format)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesContext.format)) == 4, "AVHWFramesContext.format has unexpected size % instead of 4", size_of(type_of(AVHWFramesContext.format)));
+        assert(((cast(*void)(*instance.sw_format)) - cast(*void)(*instance)) == 64, "AVHWFramesContext.sw_format has unexpected offset % instead of 64", ((cast(*void)(*instance.sw_format)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesContext.sw_format)) == 4, "AVHWFramesContext.sw_format has unexpected size % instead of 4", size_of(type_of(AVHWFramesContext.sw_format)));
+        assert(((cast(*void)(*instance.width)) - cast(*void)(*instance)) == 68, "AVHWFramesContext.width has unexpected offset % instead of 68", ((cast(*void)(*instance.width)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesContext.width)) == 4, "AVHWFramesContext.width has unexpected size % instead of 4", size_of(type_of(AVHWFramesContext.width)));
+        assert(((cast(*void)(*instance.height)) - cast(*void)(*instance)) == 72, "AVHWFramesContext.height has unexpected offset % instead of 72", ((cast(*void)(*instance.height)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesContext.height)) == 4, "AVHWFramesContext.height has unexpected size % instead of 4", size_of(type_of(AVHWFramesContext.height)));
+        assert(size_of(AVHWFramesContext) == 80, "AVHWFramesContext has size % instead of 80", size_of(AVHWFramesContext));
+    }
+
+    {
+        instance: AVHWFramesConstraints;
+        assert(((cast(*void)(*instance.valid_hw_formats)) - cast(*void)(*instance)) == 0, "AVHWFramesConstraints.valid_hw_formats has unexpected offset % instead of 0", ((cast(*void)(*instance.valid_hw_formats)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesConstraints.valid_hw_formats)) == 8, "AVHWFramesConstraints.valid_hw_formats has unexpected size % instead of 8", size_of(type_of(AVHWFramesConstraints.valid_hw_formats)));
+        assert(((cast(*void)(*instance.valid_sw_formats)) - cast(*void)(*instance)) == 8, "AVHWFramesConstraints.valid_sw_formats has unexpected offset % instead of 8", ((cast(*void)(*instance.valid_sw_formats)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesConstraints.valid_sw_formats)) == 8, "AVHWFramesConstraints.valid_sw_formats has unexpected size % instead of 8", size_of(type_of(AVHWFramesConstraints.valid_sw_formats)));
+        assert(((cast(*void)(*instance.min_width)) - cast(*void)(*instance)) == 16, "AVHWFramesConstraints.min_width has unexpected offset % instead of 16", ((cast(*void)(*instance.min_width)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesConstraints.min_width)) == 4, "AVHWFramesConstraints.min_width has unexpected size % instead of 4", size_of(type_of(AVHWFramesConstraints.min_width)));
+        assert(((cast(*void)(*instance.min_height)) - cast(*void)(*instance)) == 20, "AVHWFramesConstraints.min_height has unexpected offset % instead of 20", ((cast(*void)(*instance.min_height)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesConstraints.min_height)) == 4, "AVHWFramesConstraints.min_height has unexpected size % instead of 4", size_of(type_of(AVHWFramesConstraints.min_height)));
+        assert(((cast(*void)(*instance.max_width)) - cast(*void)(*instance)) == 24, "AVHWFramesConstraints.max_width has unexpected offset % instead of 24", ((cast(*void)(*instance.max_width)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesConstraints.max_width)) == 4, "AVHWFramesConstraints.max_width has unexpected size % instead of 4", size_of(type_of(AVHWFramesConstraints.max_width)));
+        assert(((cast(*void)(*instance.max_height)) - cast(*void)(*instance)) == 28, "AVHWFramesConstraints.max_height has unexpected offset % instead of 28", ((cast(*void)(*instance.max_height)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVHWFramesConstraints.max_height)) == 4, "AVHWFramesConstraints.max_height has unexpected size % instead of 4", size_of(type_of(AVHWFramesConstraints.max_height)));
+        assert(size_of(AVHWFramesConstraints) == 32, "AVHWFramesConstraints has size % instead of 32", size_of(AVHWFramesConstraints));
+    }
+
+    {
+        instance: AVProfile;
+        assert(((cast(*void)(*instance.profile)) - cast(*void)(*instance)) == 0, "AVProfile.profile has unexpected offset % instead of 0", ((cast(*void)(*instance.profile)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProfile.profile)) == 4, "AVProfile.profile has unexpected size % instead of 4", size_of(type_of(AVProfile.profile)));
+        assert(((cast(*void)(*instance.name)) - cast(*void)(*instance)) == 8, "AVProfile.name has unexpected offset % instead of 8", ((cast(*void)(*instance.name)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProfile.name)) == 8, "AVProfile.name has unexpected size % instead of 8", size_of(type_of(AVProfile.name)));
+        assert(size_of(AVProfile) == 16, "AVProfile has size % instead of 16", size_of(AVProfile));
+    }
+
+    {
+        instance: AVCodec;
+        assert(((cast(*void)(*instance.name)) - cast(*void)(*instance)) == 0, "AVCodec.name has unexpected offset % instead of 0", ((cast(*void)(*instance.name)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.name)) == 8, "AVCodec.name has unexpected size % instead of 8", size_of(type_of(AVCodec.name)));
+        assert(((cast(*void)(*instance.long_name)) - cast(*void)(*instance)) == 8, "AVCodec.long_name has unexpected offset % instead of 8", ((cast(*void)(*instance.long_name)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.long_name)) == 8, "AVCodec.long_name has unexpected size % instead of 8", size_of(type_of(AVCodec.long_name)));
+        assert(((cast(*void)(*instance.type)) - cast(*void)(*instance)) == 16, "AVCodec.type has unexpected offset % instead of 16", ((cast(*void)(*instance.type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.type)) == 4, "AVCodec.type has unexpected size % instead of 4", size_of(type_of(AVCodec.type)));
+        assert(((cast(*void)(*instance.id)) - cast(*void)(*instance)) == 20, "AVCodec.id has unexpected offset % instead of 20", ((cast(*void)(*instance.id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.id)) == 4, "AVCodec.id has unexpected size % instead of 4", size_of(type_of(AVCodec.id)));
+        assert(((cast(*void)(*instance.capabilities)) - cast(*void)(*instance)) == 24, "AVCodec.capabilities has unexpected offset % instead of 24", ((cast(*void)(*instance.capabilities)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.capabilities)) == 4, "AVCodec.capabilities has unexpected size % instead of 4", size_of(type_of(AVCodec.capabilities)));
+        assert(((cast(*void)(*instance.max_lowres)) - cast(*void)(*instance)) == 28, "AVCodec.max_lowres has unexpected offset % instead of 28", ((cast(*void)(*instance.max_lowres)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.max_lowres)) == 1, "AVCodec.max_lowres has unexpected size % instead of 1", size_of(type_of(AVCodec.max_lowres)));
+        assert(((cast(*void)(*instance.supported_framerates)) - cast(*void)(*instance)) == 32, "AVCodec.supported_framerates has unexpected offset % instead of 32", ((cast(*void)(*instance.supported_framerates)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.supported_framerates)) == 8, "AVCodec.supported_framerates has unexpected size % instead of 8", size_of(type_of(AVCodec.supported_framerates)));
+        assert(((cast(*void)(*instance.pix_fmts)) - cast(*void)(*instance)) == 40, "AVCodec.pix_fmts has unexpected offset % instead of 40", ((cast(*void)(*instance.pix_fmts)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.pix_fmts)) == 8, "AVCodec.pix_fmts has unexpected size % instead of 8", size_of(type_of(AVCodec.pix_fmts)));
+        assert(((cast(*void)(*instance.supported_samplerates)) - cast(*void)(*instance)) == 48, "AVCodec.supported_samplerates has unexpected offset % instead of 48", ((cast(*void)(*instance.supported_samplerates)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.supported_samplerates)) == 8, "AVCodec.supported_samplerates has unexpected size % instead of 8", size_of(type_of(AVCodec.supported_samplerates)));
+        assert(((cast(*void)(*instance.sample_fmts)) - cast(*void)(*instance)) == 56, "AVCodec.sample_fmts has unexpected offset % instead of 56", ((cast(*void)(*instance.sample_fmts)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.sample_fmts)) == 8, "AVCodec.sample_fmts has unexpected size % instead of 8", size_of(type_of(AVCodec.sample_fmts)));
+        assert(((cast(*void)(*instance.priv_class)) - cast(*void)(*instance)) == 64, "AVCodec.priv_class has unexpected offset % instead of 64", ((cast(*void)(*instance.priv_class)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.priv_class)) == 8, "AVCodec.priv_class has unexpected size % instead of 8", size_of(type_of(AVCodec.priv_class)));
+        assert(((cast(*void)(*instance.profiles)) - cast(*void)(*instance)) == 72, "AVCodec.profiles has unexpected offset % instead of 72", ((cast(*void)(*instance.profiles)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.profiles)) == 8, "AVCodec.profiles has unexpected size % instead of 8", size_of(type_of(AVCodec.profiles)));
+        assert(((cast(*void)(*instance.wrapper_name)) - cast(*void)(*instance)) == 80, "AVCodec.wrapper_name has unexpected offset % instead of 80", ((cast(*void)(*instance.wrapper_name)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.wrapper_name)) == 8, "AVCodec.wrapper_name has unexpected size % instead of 8", size_of(type_of(AVCodec.wrapper_name)));
+        assert(((cast(*void)(*instance.ch_layouts)) - cast(*void)(*instance)) == 88, "AVCodec.ch_layouts has unexpected offset % instead of 88", ((cast(*void)(*instance.ch_layouts)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodec.ch_layouts)) == 8, "AVCodec.ch_layouts has unexpected size % instead of 8", size_of(type_of(AVCodec.ch_layouts)));
+        assert(size_of(AVCodec) == 96, "AVCodec has size % instead of 96", size_of(AVCodec));
+    }
+
+    {
+        instance: AVCodecHWConfig;
+        assert(((cast(*void)(*instance.pix_fmt)) - cast(*void)(*instance)) == 0, "AVCodecHWConfig.pix_fmt has unexpected offset % instead of 0", ((cast(*void)(*instance.pix_fmt)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecHWConfig.pix_fmt)) == 4, "AVCodecHWConfig.pix_fmt has unexpected size % instead of 4", size_of(type_of(AVCodecHWConfig.pix_fmt)));
+        assert(((cast(*void)(*instance.methods)) - cast(*void)(*instance)) == 4, "AVCodecHWConfig.methods has unexpected offset % instead of 4", ((cast(*void)(*instance.methods)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecHWConfig.methods)) == 4, "AVCodecHWConfig.methods has unexpected size % instead of 4", size_of(type_of(AVCodecHWConfig.methods)));
+        assert(((cast(*void)(*instance.device_type)) - cast(*void)(*instance)) == 8, "AVCodecHWConfig.device_type has unexpected offset % instead of 8", ((cast(*void)(*instance.device_type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVCodecHWConfig.device_type)) == 4, "AVCodecHWConfig.device_type has unexpected size % instead of 4", size_of(type_of(AVCodecHWConfig.device_type)));
+        assert(size_of(AVCodecHWConfig) == 12, "AVCodecHWConfig has size % instead of 12", size_of(AVCodecHWConfig));
+    }
+
+    {
+        instance: AVProbeData;
+        assert(((cast(*void)(*instance.filename)) - cast(*void)(*instance)) == 0, "AVProbeData.filename has unexpected offset % instead of 0", ((cast(*void)(*instance.filename)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProbeData.filename)) == 8, "AVProbeData.filename has unexpected size % instead of 8", size_of(type_of(AVProbeData.filename)));
+        assert(((cast(*void)(*instance.buf)) - cast(*void)(*instance)) == 8, "AVProbeData.buf has unexpected offset % instead of 8", ((cast(*void)(*instance.buf)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProbeData.buf)) == 8, "AVProbeData.buf has unexpected size % instead of 8", size_of(type_of(AVProbeData.buf)));
+        assert(((cast(*void)(*instance.buf_size)) - cast(*void)(*instance)) == 16, "AVProbeData.buf_size has unexpected offset % instead of 16", ((cast(*void)(*instance.buf_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProbeData.buf_size)) == 4, "AVProbeData.buf_size has unexpected size % instead of 4", size_of(type_of(AVProbeData.buf_size)));
+        assert(((cast(*void)(*instance.mime_type)) - cast(*void)(*instance)) == 24, "AVProbeData.mime_type has unexpected offset % instead of 24", ((cast(*void)(*instance.mime_type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProbeData.mime_type)) == 8, "AVProbeData.mime_type has unexpected size % instead of 8", size_of(type_of(AVProbeData.mime_type)));
+        assert(size_of(AVProbeData) == 32, "AVProbeData has size % instead of 32", size_of(AVProbeData));
+    }
+
+    {
+        instance: AVOutputFormat;
+        assert(((cast(*void)(*instance.name)) - cast(*void)(*instance)) == 0, "AVOutputFormat.name has unexpected offset % instead of 0", ((cast(*void)(*instance.name)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVOutputFormat.name)) == 8, "AVOutputFormat.name has unexpected size % instead of 8", size_of(type_of(AVOutputFormat.name)));
+        assert(((cast(*void)(*instance.long_name)) - cast(*void)(*instance)) == 8, "AVOutputFormat.long_name has unexpected offset % instead of 8", ((cast(*void)(*instance.long_name)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVOutputFormat.long_name)) == 8, "AVOutputFormat.long_name has unexpected size % instead of 8", size_of(type_of(AVOutputFormat.long_name)));
+        assert(((cast(*void)(*instance.mime_type)) - cast(*void)(*instance)) == 16, "AVOutputFormat.mime_type has unexpected offset % instead of 16", ((cast(*void)(*instance.mime_type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVOutputFormat.mime_type)) == 8, "AVOutputFormat.mime_type has unexpected size % instead of 8", size_of(type_of(AVOutputFormat.mime_type)));
+        assert(((cast(*void)(*instance.extensions)) - cast(*void)(*instance)) == 24, "AVOutputFormat.extensions has unexpected offset % instead of 24", ((cast(*void)(*instance.extensions)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVOutputFormat.extensions)) == 8, "AVOutputFormat.extensions has unexpected size % instead of 8", size_of(type_of(AVOutputFormat.extensions)));
+        assert(((cast(*void)(*instance.audio_codec)) - cast(*void)(*instance)) == 32, "AVOutputFormat.audio_codec has unexpected offset % instead of 32", ((cast(*void)(*instance.audio_codec)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVOutputFormat.audio_codec)) == 4, "AVOutputFormat.audio_codec has unexpected size % instead of 4", size_of(type_of(AVOutputFormat.audio_codec)));
+        assert(((cast(*void)(*instance.video_codec)) - cast(*void)(*instance)) == 36, "AVOutputFormat.video_codec has unexpected offset % instead of 36", ((cast(*void)(*instance.video_codec)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVOutputFormat.video_codec)) == 4, "AVOutputFormat.video_codec has unexpected size % instead of 4", size_of(type_of(AVOutputFormat.video_codec)));
+        assert(((cast(*void)(*instance.subtitle_codec)) - cast(*void)(*instance)) == 40, "AVOutputFormat.subtitle_codec has unexpected offset % instead of 40", ((cast(*void)(*instance.subtitle_codec)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVOutputFormat.subtitle_codec)) == 4, "AVOutputFormat.subtitle_codec has unexpected size % instead of 4", size_of(type_of(AVOutputFormat.subtitle_codec)));
+        assert(((cast(*void)(*instance.flags)) - cast(*void)(*instance)) == 44, "AVOutputFormat.flags has unexpected offset % instead of 44", ((cast(*void)(*instance.flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVOutputFormat.flags)) == 4, "AVOutputFormat.flags has unexpected size % instead of 4", size_of(type_of(AVOutputFormat.flags)));
+        assert(((cast(*void)(*instance.codec_tag)) - cast(*void)(*instance)) == 48, "AVOutputFormat.codec_tag has unexpected offset % instead of 48", ((cast(*void)(*instance.codec_tag)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVOutputFormat.codec_tag)) == 8, "AVOutputFormat.codec_tag has unexpected size % instead of 8", size_of(type_of(AVOutputFormat.codec_tag)));
+        assert(((cast(*void)(*instance.priv_class)) - cast(*void)(*instance)) == 56, "AVOutputFormat.priv_class has unexpected offset % instead of 56", ((cast(*void)(*instance.priv_class)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVOutputFormat.priv_class)) == 8, "AVOutputFormat.priv_class has unexpected size % instead of 8", size_of(type_of(AVOutputFormat.priv_class)));
+        assert(size_of(AVOutputFormat) == 64, "AVOutputFormat has size % instead of 64", size_of(AVOutputFormat));
+    }
+
+    {
+        instance: AVInputFormat;
+        assert(((cast(*void)(*instance.name)) - cast(*void)(*instance)) == 0, "AVInputFormat.name has unexpected offset % instead of 0", ((cast(*void)(*instance.name)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVInputFormat.name)) == 8, "AVInputFormat.name has unexpected size % instead of 8", size_of(type_of(AVInputFormat.name)));
+        assert(((cast(*void)(*instance.long_name)) - cast(*void)(*instance)) == 8, "AVInputFormat.long_name has unexpected offset % instead of 8", ((cast(*void)(*instance.long_name)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVInputFormat.long_name)) == 8, "AVInputFormat.long_name has unexpected size % instead of 8", size_of(type_of(AVInputFormat.long_name)));
+        assert(((cast(*void)(*instance.flags)) - cast(*void)(*instance)) == 16, "AVInputFormat.flags has unexpected offset % instead of 16", ((cast(*void)(*instance.flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVInputFormat.flags)) == 4, "AVInputFormat.flags has unexpected size % instead of 4", size_of(type_of(AVInputFormat.flags)));
+        assert(((cast(*void)(*instance.extensions)) - cast(*void)(*instance)) == 24, "AVInputFormat.extensions has unexpected offset % instead of 24", ((cast(*void)(*instance.extensions)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVInputFormat.extensions)) == 8, "AVInputFormat.extensions has unexpected size % instead of 8", size_of(type_of(AVInputFormat.extensions)));
+        assert(((cast(*void)(*instance.codec_tag)) - cast(*void)(*instance)) == 32, "AVInputFormat.codec_tag has unexpected offset % instead of 32", ((cast(*void)(*instance.codec_tag)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVInputFormat.codec_tag)) == 8, "AVInputFormat.codec_tag has unexpected size % instead of 8", size_of(type_of(AVInputFormat.codec_tag)));
+        assert(((cast(*void)(*instance.priv_class)) - cast(*void)(*instance)) == 40, "AVInputFormat.priv_class has unexpected offset % instead of 40", ((cast(*void)(*instance.priv_class)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVInputFormat.priv_class)) == 8, "AVInputFormat.priv_class has unexpected size % instead of 8", size_of(type_of(AVInputFormat.priv_class)));
+        assert(((cast(*void)(*instance.mime_type)) - cast(*void)(*instance)) == 48, "AVInputFormat.mime_type has unexpected offset % instead of 48", ((cast(*void)(*instance.mime_type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVInputFormat.mime_type)) == 8, "AVInputFormat.mime_type has unexpected size % instead of 8", size_of(type_of(AVInputFormat.mime_type)));
+        assert(size_of(AVInputFormat) == 56, "AVInputFormat has size % instead of 56", size_of(AVInputFormat));
+    }
+
+    {
+        instance: AVIndexEntry;
+        assert(((cast(*void)(*instance.pos)) - cast(*void)(*instance)) == 0, "AVIndexEntry.pos has unexpected offset % instead of 0", ((cast(*void)(*instance.pos)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIndexEntry.pos)) == 8, "AVIndexEntry.pos has unexpected size % instead of 8", size_of(type_of(AVIndexEntry.pos)));
+        assert(((cast(*void)(*instance.timestamp)) - cast(*void)(*instance)) == 8, "AVIndexEntry.timestamp has unexpected offset % instead of 8", ((cast(*void)(*instance.timestamp)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIndexEntry.timestamp)) == 8, "AVIndexEntry.timestamp has unexpected size % instead of 8", size_of(type_of(AVIndexEntry.timestamp)));
+        // Bitfields are currently not correctly aligned
+        // assert(((cast(*void)(*instance.flags)) - cast(*void)(*instance)) == 16, "AVIndexEntry.flags has unexpected offset % instead of 16", ((cast(*void)(*instance.flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIndexEntry.flags)) == 4, "AVIndexEntry.flags has unexpected size % instead of 4", size_of(type_of(AVIndexEntry.flags)));
+        // Bitfields are currently not correctly aligned
+        // assert(((cast(*void)(*instance.size)) - cast(*void)(*instance)) == 16, "AVIndexEntry.size has unexpected offset % instead of 16", ((cast(*void)(*instance.size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIndexEntry.size)) == 4, "AVIndexEntry.size has unexpected size % instead of 4", size_of(type_of(AVIndexEntry.size)));
+        assert(((cast(*void)(*instance.min_distance)) - cast(*void)(*instance)) == 20, "AVIndexEntry.min_distance has unexpected offset % instead of 20", ((cast(*void)(*instance.min_distance)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVIndexEntry.min_distance)) == 4, "AVIndexEntry.min_distance has unexpected size % instead of 4", size_of(type_of(AVIndexEntry.min_distance)));
+        assert(size_of(AVIndexEntry) == 24, "AVIndexEntry has size % instead of 24", size_of(AVIndexEntry));
+    }
+
+    {
+        instance: AVStream;
+        assert(((cast(*void)(*instance.av_class)) - cast(*void)(*instance)) == 0, "AVStream.av_class has unexpected offset % instead of 0", ((cast(*void)(*instance.av_class)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.av_class)) == 8, "AVStream.av_class has unexpected size % instead of 8", size_of(type_of(AVStream.av_class)));
+        assert(((cast(*void)(*instance.index)) - cast(*void)(*instance)) == 8, "AVStream.index has unexpected offset % instead of 8", ((cast(*void)(*instance.index)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.index)) == 4, "AVStream.index has unexpected size % instead of 4", size_of(type_of(AVStream.index)));
+        assert(((cast(*void)(*instance.id)) - cast(*void)(*instance)) == 12, "AVStream.id has unexpected offset % instead of 12", ((cast(*void)(*instance.id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.id)) == 4, "AVStream.id has unexpected size % instead of 4", size_of(type_of(AVStream.id)));
+        assert(((cast(*void)(*instance.codecpar)) - cast(*void)(*instance)) == 16, "AVStream.codecpar has unexpected offset % instead of 16", ((cast(*void)(*instance.codecpar)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.codecpar)) == 8, "AVStream.codecpar has unexpected size % instead of 8", size_of(type_of(AVStream.codecpar)));
+        assert(((cast(*void)(*instance.priv_data)) - cast(*void)(*instance)) == 24, "AVStream.priv_data has unexpected offset % instead of 24", ((cast(*void)(*instance.priv_data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.priv_data)) == 8, "AVStream.priv_data has unexpected size % instead of 8", size_of(type_of(AVStream.priv_data)));
+        assert(((cast(*void)(*instance.time_base)) - cast(*void)(*instance)) == 32, "AVStream.time_base has unexpected offset % instead of 32", ((cast(*void)(*instance.time_base)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.time_base)) == 8, "AVStream.time_base has unexpected size % instead of 8", size_of(type_of(AVStream.time_base)));
+        assert(((cast(*void)(*instance.start_time)) - cast(*void)(*instance)) == 40, "AVStream.start_time has unexpected offset % instead of 40", ((cast(*void)(*instance.start_time)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.start_time)) == 8, "AVStream.start_time has unexpected size % instead of 8", size_of(type_of(AVStream.start_time)));
+        assert(((cast(*void)(*instance.duration)) - cast(*void)(*instance)) == 48, "AVStream.duration has unexpected offset % instead of 48", ((cast(*void)(*instance.duration)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.duration)) == 8, "AVStream.duration has unexpected size % instead of 8", size_of(type_of(AVStream.duration)));
+        assert(((cast(*void)(*instance.nb_frames)) - cast(*void)(*instance)) == 56, "AVStream.nb_frames has unexpected offset % instead of 56", ((cast(*void)(*instance.nb_frames)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.nb_frames)) == 8, "AVStream.nb_frames has unexpected size % instead of 8", size_of(type_of(AVStream.nb_frames)));
+        assert(((cast(*void)(*instance.disposition)) - cast(*void)(*instance)) == 64, "AVStream.disposition has unexpected offset % instead of 64", ((cast(*void)(*instance.disposition)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.disposition)) == 4, "AVStream.disposition has unexpected size % instead of 4", size_of(type_of(AVStream.disposition)));
+        assert(((cast(*void)(*instance.discard)) - cast(*void)(*instance)) == 68, "AVStream.discard has unexpected offset % instead of 68", ((cast(*void)(*instance.discard)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.discard)) == 4, "AVStream.discard has unexpected size % instead of 4", size_of(type_of(AVStream.discard)));
+        assert(((cast(*void)(*instance.sample_aspect_ratio)) - cast(*void)(*instance)) == 72, "AVStream.sample_aspect_ratio has unexpected offset % instead of 72", ((cast(*void)(*instance.sample_aspect_ratio)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.sample_aspect_ratio)) == 8, "AVStream.sample_aspect_ratio has unexpected size % instead of 8", size_of(type_of(AVStream.sample_aspect_ratio)));
+        assert(((cast(*void)(*instance.metadata)) - cast(*void)(*instance)) == 80, "AVStream.metadata has unexpected offset % instead of 80", ((cast(*void)(*instance.metadata)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.metadata)) == 8, "AVStream.metadata has unexpected size % instead of 8", size_of(type_of(AVStream.metadata)));
+        assert(((cast(*void)(*instance.avg_frame_rate)) - cast(*void)(*instance)) == 88, "AVStream.avg_frame_rate has unexpected offset % instead of 88", ((cast(*void)(*instance.avg_frame_rate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.avg_frame_rate)) == 8, "AVStream.avg_frame_rate has unexpected size % instead of 8", size_of(type_of(AVStream.avg_frame_rate)));
+        assert(((cast(*void)(*instance.attached_pic)) - cast(*void)(*instance)) == 96, "AVStream.attached_pic has unexpected offset % instead of 96", ((cast(*void)(*instance.attached_pic)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.attached_pic)) == 104, "AVStream.attached_pic has unexpected size % instead of 104", size_of(type_of(AVStream.attached_pic)));
+        assert(((cast(*void)(*instance.side_data)) - cast(*void)(*instance)) == 200, "AVStream.side_data has unexpected offset % instead of 200", ((cast(*void)(*instance.side_data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.side_data)) == 8, "AVStream.side_data has unexpected size % instead of 8", size_of(type_of(AVStream.side_data)));
+        assert(((cast(*void)(*instance.nb_side_data)) - cast(*void)(*instance)) == 208, "AVStream.nb_side_data has unexpected offset % instead of 208", ((cast(*void)(*instance.nb_side_data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.nb_side_data)) == 4, "AVStream.nb_side_data has unexpected size % instead of 4", size_of(type_of(AVStream.nb_side_data)));
+        assert(((cast(*void)(*instance.event_flags)) - cast(*void)(*instance)) == 212, "AVStream.event_flags has unexpected offset % instead of 212", ((cast(*void)(*instance.event_flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.event_flags)) == 4, "AVStream.event_flags has unexpected size % instead of 4", size_of(type_of(AVStream.event_flags)));
+        assert(((cast(*void)(*instance.r_frame_rate)) - cast(*void)(*instance)) == 216, "AVStream.r_frame_rate has unexpected offset % instead of 216", ((cast(*void)(*instance.r_frame_rate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.r_frame_rate)) == 8, "AVStream.r_frame_rate has unexpected size % instead of 8", size_of(type_of(AVStream.r_frame_rate)));
+        assert(((cast(*void)(*instance.pts_wrap_bits)) - cast(*void)(*instance)) == 224, "AVStream.pts_wrap_bits has unexpected offset % instead of 224", ((cast(*void)(*instance.pts_wrap_bits)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStream.pts_wrap_bits)) == 4, "AVStream.pts_wrap_bits has unexpected size % instead of 4", size_of(type_of(AVStream.pts_wrap_bits)));
+        assert(size_of(AVStream) == 232, "AVStream has size % instead of 232", size_of(AVStream));
+    }
+
+    {
+        instance: AVStreamGroupTileGrid;
+        assert(((cast(*void)(*instance.av_class)) - cast(*void)(*instance)) == 0, "AVStreamGroupTileGrid.av_class has unexpected offset % instead of 0", ((cast(*void)(*instance.av_class)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroupTileGrid.av_class)) == 8, "AVStreamGroupTileGrid.av_class has unexpected size % instead of 8", size_of(type_of(AVStreamGroupTileGrid.av_class)));
+        assert(((cast(*void)(*instance.nb_tiles)) - cast(*void)(*instance)) == 8, "AVStreamGroupTileGrid.nb_tiles has unexpected offset % instead of 8", ((cast(*void)(*instance.nb_tiles)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroupTileGrid.nb_tiles)) == 4, "AVStreamGroupTileGrid.nb_tiles has unexpected size % instead of 4", size_of(type_of(AVStreamGroupTileGrid.nb_tiles)));
+        assert(((cast(*void)(*instance.coded_width)) - cast(*void)(*instance)) == 12, "AVStreamGroupTileGrid.coded_width has unexpected offset % instead of 12", ((cast(*void)(*instance.coded_width)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroupTileGrid.coded_width)) == 4, "AVStreamGroupTileGrid.coded_width has unexpected size % instead of 4", size_of(type_of(AVStreamGroupTileGrid.coded_width)));
+        assert(((cast(*void)(*instance.coded_height)) - cast(*void)(*instance)) == 16, "AVStreamGroupTileGrid.coded_height has unexpected offset % instead of 16", ((cast(*void)(*instance.coded_height)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroupTileGrid.coded_height)) == 4, "AVStreamGroupTileGrid.coded_height has unexpected size % instead of 4", size_of(type_of(AVStreamGroupTileGrid.coded_height)));
+        assert(((cast(*void)(*instance.offsets)) - cast(*void)(*instance)) == 24, "AVStreamGroupTileGrid.offsets has unexpected offset % instead of 24", ((cast(*void)(*instance.offsets)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroupTileGrid.offsets)) == 8, "AVStreamGroupTileGrid.offsets has unexpected size % instead of 8", size_of(type_of(AVStreamGroupTileGrid.offsets)));
+        assert(((cast(*void)(*instance.background)) - cast(*void)(*instance)) == 32, "AVStreamGroupTileGrid.background has unexpected offset % instead of 32", ((cast(*void)(*instance.background)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroupTileGrid.background)) == 4, "AVStreamGroupTileGrid.background has unexpected size % instead of 4", size_of(type_of(AVStreamGroupTileGrid.background)));
+        assert(((cast(*void)(*instance.horizontal_offset)) - cast(*void)(*instance)) == 36, "AVStreamGroupTileGrid.horizontal_offset has unexpected offset % instead of 36", ((cast(*void)(*instance.horizontal_offset)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroupTileGrid.horizontal_offset)) == 4, "AVStreamGroupTileGrid.horizontal_offset has unexpected size % instead of 4", size_of(type_of(AVStreamGroupTileGrid.horizontal_offset)));
+        assert(((cast(*void)(*instance.vertical_offset)) - cast(*void)(*instance)) == 40, "AVStreamGroupTileGrid.vertical_offset has unexpected offset % instead of 40", ((cast(*void)(*instance.vertical_offset)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroupTileGrid.vertical_offset)) == 4, "AVStreamGroupTileGrid.vertical_offset has unexpected size % instead of 4", size_of(type_of(AVStreamGroupTileGrid.vertical_offset)));
+        assert(((cast(*void)(*instance.width)) - cast(*void)(*instance)) == 44, "AVStreamGroupTileGrid.width has unexpected offset % instead of 44", ((cast(*void)(*instance.width)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroupTileGrid.width)) == 4, "AVStreamGroupTileGrid.width has unexpected size % instead of 4", size_of(type_of(AVStreamGroupTileGrid.width)));
+        assert(((cast(*void)(*instance.height)) - cast(*void)(*instance)) == 48, "AVStreamGroupTileGrid.height has unexpected offset % instead of 48", ((cast(*void)(*instance.height)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroupTileGrid.height)) == 4, "AVStreamGroupTileGrid.height has unexpected size % instead of 4", size_of(type_of(AVStreamGroupTileGrid.height)));
+        assert(size_of(AVStreamGroupTileGrid) == 56, "AVStreamGroupTileGrid has size % instead of 56", size_of(AVStreamGroupTileGrid));
+    }
+
+    {
+        instance: AVStreamGroup;
+        assert(((cast(*void)(*instance.av_class)) - cast(*void)(*instance)) == 0, "AVStreamGroup.av_class has unexpected offset % instead of 0", ((cast(*void)(*instance.av_class)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroup.av_class)) == 8, "AVStreamGroup.av_class has unexpected size % instead of 8", size_of(type_of(AVStreamGroup.av_class)));
+        assert(((cast(*void)(*instance.priv_data)) - cast(*void)(*instance)) == 8, "AVStreamGroup.priv_data has unexpected offset % instead of 8", ((cast(*void)(*instance.priv_data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroup.priv_data)) == 8, "AVStreamGroup.priv_data has unexpected size % instead of 8", size_of(type_of(AVStreamGroup.priv_data)));
+        assert(((cast(*void)(*instance.index)) - cast(*void)(*instance)) == 16, "AVStreamGroup.index has unexpected offset % instead of 16", ((cast(*void)(*instance.index)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroup.index)) == 4, "AVStreamGroup.index has unexpected size % instead of 4", size_of(type_of(AVStreamGroup.index)));
+        assert(((cast(*void)(*instance.id)) - cast(*void)(*instance)) == 24, "AVStreamGroup.id has unexpected offset % instead of 24", ((cast(*void)(*instance.id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroup.id)) == 8, "AVStreamGroup.id has unexpected size % instead of 8", size_of(type_of(AVStreamGroup.id)));
+        assert(((cast(*void)(*instance.type)) - cast(*void)(*instance)) == 32, "AVStreamGroup.type has unexpected offset % instead of 32", ((cast(*void)(*instance.type)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroup.type)) == 4, "AVStreamGroup.type has unexpected size % instead of 4", size_of(type_of(AVStreamGroup.type)));
+        assert(((cast(*void)(*instance.params)) - cast(*void)(*instance)) == 40, "AVStreamGroup.params has unexpected offset % instead of 40", ((cast(*void)(*instance.params)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroup.params)) == 8, "AVStreamGroup.params has unexpected size % instead of 8", size_of(type_of(AVStreamGroup.params)));
+        assert(((cast(*void)(*instance.metadata)) - cast(*void)(*instance)) == 48, "AVStreamGroup.metadata has unexpected offset % instead of 48", ((cast(*void)(*instance.metadata)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroup.metadata)) == 8, "AVStreamGroup.metadata has unexpected size % instead of 8", size_of(type_of(AVStreamGroup.metadata)));
+        assert(((cast(*void)(*instance.nb_streams)) - cast(*void)(*instance)) == 56, "AVStreamGroup.nb_streams has unexpected offset % instead of 56", ((cast(*void)(*instance.nb_streams)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroup.nb_streams)) == 4, "AVStreamGroup.nb_streams has unexpected size % instead of 4", size_of(type_of(AVStreamGroup.nb_streams)));
+        assert(((cast(*void)(*instance.streams)) - cast(*void)(*instance)) == 64, "AVStreamGroup.streams has unexpected offset % instead of 64", ((cast(*void)(*instance.streams)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroup.streams)) == 8, "AVStreamGroup.streams has unexpected size % instead of 8", size_of(type_of(AVStreamGroup.streams)));
+        assert(((cast(*void)(*instance.disposition)) - cast(*void)(*instance)) == 72, "AVStreamGroup.disposition has unexpected offset % instead of 72", ((cast(*void)(*instance.disposition)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVStreamGroup.disposition)) == 4, "AVStreamGroup.disposition has unexpected size % instead of 4", size_of(type_of(AVStreamGroup.disposition)));
+        assert(size_of(AVStreamGroup) == 80, "AVStreamGroup has size % instead of 80", size_of(AVStreamGroup));
+    }
+
+    {
+        instance: AVProgram;
+        assert(((cast(*void)(*instance.id)) - cast(*void)(*instance)) == 0, "AVProgram.id has unexpected offset % instead of 0", ((cast(*void)(*instance.id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.id)) == 4, "AVProgram.id has unexpected size % instead of 4", size_of(type_of(AVProgram.id)));
+        assert(((cast(*void)(*instance.flags)) - cast(*void)(*instance)) == 4, "AVProgram.flags has unexpected offset % instead of 4", ((cast(*void)(*instance.flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.flags)) == 4, "AVProgram.flags has unexpected size % instead of 4", size_of(type_of(AVProgram.flags)));
+        assert(((cast(*void)(*instance.discard)) - cast(*void)(*instance)) == 8, "AVProgram.discard has unexpected offset % instead of 8", ((cast(*void)(*instance.discard)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.discard)) == 4, "AVProgram.discard has unexpected size % instead of 4", size_of(type_of(AVProgram.discard)));
+        assert(((cast(*void)(*instance.stream_index)) - cast(*void)(*instance)) == 16, "AVProgram.stream_index has unexpected offset % instead of 16", ((cast(*void)(*instance.stream_index)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.stream_index)) == 8, "AVProgram.stream_index has unexpected size % instead of 8", size_of(type_of(AVProgram.stream_index)));
+        assert(((cast(*void)(*instance.nb_stream_indexes)) - cast(*void)(*instance)) == 24, "AVProgram.nb_stream_indexes has unexpected offset % instead of 24", ((cast(*void)(*instance.nb_stream_indexes)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.nb_stream_indexes)) == 4, "AVProgram.nb_stream_indexes has unexpected size % instead of 4", size_of(type_of(AVProgram.nb_stream_indexes)));
+        assert(((cast(*void)(*instance.metadata)) - cast(*void)(*instance)) == 32, "AVProgram.metadata has unexpected offset % instead of 32", ((cast(*void)(*instance.metadata)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.metadata)) == 8, "AVProgram.metadata has unexpected size % instead of 8", size_of(type_of(AVProgram.metadata)));
+        assert(((cast(*void)(*instance.program_num)) - cast(*void)(*instance)) == 40, "AVProgram.program_num has unexpected offset % instead of 40", ((cast(*void)(*instance.program_num)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.program_num)) == 4, "AVProgram.program_num has unexpected size % instead of 4", size_of(type_of(AVProgram.program_num)));
+        assert(((cast(*void)(*instance.pmt_pid)) - cast(*void)(*instance)) == 44, "AVProgram.pmt_pid has unexpected offset % instead of 44", ((cast(*void)(*instance.pmt_pid)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.pmt_pid)) == 4, "AVProgram.pmt_pid has unexpected size % instead of 4", size_of(type_of(AVProgram.pmt_pid)));
+        assert(((cast(*void)(*instance.pcr_pid)) - cast(*void)(*instance)) == 48, "AVProgram.pcr_pid has unexpected offset % instead of 48", ((cast(*void)(*instance.pcr_pid)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.pcr_pid)) == 4, "AVProgram.pcr_pid has unexpected size % instead of 4", size_of(type_of(AVProgram.pcr_pid)));
+        assert(((cast(*void)(*instance.pmt_version)) - cast(*void)(*instance)) == 52, "AVProgram.pmt_version has unexpected offset % instead of 52", ((cast(*void)(*instance.pmt_version)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.pmt_version)) == 4, "AVProgram.pmt_version has unexpected size % instead of 4", size_of(type_of(AVProgram.pmt_version)));
+        assert(((cast(*void)(*instance.start_time)) - cast(*void)(*instance)) == 56, "AVProgram.start_time has unexpected offset % instead of 56", ((cast(*void)(*instance.start_time)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.start_time)) == 8, "AVProgram.start_time has unexpected size % instead of 8", size_of(type_of(AVProgram.start_time)));
+        assert(((cast(*void)(*instance.end_time)) - cast(*void)(*instance)) == 64, "AVProgram.end_time has unexpected offset % instead of 64", ((cast(*void)(*instance.end_time)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.end_time)) == 8, "AVProgram.end_time has unexpected size % instead of 8", size_of(type_of(AVProgram.end_time)));
+        assert(((cast(*void)(*instance.pts_wrap_reference)) - cast(*void)(*instance)) == 72, "AVProgram.pts_wrap_reference has unexpected offset % instead of 72", ((cast(*void)(*instance.pts_wrap_reference)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.pts_wrap_reference)) == 8, "AVProgram.pts_wrap_reference has unexpected size % instead of 8", size_of(type_of(AVProgram.pts_wrap_reference)));
+        assert(((cast(*void)(*instance.pts_wrap_behavior)) - cast(*void)(*instance)) == 80, "AVProgram.pts_wrap_behavior has unexpected offset % instead of 80", ((cast(*void)(*instance.pts_wrap_behavior)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVProgram.pts_wrap_behavior)) == 4, "AVProgram.pts_wrap_behavior has unexpected size % instead of 4", size_of(type_of(AVProgram.pts_wrap_behavior)));
+        assert(size_of(AVProgram) == 88, "AVProgram has size % instead of 88", size_of(AVProgram));
+    }
+
+    {
+        instance: AVChapter;
+        assert(((cast(*void)(*instance.id)) - cast(*void)(*instance)) == 0, "AVChapter.id has unexpected offset % instead of 0", ((cast(*void)(*instance.id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVChapter.id)) == 8, "AVChapter.id has unexpected size % instead of 8", size_of(type_of(AVChapter.id)));
+        assert(((cast(*void)(*instance.time_base)) - cast(*void)(*instance)) == 8, "AVChapter.time_base has unexpected offset % instead of 8", ((cast(*void)(*instance.time_base)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVChapter.time_base)) == 8, "AVChapter.time_base has unexpected size % instead of 8", size_of(type_of(AVChapter.time_base)));
+        assert(((cast(*void)(*instance.start)) - cast(*void)(*instance)) == 16, "AVChapter.start has unexpected offset % instead of 16", ((cast(*void)(*instance.start)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVChapter.start)) == 8, "AVChapter.start has unexpected size % instead of 8", size_of(type_of(AVChapter.start)));
+        assert(((cast(*void)(*instance.end)) - cast(*void)(*instance)) == 24, "AVChapter.end has unexpected offset % instead of 24", ((cast(*void)(*instance.end)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVChapter.end)) == 8, "AVChapter.end has unexpected size % instead of 8", size_of(type_of(AVChapter.end)));
+        assert(((cast(*void)(*instance.metadata)) - cast(*void)(*instance)) == 32, "AVChapter.metadata has unexpected offset % instead of 32", ((cast(*void)(*instance.metadata)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVChapter.metadata)) == 8, "AVChapter.metadata has unexpected size % instead of 8", size_of(type_of(AVChapter.metadata)));
+        assert(size_of(AVChapter) == 40, "AVChapter has size % instead of 40", size_of(AVChapter));
+    }
+
+    {
+        instance: AVFormatContext;
+        assert(((cast(*void)(*instance.av_class)) - cast(*void)(*instance)) == 0, "AVFormatContext.av_class has unexpected offset % instead of 0", ((cast(*void)(*instance.av_class)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.av_class)) == 8, "AVFormatContext.av_class has unexpected size % instead of 8", size_of(type_of(AVFormatContext.av_class)));
+        assert(((cast(*void)(*instance.iformat)) - cast(*void)(*instance)) == 8, "AVFormatContext.iformat has unexpected offset % instead of 8", ((cast(*void)(*instance.iformat)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.iformat)) == 8, "AVFormatContext.iformat has unexpected size % instead of 8", size_of(type_of(AVFormatContext.iformat)));
+        assert(((cast(*void)(*instance.oformat)) - cast(*void)(*instance)) == 16, "AVFormatContext.oformat has unexpected offset % instead of 16", ((cast(*void)(*instance.oformat)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.oformat)) == 8, "AVFormatContext.oformat has unexpected size % instead of 8", size_of(type_of(AVFormatContext.oformat)));
+        assert(((cast(*void)(*instance.priv_data)) - cast(*void)(*instance)) == 24, "AVFormatContext.priv_data has unexpected offset % instead of 24", ((cast(*void)(*instance.priv_data)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.priv_data)) == 8, "AVFormatContext.priv_data has unexpected size % instead of 8", size_of(type_of(AVFormatContext.priv_data)));
+        assert(((cast(*void)(*instance.pb)) - cast(*void)(*instance)) == 32, "AVFormatContext.pb has unexpected offset % instead of 32", ((cast(*void)(*instance.pb)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.pb)) == 8, "AVFormatContext.pb has unexpected size % instead of 8", size_of(type_of(AVFormatContext.pb)));
+        assert(((cast(*void)(*instance.ctx_flags)) - cast(*void)(*instance)) == 40, "AVFormatContext.ctx_flags has unexpected offset % instead of 40", ((cast(*void)(*instance.ctx_flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.ctx_flags)) == 4, "AVFormatContext.ctx_flags has unexpected size % instead of 4", size_of(type_of(AVFormatContext.ctx_flags)));
+        assert(((cast(*void)(*instance.nb_streams)) - cast(*void)(*instance)) == 44, "AVFormatContext.nb_streams has unexpected offset % instead of 44", ((cast(*void)(*instance.nb_streams)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.nb_streams)) == 4, "AVFormatContext.nb_streams has unexpected size % instead of 4", size_of(type_of(AVFormatContext.nb_streams)));
+        assert(((cast(*void)(*instance.streams)) - cast(*void)(*instance)) == 48, "AVFormatContext.streams has unexpected offset % instead of 48", ((cast(*void)(*instance.streams)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.streams)) == 8, "AVFormatContext.streams has unexpected size % instead of 8", size_of(type_of(AVFormatContext.streams)));
+        assert(((cast(*void)(*instance.nb_stream_groups)) - cast(*void)(*instance)) == 56, "AVFormatContext.nb_stream_groups has unexpected offset % instead of 56", ((cast(*void)(*instance.nb_stream_groups)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.nb_stream_groups)) == 4, "AVFormatContext.nb_stream_groups has unexpected size % instead of 4", size_of(type_of(AVFormatContext.nb_stream_groups)));
+        assert(((cast(*void)(*instance.stream_groups)) - cast(*void)(*instance)) == 64, "AVFormatContext.stream_groups has unexpected offset % instead of 64", ((cast(*void)(*instance.stream_groups)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.stream_groups)) == 8, "AVFormatContext.stream_groups has unexpected size % instead of 8", size_of(type_of(AVFormatContext.stream_groups)));
+        assert(((cast(*void)(*instance.nb_chapters)) - cast(*void)(*instance)) == 72, "AVFormatContext.nb_chapters has unexpected offset % instead of 72", ((cast(*void)(*instance.nb_chapters)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.nb_chapters)) == 4, "AVFormatContext.nb_chapters has unexpected size % instead of 4", size_of(type_of(AVFormatContext.nb_chapters)));
+        assert(((cast(*void)(*instance.chapters)) - cast(*void)(*instance)) == 80, "AVFormatContext.chapters has unexpected offset % instead of 80", ((cast(*void)(*instance.chapters)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.chapters)) == 8, "AVFormatContext.chapters has unexpected size % instead of 8", size_of(type_of(AVFormatContext.chapters)));
+        assert(((cast(*void)(*instance.url)) - cast(*void)(*instance)) == 88, "AVFormatContext.url has unexpected offset % instead of 88", ((cast(*void)(*instance.url)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.url)) == 8, "AVFormatContext.url has unexpected size % instead of 8", size_of(type_of(AVFormatContext.url)));
+        assert(((cast(*void)(*instance.start_time)) - cast(*void)(*instance)) == 96, "AVFormatContext.start_time has unexpected offset % instead of 96", ((cast(*void)(*instance.start_time)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.start_time)) == 8, "AVFormatContext.start_time has unexpected size % instead of 8", size_of(type_of(AVFormatContext.start_time)));
+        assert(((cast(*void)(*instance.duration)) - cast(*void)(*instance)) == 104, "AVFormatContext.duration has unexpected offset % instead of 104", ((cast(*void)(*instance.duration)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.duration)) == 8, "AVFormatContext.duration has unexpected size % instead of 8", size_of(type_of(AVFormatContext.duration)));
+        assert(((cast(*void)(*instance.bit_rate)) - cast(*void)(*instance)) == 112, "AVFormatContext.bit_rate has unexpected offset % instead of 112", ((cast(*void)(*instance.bit_rate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.bit_rate)) == 8, "AVFormatContext.bit_rate has unexpected size % instead of 8", size_of(type_of(AVFormatContext.bit_rate)));
+        assert(((cast(*void)(*instance.packet_size)) - cast(*void)(*instance)) == 120, "AVFormatContext.packet_size has unexpected offset % instead of 120", ((cast(*void)(*instance.packet_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.packet_size)) == 4, "AVFormatContext.packet_size has unexpected size % instead of 4", size_of(type_of(AVFormatContext.packet_size)));
+        assert(((cast(*void)(*instance.max_delay)) - cast(*void)(*instance)) == 124, "AVFormatContext.max_delay has unexpected offset % instead of 124", ((cast(*void)(*instance.max_delay)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.max_delay)) == 4, "AVFormatContext.max_delay has unexpected size % instead of 4", size_of(type_of(AVFormatContext.max_delay)));
+        assert(((cast(*void)(*instance.flags)) - cast(*void)(*instance)) == 128, "AVFormatContext.flags has unexpected offset % instead of 128", ((cast(*void)(*instance.flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.flags)) == 4, "AVFormatContext.flags has unexpected size % instead of 4", size_of(type_of(AVFormatContext.flags)));
+        assert(((cast(*void)(*instance.probesize)) - cast(*void)(*instance)) == 136, "AVFormatContext.probesize has unexpected offset % instead of 136", ((cast(*void)(*instance.probesize)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.probesize)) == 8, "AVFormatContext.probesize has unexpected size % instead of 8", size_of(type_of(AVFormatContext.probesize)));
+        assert(((cast(*void)(*instance.max_analyze_duration)) - cast(*void)(*instance)) == 144, "AVFormatContext.max_analyze_duration has unexpected offset % instead of 144", ((cast(*void)(*instance.max_analyze_duration)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.max_analyze_duration)) == 8, "AVFormatContext.max_analyze_duration has unexpected size % instead of 8", size_of(type_of(AVFormatContext.max_analyze_duration)));
+        assert(((cast(*void)(*instance.key)) - cast(*void)(*instance)) == 152, "AVFormatContext.key has unexpected offset % instead of 152", ((cast(*void)(*instance.key)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.key)) == 8, "AVFormatContext.key has unexpected size % instead of 8", size_of(type_of(AVFormatContext.key)));
+        assert(((cast(*void)(*instance.keylen)) - cast(*void)(*instance)) == 160, "AVFormatContext.keylen has unexpected offset % instead of 160", ((cast(*void)(*instance.keylen)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.keylen)) == 4, "AVFormatContext.keylen has unexpected size % instead of 4", size_of(type_of(AVFormatContext.keylen)));
+        assert(((cast(*void)(*instance.nb_programs)) - cast(*void)(*instance)) == 164, "AVFormatContext.nb_programs has unexpected offset % instead of 164", ((cast(*void)(*instance.nb_programs)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.nb_programs)) == 4, "AVFormatContext.nb_programs has unexpected size % instead of 4", size_of(type_of(AVFormatContext.nb_programs)));
+        assert(((cast(*void)(*instance.programs)) - cast(*void)(*instance)) == 168, "AVFormatContext.programs has unexpected offset % instead of 168", ((cast(*void)(*instance.programs)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.programs)) == 8, "AVFormatContext.programs has unexpected size % instead of 8", size_of(type_of(AVFormatContext.programs)));
+        assert(((cast(*void)(*instance.video_codec_id)) - cast(*void)(*instance)) == 176, "AVFormatContext.video_codec_id has unexpected offset % instead of 176", ((cast(*void)(*instance.video_codec_id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.video_codec_id)) == 4, "AVFormatContext.video_codec_id has unexpected size % instead of 4", size_of(type_of(AVFormatContext.video_codec_id)));
+        assert(((cast(*void)(*instance.audio_codec_id)) - cast(*void)(*instance)) == 180, "AVFormatContext.audio_codec_id has unexpected offset % instead of 180", ((cast(*void)(*instance.audio_codec_id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.audio_codec_id)) == 4, "AVFormatContext.audio_codec_id has unexpected size % instead of 4", size_of(type_of(AVFormatContext.audio_codec_id)));
+        assert(((cast(*void)(*instance.subtitle_codec_id)) - cast(*void)(*instance)) == 184, "AVFormatContext.subtitle_codec_id has unexpected offset % instead of 184", ((cast(*void)(*instance.subtitle_codec_id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.subtitle_codec_id)) == 4, "AVFormatContext.subtitle_codec_id has unexpected size % instead of 4", size_of(type_of(AVFormatContext.subtitle_codec_id)));
+        assert(((cast(*void)(*instance.data_codec_id)) - cast(*void)(*instance)) == 188, "AVFormatContext.data_codec_id has unexpected offset % instead of 188", ((cast(*void)(*instance.data_codec_id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.data_codec_id)) == 4, "AVFormatContext.data_codec_id has unexpected size % instead of 4", size_of(type_of(AVFormatContext.data_codec_id)));
+        assert(((cast(*void)(*instance.metadata)) - cast(*void)(*instance)) == 192, "AVFormatContext.metadata has unexpected offset % instead of 192", ((cast(*void)(*instance.metadata)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.metadata)) == 8, "AVFormatContext.metadata has unexpected size % instead of 8", size_of(type_of(AVFormatContext.metadata)));
+        assert(((cast(*void)(*instance.start_time_realtime)) - cast(*void)(*instance)) == 200, "AVFormatContext.start_time_realtime has unexpected offset % instead of 200", ((cast(*void)(*instance.start_time_realtime)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.start_time_realtime)) == 8, "AVFormatContext.start_time_realtime has unexpected size % instead of 8", size_of(type_of(AVFormatContext.start_time_realtime)));
+        assert(((cast(*void)(*instance.fps_probe_size)) - cast(*void)(*instance)) == 208, "AVFormatContext.fps_probe_size has unexpected offset % instead of 208", ((cast(*void)(*instance.fps_probe_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.fps_probe_size)) == 4, "AVFormatContext.fps_probe_size has unexpected size % instead of 4", size_of(type_of(AVFormatContext.fps_probe_size)));
+        assert(((cast(*void)(*instance.error_recognition)) - cast(*void)(*instance)) == 212, "AVFormatContext.error_recognition has unexpected offset % instead of 212", ((cast(*void)(*instance.error_recognition)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.error_recognition)) == 4, "AVFormatContext.error_recognition has unexpected size % instead of 4", size_of(type_of(AVFormatContext.error_recognition)));
+        assert(((cast(*void)(*instance.interrupt_callback)) - cast(*void)(*instance)) == 216, "AVFormatContext.interrupt_callback has unexpected offset % instead of 216", ((cast(*void)(*instance.interrupt_callback)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.interrupt_callback)) == 16, "AVFormatContext.interrupt_callback has unexpected size % instead of 16", size_of(type_of(AVFormatContext.interrupt_callback)));
+        assert(((cast(*void)(*instance.debug)) - cast(*void)(*instance)) == 232, "AVFormatContext.debug has unexpected offset % instead of 232", ((cast(*void)(*instance.debug)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.debug)) == 4, "AVFormatContext.debug has unexpected size % instead of 4", size_of(type_of(AVFormatContext.debug)));
+        assert(((cast(*void)(*instance.max_streams)) - cast(*void)(*instance)) == 236, "AVFormatContext.max_streams has unexpected offset % instead of 236", ((cast(*void)(*instance.max_streams)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.max_streams)) == 4, "AVFormatContext.max_streams has unexpected size % instead of 4", size_of(type_of(AVFormatContext.max_streams)));
+        assert(((cast(*void)(*instance.max_index_size)) - cast(*void)(*instance)) == 240, "AVFormatContext.max_index_size has unexpected offset % instead of 240", ((cast(*void)(*instance.max_index_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.max_index_size)) == 4, "AVFormatContext.max_index_size has unexpected size % instead of 4", size_of(type_of(AVFormatContext.max_index_size)));
+        assert(((cast(*void)(*instance.max_picture_buffer)) - cast(*void)(*instance)) == 244, "AVFormatContext.max_picture_buffer has unexpected offset % instead of 244", ((cast(*void)(*instance.max_picture_buffer)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.max_picture_buffer)) == 4, "AVFormatContext.max_picture_buffer has unexpected size % instead of 4", size_of(type_of(AVFormatContext.max_picture_buffer)));
+        assert(((cast(*void)(*instance.max_interleave_delta)) - cast(*void)(*instance)) == 248, "AVFormatContext.max_interleave_delta has unexpected offset % instead of 248", ((cast(*void)(*instance.max_interleave_delta)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.max_interleave_delta)) == 8, "AVFormatContext.max_interleave_delta has unexpected size % instead of 8", size_of(type_of(AVFormatContext.max_interleave_delta)));
+        assert(((cast(*void)(*instance.max_ts_probe)) - cast(*void)(*instance)) == 256, "AVFormatContext.max_ts_probe has unexpected offset % instead of 256", ((cast(*void)(*instance.max_ts_probe)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.max_ts_probe)) == 4, "AVFormatContext.max_ts_probe has unexpected size % instead of 4", size_of(type_of(AVFormatContext.max_ts_probe)));
+        assert(((cast(*void)(*instance.max_chunk_duration)) - cast(*void)(*instance)) == 260, "AVFormatContext.max_chunk_duration has unexpected offset % instead of 260", ((cast(*void)(*instance.max_chunk_duration)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.max_chunk_duration)) == 4, "AVFormatContext.max_chunk_duration has unexpected size % instead of 4", size_of(type_of(AVFormatContext.max_chunk_duration)));
+        assert(((cast(*void)(*instance.max_chunk_size)) - cast(*void)(*instance)) == 264, "AVFormatContext.max_chunk_size has unexpected offset % instead of 264", ((cast(*void)(*instance.max_chunk_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.max_chunk_size)) == 4, "AVFormatContext.max_chunk_size has unexpected size % instead of 4", size_of(type_of(AVFormatContext.max_chunk_size)));
+        assert(((cast(*void)(*instance.max_probe_packets)) - cast(*void)(*instance)) == 268, "AVFormatContext.max_probe_packets has unexpected offset % instead of 268", ((cast(*void)(*instance.max_probe_packets)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.max_probe_packets)) == 4, "AVFormatContext.max_probe_packets has unexpected size % instead of 4", size_of(type_of(AVFormatContext.max_probe_packets)));
+        assert(((cast(*void)(*instance.strict_std_compliance)) - cast(*void)(*instance)) == 272, "AVFormatContext.strict_std_compliance has unexpected offset % instead of 272", ((cast(*void)(*instance.strict_std_compliance)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.strict_std_compliance)) == 4, "AVFormatContext.strict_std_compliance has unexpected size % instead of 4", size_of(type_of(AVFormatContext.strict_std_compliance)));
+        assert(((cast(*void)(*instance.event_flags)) - cast(*void)(*instance)) == 276, "AVFormatContext.event_flags has unexpected offset % instead of 276", ((cast(*void)(*instance.event_flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.event_flags)) == 4, "AVFormatContext.event_flags has unexpected size % instead of 4", size_of(type_of(AVFormatContext.event_flags)));
+        assert(((cast(*void)(*instance.avoid_negative_ts)) - cast(*void)(*instance)) == 280, "AVFormatContext.avoid_negative_ts has unexpected offset % instead of 280", ((cast(*void)(*instance.avoid_negative_ts)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.avoid_negative_ts)) == 4, "AVFormatContext.avoid_negative_ts has unexpected size % instead of 4", size_of(type_of(AVFormatContext.avoid_negative_ts)));
+        assert(((cast(*void)(*instance.audio_preload)) - cast(*void)(*instance)) == 284, "AVFormatContext.audio_preload has unexpected offset % instead of 284", ((cast(*void)(*instance.audio_preload)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.audio_preload)) == 4, "AVFormatContext.audio_preload has unexpected size % instead of 4", size_of(type_of(AVFormatContext.audio_preload)));
+        assert(((cast(*void)(*instance.use_wallclock_as_timestamps)) - cast(*void)(*instance)) == 288, "AVFormatContext.use_wallclock_as_timestamps has unexpected offset % instead of 288", ((cast(*void)(*instance.use_wallclock_as_timestamps)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.use_wallclock_as_timestamps)) == 4, "AVFormatContext.use_wallclock_as_timestamps has unexpected size % instead of 4", size_of(type_of(AVFormatContext.use_wallclock_as_timestamps)));
+        assert(((cast(*void)(*instance.skip_estimate_duration_from_pts)) - cast(*void)(*instance)) == 292, "AVFormatContext.skip_estimate_duration_from_pts has unexpected offset % instead of 292", ((cast(*void)(*instance.skip_estimate_duration_from_pts)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.skip_estimate_duration_from_pts)) == 4, "AVFormatContext.skip_estimate_duration_from_pts has unexpected size % instead of 4", size_of(type_of(AVFormatContext.skip_estimate_duration_from_pts)));
+        assert(((cast(*void)(*instance.avio_flags)) - cast(*void)(*instance)) == 296, "AVFormatContext.avio_flags has unexpected offset % instead of 296", ((cast(*void)(*instance.avio_flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.avio_flags)) == 4, "AVFormatContext.avio_flags has unexpected size % instead of 4", size_of(type_of(AVFormatContext.avio_flags)));
+        assert(((cast(*void)(*instance.duration_estimation_method)) - cast(*void)(*instance)) == 300, "AVFormatContext.duration_estimation_method has unexpected offset % instead of 300", ((cast(*void)(*instance.duration_estimation_method)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.duration_estimation_method)) == 4, "AVFormatContext.duration_estimation_method has unexpected size % instead of 4", size_of(type_of(AVFormatContext.duration_estimation_method)));
+        assert(((cast(*void)(*instance.skip_initial_bytes)) - cast(*void)(*instance)) == 304, "AVFormatContext.skip_initial_bytes has unexpected offset % instead of 304", ((cast(*void)(*instance.skip_initial_bytes)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.skip_initial_bytes)) == 8, "AVFormatContext.skip_initial_bytes has unexpected size % instead of 8", size_of(type_of(AVFormatContext.skip_initial_bytes)));
+        assert(((cast(*void)(*instance.correct_ts_overflow)) - cast(*void)(*instance)) == 312, "AVFormatContext.correct_ts_overflow has unexpected offset % instead of 312", ((cast(*void)(*instance.correct_ts_overflow)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.correct_ts_overflow)) == 4, "AVFormatContext.correct_ts_overflow has unexpected size % instead of 4", size_of(type_of(AVFormatContext.correct_ts_overflow)));
+        assert(((cast(*void)(*instance.seek2any)) - cast(*void)(*instance)) == 316, "AVFormatContext.seek2any has unexpected offset % instead of 316", ((cast(*void)(*instance.seek2any)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.seek2any)) == 4, "AVFormatContext.seek2any has unexpected size % instead of 4", size_of(type_of(AVFormatContext.seek2any)));
+        assert(((cast(*void)(*instance.flush_packets)) - cast(*void)(*instance)) == 320, "AVFormatContext.flush_packets has unexpected offset % instead of 320", ((cast(*void)(*instance.flush_packets)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.flush_packets)) == 4, "AVFormatContext.flush_packets has unexpected size % instead of 4", size_of(type_of(AVFormatContext.flush_packets)));
+        assert(((cast(*void)(*instance.probe_score)) - cast(*void)(*instance)) == 324, "AVFormatContext.probe_score has unexpected offset % instead of 324", ((cast(*void)(*instance.probe_score)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.probe_score)) == 4, "AVFormatContext.probe_score has unexpected size % instead of 4", size_of(type_of(AVFormatContext.probe_score)));
+        assert(((cast(*void)(*instance.format_probesize)) - cast(*void)(*instance)) == 328, "AVFormatContext.format_probesize has unexpected offset % instead of 328", ((cast(*void)(*instance.format_probesize)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.format_probesize)) == 4, "AVFormatContext.format_probesize has unexpected size % instead of 4", size_of(type_of(AVFormatContext.format_probesize)));
+        assert(((cast(*void)(*instance.codec_whitelist)) - cast(*void)(*instance)) == 336, "AVFormatContext.codec_whitelist has unexpected offset % instead of 336", ((cast(*void)(*instance.codec_whitelist)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.codec_whitelist)) == 8, "AVFormatContext.codec_whitelist has unexpected size % instead of 8", size_of(type_of(AVFormatContext.codec_whitelist)));
+        assert(((cast(*void)(*instance.format_whitelist)) - cast(*void)(*instance)) == 344, "AVFormatContext.format_whitelist has unexpected offset % instead of 344", ((cast(*void)(*instance.format_whitelist)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.format_whitelist)) == 8, "AVFormatContext.format_whitelist has unexpected size % instead of 8", size_of(type_of(AVFormatContext.format_whitelist)));
+        assert(((cast(*void)(*instance.protocol_whitelist)) - cast(*void)(*instance)) == 352, "AVFormatContext.protocol_whitelist has unexpected offset % instead of 352", ((cast(*void)(*instance.protocol_whitelist)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.protocol_whitelist)) == 8, "AVFormatContext.protocol_whitelist has unexpected size % instead of 8", size_of(type_of(AVFormatContext.protocol_whitelist)));
+        assert(((cast(*void)(*instance.protocol_blacklist)) - cast(*void)(*instance)) == 360, "AVFormatContext.protocol_blacklist has unexpected offset % instead of 360", ((cast(*void)(*instance.protocol_blacklist)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.protocol_blacklist)) == 8, "AVFormatContext.protocol_blacklist has unexpected size % instead of 8", size_of(type_of(AVFormatContext.protocol_blacklist)));
+        assert(((cast(*void)(*instance.io_repositioned)) - cast(*void)(*instance)) == 368, "AVFormatContext.io_repositioned has unexpected offset % instead of 368", ((cast(*void)(*instance.io_repositioned)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.io_repositioned)) == 4, "AVFormatContext.io_repositioned has unexpected size % instead of 4", size_of(type_of(AVFormatContext.io_repositioned)));
+        assert(((cast(*void)(*instance.video_codec)) - cast(*void)(*instance)) == 376, "AVFormatContext.video_codec has unexpected offset % instead of 376", ((cast(*void)(*instance.video_codec)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.video_codec)) == 8, "AVFormatContext.video_codec has unexpected size % instead of 8", size_of(type_of(AVFormatContext.video_codec)));
+        assert(((cast(*void)(*instance.audio_codec)) - cast(*void)(*instance)) == 384, "AVFormatContext.audio_codec has unexpected offset % instead of 384", ((cast(*void)(*instance.audio_codec)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.audio_codec)) == 8, "AVFormatContext.audio_codec has unexpected size % instead of 8", size_of(type_of(AVFormatContext.audio_codec)));
+        assert(((cast(*void)(*instance.subtitle_codec)) - cast(*void)(*instance)) == 392, "AVFormatContext.subtitle_codec has unexpected offset % instead of 392", ((cast(*void)(*instance.subtitle_codec)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.subtitle_codec)) == 8, "AVFormatContext.subtitle_codec has unexpected size % instead of 8", size_of(type_of(AVFormatContext.subtitle_codec)));
+        assert(((cast(*void)(*instance.data_codec)) - cast(*void)(*instance)) == 400, "AVFormatContext.data_codec has unexpected offset % instead of 400", ((cast(*void)(*instance.data_codec)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.data_codec)) == 8, "AVFormatContext.data_codec has unexpected size % instead of 8", size_of(type_of(AVFormatContext.data_codec)));
+        assert(((cast(*void)(*instance.metadata_header_padding)) - cast(*void)(*instance)) == 408, "AVFormatContext.metadata_header_padding has unexpected offset % instead of 408", ((cast(*void)(*instance.metadata_header_padding)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.metadata_header_padding)) == 4, "AVFormatContext.metadata_header_padding has unexpected size % instead of 4", size_of(type_of(AVFormatContext.metadata_header_padding)));
+        assert(((cast(*void)(*instance.opaque)) - cast(*void)(*instance)) == 416, "AVFormatContext.opaque has unexpected offset % instead of 416", ((cast(*void)(*instance.opaque)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.opaque)) == 8, "AVFormatContext.opaque has unexpected size % instead of 8", size_of(type_of(AVFormatContext.opaque)));
+        assert(((cast(*void)(*instance.control_message_cb)) - cast(*void)(*instance)) == 424, "AVFormatContext.control_message_cb has unexpected offset % instead of 424", ((cast(*void)(*instance.control_message_cb)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.control_message_cb)) == 8, "AVFormatContext.control_message_cb has unexpected size % instead of 8", size_of(type_of(AVFormatContext.control_message_cb)));
+        assert(((cast(*void)(*instance.output_ts_offset)) - cast(*void)(*instance)) == 432, "AVFormatContext.output_ts_offset has unexpected offset % instead of 432", ((cast(*void)(*instance.output_ts_offset)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.output_ts_offset)) == 8, "AVFormatContext.output_ts_offset has unexpected size % instead of 8", size_of(type_of(AVFormatContext.output_ts_offset)));
+        assert(((cast(*void)(*instance.dump_separator)) - cast(*void)(*instance)) == 440, "AVFormatContext.dump_separator has unexpected offset % instead of 440", ((cast(*void)(*instance.dump_separator)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.dump_separator)) == 8, "AVFormatContext.dump_separator has unexpected size % instead of 8", size_of(type_of(AVFormatContext.dump_separator)));
+        assert(((cast(*void)(*instance.io_open)) - cast(*void)(*instance)) == 448, "AVFormatContext.io_open has unexpected offset % instead of 448", ((cast(*void)(*instance.io_open)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.io_open)) == 8, "AVFormatContext.io_open has unexpected size % instead of 8", size_of(type_of(AVFormatContext.io_open)));
+        assert(((cast(*void)(*instance.io_close2)) - cast(*void)(*instance)) == 456, "AVFormatContext.io_close2 has unexpected offset % instead of 456", ((cast(*void)(*instance.io_close2)) - cast(*void)(*instance)));
+        assert(size_of(type_of(AVFormatContext.io_close2)) == 8, "AVFormatContext.io_close2 has unexpected size % instead of 8", size_of(type_of(AVFormatContext.io_close2)));
+        assert(size_of(AVFormatContext) == 464, "AVFormatContext has size % instead of 464", size_of(AVFormatContext));
+    }
+
+    {
+        instance: CHANNEL_MAP_INFO;
+        assert(((cast(*void)(*instance.pChannelMap)) - cast(*void)(*instance)) == 0, "CHANNEL_MAP_INFO.pChannelMap has unexpected offset % instead of 0", ((cast(*void)(*instance.pChannelMap)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CHANNEL_MAP_INFO.pChannelMap)) == 8, "CHANNEL_MAP_INFO.pChannelMap has unexpected size % instead of 8", size_of(type_of(CHANNEL_MAP_INFO.pChannelMap)));
+        assert(((cast(*void)(*instance.numChannels)) - cast(*void)(*instance)) == 8, "CHANNEL_MAP_INFO.numChannels has unexpected offset % instead of 8", ((cast(*void)(*instance.numChannels)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CHANNEL_MAP_INFO.numChannels)) == 1, "CHANNEL_MAP_INFO.numChannels has unexpected size % instead of 1", size_of(type_of(CHANNEL_MAP_INFO.numChannels)));
+        assert(size_of(CHANNEL_MAP_INFO) == 16, "CHANNEL_MAP_INFO has size % instead of 16", size_of(CHANNEL_MAP_INFO));
+    }
+
+    {
+        instance: FDK_channelMapDescr;
+        assert(((cast(*void)(*instance.pMapInfoTab)) - cast(*void)(*instance)) == 0, "FDK_channelMapDescr.pMapInfoTab has unexpected offset % instead of 0", ((cast(*void)(*instance.pMapInfoTab)) - cast(*void)(*instance)));
+        assert(size_of(type_of(FDK_channelMapDescr.pMapInfoTab)) == 8, "FDK_channelMapDescr.pMapInfoTab has unexpected size % instead of 8", size_of(type_of(FDK_channelMapDescr.pMapInfoTab)));
+        assert(((cast(*void)(*instance.mapInfoTabLen)) - cast(*void)(*instance)) == 8, "FDK_channelMapDescr.mapInfoTabLen has unexpected offset % instead of 8", ((cast(*void)(*instance.mapInfoTabLen)) - cast(*void)(*instance)));
+        assert(size_of(type_of(FDK_channelMapDescr.mapInfoTabLen)) == 4, "FDK_channelMapDescr.mapInfoTabLen has unexpected size % instead of 4", size_of(type_of(FDK_channelMapDescr.mapInfoTabLen)));
+        assert(((cast(*void)(*instance.fPassThrough)) - cast(*void)(*instance)) == 12, "FDK_channelMapDescr.fPassThrough has unexpected offset % instead of 12", ((cast(*void)(*instance.fPassThrough)) - cast(*void)(*instance)));
+        assert(size_of(type_of(FDK_channelMapDescr.fPassThrough)) == 4, "FDK_channelMapDescr.fPassThrough has unexpected size % instead of 4", size_of(type_of(FDK_channelMapDescr.fPassThrough)));
+        assert(size_of(FDK_channelMapDescr) == 16, "FDK_channelMapDescr has size % instead of 16", size_of(FDK_channelMapDescr));
+    }
+
+    {
+        instance: CODER_CONFIG;
+        assert(((cast(*void)(*instance.aot)) - cast(*void)(*instance)) == 0, "CODER_CONFIG.aot has unexpected offset % instead of 0", ((cast(*void)(*instance.aot)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.aot)) == 4, "CODER_CONFIG.aot has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.aot)));
+        assert(((cast(*void)(*instance.extAOT)) - cast(*void)(*instance)) == 4, "CODER_CONFIG.extAOT has unexpected offset % instead of 4", ((cast(*void)(*instance.extAOT)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.extAOT)) == 4, "CODER_CONFIG.extAOT has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.extAOT)));
+        assert(((cast(*void)(*instance.channelMode)) - cast(*void)(*instance)) == 8, "CODER_CONFIG.channelMode has unexpected offset % instead of 8", ((cast(*void)(*instance.channelMode)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.channelMode)) == 4, "CODER_CONFIG.channelMode has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.channelMode)));
+        assert(((cast(*void)(*instance.channelConfigZero)) - cast(*void)(*instance)) == 12, "CODER_CONFIG.channelConfigZero has unexpected offset % instead of 12", ((cast(*void)(*instance.channelConfigZero)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.channelConfigZero)) == 1, "CODER_CONFIG.channelConfigZero has unexpected size % instead of 1", size_of(type_of(CODER_CONFIG.channelConfigZero)));
+        assert(((cast(*void)(*instance.samplingRate)) - cast(*void)(*instance)) == 16, "CODER_CONFIG.samplingRate has unexpected offset % instead of 16", ((cast(*void)(*instance.samplingRate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.samplingRate)) == 4, "CODER_CONFIG.samplingRate has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.samplingRate)));
+        assert(((cast(*void)(*instance.extSamplingRate)) - cast(*void)(*instance)) == 20, "CODER_CONFIG.extSamplingRate has unexpected offset % instead of 20", ((cast(*void)(*instance.extSamplingRate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.extSamplingRate)) == 4, "CODER_CONFIG.extSamplingRate has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.extSamplingRate)));
+        assert(((cast(*void)(*instance.downscaleSamplingRate)) - cast(*void)(*instance)) == 24, "CODER_CONFIG.downscaleSamplingRate has unexpected offset % instead of 24", ((cast(*void)(*instance.downscaleSamplingRate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.downscaleSamplingRate)) == 4, "CODER_CONFIG.downscaleSamplingRate has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.downscaleSamplingRate)));
+        assert(((cast(*void)(*instance.bitRate)) - cast(*void)(*instance)) == 28, "CODER_CONFIG.bitRate has unexpected offset % instead of 28", ((cast(*void)(*instance.bitRate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.bitRate)) == 4, "CODER_CONFIG.bitRate has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.bitRate)));
+        assert(((cast(*void)(*instance.samplesPerFrame)) - cast(*void)(*instance)) == 32, "CODER_CONFIG.samplesPerFrame has unexpected offset % instead of 32", ((cast(*void)(*instance.samplesPerFrame)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.samplesPerFrame)) == 4, "CODER_CONFIG.samplesPerFrame has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.samplesPerFrame)));
+        assert(((cast(*void)(*instance.noChannels)) - cast(*void)(*instance)) == 36, "CODER_CONFIG.noChannels has unexpected offset % instead of 36", ((cast(*void)(*instance.noChannels)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.noChannels)) == 4, "CODER_CONFIG.noChannels has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.noChannels)));
+        assert(((cast(*void)(*instance.bitsFrame)) - cast(*void)(*instance)) == 40, "CODER_CONFIG.bitsFrame has unexpected offset % instead of 40", ((cast(*void)(*instance.bitsFrame)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.bitsFrame)) == 4, "CODER_CONFIG.bitsFrame has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.bitsFrame)));
+        assert(((cast(*void)(*instance.nSubFrames)) - cast(*void)(*instance)) == 44, "CODER_CONFIG.nSubFrames has unexpected offset % instead of 44", ((cast(*void)(*instance.nSubFrames)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.nSubFrames)) == 4, "CODER_CONFIG.nSubFrames has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.nSubFrames)));
+        assert(((cast(*void)(*instance.BSACnumOfSubFrame)) - cast(*void)(*instance)) == 48, "CODER_CONFIG.BSACnumOfSubFrame has unexpected offset % instead of 48", ((cast(*void)(*instance.BSACnumOfSubFrame)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.BSACnumOfSubFrame)) == 4, "CODER_CONFIG.BSACnumOfSubFrame has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.BSACnumOfSubFrame)));
+        assert(((cast(*void)(*instance.BSAClayerLength)) - cast(*void)(*instance)) == 52, "CODER_CONFIG.BSAClayerLength has unexpected offset % instead of 52", ((cast(*void)(*instance.BSAClayerLength)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.BSAClayerLength)) == 4, "CODER_CONFIG.BSAClayerLength has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.BSAClayerLength)));
+        assert(((cast(*void)(*instance.flags)) - cast(*void)(*instance)) == 56, "CODER_CONFIG.flags has unexpected offset % instead of 56", ((cast(*void)(*instance.flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.flags)) == 4, "CODER_CONFIG.flags has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.flags)));
+        assert(((cast(*void)(*instance.matrixMixdownA)) - cast(*void)(*instance)) == 60, "CODER_CONFIG.matrixMixdownA has unexpected offset % instead of 60", ((cast(*void)(*instance.matrixMixdownA)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.matrixMixdownA)) == 1, "CODER_CONFIG.matrixMixdownA has unexpected size % instead of 1", size_of(type_of(CODER_CONFIG.matrixMixdownA)));
+        assert(((cast(*void)(*instance.headerPeriod)) - cast(*void)(*instance)) == 61, "CODER_CONFIG.headerPeriod has unexpected offset % instead of 61", ((cast(*void)(*instance.headerPeriod)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.headerPeriod)) == 1, "CODER_CONFIG.headerPeriod has unexpected size % instead of 1", size_of(type_of(CODER_CONFIG.headerPeriod)));
+        assert(((cast(*void)(*instance.stereoConfigIndex)) - cast(*void)(*instance)) == 62, "CODER_CONFIG.stereoConfigIndex has unexpected offset % instead of 62", ((cast(*void)(*instance.stereoConfigIndex)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.stereoConfigIndex)) == 1, "CODER_CONFIG.stereoConfigIndex has unexpected size % instead of 1", size_of(type_of(CODER_CONFIG.stereoConfigIndex)));
+        assert(((cast(*void)(*instance.sbrMode)) - cast(*void)(*instance)) == 63, "CODER_CONFIG.sbrMode has unexpected offset % instead of 63", ((cast(*void)(*instance.sbrMode)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.sbrMode)) == 1, "CODER_CONFIG.sbrMode has unexpected size % instead of 1", size_of(type_of(CODER_CONFIG.sbrMode)));
+        assert(((cast(*void)(*instance.sbrSignaling)) - cast(*void)(*instance)) == 64, "CODER_CONFIG.sbrSignaling has unexpected offset % instead of 64", ((cast(*void)(*instance.sbrSignaling)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.sbrSignaling)) == 4, "CODER_CONFIG.sbrSignaling has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.sbrSignaling)));
+        assert(((cast(*void)(*instance.rawConfig)) - cast(*void)(*instance)) == 68, "CODER_CONFIG.rawConfig has unexpected offset % instead of 68", ((cast(*void)(*instance.rawConfig)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.rawConfig)) == 64, "CODER_CONFIG.rawConfig has unexpected size % instead of 64", size_of(type_of(CODER_CONFIG.rawConfig)));
+        assert(((cast(*void)(*instance.rawConfigBits)) - cast(*void)(*instance)) == 132, "CODER_CONFIG.rawConfigBits has unexpected offset % instead of 132", ((cast(*void)(*instance.rawConfigBits)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.rawConfigBits)) == 4, "CODER_CONFIG.rawConfigBits has unexpected size % instead of 4", size_of(type_of(CODER_CONFIG.rawConfigBits)));
+        assert(((cast(*void)(*instance.sbrPresent)) - cast(*void)(*instance)) == 136, "CODER_CONFIG.sbrPresent has unexpected offset % instead of 136", ((cast(*void)(*instance.sbrPresent)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.sbrPresent)) == 1, "CODER_CONFIG.sbrPresent has unexpected size % instead of 1", size_of(type_of(CODER_CONFIG.sbrPresent)));
+        assert(((cast(*void)(*instance.psPresent)) - cast(*void)(*instance)) == 137, "CODER_CONFIG.psPresent has unexpected offset % instead of 137", ((cast(*void)(*instance.psPresent)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CODER_CONFIG.psPresent)) == 1, "CODER_CONFIG.psPresent has unexpected size % instead of 1", size_of(type_of(CODER_CONFIG.psPresent)));
+        assert(size_of(CODER_CONFIG) == 140, "CODER_CONFIG has size % instead of 140", size_of(CODER_CONFIG));
+    }
+
+    {
+        instance: LIB_INFO;
+        assert(((cast(*void)(*instance.title)) - cast(*void)(*instance)) == 0, "LIB_INFO.title has unexpected offset % instead of 0", ((cast(*void)(*instance.title)) - cast(*void)(*instance)));
+        assert(size_of(type_of(LIB_INFO.title)) == 8, "LIB_INFO.title has unexpected size % instead of 8", size_of(type_of(LIB_INFO.title)));
+        assert(((cast(*void)(*instance.build_date)) - cast(*void)(*instance)) == 8, "LIB_INFO.build_date has unexpected offset % instead of 8", ((cast(*void)(*instance.build_date)) - cast(*void)(*instance)));
+        assert(size_of(type_of(LIB_INFO.build_date)) == 8, "LIB_INFO.build_date has unexpected size % instead of 8", size_of(type_of(LIB_INFO.build_date)));
+        assert(((cast(*void)(*instance.build_time)) - cast(*void)(*instance)) == 16, "LIB_INFO.build_time has unexpected offset % instead of 16", ((cast(*void)(*instance.build_time)) - cast(*void)(*instance)));
+        assert(size_of(type_of(LIB_INFO.build_time)) == 8, "LIB_INFO.build_time has unexpected size % instead of 8", size_of(type_of(LIB_INFO.build_time)));
+        assert(((cast(*void)(*instance.module_id)) - cast(*void)(*instance)) == 24, "LIB_INFO.module_id has unexpected offset % instead of 24", ((cast(*void)(*instance.module_id)) - cast(*void)(*instance)));
+        assert(size_of(type_of(LIB_INFO.module_id)) == 4, "LIB_INFO.module_id has unexpected size % instead of 4", size_of(type_of(LIB_INFO.module_id)));
+        assert(((cast(*void)(*instance.version)) - cast(*void)(*instance)) == 28, "LIB_INFO.version has unexpected offset % instead of 28", ((cast(*void)(*instance.version)) - cast(*void)(*instance)));
+        assert(size_of(type_of(LIB_INFO.version)) == 4, "LIB_INFO.version has unexpected size % instead of 4", size_of(type_of(LIB_INFO.version)));
+        assert(((cast(*void)(*instance.flags)) - cast(*void)(*instance)) == 32, "LIB_INFO.flags has unexpected offset % instead of 32", ((cast(*void)(*instance.flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(LIB_INFO.flags)) == 4, "LIB_INFO.flags has unexpected size % instead of 4", size_of(type_of(LIB_INFO.flags)));
+        assert(((cast(*void)(*instance.versionStr)) - cast(*void)(*instance)) == 36, "LIB_INFO.versionStr has unexpected offset % instead of 36", ((cast(*void)(*instance.versionStr)) - cast(*void)(*instance)));
+        assert(size_of(type_of(LIB_INFO.versionStr)) == 32, "LIB_INFO.versionStr has unexpected size % instead of 32", size_of(type_of(LIB_INFO.versionStr)));
+        assert(size_of(LIB_INFO) == 72, "LIB_INFO has size % instead of 72", size_of(LIB_INFO));
+    }
+
+    {
+        instance: FDK_bufDescr;
+        assert(((cast(*void)(*instance.ppBase)) - cast(*void)(*instance)) == 0, "FDK_bufDescr.ppBase has unexpected offset % instead of 0", ((cast(*void)(*instance.ppBase)) - cast(*void)(*instance)));
+        assert(size_of(type_of(FDK_bufDescr.ppBase)) == 8, "FDK_bufDescr.ppBase has unexpected size % instead of 8", size_of(type_of(FDK_bufDescr.ppBase)));
+        assert(((cast(*void)(*instance.pBufSize)) - cast(*void)(*instance)) == 8, "FDK_bufDescr.pBufSize has unexpected offset % instead of 8", ((cast(*void)(*instance.pBufSize)) - cast(*void)(*instance)));
+        assert(size_of(type_of(FDK_bufDescr.pBufSize)) == 8, "FDK_bufDescr.pBufSize has unexpected size % instead of 8", size_of(type_of(FDK_bufDescr.pBufSize)));
+        assert(((cast(*void)(*instance.pEleSize)) - cast(*void)(*instance)) == 16, "FDK_bufDescr.pEleSize has unexpected offset % instead of 16", ((cast(*void)(*instance.pEleSize)) - cast(*void)(*instance)));
+        assert(size_of(type_of(FDK_bufDescr.pEleSize)) == 8, "FDK_bufDescr.pEleSize has unexpected size % instead of 8", size_of(type_of(FDK_bufDescr.pEleSize)));
+        assert(((cast(*void)(*instance.pBufType)) - cast(*void)(*instance)) == 24, "FDK_bufDescr.pBufType has unexpected offset % instead of 24", ((cast(*void)(*instance.pBufType)) - cast(*void)(*instance)));
+        assert(size_of(type_of(FDK_bufDescr.pBufType)) == 8, "FDK_bufDescr.pBufType has unexpected size % instead of 8", size_of(type_of(FDK_bufDescr.pBufType)));
+        assert(((cast(*void)(*instance.numBufs)) - cast(*void)(*instance)) == 32, "FDK_bufDescr.numBufs has unexpected offset % instead of 32", ((cast(*void)(*instance.numBufs)) - cast(*void)(*instance)));
+        assert(size_of(type_of(FDK_bufDescr.numBufs)) == 4, "FDK_bufDescr.numBufs has unexpected size % instead of 4", size_of(type_of(FDK_bufDescr.numBufs)));
+        assert(size_of(FDK_bufDescr) == 40, "FDK_bufDescr has size % instead of 40", size_of(FDK_bufDescr));
+    }
+
+    {
+        instance: CStreamInfo;
+        assert(((cast(*void)(*instance.sampleRate)) - cast(*void)(*instance)) == 0, "CStreamInfo.sampleRate has unexpected offset % instead of 0", ((cast(*void)(*instance.sampleRate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.sampleRate)) == 4, "CStreamInfo.sampleRate has unexpected size % instead of 4", size_of(type_of(CStreamInfo.sampleRate)));
+        assert(((cast(*void)(*instance.frameSize)) - cast(*void)(*instance)) == 4, "CStreamInfo.frameSize has unexpected offset % instead of 4", ((cast(*void)(*instance.frameSize)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.frameSize)) == 4, "CStreamInfo.frameSize has unexpected size % instead of 4", size_of(type_of(CStreamInfo.frameSize)));
+        assert(((cast(*void)(*instance.numChannels)) - cast(*void)(*instance)) == 8, "CStreamInfo.numChannels has unexpected offset % instead of 8", ((cast(*void)(*instance.numChannels)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.numChannels)) == 4, "CStreamInfo.numChannels has unexpected size % instead of 4", size_of(type_of(CStreamInfo.numChannels)));
+        assert(((cast(*void)(*instance.pChannelType)) - cast(*void)(*instance)) == 16, "CStreamInfo.pChannelType has unexpected offset % instead of 16", ((cast(*void)(*instance.pChannelType)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.pChannelType)) == 8, "CStreamInfo.pChannelType has unexpected size % instead of 8", size_of(type_of(CStreamInfo.pChannelType)));
+        assert(((cast(*void)(*instance.pChannelIndices)) - cast(*void)(*instance)) == 24, "CStreamInfo.pChannelIndices has unexpected offset % instead of 24", ((cast(*void)(*instance.pChannelIndices)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.pChannelIndices)) == 8, "CStreamInfo.pChannelIndices has unexpected size % instead of 8", size_of(type_of(CStreamInfo.pChannelIndices)));
+        assert(((cast(*void)(*instance.aacSampleRate)) - cast(*void)(*instance)) == 32, "CStreamInfo.aacSampleRate has unexpected offset % instead of 32", ((cast(*void)(*instance.aacSampleRate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.aacSampleRate)) == 4, "CStreamInfo.aacSampleRate has unexpected size % instead of 4", size_of(type_of(CStreamInfo.aacSampleRate)));
+        assert(((cast(*void)(*instance.profile)) - cast(*void)(*instance)) == 36, "CStreamInfo.profile has unexpected offset % instead of 36", ((cast(*void)(*instance.profile)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.profile)) == 4, "CStreamInfo.profile has unexpected size % instead of 4", size_of(type_of(CStreamInfo.profile)));
+        assert(((cast(*void)(*instance.aot)) - cast(*void)(*instance)) == 40, "CStreamInfo.aot has unexpected offset % instead of 40", ((cast(*void)(*instance.aot)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.aot)) == 4, "CStreamInfo.aot has unexpected size % instead of 4", size_of(type_of(CStreamInfo.aot)));
+        assert(((cast(*void)(*instance.channelConfig)) - cast(*void)(*instance)) == 44, "CStreamInfo.channelConfig has unexpected offset % instead of 44", ((cast(*void)(*instance.channelConfig)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.channelConfig)) == 4, "CStreamInfo.channelConfig has unexpected size % instead of 4", size_of(type_of(CStreamInfo.channelConfig)));
+        assert(((cast(*void)(*instance.bitRate)) - cast(*void)(*instance)) == 48, "CStreamInfo.bitRate has unexpected offset % instead of 48", ((cast(*void)(*instance.bitRate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.bitRate)) == 4, "CStreamInfo.bitRate has unexpected size % instead of 4", size_of(type_of(CStreamInfo.bitRate)));
+        assert(((cast(*void)(*instance.aacSamplesPerFrame)) - cast(*void)(*instance)) == 52, "CStreamInfo.aacSamplesPerFrame has unexpected offset % instead of 52", ((cast(*void)(*instance.aacSamplesPerFrame)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.aacSamplesPerFrame)) == 4, "CStreamInfo.aacSamplesPerFrame has unexpected size % instead of 4", size_of(type_of(CStreamInfo.aacSamplesPerFrame)));
+        assert(((cast(*void)(*instance.aacNumChannels)) - cast(*void)(*instance)) == 56, "CStreamInfo.aacNumChannels has unexpected offset % instead of 56", ((cast(*void)(*instance.aacNumChannels)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.aacNumChannels)) == 4, "CStreamInfo.aacNumChannels has unexpected size % instead of 4", size_of(type_of(CStreamInfo.aacNumChannels)));
+        assert(((cast(*void)(*instance.extAot)) - cast(*void)(*instance)) == 60, "CStreamInfo.extAot has unexpected offset % instead of 60", ((cast(*void)(*instance.extAot)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.extAot)) == 4, "CStreamInfo.extAot has unexpected size % instead of 4", size_of(type_of(CStreamInfo.extAot)));
+        assert(((cast(*void)(*instance.extSamplingRate)) - cast(*void)(*instance)) == 64, "CStreamInfo.extSamplingRate has unexpected offset % instead of 64", ((cast(*void)(*instance.extSamplingRate)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.extSamplingRate)) == 4, "CStreamInfo.extSamplingRate has unexpected size % instead of 4", size_of(type_of(CStreamInfo.extSamplingRate)));
+        assert(((cast(*void)(*instance.outputDelay)) - cast(*void)(*instance)) == 68, "CStreamInfo.outputDelay has unexpected offset % instead of 68", ((cast(*void)(*instance.outputDelay)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.outputDelay)) == 4, "CStreamInfo.outputDelay has unexpected size % instead of 4", size_of(type_of(CStreamInfo.outputDelay)));
+        assert(((cast(*void)(*instance.flags)) - cast(*void)(*instance)) == 72, "CStreamInfo.flags has unexpected offset % instead of 72", ((cast(*void)(*instance.flags)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.flags)) == 4, "CStreamInfo.flags has unexpected size % instead of 4", size_of(type_of(CStreamInfo.flags)));
+        assert(((cast(*void)(*instance.epConfig)) - cast(*void)(*instance)) == 76, "CStreamInfo.epConfig has unexpected offset % instead of 76", ((cast(*void)(*instance.epConfig)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.epConfig)) == 1, "CStreamInfo.epConfig has unexpected size % instead of 1", size_of(type_of(CStreamInfo.epConfig)));
+        assert(((cast(*void)(*instance.numLostAccessUnits)) - cast(*void)(*instance)) == 80, "CStreamInfo.numLostAccessUnits has unexpected offset % instead of 80", ((cast(*void)(*instance.numLostAccessUnits)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.numLostAccessUnits)) == 4, "CStreamInfo.numLostAccessUnits has unexpected size % instead of 4", size_of(type_of(CStreamInfo.numLostAccessUnits)));
+        assert(((cast(*void)(*instance.numTotalBytes)) - cast(*void)(*instance)) == 88, "CStreamInfo.numTotalBytes has unexpected offset % instead of 88", ((cast(*void)(*instance.numTotalBytes)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.numTotalBytes)) == 8, "CStreamInfo.numTotalBytes has unexpected size % instead of 8", size_of(type_of(CStreamInfo.numTotalBytes)));
+        assert(((cast(*void)(*instance.numBadBytes)) - cast(*void)(*instance)) == 96, "CStreamInfo.numBadBytes has unexpected offset % instead of 96", ((cast(*void)(*instance.numBadBytes)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.numBadBytes)) == 8, "CStreamInfo.numBadBytes has unexpected size % instead of 8", size_of(type_of(CStreamInfo.numBadBytes)));
+        assert(((cast(*void)(*instance.numTotalAccessUnits)) - cast(*void)(*instance)) == 104, "CStreamInfo.numTotalAccessUnits has unexpected offset % instead of 104", ((cast(*void)(*instance.numTotalAccessUnits)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.numTotalAccessUnits)) == 8, "CStreamInfo.numTotalAccessUnits has unexpected size % instead of 8", size_of(type_of(CStreamInfo.numTotalAccessUnits)));
+        assert(((cast(*void)(*instance.numBadAccessUnits)) - cast(*void)(*instance)) == 112, "CStreamInfo.numBadAccessUnits has unexpected offset % instead of 112", ((cast(*void)(*instance.numBadAccessUnits)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.numBadAccessUnits)) == 8, "CStreamInfo.numBadAccessUnits has unexpected size % instead of 8", size_of(type_of(CStreamInfo.numBadAccessUnits)));
+        assert(((cast(*void)(*instance.drcProgRefLev)) - cast(*void)(*instance)) == 120, "CStreamInfo.drcProgRefLev has unexpected offset % instead of 120", ((cast(*void)(*instance.drcProgRefLev)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.drcProgRefLev)) == 1, "CStreamInfo.drcProgRefLev has unexpected size % instead of 1", size_of(type_of(CStreamInfo.drcProgRefLev)));
+        assert(((cast(*void)(*instance.drcPresMode)) - cast(*void)(*instance)) == 121, "CStreamInfo.drcPresMode has unexpected offset % instead of 121", ((cast(*void)(*instance.drcPresMode)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.drcPresMode)) == 1, "CStreamInfo.drcPresMode has unexpected size % instead of 1", size_of(type_of(CStreamInfo.drcPresMode)));
+        assert(((cast(*void)(*instance.outputLoudness)) - cast(*void)(*instance)) == 124, "CStreamInfo.outputLoudness has unexpected offset % instead of 124", ((cast(*void)(*instance.outputLoudness)) - cast(*void)(*instance)));
+        assert(size_of(type_of(CStreamInfo.outputLoudness)) == 4, "CStreamInfo.outputLoudness has unexpected size % instead of 4", size_of(type_of(CStreamInfo.outputLoudness)));
+        assert(size_of(CStreamInfo) == 128, "CStreamInfo has size % instead of 128", size_of(CStreamInfo));
+    }
+
+    {
+        instance: ma_fdkaac;
+        assert(((cast(*void)(*instance.ds)) - cast(*void)(*instance)) == 0, "ma_fdkaac.ds has unexpected offset % instead of 0", ((cast(*void)(*instance.ds)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.ds)) == 72, "ma_fdkaac.ds has unexpected size % instead of 72", size_of(type_of(ma_fdkaac.ds)));
+        assert(((cast(*void)(*instance.onRead)) - cast(*void)(*instance)) == 72, "ma_fdkaac.onRead has unexpected offset % instead of 72", ((cast(*void)(*instance.onRead)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.onRead)) == 8, "ma_fdkaac.onRead has unexpected size % instead of 8", size_of(type_of(ma_fdkaac.onRead)));
+        assert(((cast(*void)(*instance.onSeek)) - cast(*void)(*instance)) == 80, "ma_fdkaac.onSeek has unexpected offset % instead of 80", ((cast(*void)(*instance.onSeek)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.onSeek)) == 8, "ma_fdkaac.onSeek has unexpected size % instead of 8", size_of(type_of(ma_fdkaac.onSeek)));
+        assert(((cast(*void)(*instance.onTell)) - cast(*void)(*instance)) == 88, "ma_fdkaac.onTell has unexpected offset % instead of 88", ((cast(*void)(*instance.onTell)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.onTell)) == 8, "ma_fdkaac.onTell has unexpected size % instead of 8", size_of(type_of(ma_fdkaac.onTell)));
+        assert(((cast(*void)(*instance.pReadSeekTellUserData)) - cast(*void)(*instance)) == 96, "ma_fdkaac.pReadSeekTellUserData has unexpected offset % instead of 96", ((cast(*void)(*instance.pReadSeekTellUserData)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.pReadSeekTellUserData)) == 8, "ma_fdkaac.pReadSeekTellUserData has unexpected size % instead of 8", size_of(type_of(ma_fdkaac.pReadSeekTellUserData)));
+        assert(((cast(*void)(*instance.format)) - cast(*void)(*instance)) == 104, "ma_fdkaac.format has unexpected offset % instead of 104", ((cast(*void)(*instance.format)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.format)) == 4, "ma_fdkaac.format has unexpected size % instead of 4", size_of(type_of(ma_fdkaac.format)));
+        assert(((cast(*void)(*instance.handle)) - cast(*void)(*instance)) == 112, "ma_fdkaac.handle has unexpected offset % instead of 112", ((cast(*void)(*instance.handle)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.handle)) == 8, "ma_fdkaac.handle has unexpected size % instead of 8", size_of(type_of(ma_fdkaac.handle)));
+        assert(((cast(*void)(*instance.in)) - cast(*void)(*instance)) == 120, "ma_fdkaac.in has unexpected offset % instead of 120", ((cast(*void)(*instance.in)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.in)) == 8, "ma_fdkaac.in has unexpected size % instead of 8", size_of(type_of(ma_fdkaac.in)));
+        assert(((cast(*void)(*instance.st)) - cast(*void)(*instance)) == 128, "ma_fdkaac.st has unexpected offset % instead of 128", ((cast(*void)(*instance.st)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.st)) == 8, "ma_fdkaac.st has unexpected size % instead of 8", size_of(type_of(ma_fdkaac.st)));
+        assert(((cast(*void)(*instance.decode_buf)) - cast(*void)(*instance)) == 136, "ma_fdkaac.decode_buf has unexpected offset % instead of 136", ((cast(*void)(*instance.decode_buf)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.decode_buf)) == 8, "ma_fdkaac.decode_buf has unexpected size % instead of 8", size_of(type_of(ma_fdkaac.decode_buf)));
+        assert(((cast(*void)(*instance.decode_buf_size)) - cast(*void)(*instance)) == 144, "ma_fdkaac.decode_buf_size has unexpected offset % instead of 144", ((cast(*void)(*instance.decode_buf_size)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.decode_buf_size)) == 4, "ma_fdkaac.decode_buf_size has unexpected size % instead of 4", size_of(type_of(ma_fdkaac.decode_buf_size)));
+        assert(((cast(*void)(*instance.decode_buf_start)) - cast(*void)(*instance)) == 148, "ma_fdkaac.decode_buf_start has unexpected offset % instead of 148", ((cast(*void)(*instance.decode_buf_start)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.decode_buf_start)) == 4, "ma_fdkaac.decode_buf_start has unexpected size % instead of 4", size_of(type_of(ma_fdkaac.decode_buf_start)));
+        assert(((cast(*void)(*instance.pcm_frame_cursor)) - cast(*void)(*instance)) == 152, "ma_fdkaac.pcm_frame_cursor has unexpected offset % instead of 152", ((cast(*void)(*instance.pcm_frame_cursor)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.pcm_frame_cursor)) == 8, "ma_fdkaac.pcm_frame_cursor has unexpected size % instead of 8", size_of(type_of(ma_fdkaac.pcm_frame_cursor)));
+        assert(((cast(*void)(*instance.info)) - cast(*void)(*instance)) == 160, "ma_fdkaac.info has unexpected offset % instead of 160", ((cast(*void)(*instance.info)) - cast(*void)(*instance)));
+        assert(size_of(type_of(ma_fdkaac.info)) == 8, "ma_fdkaac.info has unexpected size % instead of 8", size_of(type_of(ma_fdkaac.info)));
+        assert(size_of(ma_fdkaac) == 168, "ma_fdkaac has size % instead of 168", size_of(ma_fdkaac));
+    }
 }
 
-#if OS == .MACOS {
-    miniaudio :: #library "macos/miniaudio";
-} else #if OS == .LINUX {
-    miniaudio :: #library "linux/miniaudio";
+#if OS == .LINUX {
+    miniaudio_fdkaac :: #library "fdkaac/miniaudio_fdkaac";
 } else {
     #assert false;
 }
